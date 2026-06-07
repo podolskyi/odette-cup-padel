@@ -8,9 +8,22 @@ import { Avatar, PlayerTag } from '../components/ui/Avatar'
 import { Stat, SectionTitle, Chip, Empty } from '../components/ui/Bits'
 import { RatingChart, toSeries } from '../components/RatingChart'
 import { nicknameOf } from '../lib/tournament'
-import { accentForName } from '../lib/colors'
+import { accentForName, accentByKey } from '../lib/colors'
 import { formatDate, ordinal, pct, round1, signed } from '../lib/format'
 import { cx } from '../lib/cx'
+
+const AWARD_META: Record<string, { emoji: string; title: string; accent: string }> = {
+  demolition: { emoji: '💥', title: 'The Demolition', accent: 'punch' },
+  bestDuo: { emoji: '🤝', title: 'Duo of the Night', accent: 'mint' },
+  cardio: { emoji: '🏃', title: 'Cardio King/Queen', accent: 'tang' },
+  wall: { emoji: '🧱', title: 'The Wall', accent: 'sky' },
+  diplomat: { emoji: '🕊️', title: 'The Diplomat', accent: 'grape' },
+  heartbreaker: { emoji: '😬', title: 'Heartbreaker', accent: 'sun' },
+  giantSlayer: { emoji: '🪓', title: 'Giant Slayer', accent: 'lime' },
+  mostCarried: { emoji: '🎒', title: 'Most Carried', accent: 'tang' },
+  woodenSpoon: { emoji: '🥄', title: 'Wooden Spoon', accent: 'sun' },
+  perfectPair: { emoji: '✨', title: 'Perfect Pair', accent: 'mint' },
+}
 
 export function PlayerProfile() {
   const { name = '' } = useParams()
@@ -33,7 +46,8 @@ export function PlayerProfile() {
     )
   }
 
-  const { season, rating, finishes, bestPartner, worstPartner, mostFrequentPartner, nemesis } = data
+  const { season, rating, finishes, awards, bestPartner, worstPartner, mostFrequentPartner, nemesis } =
+    data
   const a = accentForName(player)
 
   return (
@@ -54,6 +68,7 @@ export function PlayerProfile() {
                 {season.tournaments} {season.tournaments === 1 ? 'event' : 'events'}
               </Chip>
               {season.tournamentWins > 0 && <Chip tone="bg-gold">👑 {season.tournamentWins}× champ</Chip>}
+              {awards.length > 0 && <Chip tone="bg-punch-soft">🏅 {awards.length} awards</Chip>}
             </div>
           </div>
         </div>
@@ -67,6 +82,51 @@ export function PlayerProfile() {
         <Stat label="Diff" value={signed(season.diff)} tone="bg-sky-soft" />
         <Stat label="Avg Finish" value={round1(season.avgFinish)} tone="bg-tang-soft" />
         <Stat label="Podiums" value={season.podiums} tone="bg-punch-soft" />
+      </section>
+
+      {/* Awards */}
+      <section>
+        <SectionTitle emoji="🏅" title="Awards" hint="Honours earned across every event" />
+        {awards.length === 0 ? (
+          <Empty emoji="🎖️">No awards yet — the next one's coming 🎾</Empty>
+        ) : (
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {awards.map((aw, i) => {
+              const meta = AWARD_META[aw.kind]
+              const ac = accentByKey(meta.accent)
+              return (
+                <Link
+                  key={`${aw.tournamentId}-${aw.kind}-${i}`}
+                  to={`/t/${aw.tournamentId}`}
+                  className={cx('sticker p-4 transition-transform hover:-translate-y-0.5', ac.soft)}
+                >
+                  <div className="flex items-center gap-3">
+                    <span
+                      className={cx(
+                        'grid h-11 w-11 shrink-0 place-items-center rounded-xl border-2 border-ink text-xl shadow-hard-sm',
+                        ac.solid,
+                      )}
+                    >
+                      {meta.emoji}
+                    </span>
+                    <div className="min-w-0">
+                      <div className="font-extrabold leading-tight">{meta.title}</div>
+                      {(aw.detail || aw.partner) && (
+                        <div className="truncate text-sm text-ink-soft">
+                          {aw.detail}
+                          {aw.partner && ` · with ${aw.partner}`}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                  <div className="mt-2 text-xs text-ink-faint">
+                    🎉 {nicknameOf({ id: aw.tournamentId, nickname: aw.nickname })} · {formatDate(aw.date)}
+                  </div>
+                </Link>
+              )
+            })}
+          </div>
+        )}
       </section>
 
       {/* Rating over time */}
