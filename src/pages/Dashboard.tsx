@@ -105,6 +105,34 @@ export function Dashboard() {
           }
         />
 
+        {/* Legend: explains the selected board */}
+        <div className={cx('sticker mb-4 p-4', board === 'total' ? 'bg-sky-soft' : 'bg-lime-soft')}>
+          {board === 'total' ? (
+            <p className="text-sm text-ink-soft">
+              <span className="font-bold text-ink">📊 Total — rewards showing up.</span> The sum of
+              every point your teams scored across all events, so playing (and scoring) more climbs
+              you higher.
+              <span className="mt-1.5 block text-xs">
+                <b>Pts</b> total points · <b>Avg</b> points per event · <b>Win%</b> games won ·{' '}
+                <b>🏆</b> 1st places · <b>🥉</b> podiums (top-3)
+              </span>
+            </p>
+          ) : (
+            <p className="text-sm text-ink-soft">
+              <span className="font-bold text-ink">🎯 Performance — rewards how high you finish.</span>{' '}
+              Your average finishing percentile: each event scores{' '}
+              <code className="rounded bg-paper-100 px-1 font-mono">(N − rank) / (N − 1) × 100</code>,
+              so 1st = 100% and last = 0%, then averaged. Field-size-adjusted, so a strong night counts
+              the same whether the draw was 8 or 16 — and it's fair no matter how many events you've
+              played.
+              <span className="mt-1.5 block text-xs">
+                Ranked at <b>2+ events</b>; newcomers appear below as <b>provisional</b>. · <b>Perf</b>{' '}
+                avg percentile · <b>Events</b> played · <b>Elo</b> skill rating
+              </span>
+            </p>
+          )}
+        </div>
+
         {season.length === 0 ? (
           <Empty>No tournaments yet.</Empty>
         ) : board === 'total' ? (
