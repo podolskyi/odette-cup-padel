@@ -75,8 +75,14 @@ export function PlayerProfile() {
       </section>
 
       {/* Stat tiles */}
-      <section className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+      <section className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-7">
         <Stat label="Elo" value={rating ? Math.round(rating.rating) : '—'} tone="bg-grape-soft" />
+        <Stat
+          label="Perf %"
+          value={`${round1(season.performance)}%`}
+          sub={season.tournaments < 2 ? 'provisional' : 'field-adjusted'}
+          tone="bg-lime-soft"
+        />
         <Stat label="Total Pts" value={season.totalPoints} tone="bg-sun-soft" />
         <Stat label="Win Rate" value={pct(season.winRate)} sub={`${season.wins}-${season.losses}-${season.ties}`} tone="bg-mint-soft" />
         <Stat label="Diff" value={signed(season.diff)} tone="bg-sky-soft" />
