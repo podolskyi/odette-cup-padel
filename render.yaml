@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: odette-cup
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    # SPA: serve index.html for every path so client-side routes
+    # (/settings, /t/:id, /p/:name) and page refreshes work.
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
