@@ -1,11 +1,10 @@
 import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { useAppStore, exportDataset } from '../store/useAppStore'
+import { useAppStore } from '../store/useAppStore'
 import { seasonInsights } from '../stats'
 import { Avatar } from '../components/ui/Avatar'
 import { Stat, SectionTitle, Chip, Empty } from '../components/ui/Bits'
 import { RatingChart, toSeries } from '../components/RatingChart'
-import { downloadText } from '../lib/download'
 import { nicknameOf } from '../lib/tournament'
 import { formatDate, pct, signed, round1 } from '../lib/format'
 import { cx } from '../lib/cx'
@@ -23,14 +22,6 @@ export function Dashboard() {
   const totalMatches = tournaments.reduce((n, t) => n + t.matches.length, 0)
   const leader = season[0]
   const topRated = ratings.slice(0, 5)
-
-  const onExport = () => {
-    const state = useAppStore.getState()
-    downloadText(
-      `odette-cup-${new Date().toISOString().slice(0, 10)}.json`,
-      exportDataset(state),
-    )
-  }
 
   return (
     <div className="space-y-10">
@@ -58,9 +49,6 @@ export function Dashboard() {
           />
         </div>
         <div className="mt-5 flex flex-wrap gap-2">
-          <button className="btn-dark" onClick={onExport}>
-            ⬇️ Export JSON
-          </button>
           <button
             className="btn"
             onClick={() => {
