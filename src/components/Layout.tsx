@@ -49,6 +49,7 @@ export function Layout() {
         <nav className="flex items-center gap-2">
           <Tab to="/">Home</Tab>
           <Tab to="/explore">Explore</Tab>
+          <Tab to="/fun">Fun</Tab>
         </nav>
       </header>
 

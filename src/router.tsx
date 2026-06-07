@@ -4,6 +4,7 @@ import { Dashboard } from './pages/Dashboard'
 import { TournamentDetail } from './pages/TournamentDetail'
 import { PlayerProfile } from './pages/PlayerProfile'
 import { Explorer } from './pages/Explorer'
+import { Fun } from './pages/Fun'
 import { Wrapped } from './pages/Wrapped'
 import { Settings } from './pages/Settings'
 
@@ -15,6 +16,7 @@ export const router = createBrowserRouter([
       { path: '/t/:id', element: <TournamentDetail /> },
       { path: '/p/:name', element: <PlayerProfile /> },
       { path: '/explore', element: <Explorer /> },
+      { path: '/fun', element: <Fun /> },
       // Hidden organizer settings (secret-word gated, not linked in nav).
       { path: '/settings', element: <Settings /> },
     ],
