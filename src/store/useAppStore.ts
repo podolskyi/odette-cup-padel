@@ -5,10 +5,10 @@ import { odetteCup } from '../data/fixtureOdette'
 import { odette21Mar, odette17May, odette31May } from '../data/realFixtures'
 import { SEED_ALIASES } from '../data/aliases'
 
-export const DATA_VERSION = 4
+export const DATA_VERSION = 5
 // Bump the key when the seeded fixtures OR baked-in aliases change so existing
 // browsers reseed (the deploy is the source of truth in this backend-less version).
-const STORAGE_KEY = 'odette-cup-padel:v4'
+const STORAGE_KEY = 'odette-cup-padel:v5'
 
 /** The four real Odette Cup events + baked-in name merges. Also the "reset to seed" target. */
 export function seedDataset(): Dataset {
