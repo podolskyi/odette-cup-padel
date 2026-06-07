@@ -1,4 +1,4 @@
-import { useMemo, useRef, type ReactNode } from 'react'
+import { useEffect, useMemo, useRef, type ReactNode } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useAppStore } from '../store/useAppStore'
 import { tournamentInsights } from '../stats'
@@ -17,6 +17,10 @@ export function Wrapped() {
     () => (tournament ? tournamentInsights(tournament, aliases) : null),
     [tournament, aliases],
   )
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   if (!tournament || !insights) {
     return (

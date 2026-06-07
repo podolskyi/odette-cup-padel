@@ -12,7 +12,6 @@ import { cx } from '../lib/cx'
 export function Dashboard() {
   const tournaments = useAppStore((s) => s.tournaments)
   const aliases = useAppStore((s) => s.aliases)
-  const resetToSeed = useAppStore((s) => s.resetToSeed)
 
   const { season, ratings } = useMemo(
     () => seasonInsights({ tournaments, aliases }),
@@ -49,14 +48,6 @@ export function Dashboard() {
           />
         </div>
         <div className="mt-5 flex flex-wrap gap-2">
-          <button
-            className="btn"
-            onClick={() => {
-              if (confirm('Reset all data back to the seeded fixtures?')) resetToSeed()
-            }}
-          >
-            ♻️ Reset to seed
-          </button>
           <span className="btn cursor-not-allowed opacity-60" title="Paste importer coming soon">
             ➕ Add tournament <em className="not-italic text-ink-faint">(soon)</em>
           </span>

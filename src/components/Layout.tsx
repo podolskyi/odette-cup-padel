@@ -1,5 +1,15 @@
-import { NavLink, Outlet, Link } from 'react-router-dom'
+import { useEffect } from 'react'
+import { NavLink, Outlet, Link, useLocation } from 'react-router-dom'
 import { cx } from '../lib/cx'
+
+/** Reset scroll to the top whenever the route changes (SPA navigations don't). */
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  return null
+}
 
 function Tab({ to, children }: { to: string; children: React.ReactNode }) {
   return (
@@ -23,6 +33,7 @@ function Tab({ to, children }: { to: string; children: React.ReactNode }) {
 export function Layout() {
   return (
     <div className="mx-auto flex min-h-dvh max-w-5xl flex-col px-4 pb-16 pt-4 sm:px-6">
+      <ScrollToTop />
       <header className="mb-6 flex items-center justify-between gap-3">
         <Link to="/" className="group flex items-center gap-2.5">
           <span className="grid h-11 w-11 place-items-center rounded-2xl border-2 border-ink bg-sun text-2xl shadow-hard-sm transition-transform group-hover:rotate-12">
