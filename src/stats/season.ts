@@ -18,6 +18,8 @@ export interface SeasonRow {
   tournamentWins: number // 1st-place finishes
   podiums: number // top-3 finishes
   avgFinish: number
+  /** Average finishing percentile, 0-100 (1st = 100, last = 0). Participation-independent. */
+  performance: number
   bestFinish: number
   worstFinish: number
   finishes: number[]
@@ -49,6 +51,7 @@ export function computeSeason(
         tournamentWins: 0,
         podiums: 0,
         avgFinish: 0,
+        performance: 0,
         bestFinish: Infinity,
         worstFinish: 0,
         finishes: [],
@@ -71,6 +74,9 @@ export function computeSeason(
       r.ties += s.ties
       r.games += s.games
       r.finishes.push(s.rank)
+      // Finishing percentile for this event (field-size normalized).
+      const n = standings.length
+      r.performance += n > 1 ? ((n - s.rank) / (n - 1)) * 100 : 100
       if (s.rank === 1) r.tournamentWins += 1
       if (s.rank <= 3) r.podiums += 1
       r.bestFinish = Math.min(r.bestFinish, s.rank)
@@ -86,6 +92,7 @@ export function computeSeason(
     r.avgFinish = r.finishes.length
       ? r.finishes.reduce((a, b) => a + b, 0) / r.finishes.length
       : 0
+    r.performance = r.tournaments ? r.performance / r.tournaments : 0
     if (!isFinite(r.bestFinish)) r.bestFinish = 0
   }
 

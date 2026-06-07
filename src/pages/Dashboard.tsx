@@ -1,7 +1,7 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAppStore } from '../store/useAppStore'
-import { seasonInsights } from '../stats'
+import { seasonInsights, type SeasonRow } from '../stats'
 import { Avatar } from '../components/ui/Avatar'
 import { Stat, SectionTitle, Chip, Empty } from '../components/ui/Bits'
 import { RatingChart, toSeries } from '../components/RatingChart'
@@ -13,14 +13,34 @@ export function Dashboard() {
   const tournaments = useAppStore((s) => s.tournaments)
   const aliases = useAppStore((s) => s.aliases)
 
-  const { season, ratings } = useMemo(
+  const { season, ratings, ratingsByPlayer } = useMemo(
     () => seasonInsights({ tournaments, aliases }),
     [tournaments, aliases],
+  )
+
+  const [board, setBoard] = useState<'total' | 'performance'>('total')
+
+  // Performance view: avg finishing percentile, fair regardless of events played.
+  // Only players with 2+ events are ranked; newcomers show as "provisional".
+  const perfRanked = useMemo(
+    () =>
+      season
+        .filter((r) => r.tournaments >= 2)
+        .sort((a, b) => b.performance - a.performance || b.totalPoints - a.totalPoints),
+    [season],
+  )
+  const perfProvisional = useMemo(
+    () =>
+      season
+        .filter((r) => r.tournaments < 2)
+        .sort((a, b) => b.performance - a.performance || b.totalPoints - a.totalPoints),
+    [season],
   )
 
   const totalMatches = tournaments.reduce((n, t) => n + t.matches.length, 0)
   const leader = season[0]
   const topRated = ratings.slice(0, 5)
+  const eloOf = (player: string) => Math.round(ratingsByPlayer.get(player)?.rating ?? 1000)
 
   return (
     <div className="space-y-10">
@@ -54,16 +74,40 @@ export function Dashboard() {
         </div>
       </section>
 
-      {/* Season leaderboard */}
+      {/* Season leaderboard (Total ↔ Performance) */}
       <section>
         <SectionTitle
           emoji="📊"
           title="Season Leaderboard"
-          hint="All-time points across every tournament"
+          hint={
+            board === 'total'
+              ? 'All-time points across every tournament'
+              : 'Avg finishing percentile — fair no matter how many events you played'
+          }
+          action={
+            <div className="flex overflow-hidden rounded-xl border-2 border-ink shadow-hard-sm">
+              <button
+                onClick={() => setBoard('total')}
+                className={cx('px-3 py-1.5 text-sm font-bold', board === 'total' ? 'bg-ink text-paper-100' : 'bg-paper-100')}
+              >
+                Total
+              </button>
+              <button
+                onClick={() => setBoard('performance')}
+                className={cx(
+                  'border-l-2 border-ink px-3 py-1.5 text-sm font-bold',
+                  board === 'performance' ? 'bg-ink text-paper-100' : 'bg-paper-100',
+                )}
+              >
+                Performance
+              </button>
+            </div>
+          }
         />
+
         {season.length === 0 ? (
           <Empty>No tournaments yet.</Empty>
-        ) : (
+        ) : board === 'total' ? (
           <div className="sticker overflow-x-auto">
             <table className="w-full min-w-[40rem] border-collapse text-left">
               <thead>
@@ -117,12 +161,53 @@ export function Dashboard() {
               </tbody>
             </table>
           </div>
+        ) : (
+          <div className="sticker overflow-x-auto">
+            <table className="w-full min-w-[40rem] border-collapse text-left">
+              <thead>
+                <tr className="border-b-2 border-ink bg-ink text-paper-100">
+                  <th className="w-10 py-2 pl-3 text-center text-[11px] font-bold uppercase">#</th>
+                  <th className="py-2 text-[11px] font-bold uppercase tracking-wider">Player</th>
+                  <th className="py-2 text-center text-[11px] font-bold uppercase">Perf</th>
+                  <th className="py-2 text-center text-[11px] font-bold uppercase">Events</th>
+                  <th className="py-2 text-center text-[11px] font-bold uppercase">Win%</th>
+                  <th className="py-2 pr-3 text-center text-[11px] font-bold uppercase">Elo</th>
+                </tr>
+              </thead>
+              <tbody>
+                {perfRanked.map((r, i) => (
+                  <PerfRow key={r.player} r={r} rank={i + 1} highlight={i === 0} elo={eloOf(r.player)} />
+                ))}
+                {perfProvisional.length > 0 && (
+                  <tr>
+                    <td
+                      colSpan={6}
+                      className="bg-paper-300/50 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-ink-soft"
+                    >
+                      Provisional · needs 2+ events
+                    </td>
+                  </tr>
+                )}
+                {perfProvisional.map((r) => (
+                  <PerfRow key={r.player} r={r} provisional elo={eloOf(r.player)} />
+                ))}
+              </tbody>
+            </table>
+          </div>
         )}
-        {leader && (
+
+        {board === 'total' && leader && (
           <p className="mt-2 text-sm text-ink-soft">
             👑 <span className="font-bold">{leader.player}</span> leads the season with{' '}
             {leader.totalPoints} points across {leader.tournaments}{' '}
             {leader.tournaments === 1 ? 'event' : 'events'}.
+          </p>
+        )}
+        {board === 'performance' && perfRanked[0] && (
+          <p className="mt-2 text-sm text-ink-soft">
+            🚀 <span className="font-bold">{perfRanked[0].player}</span> tops performance at{' '}
+            {round1(perfRanked[0].performance)}% avg finish across {perfRanked[0].tournaments} events —
+            volume doesn't count here.
           </p>
         )}
       </section>
@@ -196,5 +281,52 @@ export function Dashboard() {
         </div>
       </section>
     </div>
+  )
+}
+
+function PerfRow({
+  r,
+  rank,
+  highlight,
+  provisional,
+  elo,
+}: {
+  r: SeasonRow
+  rank?: number
+  highlight?: boolean
+  provisional?: boolean
+  elo: number
+}) {
+  return (
+    <tr
+      className={cx(
+        'border-b border-ink/10 last:border-0 hover:bg-paper-300/50',
+        highlight && 'bg-mint-soft',
+        provisional && 'opacity-70',
+      )}
+    >
+      <td className="py-2 pl-3 text-center font-mono text-xs font-bold">{rank ?? '—'}</td>
+      <td className="py-2">
+        <Link
+          to={`/p/${encodeURIComponent(r.player)}`}
+          className="group inline-flex items-center gap-2.5"
+        >
+          <Avatar name={r.player} size="sm" />
+          <span className="font-bold group-hover:underline">
+            {r.player}
+            {highlight && ' 🚀'}
+          </span>
+          {provisional && (
+            <span className="ml-1 rounded-full border border-ink/40 px-1.5 text-[10px] font-bold uppercase text-ink-faint">
+              new
+            </span>
+          )}
+        </Link>
+      </td>
+      <td className="py-2 text-center font-mono text-lg font-bold tabular">{round1(r.performance)}%</td>
+      <td className="py-2 text-center font-mono text-sm tabular text-ink-soft">{r.tournaments}</td>
+      <td className="py-2 text-center font-mono text-sm tabular">{pct(r.winRate)}</td>
+      <td className="py-2 pr-3 text-center font-mono text-sm tabular text-ink-soft">{elo}</td>
+    </tr>
   )
 }
