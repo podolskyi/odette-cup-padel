@@ -1,0 +1,10544 @@
+[
+  {
+    "id": "brackets-5WmY",
+    "name": "Odette Cup",
+    "nickname": "Sunday Morning Padel Classic Americano",
+    "date": "2025-01-05",
+    "format": "Americano",
+    "pointsPerMatch": 16,
+    "matches": [
+      {
+        "round": 1,
+        "court": 1,
+        "scoreA": 14,
+        "scoreB": 2,
+        "teamA": [
+          "Vova",
+          "Alex"
+        ],
+        "teamB": [
+          "Olya",
+          "Irina"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 2,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Yura",
+          "Serhii"
+        ],
+        "teamB": [
+          "Nikita",
+          "Roman"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 1,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Vova",
+          "Olya"
+        ],
+        "teamB": [
+          "Yura",
+          "Nikita"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Serhii",
+          "Roman"
+        ],
+        "teamB": [
+          "Alex",
+          "Irina"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Vova",
+          "Irina"
+        ],
+        "teamB": [
+          "Alex",
+          "Olya"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Yura",
+          "Roman"
+        ],
+        "teamB": [
+          "Serhii",
+          "Nikita"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 1,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Vova",
+          "Yura"
+        ],
+        "teamB": [
+          "Alex",
+          "Serhii"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Irina",
+          "Roman"
+        ],
+        "teamB": [
+          "Olya",
+          "Nikita"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Vova",
+          "Serhii"
+        ],
+        "teamB": [
+          "Olya",
+          "Roman"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 2,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Irina",
+          "Nikita"
+        ],
+        "teamB": [
+          "Alex",
+          "Yura"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Vova",
+          "Nikita"
+        ],
+        "teamB": [
+          "Irina",
+          "Serhii"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Alex",
+          "Roman"
+        ],
+        "teamB": [
+          "Olya",
+          "Yura"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Vova",
+          "Roman"
+        ],
+        "teamB": [
+          "Alex",
+          "Nikita"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Irina",
+          "Yura"
+        ],
+        "teamB": [
+          "Olya",
+          "Serhii"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "brackets-8oJo",
+    "name": "Odette Cup",
+    "nickname": "Wednesday Morning Padel Classic Americano",
+    "date": "2025-01-15",
+    "format": "Americano",
+    "pointsPerMatch": 16,
+    "matches": [
+      {
+        "round": 1,
+        "court": 1,
+        "scoreA": 14,
+        "scoreB": 2,
+        "teamA": [
+          "Roman",
+          "Vova"
+        ],
+        "teamB": [
+          "Ali",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 2,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Alina",
+          "Irina"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Nikita"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 1,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Roman",
+          "Ali"
+        ],
+        "teamB": [
+          "Alina",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 2,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Irina",
+          "Nikita"
+        ],
+        "teamB": [
+          "Vova",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Roman",
+          "Anzhelika"
+        ],
+        "teamB": [
+          "Vova",
+          "Ali"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 2,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Alina",
+          "Nikita"
+        ],
+        "teamB": [
+          "Irina",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Roman",
+          "Alina"
+        ],
+        "teamB": [
+          "Vova",
+          "Irina"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 2,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Anzhelika",
+          "Nikita"
+        ],
+        "teamB": [
+          "Ali",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 1,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Roman",
+          "Irina"
+        ],
+        "teamB": [
+          "Ali",
+          "Nikita"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Anzhelika",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Vova",
+          "Alina"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 1,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Roman",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Anzhelika",
+          "Irina"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Vova",
+          "Nikita"
+        ],
+        "teamB": [
+          "Ali",
+          "Alina"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 1,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Roman",
+          "Nikita"
+        ],
+        "teamB": [
+          "Vova",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 2,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Anzhelika",
+          "Alina"
+        ],
+        "teamB": [
+          "Ali",
+          "Irina"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "puffin-01953cbb",
+    "name": "Odette Cup",
+    "nickname": "OWAPT",
+    "date": "2025-02-25",
+    "format": "Americano",
+    "pointsPerMatch": 16,
+    "matches": [
+      {
+        "round": 1,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Alina",
+          "Olya"
+        ],
+        "teamB": [
+          "Tamara",
+          "Maks"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 2,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Eugene",
+          "Vova"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Irina"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Sergey",
+          "Vlad"
+        ],
+        "teamB": [
+          "Roman",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 1,
+        "scoreA": 1,
+        "scoreB": 15,
+        "teamA": [
+          "Tamara",
+          "Alina"
+        ],
+        "teamB": [
+          "Roman",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Irina",
+          "Vlad"
+        ],
+        "teamB": [
+          "Olya",
+          "Maks"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 3,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Oleksii",
+          "Eugene"
+        ],
+        "teamB": [
+          "Vova",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 1,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Roman",
+          "Tamara"
+        ],
+        "teamB": [
+          "Vova",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 2,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Maks",
+          "Eugene"
+        ],
+        "teamB": [
+          "Alina",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Olya",
+          "Irina"
+        ],
+        "teamB": [
+          "Vlad",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Vova",
+          "Roman"
+        ],
+        "teamB": [
+          "Vlad",
+          "Olya"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Sergey",
+          "Irina"
+        ],
+        "teamB": [
+          "Tamara",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 3,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Alina",
+          "Maks"
+        ],
+        "teamB": [
+          "Eugene",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 1,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Vlad",
+          "Vova"
+        ],
+        "teamB": [
+          "Eugene",
+          "Alina"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Oleksii",
+          "Maks"
+        ],
+        "teamB": [
+          "Roman",
+          "Olya"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 3,
+        "scoreA": 14,
+        "scoreB": 2,
+        "teamA": [
+          "Tamara",
+          "Sergey"
+        ],
+        "teamB": [
+          "Irina",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 1,
+        "scoreA": 16,
+        "scoreB": 0,
+        "teamA": [
+          "Eugene",
+          "Vlad"
+        ],
+        "teamB": [
+          "Irina",
+          "Tamara"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Olya",
+          "Sergey"
+        ],
+        "teamB": [
+          "Vova",
+          "Alina"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 3,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Roman",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Maks",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 1,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Irina",
+          "Eugene"
+        ],
+        "teamB": [
+          "Maks",
+          "Roman"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Alina",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Vlad",
+          "Tamara"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 3,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Vova",
+          "Olya"
+        ],
+        "teamB": [
+          "Sergey",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 1,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Maks",
+          "Irina"
+        ],
+        "teamB": [
+          "Sergey",
+          "Vova"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 2,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Tamara",
+          "Olya"
+        ],
+        "teamB": [
+          "Eugene",
+          "Roman"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Vlad",
+          "Alina"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 1,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Sergey",
+          "Maks"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Vlad"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Roman",
+          "Alina"
+        ],
+        "teamB": [
+          "Irina",
+          "Vova"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 3,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Eugene",
+          "Tamara"
+        ],
+        "teamB": [
+          "Olya",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 1,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Oleksii",
+          "Sergey"
+        ],
+        "teamB": [
+          "Olya",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 2,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Vova",
+          "Tamara"
+        ],
+        "teamB": [
+          "Maks",
+          "Vlad"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 3,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Irina",
+          "Roman"
+        ],
+        "teamB": [
+          "Alina",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Olya",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Alina",
+          "Irina"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Vlad",
+          "Roman"
+        ],
+        "teamB": [
+          "Sergey",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 3,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Maks",
+          "Vova"
+        ],
+        "teamB": [
+          "Tamara",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Vova",
+          "Vlad"
+        ],
+        "teamB": [
+          "Roman",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 2,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Oleksii",
+          "Anzhelika"
+        ],
+        "teamB": [
+          "Eugene",
+          "Maks"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 3,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Olya",
+          "Tamara"
+        ],
+        "teamB": [
+          "Irina",
+          "Alina"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "padelution-9e5364a5",
+    "name": "Odette Cup",
+    "nickname": "KLP 30.02",
+    "date": "2025-03-01",
+    "format": "Americano",
+    "pointsPerMatch": 16,
+    "matches": [
+      {
+        "round": 1,
+        "court": 1,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Eugene",
+          "Andriy"
+        ],
+        "teamB": [
+          "Vlad",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 2,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Irina",
+          "Eugene"
+        ],
+        "teamB": [
+          "Vova",
+          "Olya"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 3,
+        "scoreA": 2,
+        "scoreB": 14,
+        "teamA": [
+          "Maks",
+          "Kseniya"
+        ],
+        "teamB": [
+          "Alex",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 1,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Irina",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Alex",
+          "Kseniya"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Vova",
+          "Andriy"
+        ],
+        "teamB": [
+          "Maks",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 3,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Vlad",
+          "Olya"
+        ],
+        "teamB": [
+          "Anzhelika",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Vova",
+          "Eugene"
+        ],
+        "teamB": [
+          "Anzhelika",
+          "Olya"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 2,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Maks",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Vlad",
+          "Andriy"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 3,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Alex",
+          "Eugene"
+        ],
+        "teamB": [
+          "Sergey",
+          "Kseniya"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Maks",
+          "Irina"
+        ],
+        "teamB": [
+          "Sergey",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 2,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Vlad",
+          "Eugene"
+        ],
+        "teamB": [
+          "Alex",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 3,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Anzhelika",
+          "Andriy"
+        ],
+        "teamB": [
+          "Kseniya",
+          "Olya"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 1,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Vlad",
+          "Vova"
+        ],
+        "teamB": [
+          "Kseniya",
+          "Andriy"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 2,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Alex",
+          "Irina"
+        ],
+        "teamB": [
+          "Anzhelika",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 3,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Sergey",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Olya",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 1,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Alex",
+          "Maks"
+        ],
+        "teamB": [
+          "Olya",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Anzhelika",
+          "Vova"
+        ],
+        "teamB": [
+          "Sergey",
+          "Irina"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 3,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Kseniya",
+          "Eugene"
+        ],
+        "teamB": [
+          "Eugene",
+          "Andriy"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 1,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Anzhelika",
+          "Vlad"
+        ],
+        "teamB": [
+          "Eugene",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Sergey",
+          "Maks"
+        ],
+        "teamB": [
+          "Kseniya",
+          "Vova"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 3,
+        "scoreA": 2,
+        "scoreB": 14,
+        "teamA": [
+          "Olya",
+          "Irina"
+        ],
+        "teamB": [
+          "Andriy",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 1,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Sergey",
+          "Alex"
+        ],
+        "teamB": [
+          "Andriy",
+          "Irina"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 2,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Kseniya",
+          "Vlad"
+        ],
+        "teamB": [
+          "Olya",
+          "Maks"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Eugene",
+          "Vova"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 1,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Kseniya",
+          "Anzhelika"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Vova"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Olya",
+          "Alex"
+        ],
+        "teamB": [
+          "Eugene",
+          "Vlad"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 3,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Andriy",
+          "Maks"
+        ],
+        "teamB": [
+          "Eugene",
+          "Irina"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 1,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Olya",
+          "Sergey"
+        ],
+        "teamB": [
+          "Eugene",
+          "Maks"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Eugene",
+          "Anzhelika"
+        ],
+        "teamB": [
+          "Andriy",
+          "Alex"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 3,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Oleksii",
+          "Vlad"
+        ],
+        "teamB": [
+          "Irina",
+          "Vova"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 1,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Eugene",
+          "Kseniya"
+        ],
+        "teamB": [
+          "Irina",
+          "Vlad"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Andriy",
+          "Sergey"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 3,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Eugene",
+          "Alex"
+        ],
+        "teamB": [
+          "Vova",
+          "Maks"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 1,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Andriy",
+          "Olya"
+        ],
+        "teamB": [
+          "Vova",
+          "Alex"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Oleksii",
+          "Kseniya"
+        ],
+        "teamB": [
+          "Eugene",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 3,
+        "scoreA": 1,
+        "scoreB": 15,
+        "teamA": [
+          "Irina",
+          "Anzhelika"
+        ],
+        "teamB": [
+          "Maks",
+          "Vlad"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "puffin-01958abc",
+    "name": "Odette Cup",
+    "nickname": "Odette Cup March 2025",
+    "date": "2025-03-12",
+    "format": "Americano",
+    "pointsPerMatch": 24,
+    "matches": [
+      {
+        "round": 1,
+        "court": 1,
+        "scoreA": 6,
+        "scoreB": 18,
+        "teamA": [
+          "Sergey",
+          "Yulya"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Alex"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 2,
+        "scoreA": 16,
+        "scoreB": 8,
+        "teamA": [
+          "Serhii",
+          "Eugene"
+        ],
+        "teamB": [
+          "Roman",
+          "George"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 14,
+        "teamA": [
+          "Serhii",
+          "Sergey"
+        ],
+        "teamB": [
+          "Yulya",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 14,
+        "teamA": [
+          "George",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Roman",
+          "Alex"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 1,
+        "scoreA": 13,
+        "scoreB": 11,
+        "teamA": [
+          "George",
+          "Serhii"
+        ],
+        "teamB": [
+          "Sergey",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 2,
+        "scoreA": 14,
+        "scoreB": 10,
+        "teamA": [
+          "Alex",
+          "Yulya"
+        ],
+        "teamB": [
+          "Roman",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 1,
+        "scoreA": 11,
+        "scoreB": 13,
+        "teamA": [
+          "Alex",
+          "George"
+        ],
+        "teamB": [
+          "Serhii",
+          "Yulya"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 13,
+        "teamA": [
+          "Eugene",
+          "Sergey"
+        ],
+        "teamB": [
+          "Roman",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 1,
+        "scoreA": 13,
+        "scoreB": 11,
+        "teamA": [
+          "Eugene",
+          "Alex"
+        ],
+        "teamB": [
+          "George",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 2,
+        "scoreA": 16,
+        "scoreB": 8,
+        "teamA": [
+          "Oleksii",
+          "Serhii"
+        ],
+        "teamB": [
+          "Roman",
+          "Yulya"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 17,
+        "teamA": [
+          "Oleksii",
+          "Eugene"
+        ],
+        "teamB": [
+          "Alex",
+          "Serhii"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 2,
+        "scoreA": 9,
+        "scoreB": 15,
+        "teamA": [
+          "Yulya",
+          "George"
+        ],
+        "teamB": [
+          "Roman",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 1,
+        "scoreA": 13,
+        "scoreB": 11,
+        "teamA": [
+          "Yulya",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Eugene",
+          "George"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 2,
+        "scoreA": 14,
+        "scoreB": 10,
+        "teamA": [
+          "Sergey",
+          "Alex"
+        ],
+        "teamB": [
+          "Roman",
+          "Serhii"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 1,
+        "scoreA": 6,
+        "scoreB": 18,
+        "teamA": [
+          "Alex",
+          "Eugene"
+        ],
+        "teamB": [
+          "Serhii",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 17,
+        "teamA": [
+          "Roman",
+          "George"
+        ],
+        "teamB": [
+          "Sergey",
+          "Yulya"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "padelution-9e752512",
+    "name": "Odette Cup",
+    "nickname": "Odette Tuesday Americano",
+    "date": "2025-03-18",
+    "format": "Americano",
+    "pointsPerMatch": 24,
+    "matches": [
+      {
+        "round": 1,
+        "court": 1,
+        "scoreA": 13,
+        "scoreB": 11,
+        "teamA": [
+          "Serhii",
+          "William"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Vova"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 2,
+        "scoreA": 17,
+        "scoreB": 7,
+        "teamA": [
+          "Roman",
+          "Alex"
+        ],
+        "teamB": [
+          "Irina",
+          "Maks"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 1,
+        "scoreA": 16,
+        "scoreB": 8,
+        "teamA": [
+          "Serhii",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Roman",
+          "Maks"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 2,
+        "scoreA": 9,
+        "scoreB": 15,
+        "teamA": [
+          "Alex",
+          "Irina"
+        ],
+        "teamB": [
+          "Vova",
+          "William"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 1,
+        "scoreA": 6,
+        "scoreB": 18,
+        "teamA": [
+          "Serhii",
+          "Roman"
+        ],
+        "teamB": [
+          "Alex",
+          "William"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 2,
+        "scoreA": 13,
+        "scoreB": 11,
+        "teamA": [
+          "Irina",
+          "Vova"
+        ],
+        "teamB": [
+          "Maks",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 1,
+        "scoreA": 14,
+        "scoreB": 10,
+        "teamA": [
+          "Serhii",
+          "Alex"
+        ],
+        "teamB": [
+          "Irina",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 14,
+        "teamA": [
+          "Vova",
+          "Maks"
+        ],
+        "teamB": [
+          "William",
+          "Roman"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 1,
+        "scoreA": 16,
+        "scoreB": 8,
+        "teamA": [
+          "Serhii",
+          "Irina"
+        ],
+        "teamB": [
+          "Vova",
+          "Roman"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 2,
+        "scoreA": 5,
+        "scoreB": 19,
+        "teamA": [
+          "Maks",
+          "William"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Alex"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 1,
+        "scoreA": 12,
+        "scoreB": 12,
+        "teamA": [
+          "Serhii",
+          "Vova"
+        ],
+        "teamB": [
+          "Maks",
+          "Alex"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 13,
+        "teamA": [
+          "William",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Roman",
+          "Irina"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 14,
+        "teamA": [
+          "Serhii",
+          "Maks"
+        ],
+        "teamB": [
+          "William",
+          "Irina"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 17,
+        "teamA": [
+          "Oleksii",
+          "Roman"
+        ],
+        "teamB": [
+          "Alex",
+          "Vova"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "brackets-9k4Y",
+    "name": "Odette Cup",
+    "nickname": "Odette summercup championship americana",
+    "date": "2025-07-28",
+    "format": "Americano",
+    "pointsPerMatch": 16,
+    "matches": [
+      {
+        "round": 1,
+        "court": 1,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Vova",
+          "Yulya"
+        ],
+        "teamB": [
+          "William",
+          "Irina"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Roman",
+          "Eugene"
+        ],
+        "teamB": [
+          "Irina",
+          "Serhii"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 3,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Oleksii",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Alina",
+          "Alex"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Roman",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Serhii",
+          "Alina"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 2,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Vova",
+          "Eugene"
+        ],
+        "teamB": [
+          "Irina",
+          "Irina"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 3,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Oleksii",
+          "Alex"
+        ],
+        "teamB": [
+          "Yulya",
+          "William"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 1,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Yulya",
+          "Irina"
+        ],
+        "teamB": [
+          "William",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 2,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Roman",
+          "Alex"
+        ],
+        "teamB": [
+          "Serhii",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Vova",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Irina",
+          "Alina"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Vova",
+          "Alex"
+        ],
+        "teamB": [
+          "Irina",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 2,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Roman",
+          "Serhii"
+        ],
+        "teamB": [
+          "William",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 3,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Yulya",
+          "Alina"
+        ],
+        "teamB": [
+          "Eugene",
+          "Irina"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 1,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Yulya",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Irina",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 2,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Vova",
+          "Serhii"
+        ],
+        "teamB": [
+          "Irina",
+          "Roman"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Eugene",
+          "Alina"
+        ],
+        "teamB": [
+          "William",
+          "Alex"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 1,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Irina",
+          "Alex"
+        ],
+        "teamB": [
+          "William",
+          "Serhii"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Eugene",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Alina"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 3,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Vova",
+          "Irina"
+        ],
+        "teamB": [
+          "Yulya",
+          "Roman"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 1,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Vova",
+          "William"
+        ],
+        "teamB": [
+          "Roman",
+          "Irina"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Oleksii",
+          "Alina"
+        ],
+        "teamB": [
+          "Yulya",
+          "Irina"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Eugene",
+          "Serhii"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Alex"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 1,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "William",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Irina",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Vova",
+          "Irina"
+        ],
+        "teamB": [
+          "Roman",
+          "Alina"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 3,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Serhii",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Yulya",
+          "Alex"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Serhii",
+          "Alex"
+        ],
+        "teamB": [
+          "Yulya",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "William",
+          "Irina"
+        ],
+        "teamB": [
+          "Irina",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 3,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Vova",
+          "Alina"
+        ],
+        "teamB": [
+          "Roman",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Vova",
+          "Oleksii"
+        ],
+        "teamB": [
+          "William",
+          "Roman"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 2,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Irina",
+          "Alina"
+        ],
+        "teamB": [
+          "Irina",
+          "Alex"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 3,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Yulya",
+          "Serhii"
+        ],
+        "teamB": [
+          "Eugene",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "William",
+          "Alina"
+        ],
+        "teamB": [
+          "Irina",
+          "Serhii"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Vova",
+          "Roman"
+        ],
+        "teamB": [
+          "Irina",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 3,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Eugene",
+          "Alex"
+        ],
+        "teamB": [
+          "Yulya",
+          "Miroslav"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "brackets-PPxA",
+    "name": "Odette Cup",
+    "nickname": "Tuesday Morning Padel Classic Americano",
+    "date": "2025-08-12",
+    "format": "Americano",
+    "pointsPerMatch": 16,
+    "matches": [
+      {
+        "round": 1,
+        "court": 1,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Vova",
+          "Denis"
+        ],
+        "teamB": [
+          "Alex",
+          "Yulya"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 2,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Oleksii",
+          "Vova Big"
+        ],
+        "teamB": [
+          "Alex Double",
+          "Roman"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 3,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Irina",
+          "lllya"
+        ],
+        "teamB": [
+          "Elise",
+          "Alina"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Oleksii",
+          "lllya"
+        ],
+        "teamB": [
+          "Roman",
+          "Elise"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 2,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Vova",
+          "Vova Big"
+        ],
+        "teamB": [
+          "Yulya",
+          "Alex Double"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 3,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Irina",
+          "Alina"
+        ],
+        "teamB": [
+          "Denis",
+          "Alex"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 1,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Denis",
+          "Alex Double"
+        ],
+        "teamB": [
+          "Alex",
+          "Vova Big"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 2,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Oleksii",
+          "Alina"
+        ],
+        "teamB": [
+          "Roman",
+          "Irina"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 3,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Vova",
+          "lllya"
+        ],
+        "teamB": [
+          "Yulya",
+          "Elise"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Vova",
+          "Alina"
+        ],
+        "teamB": [
+          "Yulya",
+          "Irina"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 2,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Oleksii",
+          "Roman"
+        ],
+        "teamB": [
+          "Alex",
+          "lllya"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 3,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Denis",
+          "Elise"
+        ],
+        "teamB": [
+          "Vova Big",
+          "Alex Double"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 1,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Denis",
+          "Irina"
+        ],
+        "teamB": [
+          "Alex Double",
+          "lllya"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 2,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Vova",
+          "Roman"
+        ],
+        "teamB": [
+          "Yulya",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Vova Big",
+          "Elise"
+        ],
+        "teamB": [
+          "Alex",
+          "Alina"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 1,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Alex Double",
+          "Alina"
+        ],
+        "teamB": [
+          "Alex",
+          "Roman"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Vova Big",
+          "Irina"
+        ],
+        "teamB": [
+          "lllya",
+          "Elise"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 3,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Vova",
+          "Yulya"
+        ],
+        "teamB": [
+          "Denis",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Vova",
+          "Alex"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Alex Double"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Irina",
+          "Elise"
+        ],
+        "teamB": [
+          "Denis",
+          "Yulya"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 3,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Vova Big",
+          "Roman"
+        ],
+        "teamB": [
+          "lllya",
+          "Alina"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 1,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Alex",
+          "Irina"
+        ],
+        "teamB": [
+          "Yulya",
+          "Vova Big"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Vova",
+          "Alex Double"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Elise"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 3,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Roman",
+          "lllya"
+        ],
+        "teamB": [
+          "Denis",
+          "Alina"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 1,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Roman",
+          "Alina"
+        ],
+        "teamB": [
+          "Denis",
+          "Vova Big"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 2,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Alex",
+          "Alex Double"
+        ],
+        "teamB": [
+          "Yulya",
+          "lllya"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 3,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Vova",
+          "Elise"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Irina"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 1,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Vova",
+          "Irina"
+        ],
+        "teamB": [
+          "Alex",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Alex Double",
+          "Elise"
+        ],
+        "teamB": [
+          "Yulya",
+          "Alina"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 3,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Denis",
+          "Roman"
+        ],
+        "teamB": [
+          "Vova Big",
+          "lllya"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Alex",
+          "Elise"
+        ],
+        "teamB": [
+          "Yulya",
+          "Roman"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 2,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Vova",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Alex Double",
+          "Irina"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 3,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Vova Big",
+          "Alina"
+        ],
+        "teamB": [
+          "Denis",
+          "lllya"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "puffin-0198c016",
+    "name": "Odette Cup",
+    "nickname": "First  Mexicano odette cup  19.08.2025",
+    "date": "2025-08-19",
+    "format": "Mexicano",
+    "pointsPerMatch": 16,
+    "matches": [
+      {
+        "round": 1,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Alina",
+          "lllya"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Yulya"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Kir",
+          "Roman"
+        ],
+        "teamB": [
+          "Denis",
+          "Serhii"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Vova Big",
+          "Irina"
+        ],
+        "teamB": [
+          "Vova",
+          "Alex Double"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 1,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Kir",
+          "Alex Double"
+        ],
+        "teamB": [
+          "Vova",
+          "Roman"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Yulya",
+          "Alina"
+        ],
+        "teamB": [
+          "Oleksii",
+          "lllya"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 3,
+        "scoreA": 14,
+        "scoreB": 2,
+        "teamA": [
+          "Vova Big",
+          "Serhii"
+        ],
+        "teamB": [
+          "Irina",
+          "Denis"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Roman",
+          "Serhii"
+        ],
+        "teamB": [
+          "Vova",
+          "Vova Big"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Yulya",
+          "Alex Double"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Kir"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 3,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "lllya",
+          "Denis"
+        ],
+        "teamB": [
+          "Alina",
+          "Irina"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Roman",
+          "Serhii"
+        ],
+        "teamB": [
+          "Vova",
+          "Vova Big"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 2,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Oleksii",
+          "lllya"
+        ],
+        "teamB": [
+          "Kir",
+          "Yulya"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 3,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Alex Double",
+          "Irina"
+        ],
+        "teamB": [
+          "Alina",
+          "Denis"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 1,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Roman",
+          "Vova"
+        ],
+        "teamB": [
+          "Serhii",
+          "Kir"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Yulya",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Alex Double",
+          "Vova Big"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 3,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "lllya",
+          "Denis"
+        ],
+        "teamB": [
+          "Irina",
+          "Alina"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 1,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Roman",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Vova",
+          "Yulya"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "lllya",
+          "Kir"
+        ],
+        "teamB": [
+          "Alex Double",
+          "Serhii"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Vova Big",
+          "Alina"
+        ],
+        "teamB": [
+          "Denis",
+          "Irina"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 1,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Roman",
+          "Yulya"
+        ],
+        "teamB": [
+          "Vova",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Alex Double",
+          "Vova Big"
+        ],
+        "teamB": [
+          "Serhii",
+          "lllya"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 3,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Kir",
+          "Alina"
+        ],
+        "teamB": [
+          "Denis",
+          "Irina"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 1,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Roman",
+          "Alex Double"
+        ],
+        "teamB": [
+          "Yulya",
+          "Vova"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Oleksii",
+          "lllya"
+        ],
+        "teamB": [
+          "Serhii",
+          "Kir"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 3,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Vova Big",
+          "Irina"
+        ],
+        "teamB": [
+          "Alina",
+          "Denis"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 1,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Roman",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Yulya",
+          "Vova"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 2,
+        "scoreA": 14,
+        "scoreB": 2,
+        "teamA": [
+          "Vova Big",
+          "Serhii"
+        ],
+        "teamB": [
+          "lllya",
+          "Alex Double"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 3,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Kir",
+          "Denis"
+        ],
+        "teamB": [
+          "Irina",
+          "Alina"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Roman",
+          "Serhii"
+        ],
+        "teamB": [
+          "Vova Big",
+          "Yulya"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 2,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Oleksii",
+          "lllya"
+        ],
+        "teamB": [
+          "Vova",
+          "Kir"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 3,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Alex Double",
+          "Alina"
+        ],
+        "teamB": [
+          "Denis",
+          "Irina"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "brackets-nnwR",
+    "name": "Odette Cup",
+    "nickname": "Odette americana championship 26.08.25",
+    "date": "2025-08-26",
+    "format": "Americano",
+    "pointsPerMatch": 16,
+    "matches": [
+      {
+        "round": 1,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Vova",
+          "Piter Pen"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Irina"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Vova Big",
+          "Serhii"
+        ],
+        "teamB": [
+          "Yulya",
+          "Kir"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 3,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Taras",
+          "Artdiler"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Alex Double"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 1,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Vova Big",
+          "Artdiler"
+        ],
+        "teamB": [
+          "Kir",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 2,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Vova",
+          "Serhii"
+        ],
+        "teamB": [
+          "Irina",
+          "Yulya"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 3,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Taras",
+          "Alex Double"
+        ],
+        "teamB": [
+          "Piter Pen",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Piter Pen",
+          "Yulya"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Serhii"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Vova Big",
+          "Alex Double"
+        ],
+        "teamB": [
+          "Kir",
+          "Taras"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 3,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Vova",
+          "Artdiler"
+        ],
+        "teamB": [
+          "Irina",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 1,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Vova",
+          "Alex Double"
+        ],
+        "teamB": [
+          "Irina",
+          "Taras"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Vova Big",
+          "Kir"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Artdiler"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 3,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Piter Pen",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Serhii",
+          "Yulya"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Piter Pen",
+          "Taras"
+        ],
+        "teamB": [
+          "Yulya",
+          "Artdiler"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Vova",
+          "Kir"
+        ],
+        "teamB": [
+          "Irina",
+          "Vova Big"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Serhii",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Alex Double"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 1,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Yulya",
+          "Alex Double"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Kir"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 2,
+        "scoreA": 15,
+        "scoreB": 1,
+        "teamA": [
+          "Serhii",
+          "Taras"
+        ],
+        "teamB": [
+          "Artdiler",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 3,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Vova",
+          "Irina"
+        ],
+        "teamB": [
+          "Piter Pen",
+          "Vova Big"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 1,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Vova",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Vova Big",
+          "Yulya"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 2,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Taras",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Piter Pen",
+          "Irina"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 3,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Serhii",
+          "Kir"
+        ],
+        "teamB": [
+          "Artdiler",
+          "Alex Double"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Oleksii",
+          "Taras"
+        ],
+        "teamB": [
+          "Irina",
+          "Serhii"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Vova",
+          "Yulya"
+        ],
+        "teamB": [
+          "Vova Big",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 3,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Kir",
+          "Artdiler"
+        ],
+        "teamB": [
+          "Piter Pen",
+          "Alex Double"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Kir",
+          "Alex Double"
+        ],
+        "teamB": [
+          "Piter Pen",
+          "Serhii"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Oleksii",
+          "Yulya"
+        ],
+        "teamB": [
+          "Irina",
+          "Artdiler"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 3,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Vova",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Vova Big",
+          "Taras"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Vova",
+          "Taras"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Vova Big"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 2,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Yulya",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Irina",
+          "Alex Double"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 3,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Piter Pen",
+          "Kir"
+        ],
+        "teamB": [
+          "Serhii",
+          "Artdiler"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 1,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Oleksii",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Irina",
+          "Kir"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Vova",
+          "Vova Big"
+        ],
+        "teamB": [
+          "Yulya",
+          "Taras"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 3,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Serhii",
+          "Alex Double"
+        ],
+        "teamB": [
+          "Piter Pen",
+          "Artdiler"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "brackets-BBR8x",
+    "name": "Odette Cup",
+    "nickname": "Odette october Americana Rodri 14.10.2025",
+    "date": "2025-10-13",
+    "format": "Americano",
+    "pointsPerMatch": 16,
+    "matches": [
+      {
+        "round": 1,
+        "court": 1,
+        "scoreA": 15,
+        "scoreB": 1,
+        "teamA": [
+          "Vova",
+          "Vernik"
+        ],
+        "teamB": [
+          "Alina",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 2,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Vova Big",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Snezhana",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 3,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Sergey",
+          "Anton"
+        ],
+        "teamB": [
+          "Irina Perminova",
+          "William"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Vova Big",
+          "Anton"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Irina Perminova"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Vova",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Anzhelika",
+          "Snezhana"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Sergey",
+          "William"
+        ],
+        "teamB": [
+          "Vernik",
+          "Alina"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 1,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Vernik",
+          "Snezhana"
+        ],
+        "teamB": [
+          "Alina",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 2,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Vova Big",
+          "William"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Vova",
+          "Anton"
+        ],
+        "teamB": [
+          "Anzhelika",
+          "Irina Perminova"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 1,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Vova",
+          "William"
+        ],
+        "teamB": [
+          "Anzhelika",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 2,
+        "scoreA": 14,
+        "scoreB": 2,
+        "teamA": [
+          "Vova Big",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Alina",
+          "Anton"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 3,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Vernik",
+          "Irina Perminova"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Snezhana"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 1,
+        "scoreA": 14,
+        "scoreB": 2,
+        "teamA": [
+          "Vernik",
+          "Sergey"
+        ],
+        "teamB": [
+          "Snezhana",
+          "Anton"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Vova",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Anzhelika",
+          "Vova Big"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 3,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Miroslav",
+          "Irina Perminova"
+        ],
+        "teamB": [
+          "Alina",
+          "William"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 1,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Snezhana",
+          "William"
+        ],
+        "teamB": [
+          "Alina",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 2,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Miroslav",
+          "Sergey"
+        ],
+        "teamB": [
+          "Anton",
+          "Irina Perminova"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 3,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Vova",
+          "Anzhelika"
+        ],
+        "teamB": [
+          "Vernik",
+          "Vova Big"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 1,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Vova",
+          "Alina"
+        ],
+        "teamB": [
+          "Vova Big",
+          "Snezhana"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Sergey",
+          "Irina Perminova"
+        ],
+        "teamB": [
+          "Vernik",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Miroslav",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Anton",
+          "William"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 1,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Alina",
+          "Sergey"
+        ],
+        "teamB": [
+          "Anzhelika",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Vova",
+          "Snezhana"
+        ],
+        "teamB": [
+          "Vova Big",
+          "Irina Perminova"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Oleksii",
+          "Anton"
+        ],
+        "teamB": [
+          "Vernik",
+          "William"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Oleksii",
+          "William"
+        ],
+        "teamB": [
+          "Vernik",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 2,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Alina",
+          "Snezhana"
+        ],
+        "teamB": [
+          "Anzhelika",
+          "Anton"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Vova",
+          "Irina Perminova"
+        ],
+        "teamB": [
+          "Vova Big",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 1,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Vova",
+          "Sergey"
+        ],
+        "teamB": [
+          "Alina",
+          "Vova Big"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Snezhana",
+          "Irina Perminova"
+        ],
+        "teamB": [
+          "Anzhelika",
+          "William"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 3,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Vernik",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Anton"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Alina",
+          "Irina Perminova"
+        ],
+        "teamB": [
+          "Anzhelika",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Vova",
+          "Vova Big"
+        ],
+        "teamB": [
+          "Snezhana",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 3,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Miroslav",
+          "William"
+        ],
+        "teamB": [
+          "Vernik",
+          "Anton"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "americano-314",
+    "name": "Odette Cup",
+    "nickname": "Odette Cup  19th Oct",
+    "date": "2025-10-19",
+    "format": "Americano",
+    "pointsPerMatch": 16,
+    "matches": [
+      {
+        "round": 1,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Anton",
+          "Kir"
+        ],
+        "teamB": [
+          "Alex Peter Pen",
+          "Vova"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 2,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Sergey",
+          "Double Alex"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Anastasia"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 3,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Irina",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Tanya",
+          "William"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 1,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Tanya",
+          "Double Alex"
+        ],
+        "teamB": [
+          "Anton",
+          "William"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Oleksii",
+          "Alex Peter Pen"
+        ],
+        "teamB": [
+          "Irina",
+          "Kir"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 3,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Anastasia",
+          "Vova"
+        ],
+        "teamB": [
+          "Sergey",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Sergey",
+          "Alex Peter Pen"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Vova"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Miroslav",
+          "William"
+        ],
+        "teamB": [
+          "Tanya",
+          "Anton"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 3,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Kir",
+          "Double Alex"
+        ],
+        "teamB": [
+          "Irina",
+          "Anastasia"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 1,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Irina",
+          "Anton"
+        ],
+        "teamB": [
+          "Kir",
+          "Anastasia"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 2,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Vova",
+          "Double Alex"
+        ],
+        "teamB": [
+          "Oleksii",
+          "William"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Sergey",
+          "Tanya"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Alex Peter Pen"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Miroslav",
+          "Double Alex"
+        ],
+        "teamB": [
+          "Irina",
+          "Alex Peter Pen"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Tanya",
+          "Kir"
+        ],
+        "teamB": [
+          "Sergey",
+          "Anton"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 3,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Oleksii",
+          "Anastasia"
+        ],
+        "teamB": [
+          "Vova",
+          "William"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 1,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Kir",
+          "Vova"
+        ],
+        "teamB": [
+          "Tanya",
+          "Anastasia"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Alex Peter Pen",
+          "William"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Irina"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 3,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Anton",
+          "Double Alex"
+        ],
+        "teamB": [
+          "Sergey",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 1,
+        "scoreA": 1,
+        "scoreB": 15,
+        "teamA": [
+          "Sergey",
+          "Irina"
+        ],
+        "teamB": [
+          "Anton",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 2,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Anastasia",
+          "Double Alex"
+        ],
+        "teamB": [
+          "Tanya",
+          "Alex Peter Pen"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 3,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Miroslav",
+          "Vova"
+        ],
+        "teamB": [
+          "Kir",
+          "William"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "William",
+          "Double Alex"
+        ],
+        "teamB": [
+          "Sergey",
+          "Kir"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 2,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Miroslav",
+          "Anton"
+        ],
+        "teamB": [
+          "Irina",
+          "Vova"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 3,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Tanya",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Anastasia",
+          "Alex Peter Pen"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 1,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Anton",
+          "Anastasia"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Kir",
+          "Alex Peter Pen"
+        ],
+        "teamB": [
+          "Sergey",
+          "William"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Irina",
+          "Double Alex"
+        ],
+        "teamB": [
+          "Tanya",
+          "Vova"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 1,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Sergey",
+          "Vova"
+        ],
+        "teamB": [
+          "Irina",
+          "Tanya"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 2,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Oleksii",
+          "Double Alex"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Kir"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 3,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Anastasia",
+          "William"
+        ],
+        "teamB": [
+          "Anton",
+          "Alex Peter Pen"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 1,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Alex Peter Pen",
+          "Double Alex"
+        ],
+        "teamB": [
+          "Anton",
+          "Vova"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Irina",
+          "William"
+        ],
+        "teamB": [
+          "Sergey",
+          "Anastasia"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 3,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Miroslav",
+          "Tanya"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Kir"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "americano-329",
+    "name": "Odette Cup",
+    "nickname": "ODETTE CUP",
+    "date": "2025-11-01",
+    "format": "Americano",
+    "pointsPerMatch": 16,
+    "matches": [
+      {
+        "round": 1,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Serhii",
+          "Anton"
+        ],
+        "teamB": [
+          "Irina",
+          "William"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Vernik",
+          "Vova"
+        ],
+        "teamB": [
+          "Roman",
+          "Billy"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Piter Pen",
+          "Anzhelika"
+        ],
+        "teamB": [
+          "Eugene",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 4,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Eugene M",
+          "Sergey"
+        ],
+        "teamB": [
+          "Andrew",
+          "Kir"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Serhii",
+          "Vova"
+        ],
+        "teamB": [
+          "Piter Pen",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 2,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Roman",
+          "Anzhelika"
+        ],
+        "teamB": [
+          "Eugene M",
+          "Irina"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Vernik",
+          "Kir"
+        ],
+        "teamB": [
+          "Oleksii",
+          "William"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 4,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Andrew",
+          "Anton"
+        ],
+        "teamB": [
+          "Billy",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 1,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Serhii",
+          "Anzhelika"
+        ],
+        "teamB": [
+          "Kir",
+          "Anton"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 2,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Vernik",
+          "Eugene M"
+        ],
+        "teamB": [
+          "Andrew",
+          "Piter Pen"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 3,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Roman",
+          "Eugene"
+        ],
+        "teamB": [
+          "William",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 4,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Billy",
+          "Vova"
+        ],
+        "teamB": [
+          "Irina",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Vernik",
+          "Serhii"
+        ],
+        "teamB": [
+          "Eugene",
+          "Vova"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 2,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Roman",
+          "Andrew"
+        ],
+        "teamB": [
+          "Billy",
+          "Kir"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 3,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Eugene M",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Sergey",
+          "Anton"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 4,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Irina",
+          "Anzhelika"
+        ],
+        "teamB": [
+          "Piter Pen",
+          "William"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Roman",
+          "Serhii"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Eugene M",
+          "Billy"
+        ],
+        "teamB": [
+          "Irina",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 3,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Andrew",
+          "William"
+        ],
+        "teamB": [
+          "Anton",
+          "Vova"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 4,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Vernik",
+          "Piter Pen"
+        ],
+        "teamB": [
+          "Kir",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 1,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Eugene M",
+          "Serhii"
+        ],
+        "teamB": [
+          "Vernik",
+          "William"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 2,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Andrew",
+          "Irina"
+        ],
+        "teamB": [
+          "Piter Pen",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 3,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Billy",
+          "Sergey"
+        ],
+        "teamB": [
+          "Vova",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 4,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Roman",
+          "Kir"
+        ],
+        "teamB": [
+          "Eugene",
+          "Anton"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Andrew",
+          "Serhii"
+        ],
+        "teamB": [
+          "Roman",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 2,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Billy",
+          "Piter Pen"
+        ],
+        "teamB": [
+          "Kir",
+          "William"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 3,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Irina",
+          "Anton"
+        ],
+        "teamB": [
+          "Vernik",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 4,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Eugene M",
+          "Eugene"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Vova"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Billy",
+          "Serhii"
+        ],
+        "teamB": [
+          "Eugene M",
+          "Anton"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 2,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Irina",
+          "Kir"
+        ],
+        "teamB": [
+          "Eugene",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 3,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Piter Pen",
+          "Vova"
+        ],
+        "teamB": [
+          "Vernik",
+          "Roman"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 4,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Andrew",
+          "Oleksii"
+        ],
+        "teamB": [
+          "William",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Irina",
+          "Serhii"
+        ],
+        "teamB": [
+          "Andrew",
+          "Vova"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Piter Pen",
+          "Eugene"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Anton"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 3,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Kir",
+          "Anzhelika"
+        ],
+        "teamB": [
+          "Roman",
+          "Eugene M"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 4,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Billy",
+          "William"
+        ],
+        "teamB": [
+          "Vernik",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 1,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Piter Pen",
+          "Serhii"
+        ],
+        "teamB": [
+          "Billy",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 2,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Kir",
+          "Oleksii"
+        ],
+        "teamB": [
+          "William",
+          "Vova"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 3,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Vernik",
+          "Eugene"
+        ],
+        "teamB": [
+          "Eugene M",
+          "Andrew"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 4,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Irina",
+          "Sergey"
+        ],
+        "teamB": [
+          "Roman",
+          "Anton"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 1,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Kir",
+          "Serhii"
+        ],
+        "teamB": [
+          "Vernik",
+          "Irina"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 2,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Eugene",
+          "William"
+        ],
+        "teamB": [
+          "Sergey",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 3,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Roman",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Andrew",
+          "Billy"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 4,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Piter Pen",
+          "Anton"
+        ],
+        "teamB": [
+          "Eugene M",
+          "Vova"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Eugene",
+          "Serhii"
+        ],
+        "teamB": [
+          "Roman",
+          "Piter Pen"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 2,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Oleksii",
+          "Sergey"
+        ],
+        "teamB": [
+          "Vernik",
+          "Anton"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 3,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Eugene M",
+          "William"
+        ],
+        "teamB": [
+          "Billy",
+          "Irina"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 4,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Kir",
+          "Vova"
+        ],
+        "teamB": [
+          "Andrew",
+          "Anzhelika"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "americano-3211",
+    "name": "Odette Cup",
+    "nickname": "Odette",
+    "date": "2025-11-10",
+    "format": "Americano",
+    "pointsPerMatch": 16,
+    "matches": [
+      {
+        "round": 1,
+        "court": 1,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Andrew",
+          "William"
+        ],
+        "teamB": [
+          "Nastya",
+          "Katie G"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 2,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Ostap",
+          "Anton"
+        ],
+        "teamB": [
+          "Snezhana",
+          "Nastya N"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Marila",
+          "Kristian"
+        ],
+        "teamB": [
+          "Vova",
+          "Max"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 4,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Miroslav",
+          "Veronika"
+        ],
+        "teamB": [
+          "Eugene",
+          "Lera"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 1,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Andrew",
+          "Anton"
+        ],
+        "teamB": [
+          "Marila",
+          "Veronika"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Snezhana",
+          "Kristian"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Nastya"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 3,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Ostap",
+          "Lera"
+        ],
+        "teamB": [
+          "Max",
+          "Katie G"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 4,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Eugene",
+          "William"
+        ],
+        "teamB": [
+          "Nastya N",
+          "Vova"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 1,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Andrew",
+          "Kristian"
+        ],
+        "teamB": [
+          "Lera",
+          "William"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Ostap",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Eugene",
+          "Marila"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 3,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Snezhana",
+          "Vova"
+        ],
+        "teamB": [
+          "Katie G",
+          "Veronika"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 4,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Nastya N",
+          "Anton"
+        ],
+        "teamB": [
+          "Nastya",
+          "Max"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 1,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Ostap",
+          "Andrew"
+        ],
+        "teamB": [
+          "Vova",
+          "Anton"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 2,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Snezhana",
+          "Eugene"
+        ],
+        "teamB": [
+          "Nastya N",
+          "Lera"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 3,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Miroslav",
+          "Max"
+        ],
+        "teamB": [
+          "Veronika",
+          "William"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 4,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Nastya",
+          "Kristian"
+        ],
+        "teamB": [
+          "Marila",
+          "Katie G"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Snezhana",
+          "Andrew"
+        ],
+        "teamB": [
+          "Max",
+          "Kristian"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Miroslav",
+          "Nastya N"
+        ],
+        "teamB": [
+          "Nastya",
+          "Vova"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 3,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Eugene",
+          "Katie G"
+        ],
+        "teamB": [
+          "William",
+          "Anton"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 4,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Ostap",
+          "Marila"
+        ],
+        "teamB": [
+          "Lera",
+          "Veronika"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 1,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Miroslav",
+          "Andrew"
+        ],
+        "teamB": [
+          "Ostap",
+          "Katie G"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Eugene",
+          "Nastya"
+        ],
+        "teamB": [
+          "Marila",
+          "Max"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Nastya N",
+          "Veronika"
+        ],
+        "teamB": [
+          "Anton",
+          "Kristian"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 4,
+        "scoreA": 1,
+        "scoreB": 15,
+        "teamA": [
+          "Snezhana",
+          "Lera"
+        ],
+        "teamB": [
+          "Vova",
+          "William"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Eugene",
+          "Andrew"
+        ],
+        "teamB": [
+          "Snezhana",
+          "Veronika"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Nastya N",
+          "Marila"
+        ],
+        "teamB": [
+          "Lera",
+          "Katie G"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 3,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Nastya",
+          "William"
+        ],
+        "teamB": [
+          "Ostap",
+          "Kristian"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 4,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Miroslav",
+          "Vova"
+        ],
+        "teamB": [
+          "Max",
+          "Anton"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 1,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Nastya N",
+          "Andrew"
+        ],
+        "teamB": [
+          "Miroslav",
+          "William"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Nastya",
+          "Lera"
+        ],
+        "teamB": [
+          "Vova",
+          "Veronika"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 3,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Marila",
+          "Anton"
+        ],
+        "teamB": [
+          "Ostap",
+          "Snezhana"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 4,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Eugene",
+          "Max"
+        ],
+        "teamB": [
+          "Katie G",
+          "Kristian"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 1,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Nastya",
+          "Andrew"
+        ],
+        "teamB": [
+          "Eugene",
+          "Anton"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Marila",
+          "Vova"
+        ],
+        "teamB": [
+          "Max",
+          "William"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 3,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Lera",
+          "Kristian"
+        ],
+        "teamB": [
+          "Snezhana",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 4,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Nastya N",
+          "Katie G"
+        ],
+        "teamB": [
+          "Ostap",
+          "Veronika"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 1,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Marila",
+          "Andrew"
+        ],
+        "teamB": [
+          "Nastya N",
+          "Kristian"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Lera",
+          "Max"
+        ],
+        "teamB": [
+          "Katie G",
+          "Anton"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 3,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Ostap",
+          "Vova"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 4,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Nastya",
+          "Veronika"
+        ],
+        "teamB": [
+          "Snezhana",
+          "William"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 1,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Lera",
+          "Andrew"
+        ],
+        "teamB": [
+          "Ostap",
+          "Nastya"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 2,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Vova",
+          "Katie G"
+        ],
+        "teamB": [
+          "Veronika",
+          "Kristian"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 3,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Snezhana",
+          "Max"
+        ],
+        "teamB": [
+          "Eugene",
+          "Nastya N"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 4,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Marila",
+          "William"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Anton"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "americano-358",
+    "name": "Odette Cup",
+    "nickname": "ODETTE CUP 16th",
+    "date": "2025-11-16",
+    "format": "Americano",
+    "pointsPerMatch": 16,
+    "matches": [
+      {
+        "round": 1,
+        "court": 1,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Anzhelika",
+          "Mila"
+        ],
+        "teamB": [
+          "Andrew",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Serhii",
+          "Alex"
+        ],
+        "teamB": [
+          "Yulya",
+          "Anya"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 3,
+        "scoreA": 1,
+        "scoreB": 15,
+        "teamA": [
+          "Ali",
+          "Alina"
+        ],
+        "teamB": [
+          "Alex Double",
+          "William"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 4,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Denis",
+          "Tanya"
+        ],
+        "teamB": [
+          "Vova",
+          "Piter Pen"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Andrew",
+          "William"
+        ],
+        "teamB": [
+          "Alex Double",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 2,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Alex",
+          "Piter Pen"
+        ],
+        "teamB": [
+          "Serhii",
+          "Vova"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 3,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Anya",
+          "Tanya"
+        ],
+        "teamB": [
+          "Yulya",
+          "Denis"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 4,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Alina",
+          "Mila"
+        ],
+        "teamB": [
+          "Ali",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 1,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "William",
+          "Vova"
+        ],
+        "teamB": [
+          "Serhii",
+          "Alex Double"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Andrew",
+          "Denis"
+        ],
+        "teamB": [
+          "Yulya",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Alex",
+          "Ali"
+        ],
+        "teamB": [
+          "Piter Pen",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 4,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Anya",
+          "Alina"
+        ],
+        "teamB": [
+          "Tanya",
+          "Mila"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Alex Double",
+          "Denis"
+        ],
+        "teamB": [
+          "Andrew",
+          "Serhii"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "William",
+          "Anzhelika"
+        ],
+        "teamB": [
+          "Vova",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Yulya",
+          "Piter Pen"
+        ],
+        "teamB": [
+          "Alex",
+          "Ali"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 4,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Alina",
+          "Tanya"
+        ],
+        "teamB": [
+          "Anya",
+          "Mila"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Andrew",
+          "Denis"
+        ],
+        "teamB": [
+          "Serhii",
+          "Alex Double"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Mila",
+          "Eugene"
+        ],
+        "teamB": [
+          "William",
+          "Vova"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 3,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Alex",
+          "Ali"
+        ],
+        "teamB": [
+          "Piter Pen",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 4,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Alina",
+          "Tanya"
+        ],
+        "teamB": [
+          "Yulya",
+          "Anya"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 1,
+        "scoreA": 1,
+        "scoreB": 15,
+        "teamA": [
+          "Serhii",
+          "Alex"
+        ],
+        "teamB": [
+          "Alex Double",
+          "Denis"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Andrew",
+          "Ali"
+        ],
+        "teamB": [
+          "Yulya",
+          "Vova"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Anya",
+          "Eugene"
+        ],
+        "teamB": [
+          "William",
+          "Mila"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 4,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Alina",
+          "Piter Pen"
+        ],
+        "teamB": [
+          "Tanya",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 1,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Denis",
+          "Vova"
+        ],
+        "teamB": [
+          "Serhii",
+          "Alex Double"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 2,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Yulya",
+          "Anzhelika"
+        ],
+        "teamB": [
+          "Andrew",
+          "Ali"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 3,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Alex",
+          "Tanya"
+        ],
+        "teamB": [
+          "Anya",
+          "Mila"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 4,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Alina",
+          "Eugene"
+        ],
+        "teamB": [
+          "William",
+          "Piter Pen"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Serhii",
+          "Ali"
+        ],
+        "teamB": [
+          "Alex Double",
+          "Denis"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "William",
+          "Mila"
+        ],
+        "teamB": [
+          "Andrew",
+          "Anya"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Yulya",
+          "Anzhelika"
+        ],
+        "teamB": [
+          "Vova",
+          "Piter Pen"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 4,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Alina",
+          "Tanya"
+        ],
+        "teamB": [
+          "Alex",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Serhii",
+          "Denis"
+        ],
+        "teamB": [
+          "Alex Double",
+          "Mila"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 2,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Andrew",
+          "Ali"
+        ],
+        "teamB": [
+          "William",
+          "Vova"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Yulya",
+          "Anya"
+        ],
+        "teamB": [
+          "Tanya",
+          "Piter Pen"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 4,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Alex",
+          "Alina"
+        ],
+        "teamB": [
+          "Anzhelika",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Serhii",
+          "Vova"
+        ],
+        "teamB": [
+          "Alex Double",
+          "William"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 2,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Denis",
+          "Piter Pen"
+        ],
+        "teamB": [
+          "Ali",
+          "Mila"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 3,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Tanya",
+          "Anzhelika"
+        ],
+        "teamB": [
+          "Andrew",
+          "Anya"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 4,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Yulya",
+          "Alina"
+        ],
+        "teamB": [
+          "Alex",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 1,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Serhii",
+          "William"
+        ],
+        "teamB": [
+          "Alex Double",
+          "Mila"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Andrew",
+          "Vova"
+        ],
+        "teamB": [
+          "Ali",
+          "Denis"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Anzhelika",
+          "Eugene"
+        ],
+        "teamB": [
+          "Anya",
+          "Piter Pen"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 4,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Alina",
+          "Tanya"
+        ],
+        "teamB": [
+          "Alex",
+          "Yulya"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "americano-365",
+    "name": "Odette Cup",
+    "nickname": "Odette Cup 20th",
+    "date": "2025-11-20",
+    "format": "Americano",
+    "pointsPerMatch": 16,
+    "matches": [
+      {
+        "round": 1,
+        "court": 2,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Stas",
+          "Piter Pen"
+        ],
+        "teamB": [
+          "Anton",
+          "Alina"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 3,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Vova",
+          "Alex Double"
+        ],
+        "teamB": [
+          "Tanya",
+          "Sofia"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 4,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Ali",
+          "Marta"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Anya"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Miroslav",
+          "Vova"
+        ],
+        "teamB": [
+          "Stas",
+          "Anya"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Ali",
+          "Anton"
+        ],
+        "teamB": [
+          "Piter Pen",
+          "Marta"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 4,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Tanya",
+          "Alina"
+        ],
+        "teamB": [
+          "Alex Double",
+          "Sofia"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 2,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Anton",
+          "Alex Double"
+        ],
+        "teamB": [
+          "Ali",
+          "Alina"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Anya",
+          "Sofia"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Stas"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 4,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Piter Pen",
+          "Vova"
+        ],
+        "teamB": [
+          "Tanya",
+          "Marta"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 2,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Stas",
+          "Marta"
+        ],
+        "teamB": [
+          "Piter Pen",
+          "Tanya"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Alina",
+          "Vova"
+        ],
+        "teamB": [
+          "Ali",
+          "Anya"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 4,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Miroslav",
+          "Alex Double"
+        ],
+        "teamB": [
+          "Anton",
+          "Sofia"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Vova",
+          "Sofia"
+        ],
+        "teamB": [
+          "Anton",
+          "Marta"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 3,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Miroslav",
+          "Piter Pen"
+        ],
+        "teamB": [
+          "Stas",
+          "Alex Double"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 4,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Ali",
+          "Tanya"
+        ],
+        "teamB": [
+          "Alina",
+          "Anya"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Piter Pen",
+          "Alina"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Tanya"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Anton",
+          "Anya"
+        ],
+        "teamB": [
+          "Sofia",
+          "Marta"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 4,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Stas",
+          "Vova"
+        ],
+        "teamB": [
+          "Ali",
+          "Alex Double"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 2,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Alex Double",
+          "Marta"
+        ],
+        "teamB": [
+          "Stas",
+          "Ali"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 3,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Tanya",
+          "Vova"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Anton"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 4,
+        "scoreA": 0,
+        "scoreB": 16,
+        "teamA": [
+          "Alina",
+          "Sofia"
+        ],
+        "teamB": [
+          "Piter Pen",
+          "Anya"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 2,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Anya",
+          "Vova"
+        ],
+        "teamB": [
+          "Piter Pen",
+          "Alex Double"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 3,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Stas",
+          "Sofia"
+        ],
+        "teamB": [
+          "Alina",
+          "Marta"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 4,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Miroslav",
+          "Ali"
+        ],
+        "teamB": [
+          "Tanya",
+          "Anton"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Stas",
+          "Tanya"
+        ],
+        "teamB": [
+          "Ali",
+          "Sofia"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 3,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Piter Pen",
+          "Anton"
+        ],
+        "teamB": [
+          "Anya",
+          "Alex Double"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 4,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Vova",
+          "Marta"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Alina"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Alina",
+          "Alex Double"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Marta"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 3,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Ali",
+          "Vova"
+        ],
+        "teamB": [
+          "Piter Pen",
+          "Sofia"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 4,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Tanya",
+          "Anya"
+        ],
+        "teamB": [
+          "Stas",
+          "Anton"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Anton",
+          "Vova"
+        ],
+        "teamB": [
+          "Stas",
+          "Alina"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 3,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Anya",
+          "Marta"
+        ],
+        "teamB": [
+          "Tanya",
+          "Alex Double"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 4,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Miroslav",
+          "Sofia"
+        ],
+        "teamB": [
+          "Ali",
+          "Piter Pen"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "odette-2026-03-21",
+    "name": "Odette Cup",
+    "nickname": "Spring Opener",
+    "date": "2026-03-21",
+    "format": "Americano",
+    "pointsPerMatch": 16,
+    "matches": [
+      {
+        "round": 1,
+        "court": 1,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Ostap",
+          "Veronika"
+        ],
+        "teamB": [
+          "Marina",
+          "Kristian"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 2,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Roman",
+          "Max"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 3,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Vova",
+          "Alina"
+        ],
+        "teamB": [
+          "Tanya",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 4,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Anton",
+          "Denis"
+        ],
+        "teamB": [
+          "Eugene",
+          "Andrew"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 1,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Ostap",
+          "Max"
+        ],
+        "teamB": [
+          "Alina",
+          "Denis"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 2,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Vova",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Anton",
+          "Marina"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 3,
+        "scoreA": 14,
+        "scoreB": 2,
+        "teamA": [
+          "Roman",
+          "Andrew"
+        ],
+        "teamB": [
+          "Anzhelika",
+          "Kristian"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 4,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Eugene",
+          "Veronika"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Tanya"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Vova",
+          "Ostap"
+        ],
+        "teamB": [
+          "Andrew",
+          "Veronika"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Roman",
+          "Anton"
+        ],
+        "teamB": [
+          "Eugene",
+          "Alina"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Miroslav",
+          "Tanya"
+        ],
+        "teamB": [
+          "Kristian",
+          "Denis"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 4,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Oleksii",
+          "Max"
+        ],
+        "teamB": [
+          "Marina",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 1,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Roman",
+          "Ostap"
+        ],
+        "teamB": [
+          "Tanya",
+          "Max"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 2,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Miroslav",
+          "Eugene"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Andrew"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Anton",
+          "Anzhelika"
+        ],
+        "teamB": [
+          "Denis",
+          "Veronika"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 4,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Vova",
+          "Marina"
+        ],
+        "teamB": [
+          "Alina",
+          "Kristian"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Miroslav",
+          "Ostap"
+        ],
+        "teamB": [
+          "Vova",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Anton",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Marina",
+          "Tanya"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 3,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Eugene",
+          "Kristian"
+        ],
+        "teamB": [
+          "Veronika",
+          "Max"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 4,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Roman",
+          "Alina"
+        ],
+        "teamB": [
+          "Andrew",
+          "Denis"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 1,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Anton",
+          "Ostap"
+        ],
+        "teamB": [
+          "Roman",
+          "Kristian"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Eugene",
+          "Marina"
+        ],
+        "teamB": [
+          "Alina",
+          "Anzhelika"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 3,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Oleksii",
+          "Denis"
+        ],
+        "teamB": [
+          "Vova",
+          "Max"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 4,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Miroslav",
+          "Andrew"
+        ],
+        "teamB": [
+          "Tanya",
+          "Veronika"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Eugene",
+          "Ostap"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Denis"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Oleksii",
+          "Alina"
+        ],
+        "teamB": [
+          "Andrew",
+          "Kristian"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Marina",
+          "Veronika"
+        ],
+        "teamB": [
+          "Vova",
+          "Roman"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 4,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Anton",
+          "Tanya"
+        ],
+        "teamB": [
+          "Anzhelika",
+          "Max"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 1,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Oleksii",
+          "Ostap"
+        ],
+        "teamB": [
+          "Anton",
+          "Veronika"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 2,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Marina",
+          "Andrew"
+        ],
+        "teamB": [
+          "Tanya",
+          "Denis"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 3,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Alina",
+          "Max"
+        ],
+        "teamB": [
+          "Roman",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 4,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Eugene",
+          "Anzhelika"
+        ],
+        "teamB": [
+          "Vova",
+          "Kristian"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Marina",
+          "Ostap"
+        ],
+        "teamB": [
+          "Eugene",
+          "Max"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Alina",
+          "Tanya"
+        ],
+        "teamB": [
+          "Anzhelika",
+          "Veronika"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 3,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Vova",
+          "Andrew"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Anton"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 4,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Oleksii",
+          "Kristian"
+        ],
+        "teamB": [
+          "Roman",
+          "Denis"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 1,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Alina",
+          "Ostap"
+        ],
+        "teamB": [
+          "Vova",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 2,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Andrew",
+          "Anzhelika"
+        ],
+        "teamB": [
+          "Kristian",
+          "Max"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 3,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Roman",
+          "Tanya"
+        ],
+        "teamB": [
+          "Anton",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 4,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Marina",
+          "Denis"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Veronika"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 1,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Andrew",
+          "Ostap"
+        ],
+        "teamB": [
+          "Roman",
+          "Marina"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 2,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Tanya",
+          "Kristian"
+        ],
+        "teamB": [
+          "Vova",
+          "Denis"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 3,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Miroslav",
+          "Anzhelika"
+        ],
+        "teamB": [
+          "Eugene",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 4,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Alina",
+          "Veronika"
+        ],
+        "teamB": [
+          "Anton",
+          "Max"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Tanya",
+          "Ostap"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Alina"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 2,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Anzhelika",
+          "Denis"
+        ],
+        "teamB": [
+          "Roman",
+          "Veronika"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 3,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Anton",
+          "Kristian"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Marina"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 4,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Andrew",
+          "Max"
+        ],
+        "teamB": [
+          "Vova",
+          "Eugene"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "odette-2026-05-17",
+    "name": "Odette Cup",
+    "nickname": "May Mayhem",
+    "date": "2026-05-17",
+    "format": "Americano",
+    "pointsPerMatch": 16,
+    "matches": [
+      {
+        "round": 1,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Roman",
+          "Lisa M"
+        ],
+        "teamB": [
+          "Alex Double",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Anastasia",
+          "Irina"
+        ],
+        "teamB": [
+          "Katie G",
+          "Kir"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 3,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Sergey",
+          "Eugene"
+        ],
+        "teamB": [
+          "Andrew",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 4,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Vova",
+          "Alina"
+        ],
+        "teamB": [
+          "Eugene M",
+          "Natali"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 1,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Roman",
+          "Anastasia"
+        ],
+        "teamB": [
+          "Sergey",
+          "Alina"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Katie G",
+          "Eugene"
+        ],
+        "teamB": [
+          "Vova",
+          "Alex Double"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Natali",
+          "Irina"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 4,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Eugene M",
+          "Lisa M"
+        ],
+        "teamB": [
+          "Kir",
+          "Andrew"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 1,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Roman",
+          "Eugene"
+        ],
+        "teamB": [
+          "Natali",
+          "Lisa M"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Vova",
+          "Irina"
+        ],
+        "teamB": [
+          "Eugene M",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 3,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Katie G",
+          "Andrew"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Alina"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 4,
+        "scoreA": 2,
+        "scoreB": 14,
+        "teamA": [
+          "Kir",
+          "Anastasia"
+        ],
+        "teamB": [
+          "Alex Double",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 1,
+        "scoreA": 14,
+        "scoreB": 2,
+        "teamA": [
+          "Roman",
+          "Irina"
+        ],
+        "teamB": [
+          "Andrew",
+          "Anastasia"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Katie G",
+          "Eugene M"
+        ],
+        "teamB": [
+          "Kir",
+          "Natali"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 3,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Vova",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Alina",
+          "Lisa M"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 4,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Alex Double",
+          "Eugene"
+        ],
+        "teamB": [
+          "Sergey",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Katie G",
+          "Roman"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 2,
+        "scoreA": 2,
+        "scoreB": 14,
+        "teamA": [
+          "Vova",
+          "Kir"
+        ],
+        "teamB": [
+          "Alex Double",
+          "Andrew"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 3,
+        "scoreA": 14,
+        "scoreB": 2,
+        "teamA": [
+          "Eugene M",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Lisa M",
+          "Anastasia"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 4,
+        "scoreA": 14,
+        "scoreB": 2,
+        "teamA": [
+          "Sergey",
+          "Irina"
+        ],
+        "teamB": [
+          "Natali",
+          "Alina"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 1,
+        "scoreA": 14,
+        "scoreB": 2,
+        "teamA": [
+          "Vova",
+          "Roman"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Irina"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 2,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Eugene M",
+          "Alex Double"
+        ],
+        "teamB": [
+          "Sergey",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 3,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Kir",
+          "Alina"
+        ],
+        "teamB": [
+          "Anastasia",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 4,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Katie G",
+          "Natali"
+        ],
+        "teamB": [
+          "Andrew",
+          "Lisa M"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 1,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Eugene M",
+          "Roman"
+        ],
+        "teamB": [
+          "Katie G",
+          "Alina"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Kir",
+          "Sergey"
+        ],
+        "teamB": [
+          "Natali",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 3,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Alex Double",
+          "Lisa M"
+        ],
+        "teamB": [
+          "Eugene",
+          "Irina"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 4,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Vova",
+          "Andrew"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Anastasia"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 1,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Kir",
+          "Roman"
+        ],
+        "teamB": [
+          "Vova",
+          "Lisa M"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Alex Double",
+          "Natali"
+        ],
+        "teamB": [
+          "Andrew",
+          "Alina"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Sergey",
+          "Anastasia"
+        ],
+        "teamB": [
+          "Katie G",
+          "Irina"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 4,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Eugene M",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 1,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Alex Double",
+          "Roman"
+        ],
+        "teamB": [
+          "Eugene M",
+          "Anastasia"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Sergey",
+          "Andrew"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Lisa M"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 3,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Natali",
+          "Eugene"
+        ],
+        "teamB": [
+          "Katie G",
+          "Vova"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 4,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Kir",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Alina",
+          "Irina"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Sergey",
+          "Roman"
+        ],
+        "teamB": [
+          "Kir",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Natali",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Anastasia"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 3,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Andrew",
+          "Irina"
+        ],
+        "teamB": [
+          "Vova",
+          "Eugene M"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 4,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Alex Double",
+          "Alina"
+        ],
+        "teamB": [
+          "Katie G",
+          "Lisa M"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 1,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Natali",
+          "Roman"
+        ],
+        "teamB": [
+          "Alex Double",
+          "Irina"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Andrew",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Alina",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 3,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Katie G",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Eugene M",
+          "Kir"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 4,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Sergey",
+          "Lisa M"
+        ],
+        "teamB": [
+          "Vova",
+          "Anastasia"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "puffin-019e585d",
+    "name": "Odette Cup",
+    "nickname": "Odette Cup",
+    "date": "2026-05-24",
+    "format": "Mexicano",
+    "pointsPerMatch": 16,
+    "matches": [
+      {
+        "round": 1,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Vova",
+          "Alex Double"
+        ],
+        "teamB": [
+          "Roman",
+          "Kir"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Tanya",
+          "Anton"
+        ],
+        "teamB": [
+          "Denis",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Oleksii",
+          "Mila"
+        ],
+        "teamB": [
+          "Sergey",
+          "Alex"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 4,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Rick",
+          "Eugene"
+        ],
+        "teamB": [
+          "Sabrina",
+          "Den"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Sergey",
+          "Denis"
+        ],
+        "teamB": [
+          "Alex",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Eugene",
+          "Vova"
+        ],
+        "teamB": [
+          "Alex Double",
+          "Rick"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 3,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Sabrina",
+          "Kir"
+        ],
+        "teamB": [
+          "Den",
+          "Roman"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 4,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Tanya",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Anton",
+          "Mila"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Sergey",
+          "Eugene"
+        ],
+        "teamB": [
+          "Denis",
+          "Vova"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Tanya",
+          "Alex"
+        ],
+        "teamB": [
+          "Roman",
+          "Den"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Oleksii",
+          "Sabrina"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Kir"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 4,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Alex Double",
+          "Mila"
+        ],
+        "teamB": [
+          "Rick",
+          "Anton"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 1,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Sergey",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Eugene",
+          "Tanya"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 2,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Roman",
+          "Denis"
+        ],
+        "teamB": [
+          "Den",
+          "Rick"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 3,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Vova",
+          "Anton"
+        ],
+        "teamB": [
+          "Alex",
+          "Kir"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 4,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Oleksii",
+          "Mila"
+        ],
+        "teamB": [
+          "Sabrina",
+          "Alex Double"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 1,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Eugene",
+          "Denis"
+        ],
+        "teamB": [
+          "Tanya",
+          "Roman"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 2,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Sergey",
+          "Vova"
+        ],
+        "teamB": [
+          "Kir",
+          "Alex"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 3,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Anton",
+          "Rick"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Den"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 4,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Oleksii",
+          "Mila"
+        ],
+        "teamB": [
+          "Sabrina",
+          "Alex Double"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 1,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Eugene",
+          "Tanya"
+        ],
+        "teamB": [
+          "Denis",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Roman",
+          "Kir"
+        ],
+        "teamB": [
+          "Vova",
+          "Alex"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 3,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Anton",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Rick",
+          "Sabrina"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 4,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Den",
+          "Mila"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Alex Double"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Eugene",
+          "Sergey"
+        ],
+        "teamB": [
+          "Denis",
+          "Tanya"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 2,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Alex",
+          "Roman"
+        ],
+        "teamB": [
+          "Vova",
+          "Anton"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 3,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Kir",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Rick"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 4,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Den",
+          "Mila"
+        ],
+        "teamB": [
+          "Alex Double",
+          "Sabrina"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Eugene",
+          "Roman"
+        ],
+        "teamB": [
+          "Denis",
+          "Alex"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Tanya",
+          "Alex Double"
+        ],
+        "teamB": [
+          "Sergey",
+          "Kir"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Sabrina",
+          "Vova"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 4,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Anton",
+          "Mila"
+        ],
+        "teamB": [
+          "Rick",
+          "Den"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 1,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Eugene",
+          "Alex"
+        ],
+        "teamB": [
+          "Roman",
+          "Tanya"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 2,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Denis",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Alex Double",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 3,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Sergey",
+          "Sabrina"
+        ],
+        "teamB": [
+          "Rick",
+          "Kir"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 4,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Anton",
+          "Mila"
+        ],
+        "teamB": [
+          "Vova",
+          "Den"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Eugene",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Alex",
+          "Denis"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 2,
+        "scoreA": 13,
+        "scoreB": 3,
+        "teamA": [
+          "Roman",
+          "Rick"
+        ],
+        "teamB": [
+          "Tanya",
+          "Kir"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Sergey",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Alex Double",
+          "Vova"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 4,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Den",
+          "Mila"
+        ],
+        "teamB": [
+          "Sabrina",
+          "Anton"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Eugene",
+          "Denis"
+        ],
+        "teamB": [
+          "Roman",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 2,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Alex",
+          "Sergey"
+        ],
+        "teamB": [
+          "Rick",
+          "Tanya"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Sabrina",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Alex Double",
+          "Vova"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 4,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Anton",
+          "Mila"
+        ],
+        "teamB": [
+          "Kir",
+          "Den"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Eugene",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Roman",
+          "Alex"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 2,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Denis",
+          "Vova"
+        ],
+        "teamB": [
+          "Sergey",
+          "Alex Double"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Rick",
+          "Sabrina"
+        ],
+        "teamB": [
+          "Kir",
+          "Den"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 4,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Tanya",
+          "Mila"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Anton"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "odette-2026-05-31",
+    "name": "Odette Cup",
+    "nickname": "Sunset Smash",
+    "date": "2026-05-31",
+    "format": "Americano",
+    "pointsPerMatch": 16,
+    "matches": [
+      {
+        "round": 1,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Kir",
+          "Andrew"
+        ],
+        "teamB": [
+          "Denny",
+          "Alex"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 2,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Veronika",
+          "Anton"
+        ],
+        "teamB": [
+          "Tanya",
+          "Denis"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 3,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Vova",
+          "Eugene"
+        ],
+        "teamB": [
+          "Roman",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 4,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Sergey",
+          "Irina"
+        ],
+        "teamB": [
+          "Oleksii",
+          "Sofia"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 1,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Denis",
+          "Eugene"
+        ],
+        "teamB": [
+          "Tanya",
+          "Vova"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Kir",
+          "Irina"
+        ],
+        "teamB": [
+          "Sergey",
+          "Andrew"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Alex",
+          "Sofia"
+        ],
+        "teamB": [
+          "Denny",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 4,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Anton",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Veronika",
+          "Roman"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 1,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Eugene",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Tanya",
+          "Denis"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 2,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Vova",
+          "Irina"
+        ],
+        "teamB": [
+          "Anton",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 3,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Kir",
+          "Alex"
+        ],
+        "teamB": [
+          "Denny",
+          "Andrew"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 4,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Veronika",
+          "Sofia"
+        ],
+        "teamB": [
+          "Roman",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 1,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Tanya",
+          "Irina"
+        ],
+        "teamB": [
+          "Denis",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 2,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Kir",
+          "Eugene"
+        ],
+        "teamB": [
+          "Alex",
+          "Vova"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 3,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Anton",
+          "Roman"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 4,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Denny",
+          "Veronika"
+        ],
+        "teamB": [
+          "Sofia",
+          "Andrew"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Alex",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Denis",
+          "Vova"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 2,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Kir",
+          "Anton"
+        ],
+        "teamB": [
+          "Tanya",
+          "Irina"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 3,
+        "scoreA": 15,
+        "scoreB": 1,
+        "teamA": [
+          "Eugene",
+          "Andrew"
+        ],
+        "teamB": [
+          "Roman",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 4,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Denny",
+          "Veronika"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Sofia"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Eugene",
+          "Andrew"
+        ],
+        "teamB": [
+          "Denis",
+          "Vova"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Alex",
+          "Tanya"
+        ],
+        "teamB": [
+          "Anton",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 3,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Denny",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Kir",
+          "Irina"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 4,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Veronika",
+          "Roman"
+        ],
+        "teamB": [
+          "Sergey",
+          "Sofia"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Vova",
+          "Andrew"
+        ],
+        "teamB": [
+          "Alex",
+          "Denis"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 2,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Eugene",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Kir",
+          "Tanya"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Anton",
+          "Sofia"
+        ],
+        "teamB": [
+          "Denny",
+          "Irina"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 4,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Veronika",
+          "Roman"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Vova",
+          "Eugene"
+        ],
+        "teamB": [
+          "Denis",
+          "Andrew"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Alex",
+          "Tanya"
+        ],
+        "teamB": [
+          "Irina",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 3,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Denny",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Kir",
+          "Anton"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 4,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Veronika",
+          "Roman"
+        ],
+        "teamB": [
+          "Sergey",
+          "Sofia"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Irina",
+          "Andrew"
+        ],
+        "teamB": [
+          "Denis",
+          "Vova"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Alex",
+          "Tanya"
+        ],
+        "teamB": [
+          "Eugene",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Kir",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Denny",
+          "Anton"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 4,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Roman",
+          "Sofia"
+        ],
+        "teamB": [
+          "Veronika",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Eugene",
+          "Andrew"
+        ],
+        "teamB": [
+          "Denis",
+          "Vova"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Alex",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Denny",
+          "Irina"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 3,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Kir",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Anton",
+          "Tanya"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 4,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Veronika",
+          "Sergey"
+        ],
+        "teamB": [
+          "Roman",
+          "Sofia"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Vova",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Denis",
+          "Andrew"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 2,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Alex",
+          "Irina"
+        ],
+        "teamB": [
+          "Kir",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 3,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Denny",
+          "Anton"
+        ],
+        "teamB": [
+          "Tanya",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 4,
+        "scoreA": 0,
+        "scoreB": 16,
+        "teamA": [
+          "Veronika",
+          "Sofia"
+        ],
+        "teamB": [
+          "Roman",
+          "Sergey"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Alex",
+          "Vova"
+        ],
+        "teamB": [
+          "Denis",
+          "Andrew"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 2,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Sergey",
+          "Irina"
+        ],
+        "teamB": [
+          "Eugene",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 3,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Kir",
+          "Roman"
+        ],
+        "teamB": [
+          "Denny",
+          "Tanya"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 4,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Anton",
+          "Sofia"
+        ],
+        "teamB": [
+          "Veronika",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 13,
+        "court": 1,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Denis",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Alex",
+          "Vova"
+        ]
+      },
+      {
+        "round": 13,
+        "court": 2,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Eugene",
+          "Roman"
+        ],
+        "teamB": [
+          "Kir",
+          "Andrew"
+        ]
+      },
+      {
+        "round": 13,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Tanya",
+          "Sergey"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Irina"
+        ]
+      },
+      {
+        "round": 13,
+        "court": 4,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Anton",
+          "Sofia"
+        ],
+        "teamB": [
+          "Denny",
+          "Veronika"
+        ]
+      },
+      {
+        "round": 14,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Alex",
+          "Denis"
+        ],
+        "teamB": [
+          "Vova",
+          "Eugene"
+        ]
+      },
+      {
+        "round": 14,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Oleksii",
+          "Andrew"
+        ],
+        "teamB": [
+          "Roman",
+          "Irina"
+        ]
+      },
+      {
+        "round": 14,
+        "court": 3,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Denny",
+          "Sergey"
+        ],
+        "teamB": [
+          "Kir",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 14,
+        "court": 4,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Anton",
+          "Sofia"
+        ],
+        "teamB": [
+          "Veronika",
+          "Tanya"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "odette-2026-06-07",
+    "name": "Odette Cup",
+    "nickname": "Summer Smash",
+    "date": "2026-06-07",
+    "format": "Americano",
+    "pointsPerMatch": 16,
+    "matches": [
+      {
+        "round": 1,
+        "court": 1,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Alex",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Sabrina",
+          "Alexander"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Roman",
+          "Elan"
+        ],
+        "teamB": [
+          "Denis R",
+          "Veronika"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 3,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Denny",
+          "Sofia"
+        ],
+        "teamB": [
+          "Sergey",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 1,
+        "court": 4,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Denis",
+          "Vova"
+        ],
+        "teamB": [
+          "Illya",
+          "Irina"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Sergey",
+          "Elan"
+        ],
+        "teamB": [
+          "Roman",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 2,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Irina",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Illya",
+          "Alex"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 3,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Vova",
+          "Alexander"
+        ],
+        "teamB": [
+          "Denis",
+          "Sabrina"
+        ]
+      },
+      {
+        "round": 2,
+        "court": 4,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Veronika",
+          "Sofia"
+        ],
+        "teamB": [
+          "Denis R",
+          "Denny"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 1,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Alex",
+          "Elan"
+        ],
+        "teamB": [
+          "Sergey",
+          "Illya"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Alexander",
+          "Denis R"
+        ],
+        "teamB": [
+          "Roman",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 3,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Irina",
+          "Sabrina"
+        ],
+        "teamB": [
+          "Vova",
+          "Denny"
+        ]
+      },
+      {
+        "round": 3,
+        "court": 4,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Miroslav",
+          "Sofia"
+        ],
+        "teamB": [
+          "Denis",
+          "Veronika"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 1,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Alex",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Sergey",
+          "Elan"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Illya",
+          "Roman"
+        ],
+        "teamB": [
+          "Vova",
+          "Denny"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 3,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Alexander",
+          "Sofia"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Denis R"
+        ]
+      },
+      {
+        "round": 4,
+        "court": 4,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Denis",
+          "Veronika"
+        ],
+        "teamB": [
+          "Irina",
+          "Sabrina"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Vova",
+          "Elan"
+        ],
+        "teamB": [
+          "Alex",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 2,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Roman",
+          "Denny"
+        ],
+        "teamB": [
+          "Sergey",
+          "Miroslav"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 3,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Denis",
+          "Illya"
+        ],
+        "teamB": [
+          "Alexander",
+          "Denis R"
+        ]
+      },
+      {
+        "round": 5,
+        "court": 4,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Irina",
+          "Sofia"
+        ],
+        "teamB": [
+          "Sabrina",
+          "Veronika"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 1,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Vova",
+          "Oleksii"
+        ],
+        "teamB": [
+          "Alex",
+          "Elan"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 2,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Miroslav",
+          "Denny"
+        ],
+        "teamB": [
+          "Sergey",
+          "Denis R"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 3,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Denis",
+          "Alexander"
+        ],
+        "teamB": [
+          "Illya",
+          "Roman"
+        ]
+      },
+      {
+        "round": 6,
+        "court": 4,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Irina",
+          "Sofia"
+        ],
+        "teamB": [
+          "Sabrina",
+          "Veronika"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 1,
+        "scoreA": 5,
+        "scoreB": 11,
+        "teamA": [
+          "Vova",
+          "Denis R"
+        ],
+        "teamB": [
+          "Sergey",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Alex",
+          "Elan"
+        ],
+        "teamB": [
+          "Illya",
+          "Roman"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 3,
+        "scoreA": 12,
+        "scoreB": 4,
+        "teamA": [
+          "Miroslav",
+          "Veronika"
+        ],
+        "teamB": [
+          "Alexander",
+          "Denny"
+        ]
+      },
+      {
+        "round": 7,
+        "court": 4,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Denis",
+          "Sabrina"
+        ],
+        "teamB": [
+          "Irina",
+          "Sofia"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 1,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Sergey",
+          "Vova"
+        ],
+        "teamB": [
+          "Alex",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 2,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Roman",
+          "Denis R"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Elan"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Alexander",
+          "Veronika"
+        ],
+        "teamB": [
+          "Illya",
+          "Denny"
+        ]
+      },
+      {
+        "round": 8,
+        "court": 4,
+        "scoreA": 10,
+        "scoreB": 6,
+        "teamA": [
+          "Denis",
+          "Sabrina"
+        ],
+        "teamB": [
+          "Irina",
+          "Sofia"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 1,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Alex",
+          "Denis R"
+        ],
+        "teamB": [
+          "Sergey",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Vova",
+          "Roman"
+        ],
+        "teamB": [
+          "Miroslav",
+          "Elan"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 3,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Sabrina",
+          "Veronika"
+        ],
+        "teamB": [
+          "Illya",
+          "Denny"
+        ]
+      },
+      {
+        "round": 9,
+        "court": 4,
+        "scoreA": 14,
+        "scoreB": 2,
+        "teamA": [
+          "Irina",
+          "Alexander"
+        ],
+        "teamB": [
+          "Denis",
+          "Sofia"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 1,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Alex",
+          "Roman"
+        ],
+        "teamB": [
+          "Denis R",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 2,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Vova",
+          "Elan"
+        ],
+        "teamB": [
+          "Sergey",
+          "Illya"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 3,
+        "scoreA": 11,
+        "scoreB": 5,
+        "teamA": [
+          "Irina",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Alexander",
+          "Denny"
+        ]
+      },
+      {
+        "round": 10,
+        "court": 4,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Sabrina",
+          "Sofia"
+        ],
+        "teamB": [
+          "Denis",
+          "Veronika"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 1,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Vova",
+          "Alex"
+        ],
+        "teamB": [
+          "Roman",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 2,
+        "scoreA": 7,
+        "scoreB": 9,
+        "teamA": [
+          "Miroslav",
+          "Elan"
+        ],
+        "teamB": [
+          "Sergey",
+          "Denis R"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 3,
+        "scoreA": 4,
+        "scoreB": 12,
+        "teamA": [
+          "Illya",
+          "Alexander"
+        ],
+        "teamB": [
+          "Irina",
+          "Veronika"
+        ]
+      },
+      {
+        "round": 11,
+        "court": 4,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Sabrina",
+          "Sofia"
+        ],
+        "teamB": [
+          "Denis",
+          "Denny"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 1,
+        "scoreA": 3,
+        "scoreB": 13,
+        "teamA": [
+          "Alex",
+          "Denis R"
+        ],
+        "teamB": [
+          "Roman",
+          "Oleksii"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 2,
+        "scoreA": 6,
+        "scoreB": 10,
+        "teamA": [
+          "Sergey",
+          "Elan"
+        ],
+        "teamB": [
+          "Vova",
+          "Irina"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 3,
+        "scoreA": 8,
+        "scoreB": 8,
+        "teamA": [
+          "Illya",
+          "Miroslav"
+        ],
+        "teamB": [
+          "Veronika",
+          "Denny"
+        ]
+      },
+      {
+        "round": 12,
+        "court": 4,
+        "scoreA": 9,
+        "scoreB": 7,
+        "teamA": [
+          "Denis",
+          "Sofia"
+        ],
+        "teamB": [
+          "Sabrina",
+          "Alexander"
+        ]
+      }
+    ]
+  }
+]
