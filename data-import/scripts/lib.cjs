@@ -32,9 +32,14 @@ function transliterate(name) {
   return out
 }
 
-/** Trim, collapse internal whitespace, and transliterate Cyrillic to Latin. */
+/** Title-case each word so case-only variants (ANDREW vs Andrew) collapse. */
+function titleCase(s) {
+  return s.replace(/\S+/g, (w) => w[0].toUpperCase() + w.slice(1).toLowerCase())
+}
+
+/** Trim, collapse whitespace, transliterate Cyrillic→Latin, normalise to Title Case. */
 function cleanName(name) {
-  return transliterate(String(name ?? '').replace(/\s+/g, ' ').trim())
+  return titleCase(transliterate(String(name ?? '').replace(/\s+/g, ' ').trim()))
 }
 
 // --- Tournament assembly ----------------------------------------------------
