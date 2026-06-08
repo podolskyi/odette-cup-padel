@@ -1,16 +1,55 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAppStore } from '../store/useAppStore'
 import { funInsights, type FunInsight } from '../stats'
 import { Avatar } from '../components/ui/Avatar'
 import { SectionTitle, Chip, Empty } from '../components/ui/Bits'
 import { accentByKey } from '../lib/colors'
+import { seededShuffle } from '../lib/shuffle'
 import { cx } from '../lib/cx'
+
+const VISIBLE = 15
+const randomSeed = () => Math.floor(Math.random() * 1_000_000_000)
+
+// Ranked variants share a "family" (key minus a trailing -N) so a single view
+// never shows e.g. both Elo #1 and Elo #2 — they just enrich the rotation.
+const familyOf = (key: string) => key.replace(/-\d+$/, '')
+
+/** Pick up to `n` cards: one per family, and at most 3 cards per player, so a
+ *  shuffle always feels varied. Relaxes the rules if the pool is too small. */
+function pickDiverse(pool: FunInsight[], n: number): FunInsight[] {
+  const out: FunInsight[] = []
+  const families = new Set<string>()
+  const perPlayer = new Map<string, number>()
+  const bump = (it: FunInsight) => it.players.forEach((p) => perPlayer.set(p, (perPlayer.get(p) ?? 0) + 1))
+  const playerMaxed = (it: FunInsight) => it.players.some((p) => (perPlayer.get(p) ?? 0) >= 3)
+
+  for (const it of pool) {
+    if (out.length >= n) break
+    if (families.has(familyOf(it.key)) || playerMaxed(it)) continue
+    out.push(it)
+    families.add(familyOf(it.key))
+    bump(it)
+  }
+  // Backfill (small datasets): allow repeat families, keep the player cap.
+  if (out.length < n) {
+    for (const it of pool) {
+      if (out.length >= n) break
+      if (out.includes(it) || playerMaxed(it)) continue
+      out.push(it)
+      bump(it)
+    }
+  }
+  return out
+}
 
 export function Fun() {
   const tournaments = useAppStore((s) => s.tournaments)
   const aliases = useAppStore((s) => s.aliases)
-  const insights = useMemo(() => funInsights({ tournaments, aliases }), [tournaments, aliases])
+  const pool = useMemo(() => funInsights({ tournaments, aliases }), [tournaments, aliases])
+  const [seed, setSeed] = useState(randomSeed)
+
+  const visible = useMemo(() => pickDiverse(seededShuffle(pool, seed), VISIBLE), [pool, seed])
 
   return (
     <div className="space-y-8">
@@ -29,13 +68,36 @@ export function Fun() {
       </section>
 
       <section>
-        <SectionTitle emoji="🏅" title="Superlatives" hint="Across every Odette Cup so far" />
-        {insights.length === 0 ? (
+        <SectionTitle
+          emoji="🏅"
+          title="Superlatives"
+          hint={
+            pool.length
+              ? `A random ${Math.min(VISIBLE, pool.length)} of ${pool.length} — hit shuffle for more`
+              : 'Across every Odette Cup so far'
+          }
+          action={
+            pool.length > VISIBLE ? (
+              <button
+                type="button"
+                onClick={() => setSeed(randomSeed())}
+                className="group flex shrink-0 items-center gap-2 rounded-xl border-2 border-ink bg-sun px-4 py-2 text-sm font-extrabold shadow-hard-sm transition-transform hover:-translate-y-0.5 active:translate-y-0 active:shadow-none"
+              >
+                <span className="text-lg transition-transform duration-300 group-hover:rotate-180 group-active:rotate-[360deg]">
+                  🎲
+                </span>
+                Surprise me
+              </button>
+            ) : undefined
+          }
+        />
+        {pool.length === 0 ? (
           <Empty emoji="🤷">Not enough data yet — play a few more events!</Empty>
         ) : (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {insights.map((it) => (
-              <FunCard key={it.key} insight={it} />
+            {visible.map((it) => (
+              // Key by seed so every shuffle re-mounts the cards and replays the pop-in.
+              <FunCard key={`${seed}-${it.key}`} insight={it} />
             ))}
           </div>
         )}
