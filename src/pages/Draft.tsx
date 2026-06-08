@@ -142,6 +142,7 @@ function TournamentsTab() {
   const setDate = useDraftStore((s) => s.setDate)
   const eff = useMemo(() => ({ ...seed.aliases, ...aliases }), [aliases])
   const [open, setOpen] = useState<string | null>(null)
+  const [popup, setPopup] = useState<string | null>(null)
 
   const ordered = [...draftTournaments].sort((a, b) =>
     ((dates[b.id] || b.date) || '0').localeCompare((dates[a.id] || a.date) || '0'),
@@ -189,8 +190,11 @@ function TournamentsTab() {
             </div>
 
             {(() => {
-              // Drop the "no date" warning once a date has been entered.
-              const warns = t._review.warnings.filter((w) => w !== 'ok' && !(date && /no date/i.test(w)))
+              // Empty (0-0) courts are normal (time ran out) — never warn about them.
+              // Drop the "no date" warning too once a date has been entered.
+              const warns = t._review.warnings.filter(
+                (w) => w !== 'ok' && !/empty court/i.test(w) && !(date && /no date/i.test(w)),
+              )
               return warns.length ? (
                 <div className="border-t-2 border-ink/10 bg-sun-soft px-3 py-1.5 text-xs font-bold text-ink-soft">
                   ⚠️ {warns.join(' · ')}
@@ -198,22 +202,39 @@ function TournamentsTab() {
               ) : null
             })()}
 
-            {isOpen && <TournamentDetail entry={t} aliases={eff} />}
+            {isOpen && <TournamentDetail entry={t} aliases={eff} onPlayer={setPopup} />}
           </div>
         )
       })}
+      {popup && <DraftPlayerModal player={popup} aliases={eff} onClose={() => setPopup(null)} />}
     </div>
   )
 }
 
-function TournamentDetail({ entry, aliases }: { entry: DraftEntry; aliases: Record<string, string> }) {
+function TournamentDetail({
+  entry,
+  aliases,
+  onPlayer,
+}: {
+  entry: DraftEntry
+  aliases: Record<string, string>
+  onPlayer: (name: string) => void
+}) {
   const standings = useMemo(() => computeStandings(entry, aliases), [entry, aliases])
   const rounds = Math.max(...entry.matches.map((m) => m.round))
+  const P = ({ raw }: { raw: string }) => {
+    const n = resolveName(raw, aliases)
+    return (
+      <button onClick={() => onPlayer(n)} className="hover:underline decoration-2 underline-offset-2">
+        {n}
+      </button>
+    )
+  }
   return (
     <div className="grid gap-4 border-t-2 border-ink/10 p-3 lg:grid-cols-2">
       <div>
         <div className="mb-1.5 text-xs font-bold uppercase tracking-wider text-ink-soft">Our standings</div>
-        <StandingsTable standings={standings} />
+        <StandingsTable standings={standings} onPlayer={onPlayer} />
       </div>
       <div>
         <div className="mb-1.5 text-xs font-bold uppercase tracking-wider text-ink-soft">Match log</div>
@@ -224,19 +245,97 @@ function TournamentDetail({ entry, aliases }: { entry: DraftEntry; aliases: Reco
               {entry.matches.filter((m) => m.round === rd).map((m, i) => (
                 <div key={i} className="flex items-center justify-between gap-2 py-0.5 text-sm">
                   <span className="flex-1 truncate text-right">
-                    {resolveName(m.teamA[0], aliases)} & {resolveName(m.teamA[1], aliases)}
+                    <P raw={m.teamA[0]} /> & <P raw={m.teamA[1]} />
                   </span>
                   <span className="shrink-0 rounded border border-ink bg-paper-200 px-1.5 font-mono text-xs font-bold tabular">
                     {m.scoreA}-{m.scoreB}
                   </span>
                   <span className="flex-1 truncate">
-                    {resolveName(m.teamB[0], aliases)} & {resolveName(m.teamB[1], aliases)}
+                    <P raw={m.teamB[0]} /> & <P raw={m.teamB[1]} />
                   </span>
                 </div>
               ))}
             </div>
           ))}
         </div>
+      </div>
+    </div>
+  )
+}
+
+// Draft-scoped player popup — only the tournaments being imported (not the live app).
+function DraftPlayerModal({
+  player,
+  aliases,
+  onClose,
+}: {
+  player: string
+  aliases: Record<string, string>
+  onClose: () => void
+}) {
+  const rows = useMemo(() => {
+    const out: { t: DraftEntry; rank: number; total: number; record: string; pts: number }[] = []
+    for (const t of [...draftTournaments].sort((a, b) => (b.date || '0').localeCompare(a.date || '0'))) {
+      const st = computeStandings(t, aliases)
+      const r = st.find((s) => s.player === player)
+      if (r) out.push({ t, rank: r.rank, total: st.length, record: `${r.wins}-${r.losses}-${r.ties}`, pts: r.points })
+    }
+    return out
+  }, [player, aliases])
+  const cyr = NAME_INFO.get(player)?.originals ?? []
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose()
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [onClose])
+
+  return (
+    <div className="fixed inset-0 z-50 grid place-items-center bg-ink/40 p-4" onClick={onClose}>
+      <div
+        className="sticker-lg max-h-[85vh] w-full max-w-lg overflow-y-auto bg-paper-100 p-5"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex items-start justify-between gap-3">
+          <div className="flex items-center gap-3">
+            <Avatar name={player} size="lg" />
+            <div>
+              <h3 className="text-2xl font-extrabold leading-none">{player}</h3>
+              {cyr.length > 0 && <div className="mt-0.5 text-sm text-ink-soft">{cyr.join(' / ')}</div>}
+              <div className="mt-1 text-[11px] font-bold uppercase tracking-wider text-ink-soft">
+                Draft profile · {rows.length} event{rows.length === 1 ? '' : 's'}
+              </div>
+            </div>
+          </div>
+          <button className="btn px-3 py-1" onClick={onClose}>✕</button>
+        </div>
+
+        <div className="mt-4 space-y-2">
+          {rows.length === 0 ? (
+            <div className="text-sm text-ink-soft">No appearances in the imported tournaments.</div>
+          ) : (
+            rows.map(({ t, rank, total, record, pts }) => (
+              <div key={t.id} className="sticker flex items-center justify-between gap-3 p-2.5">
+                <div className="min-w-0">
+                  <div className="truncate font-bold">🎉 {t.nickname || t.name}</div>
+                  <div className="text-xs text-ink-soft">{t._source.service} · {t.date || 'no date'}</div>
+                </div>
+                <div className="flex shrink-0 items-center gap-3">
+                  <div className="text-right">
+                    <div className="font-mono text-xs tabular text-ink-soft">{record}</div>
+                    <div className="font-mono text-sm font-bold tabular">{pts} pts</div>
+                  </div>
+                  <div className="grid h-10 w-12 place-items-center rounded-xl border-2 border-ink bg-paper-200 font-mono text-sm font-bold tabular">
+                    {rank}/{total}
+                  </div>
+                </div>
+              </div>
+            ))
+          )}
+        </div>
+        <p className="mt-3 text-xs text-ink-faint">
+          Draft-only — the tournaments being imported, not the live app.
+        </p>
       </div>
     </div>
   )

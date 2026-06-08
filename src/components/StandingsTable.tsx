@@ -7,9 +7,12 @@ import { cx } from '../lib/cx'
 export function StandingsTable({
   standings,
   className,
+  onPlayer,
 }: {
   standings: PlayerStanding[]
   className?: string
+  /** When set, clicking a player calls this instead of linking to the profile (used in the draft tool). */
+  onPlayer?: (name: string) => void
 }) {
   const last = standings.length
   return (
@@ -48,17 +51,31 @@ export function StandingsTable({
                   </span>
                 </td>
                 <td className="py-2">
-                  <Link
-                    to={`/p/${encodeURIComponent(s.player)}`}
-                    className="group inline-flex items-center gap-2.5"
-                  >
-                    <Avatar name={s.player} size="sm" />
-                    <span className="font-bold group-hover:underline decoration-2 underline-offset-2">
-                      {s.player}
-                      {champ && <span className="ml-1">👑</span>}
-                      {spoon && <span className="ml-1">🥄</span>}
-                    </span>
-                  </Link>
+                  {onPlayer ? (
+                    <button
+                      onClick={() => onPlayer(s.player)}
+                      className="group inline-flex items-center gap-2.5 text-left"
+                    >
+                      <Avatar name={s.player} size="sm" />
+                      <span className="font-bold group-hover:underline decoration-2 underline-offset-2">
+                        {s.player}
+                        {champ && <span className="ml-1">👑</span>}
+                        {spoon && <span className="ml-1">🥄</span>}
+                      </span>
+                    </button>
+                  ) : (
+                    <Link
+                      to={`/p/${encodeURIComponent(s.player)}`}
+                      className="group inline-flex items-center gap-2.5"
+                    >
+                      <Avatar name={s.player} size="sm" />
+                      <span className="font-bold group-hover:underline decoration-2 underline-offset-2">
+                        {s.player}
+                        {champ && <span className="ml-1">👑</span>}
+                        {spoon && <span className="ml-1">🥄</span>}
+                      </span>
+                    </Link>
+                  )}
                 </td>
                 <td className="py-2 text-center font-mono text-sm tabular text-ink-soft">
                   {s.wins}-{s.losses}-{s.ties}
