@@ -494,16 +494,26 @@ function NamesTab() {
 
 function MergeInput({ name, onMerge }: { name: string; onMerge: (to: string) => void }) {
   const [v, setV] = useState('')
+  const apply = () => {
+    if (v.trim() && v.trim() !== name) { onMerge(v.trim()); setV('') }
+  }
   return (
-    <input
-      list="canon-names"
-      value={v}
-      onChange={(e) => setV(e.target.value)}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' && v.trim() && v.trim() !== name) { onMerge(v.trim()); setV('') }
-      }}
-      placeholder="merge into…"
-      className="w-28 rounded-lg border-2 border-ink bg-paper-100 px-2 py-0.5 text-xs outline-none"
-    />
+    <span className="flex items-center gap-1">
+      <input
+        list="canon-names"
+        value={v}
+        onChange={(e) => setV(e.target.value)}
+        onKeyDown={(e) => e.key === 'Enter' && apply()}
+        placeholder="merge into…"
+        className="w-28 rounded-lg border-2 border-ink bg-paper-100 px-2 py-0.5 text-xs outline-none"
+      />
+      <button
+        onClick={apply}
+        disabled={!v.trim() || v.trim() === name}
+        className="btn px-2 py-0.5 text-xs disabled:cursor-not-allowed disabled:opacity-40"
+      >
+        Merge
+      </button>
+    </span>
   )
 }
