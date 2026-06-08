@@ -1,6 +1,7 @@
-import { useMemo } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import { useAppStore } from '../store/useAppStore'
 import { seasonInsights, pairKey, type HeadToHead } from '../stats'
+import { allPlayers } from '../identity/aliases'
 import { SortableTable, type Column } from '../components/SortableTable'
 import { PlayerTag } from '../components/ui/Avatar'
 import { SectionTitle, Chip, Empty, Stat } from '../components/ui/Bits'
@@ -15,8 +16,20 @@ export function Explorer() {
     [tournaments, aliases],
   )
 
-  // Pairs who teamed up 2+ times.
-  const duos = partnerships.filter((p) => p.games >= 2)
+  const players = useMemo(() => allPlayers(tournaments, aliases), [tournaments, aliases])
+  const [filter, setFilter] = useState('')
+  const active = players.includes(filter) ? filter : '' // only filter on an exact player
+
+  const partRef = useRef<HTMLDivElement>(null)
+  const rivRef = useRef<HTMLDivElement>(null)
+  const glueRef = useRef<HTMLDivElement>(null)
+  const jump = (r: React.RefObject<HTMLDivElement>) =>
+    r.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+
+  // Pairs who teamed up 2+ times (optionally filtered to one player).
+  const duos = partnerships
+    .filter((p) => p.games >= 2)
+    .filter((p) => !active || p.players.includes(active))
 
   // One row per rivalry: the dominant direction, 2+ meetings.
   const rivalryRows = useMemo(() => {
@@ -31,6 +44,11 @@ export function Explorer() {
     }
     return [...best.values()].filter((h) => h.wins !== h.losses)
   }, [rivalries])
+
+  const rivalryShown = active
+    ? rivalryRows.filter((h) => h.player === active || h.opponent === active)
+    : rivalryRows
+  const glueShown = active ? glue.filter((g) => g.player === active) : glue.slice(0, 12)
 
   const duoCols: Column<(typeof duos)[number]>[] = [
     {
@@ -115,7 +133,7 @@ export function Explorer() {
   ]
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-6">
       <section className="sticker-lg bg-paper-100 p-6 sm:p-8">
         <Chip tone="bg-mint">EXPLORER</Chip>
         <h1 className="mt-3 text-4xl font-extrabold sm:text-5xl">Duos, Rivals & Glue</h1>
@@ -124,43 +142,73 @@ export function Explorer() {
         </p>
       </section>
 
-      <section>
+      {/* Sticky filter + jump nav */}
+      <div className="sticker sticky top-2 z-20 flex flex-wrap items-center gap-2 p-3">
+        <div className="flex items-center gap-2">
+          <input
+            list="explorer-players"
+            value={filter}
+            onChange={(e) => setFilter(e.target.value)}
+            placeholder="🔎 filter by player…"
+            className="w-48 rounded-xl border-2 border-ink bg-paper-100 px-3 py-1.5 font-bold shadow-hard-sm outline-none"
+          />
+          <datalist id="explorer-players">
+            {players.map((p) => <option key={p} value={p} />)}
+          </datalist>
+          {filter && (
+            <button className="btn px-2 py-1 text-xs" onClick={() => setFilter('')}>✕ clear</button>
+          )}
+        </div>
+        <div className="ml-auto flex flex-wrap gap-2">
+          <button className="btn px-3 py-1 text-sm" onClick={() => jump(partRef)}>🤝 Partnerships</button>
+          <button className="btn px-3 py-1 text-sm" onClick={() => jump(rivRef)}>⚔️ Rivalries</button>
+          <button className="btn px-3 py-1 text-sm" onClick={() => jump(glueRef)}>🧲 Glue</button>
+        </div>
+      </div>
+
+      {active && (
+        <p className="px-1 text-sm text-ink-soft">
+          Showing <span className="font-bold text-ink">{active}</span>'s partnerships & rivalries.
+        </p>
+      )}
+
+      <section ref={partRef} className="scroll-mt-20">
         <SectionTitle emoji="🤝" title="Best Partnerships" hint="Pairs who teamed up 2+ times — tap a header to sort" />
         {duos.length ? (
           <SortableTable
             columns={duoCols}
             rows={duos}
             rowKey={(p) => p.key}
-            initialSort={{ key: 'win', dir: 'desc' }}
+            initialSort={{ key: active ? 'games' : 'win', dir: 'desc' }}
           />
         ) : (
-          <Empty emoji="🤝">No repeat partnerships yet — add more tournaments.</Empty>
+          <Empty emoji="🤝">{active ? `No repeat partnerships for ${active}.` : 'No repeat partnerships yet.'}</Empty>
         )}
       </section>
 
-      <section>
+      <section ref={rivRef} className="scroll-mt-20">
         <SectionTitle emoji="⚔️" title="Rivalries" hint="One-sided head-to-heads, 2+ meetings" />
-        {rivalryRows.length ? (
+        {rivalryShown.length ? (
           <SortableTable
             columns={rivalCols}
-            rows={rivalryRows}
+            rows={rivalryShown}
             rowKey={(h) => `${h.player}>${h.opponent}`}
             initialSort={{ key: 'rec', dir: 'desc' }}
           />
         ) : (
-          <Empty emoji="⚔️">No decisive rivalries yet.</Empty>
+          <Empty emoji="⚔️">{active ? `No decisive rivalries for ${active}.` : 'No decisive rivalries yet.'}</Empty>
         )}
       </section>
 
-      <section>
+      <section ref={glueRef} className="scroll-mt-20">
         <SectionTitle
           emoji="🧲"
           title="The Glue"
-          hint="Players who lift their partners' win rate (6+ shared games)"
+          hint={active ? `${active}'s partner uplift` : "Players who lift their partners' win rate"}
         />
-        {glue.length ? (
+        {glueShown.length ? (
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {glue.slice(0, 6).map((g, i) => (
+            {glueShown.map((g, i) => (
               <div key={g.player} className="sticker flex items-center gap-3 p-4">
                 <span className="font-display text-2xl font-extrabold text-ink-faint">{i + 1}</span>
                 <PlayerTag name={g.player} size="md" />
