@@ -38,7 +38,7 @@ export function nicknameOf(t: Pick<Tournament, 'id' | 'nickname'>): string {
   return t.nickname ?? funnyName(t.id)
 }
 
-/** The canonical event title, e.g. "Odette Cup, 7 Jun 2026". */
+/** The canonical event title, e.g. "Odette Cup, 7 Jun 2026" (just the name if undated). */
 export function eventTitle(t: Pick<Tournament, 'name' | 'date'>): string {
-  return `${t.name}, ${formatDate(t.date)}`
+  return t.date ? `${t.name}, ${formatDate(t.date)}` : t.name
 }

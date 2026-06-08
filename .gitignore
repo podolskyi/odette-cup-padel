@@ -19,3 +19,7 @@ dist-ssr
 .idea
 .DS_Store
 *.sw?
+
+# one-time import: raw downloads are large, keep them local
+data-import/raw/
+data-import/out/

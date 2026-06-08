@@ -7,6 +7,7 @@ import { Explorer } from './pages/Explorer'
 import { Fun } from './pages/Fun'
 import { Wrapped } from './pages/Wrapped'
 import { Settings } from './pages/Settings'
+import { Draft } from './pages/Draft'
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +20,8 @@ export const router = createBrowserRouter([
       { path: '/fun', element: <Fun /> },
       // Hidden organizer settings (secret-word gated, not linked in nav).
       { path: '/settings', element: <Settings /> },
+      // Hidden one-time import review + name-merge workspace.
+      { path: '/draft', element: <Draft /> },
     ],
   },
   // Wrapped is full-screen (no app chrome) so it screenshots cleanly.
