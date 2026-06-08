@@ -24,6 +24,7 @@ export interface AggregateStats {
   players: number
   cards: Highlight[]
   money: Highlight[]
+  buys: Highlight[]
 }
 
 const r1 = (n: number) => (Math.round(n * 10) / 10).toString()
@@ -123,7 +124,7 @@ export function aggregateStats(
   const cards: Highlight[] = [
     { emoji: '🔢', value: totalPoints.toLocaleString(), label: 'Points rallied', caption: 'every single one fought for', accent: 'sun' },
     { emoji: '📅', value: `${span}`, label: 'Months of rivalry', caption: dates.length ? `${dates[0]} → ${dates[dates.length - 1]}` : '', accent: 'sky' },
-    mostEvents && { emoji: '🏃', value: `${eventHours(mostEvents.tournaments)}h`, label: 'Most court time', caption: `${mostEvents.player} · ${mostEvents.tournaments} nights`, accent: 'tang' },
+    mostEvents && { emoji: '🏃', value: `${eventHours(mostEvents.tournaments)}h`, label: 'Most court time', caption: `${mostEvents.player} · ${mostEvents.tournaments} events`, accent: 'tang' },
     mostGames && { emoji: '🎮', value: `${mostGames.games}`, label: 'Most matches', caption: `${mostGames.player} — a true regular`, accent: 'sky' },
     mostTitles && mostTitles.tournamentWins > 0 && { emoji: '👑', value: `${mostTitles.tournamentWins}`, label: 'Most titles', caption: `${mostTitles.player}, serial champion`, accent: 'gold' },
     topPeak && { emoji: '⚡', value: `${Math.round(topPeak.peak)}`, label: 'Highest Elo peak', caption: `${topPeak.player} at their best`, accent: 'grape' },
@@ -143,14 +144,26 @@ export function aggregateStats(
   const totalEntries = season.reduce((n, s) => n + s.tournaments, 0)
   const totalSpend = Math.round(totalEntries * costPerEntryUsd)
   const biggest = mostEvents
-    ? { player: mostEvents.player, spend: Math.round(mostEvents.tournaments * costPerEntryUsd), nights: mostEvents.tournaments }
+    ? { player: mostEvents.player, spend: Math.round(mostEvents.tournaments * costPerEntryUsd), events: mostEvents.tournaments }
     : null
-  const nasiGoreng = Math.round(totalSpend / 2.5) // ~$2.5 a plate in Ubud
   const money: Highlight[] = [
-    { emoji: '💸', value: `$${totalSpend.toLocaleString()}`, label: 'Spent on padel, total', caption: `${totalEntries} entries · ~$${costPerEntryUsd}/night`, accent: 'mint' },
-    biggest && { emoji: '🤑', value: `$${biggest.spend.toLocaleString()}`, label: 'Biggest spender', caption: `${biggest.player} · ${biggest.nights} nights out`, accent: 'sun' },
-    { emoji: '🍛', value: nasiGoreng.toLocaleString(), label: 'Plates of nasi goreng', caption: 'what it could all buy instead', accent: 'tang' },
+    { emoji: '💸', value: `$${totalSpend.toLocaleString()}`, label: 'Spent on padel, total', caption: `${totalEntries} entries · ~$${costPerEntryUsd}/event`, accent: 'mint' },
+    biggest && { emoji: '🤑', value: `$${biggest.spend.toLocaleString()}`, label: 'Biggest spender', caption: `${biggest.player} · ${biggest.events} events in`, accent: 'sun' },
+    { emoji: '🎟️', value: `${totalEntries.toLocaleString()}`, label: 'Entries paid', caption: 'one player, one event', accent: 'grape' },
   ].filter(Boolean) as Highlight[]
 
-  return { tournaments: tournaments.length, matches, hours, players: players.length, cards, money }
+  // 🛒 What that pile of rupiah could have bought instead (Bali prices, very rough).
+  const buy = (price: number) => Math.floor(totalSpend / price).toLocaleString()
+  const buys: Highlight[] = [
+    { emoji: '🍛', value: buy(2.5), label: 'Plates of nasi goreng', caption: '~$2.5 a plate in Ubud', accent: 'tang' },
+    { emoji: '🍺', value: buy(3), label: 'Cold Bintangs', caption: '~$3 a bottle, post-match', accent: 'sun' },
+    { emoji: '🥥', value: buy(1.5), label: 'Fresh coconuts', caption: '~$1.5 on the beach', accent: 'lime' },
+    { emoji: '☕', value: buy(2.5), label: 'Flat whites', caption: '~$2.5 a cup, Canggu cafés', accent: 'mint' },
+    { emoji: '🛵', value: buy(5), label: 'Days of scooter rental', caption: '~$5 a day', accent: 'sky' },
+    { emoji: '💆', value: buy(7), label: 'Balinese massages', caption: '~$7 an hour', accent: 'grape' },
+    { emoji: '🎾', value: buy(120), label: 'Brand-new padel rackets', caption: '~$120 a mid-range racket', accent: 'punch' },
+    { emoji: '✈️', value: buy(55), label: 'Flights to Jakarta', caption: '~$55 one-way', accent: 'gold' },
+  ]
+
+  return { tournaments: tournaments.length, matches, hours, players: players.length, cards, money, buys }
 }

@@ -22,7 +22,7 @@ export function Stats() {
         <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
           <Stat label="Tournaments" value={stats.tournaments} tone="bg-sky-soft" />
           <Stat label="Matches" value={stats.matches} tone="bg-mint-soft" />
-          <Stat label="Hours on court" value={`${stats.hours}h`} sub="≈ 2h per night" tone="bg-tang-soft" />
+          <Stat label="Hours on court" value={`${stats.hours}h`} sub="≈ 2h per event" tone="bg-tang-soft" />
           <Stat label="Players" value={stats.players} tone="bg-punch-soft" />
         </div>
       </section>
@@ -55,7 +55,7 @@ export function Stats() {
       </section>
 
       <section>
-        <SectionTitle emoji="💸" title="The Damage" hint="Entry fees, roughly — ~$14 / 225k IDR per night" />
+        <SectionTitle emoji="💸" title="The Damage" hint="Entry fees, roughly — ~$14 / 225k IDR per event" />
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           {stats.money.map((c, i) => {
             const a = accentByKey(c.accent)
@@ -75,6 +75,33 @@ export function Stats() {
               </div>
             )
           })}
+        </div>
+
+        <div className="mt-6 sticker-lg bg-paper-100 p-5 sm:p-6">
+          <div className="flex items-baseline justify-between gap-3">
+            <h3 className="font-display text-xl font-extrabold sm:text-2xl">…or, instead 🛒</h3>
+            <span className="text-xs font-bold uppercase tracking-wider text-ink-faint">
+              same money, more fun
+            </span>
+          </div>
+          <p className="mt-1 text-sm text-ink-soft">
+            What the whole pile of entry fees could've bought around Bali instead.
+          </p>
+          <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            {stats.buys.map((c, i) => {
+              const a = accentByKey(c.accent)
+              return (
+                <div key={i} className={cx('sticker flex flex-col gap-1 p-3 animate-pop-in', a.soft)}>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">{c.emoji}</span>
+                    <span className="font-mono text-2xl font-extrabold tabular leading-none">{c.value}</span>
+                  </div>
+                  <div className="text-sm font-bold leading-tight">{c.label}</div>
+                  {c.caption && <div className="text-xs text-ink-soft">{c.caption}</div>}
+                </div>
+              )
+            })}
+          </div>
         </div>
       </section>
     </div>
