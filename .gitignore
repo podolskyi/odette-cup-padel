@@ -23,3 +23,7 @@ dist-ssr
 # one-time import: raw downloads are large, keep them local
 data-import/raw/
 data-import/out/
+
+# local env (Supabase keys)
+.env
+.env.local

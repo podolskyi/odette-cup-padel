@@ -1,6 +1,7 @@
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { draftTournaments, draftNames, type DraftEntry } from '../draft/draftData'
 import { useDraftStore } from '../draft/draftStore'
+import { supabaseConfigured, loadReview, saveReview } from '../lib/supabase'
 import { seedDataset } from '../store/useAppStore'
 import { computeStandings } from '../stats'
 import { allPlayers, resolveName } from '../identity/aliases'
@@ -72,7 +73,65 @@ export function Draft() {
         </div>
       </section>
 
+      <CloudBar />
       {tab === 'tournaments' ? <TournamentsTab /> : <NamesTab />}
+    </div>
+  )
+}
+
+// --- Cloud sync (Supabase) -------------------------------------------------
+
+function CloudBar() {
+  const aliases = useDraftStore((s) => s.aliases)
+  const dates = useDraftStore((s) => s.dates)
+  const loadStore = useDraftStore((s) => s.load)
+  const [status, setStatus] = useState<'idle' | 'loading' | 'saving' | 'saved' | 'error'>('idle')
+  const [last, setLast] = useState<string | undefined>()
+
+  // On open, pull the latest shared review so everyone sees the same state.
+  useEffect(() => {
+    if (!supabaseConfigured) return
+    let alive = true
+    setStatus('loading')
+    loadReview()
+      .then((r) => {
+        if (!alive) return
+        if (r) { loadStore({ aliases: r.aliases, dates: r.dates }); setLast(r.updated_at) }
+        setStatus('idle')
+      })
+      .catch(() => alive && setStatus('error'))
+    return () => { alive = false }
+  }, [loadStore])
+
+  if (!supabaseConfigured) {
+    return (
+      <div className="sticker bg-sun-soft px-4 py-2 text-sm text-ink-soft">
+        ☁️ Cloud sync not configured yet — your work auto-saves on this device and you can Export the file.
+      </div>
+    )
+  }
+
+  const save = async () => {
+    setStatus('saving')
+    try {
+      const t = await saveReview(aliases, dates)
+      setLast(t)
+      setStatus('saved')
+    } catch {
+      setStatus('error')
+    }
+  }
+
+  const when = last ? new Date(last).toLocaleString() : 'never'
+  return (
+    <div className="sticker flex flex-wrap items-center justify-between gap-2 bg-mint-soft px-4 py-2 text-sm">
+      <span>
+        ☁️ Shared review ·{' '}
+        {status === 'loading' ? 'loading…' : status === 'saving' ? 'saving…' : status === 'error' ? '⚠️ connection issue' : `last saved ${when}`}
+      </span>
+      <button className="btn-dark px-3 py-1" onClick={save} disabled={status === 'saving'}>
+        💾 Save to cloud
+      </button>
     </div>
   )
 }
