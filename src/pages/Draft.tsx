@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react'
-import { draftTournaments, type DraftEntry } from '../draft/draftData'
+import { useMemo, useRef, useState } from 'react'
+import { draftTournaments, draftNames, type DraftEntry } from '../draft/draftData'
 import { useDraftStore } from '../draft/draftStore'
 import { seedDataset } from '../store/useAppStore'
 import { computeStandings } from '../stats'
@@ -8,8 +8,12 @@ import { suggestDuplicates } from '../lib/similar'
 import { isUnlocked, tryUnlock } from '../lib/settingsGate'
 import { StandingsTable } from '../components/StandingsTable'
 import { Avatar } from '../components/ui/Avatar'
-import { SectionTitle, Chip, Stat, Empty } from '../components/ui/Bits'
+import { SectionTitle, Chip, Stat } from '../components/ui/Bits'
+import { downloadText } from '../lib/download'
 import { cx } from '../lib/cx'
+
+// name -> Cyrillic originals + tournaments it appears in (from the draft import).
+const NAME_INFO = new Map(draftNames.map((n) => [n.name, n]))
 
 const seed = seedDataset()
 const seedTournaments = seed.tournaments
@@ -183,11 +187,14 @@ const allTournaments = [...seedTournaments, ...draftTournaments]
 
 function NamesTab() {
   const aliases = useDraftStore((s) => s.aliases)
+  const dates = useDraftStore((s) => s.dates)
   const setAlias = useDraftStore((s) => s.setAlias)
   const removeAlias = useDraftStore((s) => s.removeAlias)
   const clearAliases = useDraftStore((s) => s.clearAliases)
+  const load = useDraftStore((s) => s.load)
   const [q, setQ] = useState('')
-  const [snippet, setSnippet] = useState<string | null>(null)
+  const [expanded, setExpanded] = useState<string | null>(null)
+  const fileRef = useRef<HTMLInputElement>(null)
 
   const eff = useMemo(() => ({ ...seed.aliases, ...aliases }), [aliases])
 
@@ -200,14 +207,9 @@ function NamesTab() {
   }, [])
 
   const canonicalCount = useMemo(() => allPlayers(allTournaments, eff).length, [eff])
-
+  const canonicals = useMemo(() => [...new Set(rawNames.map((n) => resolveName(n, eff)))].sort((a, b) => a.localeCompare(b)), [rawNames, eff])
   const suggestions = useMemo(
-    () => suggestDuplicates(rawNames).filter((s) => resolveName(s.a, eff) !== resolveName(s.b, eff)).slice(0, 30),
-    [rawNames, eff],
-  )
-
-  const canonicals = useMemo(
-    () => [...new Set(rawNames.map((n) => resolveName(n, eff)))].sort((a, b) => a.localeCompare(b)),
+    () => suggestDuplicates(rawNames).filter((s) => resolveName(s.a, eff) !== resolveName(s.b, eff)).slice(0, 40),
     [rawNames, eff],
   )
 
@@ -218,66 +220,118 @@ function NamesTab() {
   }
   const dir = (a: string, b: string): [string, string] => {
     const ca = counts.get(a) ?? 0, cb = counts.get(b) ?? 0
-    return ca >= cb ? [b, a] : [a, b] // merge rarer into more common
+    return ca >= cb ? [b, a] : [a, b]
+  }
+  const cyrillicFor = (n: string) => NAME_INFO.get(n)?.originals ?? []
+  const toursFor = (n: string): string[] => {
+    const set = new Set<string>()
+    for (const t of NAME_INFO.get(n)?.tournaments ?? []) set.add(t.label)
+    for (const t of seedTournaments)
+      if (t.matches.some((m) => [...m.teamA, ...m.teamB].includes(n))) set.add(t.nickname || t.name)
+    return [...set]
   }
 
-  const exportAll = () => {
-    const merged = { ...seed.aliases, ...aliases }
-    const lines = Object.entries(merged).sort().map(([f, t]) => `  ${JSON.stringify(f)}: ${JSON.stringify(t)},`).join('\n')
-    const code = `// src/data/aliases.ts\nexport const SEED_ALIASES: Record<string, string> = {\n${lines}\n}`
-    setSnippet(code)
-    try { navigator.clipboard?.writeText(code) } catch { /* fallback below */ }
+  // --- save / load (file hand-off) ---
+  const exportJson = () => {
+    const payload = { version: 1, exportedAt: new Date().toISOString(), aliases, dates }
+    downloadText(`odette-merges-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(payload, null, 2))
+  }
+  const exportCsv = () => {
+    const rows = [['name', 'canonical', 'cyrillic', 'games', 'tournaments']]
+    for (const n of rawNames)
+      rows.push([n, resolveName(n, eff), cyrillicFor(n).join('/'), String(counts.get(n) ?? 0), toursFor(n).join(' | ')])
+    const csv = rows.map((r) => r.map((c) => `"${String(c).replace(/"/g, '""')}"`).join(',')).join('\n')
+    downloadText(`odette-names-${new Date().toISOString().slice(0, 10)}.csv`, csv, 'text/csv')
+  }
+  const importFile = (file?: File) => {
+    if (!file) return
+    const reader = new FileReader()
+    reader.onload = () => {
+      try {
+        const d = JSON.parse(String(reader.result))
+        load({ aliases: d.aliases, dates: d.dates })
+      } catch {
+        alert('Could not read that file — expected the exported JSON.')
+      }
+    }
+    reader.readAsText(file)
   }
 
-  const filtered = rawNames.filter((n) => n.toLowerCase().includes(q.toLowerCase()))
+  const filtered = rawNames.filter(
+    (n) => n.toLowerCase().includes(q.toLowerCase()) || cyrillicFor(n).some((o) => o.includes(q)),
+  )
   const aliasEntries = Object.entries(aliases)
 
   return (
     <div className="space-y-6">
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        <Stat label="Distinct names" value={rawNames.length} tone="bg-sky-soft" />
-        <Stat label="→ Players" value={canonicalCount} tone="bg-mint-soft" />
-        <Stat label="Draft merges" value={aliasEntries.length} tone="bg-sun-soft" />
-        <button className="btn-dark" onClick={exportAll}>⤓ Export merges</button>
-      </div>
-
-      {snippet && (
-        <div className="rounded-2xl border-2 border-ink bg-grape-soft p-4">
-          <div className="mb-2 text-sm font-bold">
-            ✅ Copied. This is the full merged alias map — paste into{' '}
-            <code className="rounded bg-paper-100 px-1">src/data/aliases.ts</code> when promoting.
-          </div>
-          <textarea readOnly value={snippet} onFocus={(e) => e.currentTarget.select()} className="h-40 w-full rounded-xl border-2 border-ink bg-paper-100 p-3 font-mono text-xs" />
+      {/* Toolbar: stats + save/export/import */}
+      <div className="sticker flex flex-wrap items-center gap-3 p-3">
+        <div className="flex gap-4 px-1">
+          <span className="text-sm"><b className="font-mono text-lg">{rawNames.length}</b> names</span>
+          <span className="text-sm"><b className="font-mono text-lg text-mint">{canonicalCount}</b> players</span>
+          <span className="text-sm"><b className="font-mono text-lg">{aliasEntries.length}</b> merges</span>
         </div>
-      )}
+        <div className="ml-auto flex flex-wrap gap-2">
+          <button className="btn-dark" onClick={exportJson}>💾 Export (send to me)</button>
+          <button className="btn" onClick={exportCsv}>CSV</button>
+          <button className="btn" onClick={() => fileRef.current?.click()}>⤒ Import</button>
+          <input ref={fileRef} type="file" accept="application/json" className="hidden" onChange={(e) => importFile(e.target.files?.[0])} />
+          {aliasEntries.length > 0 && <button className="btn" onClick={() => confirm('Clear all your merges?') && clearAliases()}>Reset</button>}
+        </div>
+      </div>
+      <p className="-mt-3 px-1 text-xs text-ink-soft">
+        Your work saves automatically as you go. When you're done, hit <b>Export</b> and send me the
+        file (or we'll sync it via the cloud).
+      </p>
 
+      <datalist id="canon-names">{canonicals.map((c) => <option key={c} value={c} />)}</datalist>
+
+      {/* Main: full name list with Cyrillic + tournaments */}
       <section>
-        <SectionTitle emoji="💡" title="Suggested merges" hint="Look-alikes + transliteration matches — your call" />
-        {suggestions.length === 0 ? (
-          <Empty emoji="✅">No obvious look-alikes left.</Empty>
-        ) : (
-          <div className="grid gap-2 sm:grid-cols-2">
-            {suggestions.map((s) => {
-              const [loser, winner] = dir(s.a, s.b)
-              return (
-                <div key={`${s.a}|${s.b}`} className="sticker flex items-center justify-between gap-2 p-2.5 text-sm">
-                  <span className="flex items-center gap-1.5">
-                    <Avatar name={s.a} size="sm" /> <b>{s.a}</b>
-                    <span className="text-ink-faint">↔</span>
-                    <Avatar name={s.b} size="sm" /> <b>{s.b}</b>
-                    <span className="ml-1 text-ink-faint">·{counts.get(s.a)}/{counts.get(s.b)}</span>
-                  </span>
-                  <button className="btn-dark shrink-0 px-2.5 py-1 text-xs" onClick={() => link(loser, winner)}>→ {winner}</button>
+        <SectionTitle emoji="📇" title="Players" hint="Tap a name to see their tournaments & merge" />
+        <input
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+          placeholder="search (Latin or Cyrillic)…"
+          className="mb-3 w-full rounded-xl border-2 border-ink bg-paper-100 px-3 py-2 font-bold shadow-hard-sm outline-none sm:max-w-xs"
+        />
+        <div className="sticker divide-y divide-ink/10">
+          {filtered.map((n) => {
+            const canon = resolveName(n, eff)
+            const merged = canon !== n
+            const cyr = cyrillicFor(n)
+            const isOpen = expanded === n
+            return (
+              <div key={n}>
+                <div className="flex items-center gap-2 px-3 py-1.5 text-sm">
+                  <button className="flex flex-1 items-center gap-2 text-left" onClick={() => setExpanded(isOpen ? null : n)}>
+                    <Avatar name={canon} size="sm" />
+                    <span className={cx('font-bold', merged && 'text-ink-faint line-through')}>{n}</span>
+                    {cyr.length > 0 && <span className="text-ink-soft">({cyr.join(' / ')})</span>}
+                    {merged && <span className="text-ink-soft">→ <b className="text-ink">{canon}</b></span>}
+                  </button>
+                  <span className="font-mono text-xs text-ink-faint">{counts.get(n)}g</span>
+                  {merged ? (
+                    <button className="btn px-2 py-0.5 text-xs" onClick={() => removeAlias(n)}>↩ unmerge</button>
+                  ) : (
+                    <MergeInput name={n} onMerge={(to) => link(n, to)} />
+                  )}
                 </div>
-              )
-            })}
-          </div>
-        )}
+                {isOpen && (
+                  <div className="bg-paper-300/30 px-3 py-2 text-xs text-ink-soft">
+                    <span className="font-bold">Played in:</span> {toursFor(n).join(' · ') || '—'}
+                  </div>
+                )}
+              </div>
+            )
+          })}
+        </div>
       </section>
 
+      {/* Your merges */}
       {aliasEntries.length > 0 && (
         <section>
-          <SectionTitle emoji="🧷" title="Your merges" action={<button className="btn" onClick={clearAliases}>Reset all</button>} />
+          <SectionTitle emoji="🧷" title="Your merges" />
           <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
             {aliasEntries.map(([f, t]) => (
               <div key={f} className="sticker flex items-center justify-between gap-2 p-2 text-sm">
@@ -289,37 +343,26 @@ function NamesTab() {
         </section>
       )}
 
-      <section>
-        <SectionTitle emoji="📇" title="All names" hint="Merge any name into a canonical one" />
-        <input
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-          placeholder="search names…"
-          className="mb-3 w-full rounded-xl border-2 border-ink bg-paper-100 px-3 py-2 font-bold shadow-hard-sm outline-none sm:max-w-xs"
-        />
-        <datalist id="canon-names">
-          {canonicals.map((c) => <option key={c} value={c} />)}
-        </datalist>
-        <div className="sticker divide-y divide-ink/10">
-          {filtered.map((n) => {
-            const canon = resolveName(n, eff)
-            const merged = canon !== n
+      {/* Suggestions — de-emphasized, opt-in */}
+      <details className="sticker p-3">
+        <summary className="cursor-pointer text-sm font-bold">
+          💡 Suggested merges ({suggestions.length}) — rough hints, double-check before applying
+        </summary>
+        <div className="mt-3 grid gap-2 sm:grid-cols-2">
+          {suggestions.map((s) => {
+            const [loser, winner] = dir(s.a, s.b)
             return (
-              <div key={n} className="flex items-center gap-2 px-3 py-1.5 text-sm">
-                <Avatar name={canon} size="sm" />
-                <span className={cx('font-bold', merged && 'text-ink-faint line-through')}>{n}</span>
-                {merged && <span className="text-ink-soft">→ <b className="text-ink">{canon}</b></span>}
-                <span className="ml-auto font-mono text-xs text-ink-faint">{counts.get(n)}g</span>
-                {merged ? (
-                  <button className="btn px-2 py-0.5 text-xs" onClick={() => removeAlias(n)}>↩</button>
-                ) : (
-                  <MergeInput name={n} onMerge={(to) => link(n, to)} />
-                )}
+              <div key={`${s.a}|${s.b}`} className="flex items-center justify-between gap-2 rounded-lg border border-ink/15 p-2 text-sm">
+                <span className="flex items-center gap-1.5">
+                  <b>{s.a}</b><span className="text-ink-faint">↔</span><b>{s.b}</b>
+                  <span className="ml-1 text-ink-faint">·{counts.get(s.a)}/{counts.get(s.b)}</span>
+                </span>
+                <button className="btn shrink-0 px-2 py-0.5 text-xs" onClick={() => link(loser, winner)}>→ {winner}</button>
               </div>
             )
           })}
         </div>
-      </section>
+      </details>
     </div>
   )
 }

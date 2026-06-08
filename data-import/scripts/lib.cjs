@@ -66,10 +66,12 @@ function buildEntry(meta, rawMatches) {
 
   // Drop unplayed (both 0) and malformed rows.
   const kept = []
+  const origins = [] // {clean, orig} — keeps the source spelling (incl. Cyrillic)
   let dropped = 0
   for (const m of rawMatches) {
     const sa = Number(m.scoreA), sb = Number(m.scoreB)
-    const names = [...m.teamA, ...m.teamB].map(cleanName)
+    const raw = [...m.teamA, ...m.teamB].map((n) => String(n ?? '').replace(/\s+/g, ' ').trim())
+    const names = raw.map(cleanName)
     if (names.some((n) => !n)) { dropped++; continue }
     if (!Number.isFinite(sa) || !Number.isFinite(sb)) { dropped++; continue }
     if (sa === 0 && sb === 0) { dropped++; continue }
@@ -78,6 +80,7 @@ function buildEntry(meta, rawMatches) {
       scoreA: sa, scoreB: sb,
       teamA: [names[0], names[1]], teamB: [names[2], names[3]],
     })
+    names.forEach((c, i) => origins.push({ clean: c, orig: raw[i] }))
   }
   if (dropped) warnings.push(`${dropped} unplayed/blank match(es) dropped`)
   if (kept.length === 0) warnings.push('NO valid matches parsed')
@@ -100,6 +103,7 @@ function buildEntry(meta, rawMatches) {
     format: meta.format || 'Americano',
     pointsPerMatch: pts,
     matches: kept,
+    _origins: origins,
     _source: {
       service: meta.service,
       url: meta.sourceUrl,

@@ -10,6 +10,8 @@ interface DraftState {
   removeAlias: (from: string) => void
   clearAliases: () => void
   setDate: (id: string, date: string) => void
+  /** Bulk-load merges + dates (used by file/cloud import). */
+  load: (data: { aliases?: Record<string, string>; dates?: Record<string, string> }) => void
 }
 
 export const useDraftStore = create<DraftState>()(
@@ -27,6 +29,8 @@ export const useDraftStore = create<DraftState>()(
         }),
       clearAliases: () => set({ aliases: {} }),
       setDate: (id, date) => set((s) => ({ dates: { ...s.dates, [id]: date } })),
+      load: (data) =>
+        set((s) => ({ aliases: data.aliases ?? s.aliases, dates: data.dates ?? s.dates })),
     }),
     { name: 'odette-cup-padel:draft-review' },
   ),

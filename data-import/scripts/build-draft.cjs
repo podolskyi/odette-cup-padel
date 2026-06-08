@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+const { hasCyrillic } = require('./lib.cjs')
 
 const sources = [
   require('./transform-brackets.cjs'),
@@ -17,33 +18,38 @@ for (const s of sources) {
   }
 }
 
-// Sort by date (undated last), then by id.
+// Build a name index: cleaned name -> { count, originals (Cyrillic), tournaments }.
+const idx = new Map()
+for (const e of entries) {
+  const label = e.nickname || e._source.originalName || e.id
+  for (const o of e._origins || []) {
+    let r = idx.get(o.clean)
+    if (!r) { r = { count: 0, originals: new Set(), tours: new Map() }; idx.set(o.clean, r) }
+    r.count++
+    if (hasCyrillic(o.orig)) r.originals.add(o.orig)
+    r.tours.set(e.id, { id: e.id, label, date: e.date })
+  }
+}
+for (const e of entries) delete e._origins // keep the tournament file lean
+
 entries.sort((a, b) => (b.date || '0').localeCompare(a.date || '0') || a.id.localeCompare(b.id))
 
 const outDir = path.join(__dirname, '..', 'out')
 fs.mkdirSync(outDir, { recursive: true })
 fs.writeFileSync(path.join(outDir, 'draft.json'), JSON.stringify(entries, null, 2))
 
-// Summary table
-console.log(`\n${entries.length} tournaments parsed\n`)
-const pad = (s, n) => String(s).padEnd(n)
-console.log(pad('id', 22), pad('date', 12), pad('orig name', 26), pad('P', 3), pad('M', 4), pad('R', 3), pad('pts', 4), 'warnings')
-console.log('-'.repeat(110))
-for (const e of entries) {
-  console.log(
-    pad(e.id, 22),
-    pad(e.date || '—', 12),
-    pad((e._source.originalName || '').slice(0, 25), 26),
-    pad(e._review.players, 3),
-    pad(e._review.matches, 4),
-    pad(e._review.rounds, 3),
-    pad(e.pointsPerMatch, 4),
-    e._review.warnings.join('; ') || 'ok',
-  )
-}
+const names = [...idx.entries()]
+  .map(([name, r]) => ({
+    name,
+    count: r.count,
+    originals: [...r.originals],
+    tournaments: [...r.tours.values()],
+  }))
+  .sort((a, b) => a.name.localeCompare(b.name))
+fs.writeFileSync(path.join(outDir, 'draftNames.json'), JSON.stringify(names, null, 2))
 
-// Distinct names across the draft (for the merge tool).
-const names = new Set()
-for (const e of entries) for (const m of e.matches) for (const p of [...m.teamA, ...m.teamB]) names.add(p)
-console.log(`\n${names.size} distinct player names across the draft:`)
-console.log([...names].sort((a, b) => a.localeCompare(b)).join(', '))
+// Summary
+console.log(`\n${entries.length} tournaments, ${names.length} distinct names`)
+const cyr = names.filter((n) => n.originals.length)
+console.log(`${cyr.length} names have a Cyrillic original, e.g.:`)
+console.log(cyr.slice(0, 12).map((n) => `${n.name} (${n.originals.join('/')})`).join(', '))
