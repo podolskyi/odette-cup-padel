@@ -1,0 +1,1762 @@
+[
+  {
+    "name": "Alex",
+    "count": 12,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "puffin-019e585d",
+        "label": "Odette Cup",
+        "date": "2026-05-24"
+      }
+    ]
+  },
+  {
+    "name": "Alex Double",
+    "count": 34,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "puffin-019e585d",
+        "label": "Odette Cup",
+        "date": "2026-05-24"
+      },
+      {
+        "id": "americano-365",
+        "label": "Odette Cup 20th",
+        "date": ""
+      },
+      {
+        "id": "americano-358",
+        "label": "ODETTE CUP 16th",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Alex Peter Pen",
+    "count": 11,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-314",
+        "label": "Odette Cup  19th Oct",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Ali",
+    "count": 29,
+    "originals": [
+      "Али"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-8oJo",
+        "label": "Wednesday Morning Padel Classic Americano",
+        "date": "2025-01-15"
+      },
+      {
+        "id": "americano-365",
+        "label": "Odette Cup 20th",
+        "date": ""
+      },
+      {
+        "id": "americano-358",
+        "label": "ODETTE CUP 16th",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Alina",
+    "count": 84,
+    "originals": [
+      "Алина",
+      "Аліна"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-8oJo",
+        "label": "Wednesday Morning Padel Classic Americano",
+        "date": "2025-01-15"
+      },
+      {
+        "id": "brackets-BBR8x",
+        "label": "Odette october Americana Rodri 14.10.2025",
+        "date": "2025-10-13"
+      },
+      {
+        "id": "brackets-PPxA",
+        "label": "Tuesday Morning Padel Classic Americano",
+        "date": "2025-08-12"
+      },
+      {
+        "id": "brackets-9k4Y",
+        "label": "Odette summercup championship americana",
+        "date": "2025-07-28"
+      },
+      {
+        "id": "puffin-0198c016",
+        "label": "First  Mexicano odette cup  19.08.2025",
+        "date": "2025-08-19"
+      },
+      {
+        "id": "puffin-01953cbb",
+        "label": "OWAPT",
+        "date": "2025-02-25"
+      },
+      {
+        "id": "americano-365",
+        "label": "Odette Cup 20th",
+        "date": ""
+      },
+      {
+        "id": "americano-358",
+        "label": "ODETTE CUP 16th",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Anastasia",
+    "count": 11,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-314",
+        "label": "Odette Cup  19th Oct",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Andrew",
+    "count": 34,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-329",
+        "label": "ODETTE CUP",
+        "date": ""
+      },
+      {
+        "id": "americano-3211",
+        "label": "Odette",
+        "date": ""
+      },
+      {
+        "id": "americano-358",
+        "label": "ODETTE CUP 16th",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Andriy",
+    "count": 12,
+    "originals": [
+      "Андрій"
+    ],
+    "tournaments": [
+      {
+        "id": "padelution-9e5364a5",
+        "label": "KLP 30.02",
+        "date": "2025-03-01"
+      }
+    ]
+  },
+  {
+    "name": "Anton",
+    "count": 68,
+    "originals": [
+      "Антон"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-BBR8x",
+        "label": "Odette october Americana Rodri 14.10.2025",
+        "date": "2025-10-13"
+      },
+      {
+        "id": "puffin-019e585d",
+        "label": "Odette Cup",
+        "date": "2026-05-24"
+      },
+      {
+        "id": "americano-314",
+        "label": "Odette Cup  19th Oct",
+        "date": ""
+      },
+      {
+        "id": "americano-329",
+        "label": "ODETTE CUP",
+        "date": ""
+      },
+      {
+        "id": "americano-365",
+        "label": "Odette Cup 20th",
+        "date": ""
+      },
+      {
+        "id": "americano-3211",
+        "label": "Odette",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Anya",
+    "count": 22,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-365",
+        "label": "Odette Cup 20th",
+        "date": ""
+      },
+      {
+        "id": "americano-358",
+        "label": "ODETTE CUP 16th",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Anzhelika",
+    "count": 64,
+    "originals": [
+      "Анжелика",
+      "Анжеліка"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-8oJo",
+        "label": "Wednesday Morning Padel Classic Americano",
+        "date": "2025-01-15"
+      },
+      {
+        "id": "brackets-BBR8x",
+        "label": "Odette october Americana Rodri 14.10.2025",
+        "date": "2025-10-13"
+      },
+      {
+        "id": "puffin-01953cbb",
+        "label": "OWAPT",
+        "date": "2025-02-25"
+      },
+      {
+        "id": "padelution-9e5364a5",
+        "label": "KLP 30.02",
+        "date": "2025-03-01"
+      },
+      {
+        "id": "americano-329",
+        "label": "ODETTE CUP",
+        "date": ""
+      },
+      {
+        "id": "americano-358",
+        "label": "ODETTE CUP 16th",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Artdiler",
+    "count": 11,
+    "originals": [
+      "Артдилер"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-nnwR",
+        "label": "Odette americana championship 26.08.25",
+        "date": "2025-08-26"
+      }
+    ]
+  },
+  {
+    "name": "Billy",
+    "count": 12,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-329",
+        "label": "ODETTE CUP",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Den",
+    "count": 12,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "puffin-019e585d",
+        "label": "Odette Cup",
+        "date": "2026-05-24"
+      }
+    ]
+  },
+  {
+    "name": "Denis",
+    "count": 44,
+    "originals": [
+      "Денис"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-PPxA",
+        "label": "Tuesday Morning Padel Classic Americano",
+        "date": "2025-08-12"
+      },
+      {
+        "id": "puffin-019e585d",
+        "label": "Odette Cup",
+        "date": "2026-05-24"
+      },
+      {
+        "id": "puffin-0198c016",
+        "label": "First  Mexicano odette cup  19.08.2025",
+        "date": "2025-08-19"
+      },
+      {
+        "id": "americano-358",
+        "label": "ODETTE CUP 16th",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Double Alex",
+    "count": 11,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-314",
+        "label": "Odette Cup  19th Oct",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Elise",
+    "count": 11,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "brackets-PPxA",
+        "label": "Tuesday Morning Padel Classic Americano",
+        "date": "2025-08-12"
+      }
+    ]
+  },
+  {
+    "name": "Eugene",
+    "count": 12,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "puffin-019e585d",
+        "label": "Odette Cup",
+        "date": "2026-05-24"
+      }
+    ]
+  },
+  {
+    "name": "Eugene M",
+    "count": 12,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-329",
+        "label": "ODETTE CUP",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "George",
+    "count": 8,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "puffin-01958abc",
+        "label": "Odette Cup March 2025",
+        "date": "2025-03-12"
+      }
+    ]
+  },
+  {
+    "name": "Ilya",
+    "count": 21,
+    "originals": [
+      "Илья"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-PPxA",
+        "label": "Tuesday Morning Padel Classic Americano",
+        "date": "2025-08-12"
+      },
+      {
+        "id": "puffin-0198c016",
+        "label": "First  Mexicano odette cup  19.08.2025",
+        "date": "2025-08-19"
+      }
+    ]
+  },
+  {
+    "name": "Ira",
+    "count": 69,
+    "originals": [
+      "Ира",
+      "Іра"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-8oJo",
+        "label": "Wednesday Morning Padel Classic Americano",
+        "date": "2025-01-15"
+      },
+      {
+        "id": "brackets-5WmY",
+        "label": "Sunday Morning Padel Classic Americano",
+        "date": "2025-01-05"
+      },
+      {
+        "id": "brackets-nnwR",
+        "label": "Odette americana championship 26.08.25",
+        "date": "2025-08-26"
+      },
+      {
+        "id": "brackets-PPxA",
+        "label": "Tuesday Morning Padel Classic Americano",
+        "date": "2025-08-12"
+      },
+      {
+        "id": "puffin-0198c016",
+        "label": "First  Mexicano odette cup  19.08.2025",
+        "date": "2025-08-19"
+      },
+      {
+        "id": "puffin-01953cbb",
+        "label": "OWAPT",
+        "date": "2025-02-25"
+      },
+      {
+        "id": "padelution-9e5364a5",
+        "label": "KLP 30.02",
+        "date": "2025-03-01"
+      }
+    ]
+  },
+  {
+    "name": "Ira K",
+    "count": 11,
+    "originals": [
+      "Ира К"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-9k4Y",
+        "label": "Odette summercup championship americana",
+        "date": "2025-07-28"
+      }
+    ]
+  },
+  {
+    "name": "Ira P",
+    "count": 11,
+    "originals": [
+      "Ира П"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-9k4Y",
+        "label": "Odette summercup championship americana",
+        "date": "2025-07-28"
+      }
+    ]
+  },
+  {
+    "name": "Irina",
+    "count": 19,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "padelution-9e752512",
+        "label": "Odette Tuesday Americano",
+        "date": "2025-03-18"
+      },
+      {
+        "id": "americano-329",
+        "label": "ODETTE CUP",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Irina P",
+    "count": 11,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-314",
+        "label": "Odette Cup  19th Oct",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Irina Perminova",
+    "count": 11,
+    "originals": [
+      "Ирина Перминова"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-BBR8x",
+        "label": "Odette october Americana Rodri 14.10.2025",
+        "date": "2025-10-13"
+      }
+    ]
+  },
+  {
+    "name": "Katie G",
+    "count": 11,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-3211",
+        "label": "Odette",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Kir",
+    "count": 56,
+    "originals": [
+      "Кир"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-nnwR",
+        "label": "Odette americana championship 26.08.25",
+        "date": "2025-08-26"
+      },
+      {
+        "id": "puffin-019e585d",
+        "label": "Odette Cup",
+        "date": "2026-05-24"
+      },
+      {
+        "id": "puffin-0198c016",
+        "label": "First  Mexicano odette cup  19.08.2025",
+        "date": "2025-08-19"
+      },
+      {
+        "id": "americano-314",
+        "label": "Odette Cup  19th Oct",
+        "date": ""
+      },
+      {
+        "id": "americano-329",
+        "label": "ODETTE CUP",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Kristian",
+    "count": 11,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-3211",
+        "label": "Odette",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Kseniya",
+    "count": 11,
+    "originals": [
+      "Ксенія"
+    ],
+    "tournaments": [
+      {
+        "id": "padelution-9e5364a5",
+        "label": "KLP 30.02",
+        "date": "2025-03-01"
+      }
+    ]
+  },
+  {
+    "name": "Lekha",
+    "count": 11,
+    "originals": [
+      "Леха"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-9k4Y",
+        "label": "Odette summercup championship americana",
+        "date": "2025-07-28"
+      }
+    ]
+  },
+  {
+    "name": "Lera",
+    "count": 11,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-3211",
+        "label": "Odette",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Lesha",
+    "count": 50,
+    "originals": [
+      "Леша"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-8oJo",
+        "label": "Wednesday Morning Padel Classic Americano",
+        "date": "2025-01-15"
+      },
+      {
+        "id": "brackets-BBR8x",
+        "label": "Odette october Americana Rodri 14.10.2025",
+        "date": "2025-10-13"
+      },
+      {
+        "id": "brackets-nnwR",
+        "label": "Odette americana championship 26.08.25",
+        "date": "2025-08-26"
+      },
+      {
+        "id": "brackets-PPxA",
+        "label": "Tuesday Morning Padel Classic Americano",
+        "date": "2025-08-12"
+      },
+      {
+        "id": "puffin-0198c016",
+        "label": "First  Mexicano odette cup  19.08.2025",
+        "date": "2025-08-19"
+      }
+    ]
+  },
+  {
+    "name": "Maks",
+    "count": 23,
+    "originals": [
+      "Макс"
+    ],
+    "tournaments": [
+      {
+        "id": "puffin-01953cbb",
+        "label": "OWAPT",
+        "date": "2025-02-25"
+      },
+      {
+        "id": "padelution-9e5364a5",
+        "label": "KLP 30.02",
+        "date": "2025-03-01"
+      }
+    ]
+  },
+  {
+    "name": "Maksym",
+    "count": 7,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "padelution-9e752512",
+        "label": "Odette Tuesday Americano",
+        "date": "2025-03-18"
+      }
+    ]
+  },
+  {
+    "name": "Marila",
+    "count": 11,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-3211",
+        "label": "Odette",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Marta",
+    "count": 11,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-365",
+        "label": "Odette Cup 20th",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Max",
+    "count": 11,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-3211",
+        "label": "Odette",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Mila",
+    "count": 12,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "puffin-019e585d",
+        "label": "Odette Cup",
+        "date": "2026-05-24"
+      }
+    ]
+  },
+  {
+    "name": "Milka",
+    "count": 11,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-358",
+        "label": "ODETTE CUP 16th",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Miroslav",
+    "count": 78,
+    "originals": [
+      "Мирослав"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-BBR8x",
+        "label": "Odette october Americana Rodri 14.10.2025",
+        "date": "2025-10-13"
+      },
+      {
+        "id": "brackets-nnwR",
+        "label": "Odette americana championship 26.08.25",
+        "date": "2025-08-26"
+      },
+      {
+        "id": "brackets-9k4Y",
+        "label": "Odette summercup championship americana",
+        "date": "2025-07-28"
+      },
+      {
+        "id": "puffin-019e585d",
+        "label": "Odette Cup",
+        "date": "2026-05-24"
+      },
+      {
+        "id": "americano-314",
+        "label": "Odette Cup  19th Oct",
+        "date": ""
+      },
+      {
+        "id": "americano-365",
+        "label": "Odette Cup 20th",
+        "date": ""
+      },
+      {
+        "id": "americano-3211",
+        "label": "Odette",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Nastya",
+    "count": 11,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-3211",
+        "label": "Odette",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Nastya N",
+    "count": 11,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-3211",
+        "label": "Odette",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Nikita",
+    "count": 14,
+    "originals": [
+      "Никита"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-8oJo",
+        "label": "Wednesday Morning Padel Classic Americano",
+        "date": "2025-01-15"
+      },
+      {
+        "id": "brackets-5WmY",
+        "label": "Sunday Morning Padel Classic Americano",
+        "date": "2025-01-05"
+      }
+    ]
+  },
+  {
+    "name": "Oleksander",
+    "count": 8,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "puffin-01958abc",
+        "label": "Odette Cup March 2025",
+        "date": "2025-03-12"
+      }
+    ]
+  },
+  {
+    "name": "Oleksandr",
+    "count": 18,
+    "originals": [
+      "Олександр"
+    ],
+    "tournaments": [
+      {
+        "id": "padelution-9e752512",
+        "label": "Odette Tuesday Americano",
+        "date": "2025-03-18"
+      },
+      {
+        "id": "padelution-9e5364a5",
+        "label": "KLP 30.02",
+        "date": "2025-03-01"
+      }
+    ]
+  },
+  {
+    "name": "Oleksey",
+    "count": 12,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "puffin-019e585d",
+        "label": "Odette Cup",
+        "date": "2026-05-24"
+      }
+    ]
+  },
+  {
+    "name": "Oleksii",
+    "count": 26,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "puffin-01958abc",
+        "label": "Odette Cup March 2025",
+        "date": "2025-03-12"
+      },
+      {
+        "id": "padelution-9e752512",
+        "label": "Odette Tuesday Americano",
+        "date": "2025-03-18"
+      },
+      {
+        "id": "americano-314",
+        "label": "Odette Cup  19th Oct",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Oleksiy",
+    "count": 23,
+    "originals": [
+      "Олексій"
+    ],
+    "tournaments": [
+      {
+        "id": "puffin-01953cbb",
+        "label": "OWAPT",
+        "date": "2025-02-25"
+      },
+      {
+        "id": "padelution-9e5364a5",
+        "label": "KLP 30.02",
+        "date": "2025-03-01"
+      }
+    ]
+  },
+  {
+    "name": "Oleski",
+    "count": 12,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-329",
+        "label": "ODETTE CUP",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Olya",
+    "count": 30,
+    "originals": [
+      "Оля"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-5WmY",
+        "label": "Sunday Morning Padel Classic Americano",
+        "date": "2025-01-05"
+      },
+      {
+        "id": "puffin-01953cbb",
+        "label": "OWAPT",
+        "date": "2025-02-25"
+      },
+      {
+        "id": "padelution-9e5364a5",
+        "label": "KLP 30.02",
+        "date": "2025-03-01"
+      }
+    ]
+  },
+  {
+    "name": "Ostap",
+    "count": 11,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-3211",
+        "label": "Odette",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Peter Pen",
+    "count": 34,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-329",
+        "label": "ODETTE CUP",
+        "date": ""
+      },
+      {
+        "id": "americano-365",
+        "label": "Odette Cup 20th",
+        "date": ""
+      },
+      {
+        "id": "americano-358",
+        "label": "ODETTE CUP 16th",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Piter Pen",
+    "count": 11,
+    "originals": [
+      "Питер Пен"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-nnwR",
+        "label": "Odette americana championship 26.08.25",
+        "date": "2025-08-26"
+      }
+    ]
+  },
+  {
+    "name": "Rick",
+    "count": 12,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "puffin-019e585d",
+        "label": "Odette Cup",
+        "date": "2026-05-24"
+      }
+    ]
+  },
+  {
+    "name": "Roma",
+    "count": 65,
+    "originals": [
+      "Рома"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-8oJo",
+        "label": "Wednesday Morning Padel Classic Americano",
+        "date": "2025-01-15"
+      },
+      {
+        "id": "brackets-5WmY",
+        "label": "Sunday Morning Padel Classic Americano",
+        "date": "2025-01-05"
+      },
+      {
+        "id": "brackets-PPxA",
+        "label": "Tuesday Morning Padel Classic Americano",
+        "date": "2025-08-12"
+      },
+      {
+        "id": "brackets-9k4Y",
+        "label": "Odette summercup championship americana",
+        "date": "2025-07-28"
+      },
+      {
+        "id": "puffin-0198c016",
+        "label": "First  Mexicano odette cup  19.08.2025",
+        "date": "2025-08-19"
+      },
+      {
+        "id": "puffin-01953cbb",
+        "label": "OWAPT",
+        "date": "2025-02-25"
+      },
+      {
+        "id": "padelution-9e752512",
+        "label": "Odette Tuesday Americano",
+        "date": "2025-03-18"
+      }
+    ]
+  },
+  {
+    "name": "Roman",
+    "count": 32,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "puffin-019e585d",
+        "label": "Odette Cup",
+        "date": "2026-05-24"
+      },
+      {
+        "id": "puffin-01958abc",
+        "label": "Odette Cup March 2025",
+        "date": "2025-03-12"
+      },
+      {
+        "id": "americano-329",
+        "label": "ODETTE CUP",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Sabrina",
+    "count": 12,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "puffin-019e585d",
+        "label": "Odette Cup",
+        "date": "2026-05-24"
+      }
+    ]
+  },
+  {
+    "name": "Sasha",
+    "count": 29,
+    "originals": [
+      "Саша"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-5WmY",
+        "label": "Sunday Morning Padel Classic Americano",
+        "date": "2025-01-05"
+      },
+      {
+        "id": "brackets-9k4Y",
+        "label": "Odette summercup championship americana",
+        "date": "2025-07-28"
+      },
+      {
+        "id": "americano-358",
+        "label": "ODETTE CUP 16th",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Sasha Dvoechka",
+    "count": 32,
+    "originals": [
+      "Саша Двоечка"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-nnwR",
+        "label": "Odette americana championship 26.08.25",
+        "date": "2025-08-26"
+      },
+      {
+        "id": "brackets-PPxA",
+        "label": "Tuesday Morning Padel Classic Americano",
+        "date": "2025-08-12"
+      },
+      {
+        "id": "puffin-0198c016",
+        "label": "First  Mexicano odette cup  19.08.2025",
+        "date": "2025-08-19"
+      }
+    ]
+  },
+  {
+    "name": "Sasha P",
+    "count": 11,
+    "originals": [
+      "Саша П"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-PPxA",
+        "label": "Tuesday Morning Padel Classic Americano",
+        "date": "2025-08-12"
+      }
+    ]
+  },
+  {
+    "name": "Serega",
+    "count": 39,
+    "originals": [
+      "Серега"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-5WmY",
+        "label": "Sunday Morning Padel Classic Americano",
+        "date": "2025-01-05"
+      },
+      {
+        "id": "brackets-nnwR",
+        "label": "Odette americana championship 26.08.25",
+        "date": "2025-08-26"
+      },
+      {
+        "id": "brackets-9k4Y",
+        "label": "Odette summercup championship americana",
+        "date": "2025-07-28"
+      },
+      {
+        "id": "puffin-0198c016",
+        "label": "First  Mexicano odette cup  19.08.2025",
+        "date": "2025-08-19"
+      }
+    ]
+  },
+  {
+    "name": "Serega Iksi",
+    "count": 11,
+    "originals": [
+      "Серега Икси"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-BBR8x",
+        "label": "Odette october Americana Rodri 14.10.2025",
+        "date": "2025-10-13"
+      }
+    ]
+  },
+  {
+    "name": "Sergey",
+    "count": 31,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "puffin-01958abc",
+        "label": "Odette Cup March 2025",
+        "date": "2025-03-12"
+      },
+      {
+        "id": "americano-314",
+        "label": "Odette Cup  19th Oct",
+        "date": ""
+      },
+      {
+        "id": "americano-329",
+        "label": "ODETTE CUP",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Sergey Ixi",
+    "count": 12,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "puffin-019e585d",
+        "label": "Odette Cup",
+        "date": "2026-05-24"
+      }
+    ]
+  },
+  {
+    "name": "Sergiy",
+    "count": 23,
+    "originals": [
+      "Сергій"
+    ],
+    "tournaments": [
+      {
+        "id": "puffin-01953cbb",
+        "label": "OWAPT",
+        "date": "2025-02-25"
+      },
+      {
+        "id": "padelution-9e5364a5",
+        "label": "KLP 30.02",
+        "date": "2025-03-01"
+      }
+    ]
+  },
+  {
+    "name": "Serhii",
+    "count": 26,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "puffin-01958abc",
+        "label": "Odette Cup March 2025",
+        "date": "2025-03-12"
+      },
+      {
+        "id": "padelution-9e752512",
+        "label": "Odette Tuesday Americano",
+        "date": "2025-03-18"
+      },
+      {
+        "id": "americano-358",
+        "label": "ODETTE CUP 16th",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Serhii P",
+    "count": 12,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-329",
+        "label": "ODETTE CUP",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Snezhana",
+    "count": 22,
+    "originals": [
+      "Снежана"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-BBR8x",
+        "label": "Odette october Americana Rodri 14.10.2025",
+        "date": "2025-10-13"
+      },
+      {
+        "id": "americano-3211",
+        "label": "Odette",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Sofia",
+    "count": 11,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-365",
+        "label": "Odette Cup 20th",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Stas",
+    "count": 11,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-365",
+        "label": "Odette Cup 20th",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Tamara",
+    "count": 12,
+    "originals": [
+      "Тамара"
+    ],
+    "tournaments": [
+      {
+        "id": "puffin-01953cbb",
+        "label": "OWAPT",
+        "date": "2025-02-25"
+      }
+    ]
+  },
+  {
+    "name": "Tanya",
+    "count": 45,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "puffin-019e585d",
+        "label": "Odette Cup",
+        "date": "2026-05-24"
+      },
+      {
+        "id": "americano-314",
+        "label": "Odette Cup  19th Oct",
+        "date": ""
+      },
+      {
+        "id": "americano-365",
+        "label": "Odette Cup 20th",
+        "date": ""
+      },
+      {
+        "id": "americano-358",
+        "label": "ODETTE CUP 16th",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Taras",
+    "count": 11,
+    "originals": [
+      "Тарас"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-nnwR",
+        "label": "Odette americana championship 26.08.25",
+        "date": "2025-08-26"
+      }
+    ]
+  },
+  {
+    "name": "Vernik",
+    "count": 23,
+    "originals": [
+      "Верник"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-BBR8x",
+        "label": "Odette october Americana Rodri 14.10.2025",
+        "date": "2025-10-13"
+      },
+      {
+        "id": "americano-329",
+        "label": "ODETTE CUP",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Veronika",
+    "count": 11,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-3211",
+        "label": "Odette",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Vilyam",
+    "count": 22,
+    "originals": [
+      "Вильям"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-BBR8x",
+        "label": "Odette october Americana Rodri 14.10.2025",
+        "date": "2025-10-13"
+      },
+      {
+        "id": "brackets-9k4Y",
+        "label": "Odette summercup championship americana",
+        "date": "2025-07-28"
+      }
+    ]
+  },
+  {
+    "name": "Vlad",
+    "count": 23,
+    "originals": [
+      "Влад"
+    ],
+    "tournaments": [
+      {
+        "id": "puffin-01953cbb",
+        "label": "OWAPT",
+        "date": "2025-02-25"
+      },
+      {
+        "id": "padelution-9e5364a5",
+        "label": "KLP 30.02",
+        "date": "2025-03-01"
+      }
+    ]
+  },
+  {
+    "name": "Vladimir Big",
+    "count": 33,
+    "originals": [
+      "Владимир Биг"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-BBR8x",
+        "label": "Odette october Americana Rodri 14.10.2025",
+        "date": "2025-10-13"
+      },
+      {
+        "id": "brackets-nnwR",
+        "label": "Odette americana championship 26.08.25",
+        "date": "2025-08-26"
+      },
+      {
+        "id": "brackets-PPxA",
+        "label": "Tuesday Morning Padel Classic Americano",
+        "date": "2025-08-12"
+      }
+    ]
+  },
+  {
+    "name": "Vova",
+    "count": 166,
+    "originals": [
+      "Вова"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-8oJo",
+        "label": "Wednesday Morning Padel Classic Americano",
+        "date": "2025-01-15"
+      },
+      {
+        "id": "brackets-5WmY",
+        "label": "Sunday Morning Padel Classic Americano",
+        "date": "2025-01-05"
+      },
+      {
+        "id": "brackets-BBR8x",
+        "label": "Odette october Americana Rodri 14.10.2025",
+        "date": "2025-10-13"
+      },
+      {
+        "id": "brackets-nnwR",
+        "label": "Odette americana championship 26.08.25",
+        "date": "2025-08-26"
+      },
+      {
+        "id": "brackets-PPxA",
+        "label": "Tuesday Morning Padel Classic Americano",
+        "date": "2025-08-12"
+      },
+      {
+        "id": "brackets-9k4Y",
+        "label": "Odette summercup championship americana",
+        "date": "2025-07-28"
+      },
+      {
+        "id": "puffin-019e585d",
+        "label": "Odette Cup",
+        "date": "2026-05-24"
+      },
+      {
+        "id": "puffin-0198c016",
+        "label": "First  Mexicano odette cup  19.08.2025",
+        "date": "2025-08-19"
+      },
+      {
+        "id": "puffin-01953cbb",
+        "label": "OWAPT",
+        "date": "2025-02-25"
+      },
+      {
+        "id": "padelution-9e752512",
+        "label": "Odette Tuesday Americano",
+        "date": "2025-03-18"
+      },
+      {
+        "id": "padelution-9e5364a5",
+        "label": "KLP 30.02",
+        "date": "2025-03-01"
+      },
+      {
+        "id": "americano-314",
+        "label": "Odette Cup  19th Oct",
+        "date": ""
+      },
+      {
+        "id": "americano-329",
+        "label": "ODETTE CUP",
+        "date": ""
+      },
+      {
+        "id": "americano-365",
+        "label": "Odette Cup 20th",
+        "date": ""
+      },
+      {
+        "id": "americano-3211",
+        "label": "Odette",
+        "date": ""
+      },
+      {
+        "id": "americano-358",
+        "label": "ODETTE CUP 16th",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Vova Big",
+    "count": 10,
+    "originals": [
+      "Вова Биг"
+    ],
+    "tournaments": [
+      {
+        "id": "puffin-0198c016",
+        "label": "First  Mexicano odette cup  19.08.2025",
+        "date": "2025-08-19"
+      }
+    ]
+  },
+  {
+    "name": "William",
+    "count": 52,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "padelution-9e752512",
+        "label": "Odette Tuesday Americano",
+        "date": "2025-03-18"
+      },
+      {
+        "id": "americano-314",
+        "label": "Odette Cup  19th Oct",
+        "date": ""
+      },
+      {
+        "id": "americano-329",
+        "label": "ODETTE CUP",
+        "date": ""
+      },
+      {
+        "id": "americano-3211",
+        "label": "Odette",
+        "date": ""
+      },
+      {
+        "id": "americano-358",
+        "label": "ODETTE CUP 16th",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Yevgeniy",
+    "count": 11,
+    "originals": [
+      "Євгеній"
+    ],
+    "tournaments": [
+      {
+        "id": "padelution-9e5364a5",
+        "label": "KLP 30.02",
+        "date": "2025-03-01"
+      }
+    ]
+  },
+  {
+    "name": "Yevhen",
+    "count": 34,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-329",
+        "label": "ODETTE CUP",
+        "date": ""
+      },
+      {
+        "id": "americano-3211",
+        "label": "Odette",
+        "date": ""
+      },
+      {
+        "id": "americano-358",
+        "label": "ODETTE CUP 16th",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Yevhenii",
+    "count": 8,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "puffin-01958abc",
+        "label": "Odette Cup March 2025",
+        "date": "2025-03-12"
+      }
+    ]
+  },
+  {
+    "name": "Yulia",
+    "count": 11,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "americano-358",
+        "label": "ODETTE CUP 16th",
+        "date": ""
+      }
+    ]
+  },
+  {
+    "name": "Yuliia",
+    "count": 8,
+    "originals": [],
+    "tournaments": [
+      {
+        "id": "puffin-01958abc",
+        "label": "Odette Cup March 2025",
+        "date": "2025-03-12"
+      }
+    ]
+  },
+  {
+    "name": "Yulya",
+    "count": 43,
+    "originals": [
+      "Юля"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-nnwR",
+        "label": "Odette americana championship 26.08.25",
+        "date": "2025-08-26"
+      },
+      {
+        "id": "brackets-PPxA",
+        "label": "Tuesday Morning Padel Classic Americano",
+        "date": "2025-08-12"
+      },
+      {
+        "id": "brackets-9k4Y",
+        "label": "Odette summercup championship americana",
+        "date": "2025-07-28"
+      },
+      {
+        "id": "puffin-0198c016",
+        "label": "First  Mexicano odette cup  19.08.2025",
+        "date": "2025-08-19"
+      }
+    ]
+  },
+  {
+    "name": "Yura",
+    "count": 7,
+    "originals": [
+      "Юра"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-5WmY",
+        "label": "Sunday Morning Padel Classic Americano",
+        "date": "2025-01-05"
+      }
+    ]
+  },
+  {
+    "name": "Zheka",
+    "count": 22,
+    "originals": [
+      "Жека"
+    ],
+    "tournaments": [
+      {
+        "id": "brackets-9k4Y",
+        "label": "Odette summercup championship americana",
+        "date": "2025-07-28"
+      },
+      {
+        "id": "padelution-9e5364a5",
+        "label": "KLP 30.02",
+        "date": "2025-03-01"
+      }
+    ]
+  },
+  {
+    "name": "Zhenya",
+    "count": 12,
+    "originals": [
+      "Женя"
+    ],
+    "tournaments": [
+      {
+        "id": "puffin-01953cbb",
+        "label": "OWAPT",
+        "date": "2025-02-25"
+      }
+    ]
+  }
+]
