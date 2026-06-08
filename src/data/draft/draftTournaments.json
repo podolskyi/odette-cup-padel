@@ -6145,7 +6145,7 @@
       "matches": 44,
       "rounds": 11,
       "warnings": [
-        "16 unplayed/blank match(es) dropped",
+        "16 empty court(s) skipped (0-0 — scheduled but never played)",
         "no date found — needs manual entry"
       ]
     }
@@ -6842,7 +6842,7 @@
       "matches": 48,
       "rounds": 12,
       "warnings": [
-        "12 unplayed/blank match(es) dropped",
+        "12 empty court(s) skipped (0-0 — scheduled but never played)",
         "no date found — needs manual entry"
       ]
     }

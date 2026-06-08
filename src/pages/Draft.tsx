@@ -10,7 +10,6 @@ import { isUnlocked, tryUnlock } from '../lib/settingsGate'
 import { StandingsTable } from '../components/StandingsTable'
 import { Avatar } from '../components/ui/Avatar'
 import { SectionTitle, Chip, Stat } from '../components/ui/Bits'
-import { downloadText } from '../lib/download'
 import { cx } from '../lib/cx'
 
 // name -> Cyrillic originals + tournaments it appears in (from the draft import).
@@ -85,53 +84,52 @@ function CloudBar() {
   const aliases = useDraftStore((s) => s.aliases)
   const dates = useDraftStore((s) => s.dates)
   const loadStore = useDraftStore((s) => s.load)
-  const [status, setStatus] = useState<'idle' | 'loading' | 'saving' | 'saved' | 'error'>('idle')
+  const [status, setStatus] = useState<'loading' | 'saving' | 'saved' | 'error'>('loading')
   const [last, setLast] = useState<string | undefined>()
+  const loadedRef = useRef(false)
 
-  // On open, pull the latest shared review so everyone sees the same state.
+  // On open, pull the latest shared review (the DB is the source of truth).
   useEffect(() => {
-    if (!supabaseConfigured) return
+    if (!supabaseConfigured) { loadedRef.current = true; return }
     let alive = true
-    setStatus('loading')
     loadReview()
       .then((r) => {
         if (!alive) return
         if (r) { loadStore({ aliases: r.aliases, dates: r.dates }); setLast(r.updated_at) }
-        setStatus('idle')
+        loadedRef.current = true
+        setStatus('saved')
       })
-      .catch(() => alive && setStatus('error'))
+      .catch(() => { if (alive) { loadedRef.current = true; setStatus('error') } })
     return () => { alive = false }
   }, [loadStore])
+
+  // Auto-save every change (debounced) — no button to forget.
+  useEffect(() => {
+    if (!supabaseConfigured || !loadedRef.current) return
+    setStatus('saving')
+    const id = setTimeout(() => {
+      saveReview(aliases, dates).then((t) => { setLast(t); setStatus('saved') }).catch(() => setStatus('error'))
+    }, 700)
+    return () => clearTimeout(id)
+  }, [aliases, dates])
 
   if (!supabaseConfigured) {
     return (
       <div className="sticker bg-sun-soft px-4 py-2 text-sm text-ink-soft">
-        ☁️ Cloud sync not configured yet — your work auto-saves on this device and you can Export the file.
+        ☁️ Cloud not configured — work auto-saves on this device only.
       </div>
     )
   }
 
-  const save = async () => {
-    setStatus('saving')
-    try {
-      const t = await saveReview(aliases, dates)
-      setLast(t)
-      setStatus('saved')
-    } catch {
-      setStatus('error')
-    }
-  }
-
-  const when = last ? new Date(last).toLocaleString() : 'never'
+  const when = last ? new Date(last).toLocaleTimeString() : ''
+  const label =
+    status === 'loading' ? 'Loading your saved work…'
+      : status === 'saving' ? 'Saving…'
+      : status === 'error' ? '⚠️ Connection issue — your work is safe locally and will sync on the next change'
+      : `All changes saved automatically${when ? ` · ${when}` : ''}`
   return (
-    <div className="sticker flex flex-wrap items-center justify-between gap-2 bg-mint-soft px-4 py-2 text-sm">
-      <span>
-        ☁️ Shared review ·{' '}
-        {status === 'loading' ? 'loading…' : status === 'saving' ? 'saving…' : status === 'error' ? '⚠️ connection issue' : `last saved ${when}`}
-      </span>
-      <button className="btn-dark px-3 py-1" onClick={save} disabled={status === 'saving'}>
-        💾 Save to cloud
-      </button>
+    <div className={cx('sticker px-4 py-2 text-sm font-bold', status === 'error' ? 'bg-punch-soft' : 'bg-mint-soft')}>
+      ☁️ {label}
     </div>
   )
 }
@@ -250,14 +248,11 @@ const allTournaments = [...seedTournaments, ...draftTournaments]
 
 function NamesTab() {
   const aliases = useDraftStore((s) => s.aliases)
-  const dates = useDraftStore((s) => s.dates)
   const setAlias = useDraftStore((s) => s.setAlias)
   const removeAlias = useDraftStore((s) => s.removeAlias)
   const clearAliases = useDraftStore((s) => s.clearAliases)
-  const load = useDraftStore((s) => s.load)
   const [q, setQ] = useState('')
   const [expanded, setExpanded] = useState<string | null>(null)
-  const fileRef = useRef<HTMLInputElement>(null)
 
   const eff = useMemo(() => ({ ...seed.aliases, ...aliases }), [aliases])
 
@@ -294,32 +289,6 @@ function NamesTab() {
     return [...set]
   }
 
-  // --- save / load (file hand-off) ---
-  const exportJson = () => {
-    const payload = { version: 1, exportedAt: new Date().toISOString(), aliases, dates }
-    downloadText(`odette-merges-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(payload, null, 2))
-  }
-  const exportCsv = () => {
-    const rows = [['name', 'canonical', 'cyrillic', 'games', 'tournaments']]
-    for (const n of rawNames)
-      rows.push([n, resolveName(n, eff), cyrillicFor(n).join('/'), String(counts.get(n) ?? 0), toursFor(n).join(' | ')])
-    const csv = rows.map((r) => r.map((c) => `"${String(c).replace(/"/g, '""')}"`).join(',')).join('\n')
-    downloadText(`odette-names-${new Date().toISOString().slice(0, 10)}.csv`, csv, 'text/csv')
-  }
-  const importFile = (file?: File) => {
-    if (!file) return
-    const reader = new FileReader()
-    reader.onload = () => {
-      try {
-        const d = JSON.parse(String(reader.result))
-        load({ aliases: d.aliases, dates: d.dates })
-      } catch {
-        alert('Could not read that file — expected the exported JSON.')
-      }
-    }
-    reader.readAsText(file)
-  }
-
   const filtered = rawNames.filter(
     (n) => n.toLowerCase().includes(q.toLowerCase()) || cyrillicFor(n).some((o) => o.includes(q)),
   )
@@ -327,25 +296,19 @@ function NamesTab() {
 
   return (
     <div className="space-y-6">
-      {/* Toolbar: stats + save/export/import */}
+      {/* Stats */}
       <div className="sticker flex flex-wrap items-center gap-3 p-3">
         <div className="flex gap-4 px-1">
           <span className="text-sm"><b className="font-mono text-lg">{rawNames.length}</b> names</span>
           <span className="text-sm"><b className="font-mono text-lg text-mint">{canonicalCount}</b> players</span>
           <span className="text-sm"><b className="font-mono text-lg">{aliasEntries.length}</b> merges</span>
         </div>
-        <div className="ml-auto flex flex-wrap gap-2">
-          <button className="btn-dark" onClick={exportJson}>💾 Export (send to me)</button>
-          <button className="btn" onClick={exportCsv}>CSV</button>
-          <button className="btn" onClick={() => fileRef.current?.click()}>⤒ Import</button>
-          <input ref={fileRef} type="file" accept="application/json" className="hidden" onChange={(e) => importFile(e.target.files?.[0])} />
-          {aliasEntries.length > 0 && <button className="btn" onClick={() => confirm('Clear all your merges?') && clearAliases()}>Reset</button>}
-        </div>
+        {aliasEntries.length > 0 && (
+          <button className="btn ml-auto" onClick={() => confirm('Clear all your merges?') && clearAliases()}>
+            Reset merges
+          </button>
+        )}
       </div>
-      <p className="-mt-3 px-1 text-xs text-ink-soft">
-        Your work saves automatically as you go. When you're done, hit <b>Export</b> and send me the
-        file (or we'll sync it via the cloud).
-      </p>
 
       <datalist id="canon-names">{canonicals.map((c) => <option key={c} value={c} />)}</datalist>
 

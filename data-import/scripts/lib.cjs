@@ -82,7 +82,7 @@ function buildEntry(meta, rawMatches) {
     })
     names.forEach((c, i) => origins.push({ clean: c, orig: raw[i] }))
   }
-  if (dropped) warnings.push(`${dropped} unplayed/blank match(es) dropped`)
+  if (dropped) warnings.push(`${dropped} empty court(s) skipped (0-0 — scheduled but never played)`)
   if (kept.length === 0) warnings.push('NO valid matches parsed')
 
   // pointsPerMatch: explicit, else the most common score sum.
