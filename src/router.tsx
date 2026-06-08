@@ -5,6 +5,7 @@ import { TournamentDetail } from './pages/TournamentDetail'
 import { PlayerProfile } from './pages/PlayerProfile'
 import { Explorer } from './pages/Explorer'
 import { Fun } from './pages/Fun'
+import { Stats } from './pages/Stats'
 import { Wrapped } from './pages/Wrapped'
 import { Settings } from './pages/Settings'
 import { Draft } from './pages/Draft'
@@ -18,6 +19,7 @@ export const router = createBrowserRouter([
       { path: '/p/:name', element: <PlayerProfile /> },
       { path: '/explore', element: <Explorer /> },
       { path: '/fun', element: <Fun /> },
+      { path: '/stats', element: <Stats /> },
       // Hidden organizer settings (secret-word gated, not linked in nav).
       { path: '/settings', element: <Settings /> },
       // Hidden one-time import review + name-merge workspace.
