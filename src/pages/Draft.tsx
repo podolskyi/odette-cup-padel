@@ -190,11 +190,15 @@ function TournamentsTab() {
               </button>
             </div>
 
-            {t._review.warnings.some((w) => w !== 'ok') && (
-              <div className="border-t-2 border-ink/10 bg-sun-soft px-3 py-1.5 text-xs font-bold text-ink-soft">
-                ⚠️ {t._review.warnings.join(' · ')}
-              </div>
-            )}
+            {(() => {
+              // Drop the "no date" warning once a date has been entered.
+              const warns = t._review.warnings.filter((w) => w !== 'ok' && !(date && /no date/i.test(w)))
+              return warns.length ? (
+                <div className="border-t-2 border-ink/10 bg-sun-soft px-3 py-1.5 text-xs font-bold text-ink-soft">
+                  ⚠️ {warns.join(' · ')}
+                </div>
+              ) : null
+            })()}
 
             {isOpen && <TournamentDetail entry={t} aliases={eff} />}
           </div>
