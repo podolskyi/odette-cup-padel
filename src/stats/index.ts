@@ -21,6 +21,7 @@ export * from './ratings'
 export * from './glue'
 export * from './fun'
 export * from './aggregate'
+export * from './activity'
 
 // --- One tournament -------------------------------------------------------
 

@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAppStore } from '../store/useAppStore'
-import { seasonInsights, type SeasonRow } from '../stats'
+import { seasonInsights, recentPlayers, lastSeenDates, RECENT_EVENTS, type SeasonRow } from '../stats'
 import { Avatar } from '../components/ui/Avatar'
 import { Stat, SectionTitle, Chip, Empty } from '../components/ui/Bits'
 import { RatingChart, toSeries } from '../components/RatingChart'
@@ -36,6 +36,11 @@ export function Dashboard() {
         .sort((a, b) => b.performance - a.performance || b.totalPoints - a.totalPoints),
     [season],
   )
+
+  // Activity: a player is "idle" (👻) if they missed the last few events.
+  const active = useMemo(() => recentPlayers(tournaments, aliases), [tournaments, aliases])
+  const lastSeen = useMemo(() => lastSeenDates(tournaments, aliases), [tournaments, aliases])
+  const isIdle = (player: string) => !active.has(player)
 
   const totalMatches = tournaments.reduce((n, t) => n + t.matches.length, 0)
   const leader = season[0]
@@ -114,7 +119,8 @@ export function Dashboard() {
               you higher.
               <span className="mt-1.5 block text-xs">
                 <b>Pts</b> total points · <b>Avg</b> points per event · <b>Win%</b> games won ·{' '}
-                <b>🏆</b> 1st places · <b>🥉</b> podiums (top-3)
+                <b>🏆</b> 1st places · <b>🥉</b> podiums (top-3) · <b>👻</b> idle (missed last{' '}
+                {RECENT_EVENTS} events)
               </span>
             </p>
           ) : (
@@ -127,7 +133,8 @@ export function Dashboard() {
               played.
               <span className="mt-1.5 block text-xs">
                 Ranked at <b>2+ events</b>; newcomers appear below as <b>provisional</b>. · <b>Perf</b>{' '}
-                avg percentile · <b>Events</b> played · <b>Elo</b> skill rating
+                avg percentile · <b>Events</b> played · <b>Elo</b> skill rating · <b>👻</b> idle (missed
+                last {RECENT_EVENTS} events)
               </span>
             </p>
           )}
@@ -169,6 +176,7 @@ export function Dashboard() {
                         <span className="font-bold group-hover:underline">
                           {r.player}
                           {r.rank === 1 && ' 👑'}
+                          {isIdle(r.player) && <GhostMark date={lastSeen.get(r.player)} />}
                         </span>
                       </Link>
                     </td>
@@ -204,7 +212,15 @@ export function Dashboard() {
               </thead>
               <tbody>
                 {perfRanked.map((r, i) => (
-                  <PerfRow key={r.player} r={r} rank={i + 1} highlight={i === 0} elo={eloOf(r.player)} />
+                  <PerfRow
+                    key={r.player}
+                    r={r}
+                    rank={i + 1}
+                    highlight={i === 0}
+                    elo={eloOf(r.player)}
+                    idle={isIdle(r.player)}
+                    lastSeen={lastSeen.get(r.player)}
+                  />
                 ))}
                 {perfProvisional.length > 0 && (
                   <tr>
@@ -217,7 +233,14 @@ export function Dashboard() {
                   </tr>
                 )}
                 {perfProvisional.map((r) => (
-                  <PerfRow key={r.player} r={r} provisional elo={eloOf(r.player)} />
+                  <PerfRow
+                    key={r.player}
+                    r={r}
+                    provisional
+                    elo={eloOf(r.player)}
+                    idle={isIdle(r.player)}
+                    lastSeen={lastSeen.get(r.player)}
+                  />
                 ))}
               </tbody>
             </table>
@@ -255,7 +278,10 @@ export function Dashboard() {
                 >
                   <span className="w-5 text-center font-mono text-xs font-bold text-ink-faint">{i + 1}</span>
                   <Avatar name={r.player} size="sm" />
-                  <span className="flex-1 font-bold">{r.player}</span>
+                  <span className="flex-1 font-bold">
+                    {r.player}
+                    {isIdle(r.player) && <GhostMark date={lastSeen.get(r.player)} />}
+                  </span>
                   <span className="font-mono text-lg font-bold tabular">{Math.round(r.rating)}</span>
                   <span
                     className={cx(
@@ -312,18 +338,38 @@ export function Dashboard() {
   )
 }
 
+function GhostMark({ date }: { date?: string }) {
+  return (
+    <span
+      className="cursor-default"
+      title={
+        date
+          ? `Idle — hasn't played the last ${RECENT_EVENTS} events (last seen ${formatDate(date)})`
+          : `Idle — hasn't played the last ${RECENT_EVENTS} events`
+      }
+    >
+      {' '}
+      👻
+    </span>
+  )
+}
+
 function PerfRow({
   r,
   rank,
   highlight,
   provisional,
   elo,
+  idle,
+  lastSeen,
 }: {
   r: SeasonRow
   rank?: number
   highlight?: boolean
   provisional?: boolean
   elo: number
+  idle?: boolean
+  lastSeen?: string
 }) {
   return (
     <tr
@@ -343,6 +389,7 @@ function PerfRow({
           <span className="font-bold group-hover:underline">
             {r.player}
             {highlight && ' 🚀'}
+            {idle && <GhostMark date={lastSeen} />}
           </span>
           {provisional && (
             <span className="ml-1 rounded-full border border-ink/40 px-1.5 text-[10px] font-bold uppercase text-ink-faint">
