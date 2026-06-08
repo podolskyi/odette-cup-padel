@@ -182,13 +182,13 @@ export function playerProfile(
   const partnerships = computePartnerships(allMatches, aliases).filter(
     (p) => p.players[0] === player || p.players[1] === player,
   )
-  const qualified = partnerships.filter((p) => p.games >= MIN_PAIR_GAMES)
-  const bestPartner = [...qualified].sort(
-    (a, b) => b.winRate - a.winRate || b.pointsPerGame - a.pointsPerGame,
-  )[0]
-  const worstPartner = [...qualified].sort(
-    (a, b) => a.winRate - b.winRate || a.pointsPerGame - b.pointsPerGame,
-  )[0]
+  // Best/Toughest partner only make sense when there are 2+ distinct partners
+  // with enough games — otherwise they'd collapse onto the same lone partner.
+  const byWin = partnerships
+    .filter((p) => p.games >= MIN_PAIR_GAMES)
+    .sort((a, b) => b.winRate - a.winRate || b.pointsPerGame - a.pointsPerGame)
+  const bestPartner = byWin.length >= 2 ? byWin[0] : undefined
+  const worstPartner = byWin.length >= 2 ? byWin[byWin.length - 1] : undefined
   const mostFrequentPartner = [...partnerships].sort((a, b) => b.games - a.games)[0]
 
   const rivalries = computeRivalries(allMatches, aliases)

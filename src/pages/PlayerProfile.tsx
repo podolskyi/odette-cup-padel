@@ -147,27 +147,23 @@ export function PlayerProfile() {
       <section>
         <SectionTitle emoji="🤝" title="Partners & Rivals" />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <RelCard
-            emoji="💞"
-            title="Best Partner"
-            accent="bg-mint-soft"
-            partnership={bestPartner}
-            self={player}
-          />
-          <RelCard
-            emoji="🧊"
-            title="Toughest Pairing"
-            accent="bg-sky-soft"
-            partnership={worstPartner}
-            self={player}
-          />
-          <RelCard
-            emoji="🔁"
-            title="Most Frequent"
-            accent="bg-sun-soft"
-            partnership={mostFrequentPartner}
-            self={player}
-          />
+          {(() => {
+            // Only show distinct, meaningful cards — avoids the same partner
+            // appearing as best/toughest/most-played for low-sample players.
+            const cards: { key: string; emoji: string; title: string; accent: string; p: Partnership }[] = []
+            if (bestPartner) cards.push({ key: 'best', emoji: '💞', title: 'Best Partner', accent: 'bg-mint-soft', p: bestPartner })
+            if (worstPartner && worstPartner.key !== bestPartner?.key)
+              cards.push({ key: 'worst', emoji: '🧊', title: 'Toughest Pairing', accent: 'bg-sky-soft', p: worstPartner })
+            if (
+              mostFrequentPartner &&
+              mostFrequentPartner.key !== bestPartner?.key &&
+              mostFrequentPartner.key !== worstPartner?.key
+            )
+              cards.push({ key: 'freq', emoji: '🔁', title: 'Most Played', accent: 'bg-sun-soft', p: mostFrequentPartner })
+            return cards.map((c) => (
+              <RelCard key={c.key} emoji={c.emoji} title={c.title} accent={c.accent} partnership={c.p} self={player} />
+            ))
+          })()}
           <div className="sticker bg-punch-soft p-4">
             <div className="mb-2 text-2xl">😈</div>
             <div className="text-[11px] font-bold uppercase tracking-wider text-ink-soft">Nemesis</div>

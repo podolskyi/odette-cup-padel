@@ -243,9 +243,9 @@ export function Dashboard() {
       {/* Ratings */}
       <section className="grid gap-6 lg:grid-cols-2">
         <div>
-          <SectionTitle emoji="📈" title="Elo Ratings" hint="Team-Elo, everyone starts at 1000" />
-          <div className="sticker divide-y divide-ink/10">
-            {ratings.slice(0, 8).map((r, i) => {
+          <SectionTitle emoji="📈" title="Elo Ratings" hint={`Team-Elo · all ${ratings.length} players`} />
+          <div className="sticker max-h-[32rem] divide-y divide-ink/10 overflow-y-auto">
+            {ratings.map((r, i) => {
               const delta = Math.round(r.rating - 1000)
               return (
                 <Link
