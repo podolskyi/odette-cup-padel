@@ -18,7 +18,7 @@
         ],
         "teamB": [
           "Olya",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -28,7 +28,7 @@
         "scoreB": 11,
         "teamA": [
           "Yura",
-          "Serhii"
+          "Serhii P"
         ],
         "teamB": [
           "Nikita",
@@ -55,12 +55,12 @@
         "scoreA": 10,
         "scoreB": 6,
         "teamA": [
-          "Serhii",
+          "Serhii P",
           "Roman"
         ],
         "teamB": [
           "Alex",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -70,7 +70,7 @@
         "scoreB": 6,
         "teamA": [
           "Vova",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
           "Alex",
@@ -87,7 +87,7 @@
           "Roman"
         ],
         "teamB": [
-          "Serhii",
+          "Serhii P",
           "Nikita"
         ]
       },
@@ -102,7 +102,7 @@
         ],
         "teamB": [
           "Alex",
-          "Serhii"
+          "Serhii P"
         ]
       },
       {
@@ -111,7 +111,7 @@
         "scoreA": 10,
         "scoreB": 6,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Roman"
         ],
         "teamB": [
@@ -126,7 +126,7 @@
         "scoreB": 6,
         "teamA": [
           "Vova",
-          "Serhii"
+          "Serhii P"
         ],
         "teamB": [
           "Olya",
@@ -139,7 +139,7 @@
         "scoreA": 5,
         "scoreB": 11,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Nikita"
         ],
         "teamB": [
@@ -157,8 +157,8 @@
           "Nikita"
         ],
         "teamB": [
-          "Irina",
-          "Serhii"
+          "Irina P",
+          "Serhii P"
         ]
       },
       {
@@ -195,12 +195,12 @@
         "scoreA": 7,
         "scoreB": 9,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Yura"
         ],
         "teamB": [
           "Olya",
-          "Serhii"
+          "Serhii P"
         ]
       }
     ]
@@ -234,7 +234,7 @@
         "scoreB": 11,
         "teamA": [
           "Alina",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
           "Oleksii",
@@ -261,7 +261,7 @@
         "scoreA": 3,
         "scoreB": 13,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Nikita"
         ],
         "teamB": [
@@ -293,7 +293,7 @@
           "Nikita"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Oleksii"
         ]
       },
@@ -308,7 +308,7 @@
         ],
         "teamB": [
           "Vova",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -332,7 +332,7 @@
         "scoreB": 11,
         "teamA": [
           "Roman",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
           "Ali",
@@ -364,7 +364,7 @@
         ],
         "teamB": [
           "Anzhelika",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -406,7 +406,7 @@
         ],
         "teamB": [
           "Ali",
-          "Irina"
+          "Irina P"
         ]
       }
     ]
@@ -444,7 +444,7 @@
         ],
         "teamB": [
           "Oleksii",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -453,7 +453,7 @@
         "scoreA": 8,
         "scoreB": 8,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Vlad"
         ],
         "teamB": [
@@ -472,7 +472,7 @@
         ],
         "teamB": [
           "Roman",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -481,7 +481,7 @@
         "scoreA": 10,
         "scoreB": 6,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Vlad"
         ],
         "teamB": [
@@ -528,7 +528,7 @@
         ],
         "teamB": [
           "Alina",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -538,7 +538,7 @@
         "scoreB": 11,
         "teamA": [
           "Olya",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
           "Vlad",
@@ -565,8 +565,8 @@
         "scoreA": 11,
         "scoreB": 5,
         "teamA": [
-          "Sergey",
-          "Irina"
+          "Sergey Ixi",
+          "Irina P"
         ],
         "teamB": [
           "Tamara",
@@ -622,10 +622,10 @@
         "scoreB": 2,
         "teamA": [
           "Tamara",
-          "Sergey"
+          "Sergey Ixi"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Anzhelika"
         ]
       },
@@ -639,7 +639,7 @@
           "Vlad"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Tamara"
         ]
       },
@@ -650,7 +650,7 @@
         "scoreB": 9,
         "teamA": [
           "Olya",
-          "Sergey"
+          "Sergey Ixi"
         ],
         "teamB": [
           "Vova",
@@ -677,7 +677,7 @@
         "scoreA": 6,
         "scoreB": 10,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Eugene"
         ],
         "teamB": [
@@ -709,7 +709,7 @@
           "Olya"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Anzhelika"
         ]
       },
@@ -720,10 +720,10 @@
         "scoreB": 12,
         "teamA": [
           "Maks",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Vova"
         ]
       },
@@ -761,7 +761,7 @@
         "scoreA": 6,
         "scoreB": 10,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Maks"
         ],
         "teamB": [
@@ -779,7 +779,7 @@
           "Alina"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Vova"
         ]
       },
@@ -804,7 +804,7 @@
         "scoreB": 5,
         "teamA": [
           "Oleksii",
-          "Sergey"
+          "Sergey Ixi"
         ],
         "teamB": [
           "Olya",
@@ -831,7 +831,7 @@
         "scoreA": 13,
         "scoreB": 3,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Roman"
         ],
         "teamB": [
@@ -850,7 +850,7 @@
         ],
         "teamB": [
           "Alina",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -863,7 +863,7 @@
           "Roman"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Eugene"
         ]
       },
@@ -892,7 +892,7 @@
         ],
         "teamB": [
           "Roman",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -919,7 +919,7 @@
           "Tamara"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Alina"
         ]
       }
@@ -944,7 +944,7 @@
         ],
         "teamB": [
           "Vlad",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -953,7 +953,7 @@
         "scoreA": 9,
         "scoreB": 7,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Eugene"
         ],
         "teamB": [
@@ -981,7 +981,7 @@
         "scoreA": 9,
         "scoreB": 7,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Oleksii"
         ],
         "teamB": [
@@ -1014,7 +1014,7 @@
         ],
         "teamB": [
           "Anzhelika",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -1055,7 +1055,7 @@
           "Eugene"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Kseniya"
         ]
       },
@@ -1066,10 +1066,10 @@
         "scoreB": 8,
         "teamA": [
           "Maks",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Eugene"
         ]
       },
@@ -1122,7 +1122,7 @@
         "scoreB": 4,
         "teamA": [
           "Alex",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
           "Anzhelika",
@@ -1135,7 +1135,7 @@
         "scoreA": 12,
         "scoreB": 4,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Oleksii"
         ],
         "teamB": [
@@ -1167,8 +1167,8 @@
           "Vova"
         ],
         "teamB": [
-          "Sergey",
-          "Irina"
+          "Sergey Ixi",
+          "Irina P"
         ]
       },
       {
@@ -1205,7 +1205,7 @@
         "scoreA": 7,
         "scoreB": 9,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Maks"
         ],
         "teamB": [
@@ -1220,7 +1220,7 @@
         "scoreB": 14,
         "teamA": [
           "Olya",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
           "Andriy",
@@ -1233,12 +1233,12 @@
         "scoreA": 9,
         "scoreB": 7,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Alex"
         ],
         "teamB": [
           "Andriy",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -1308,7 +1308,7 @@
         ],
         "teamB": [
           "Eugene",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -1318,7 +1318,7 @@
         "scoreB": 10,
         "teamA": [
           "Olya",
-          "Sergey"
+          "Sergey Ixi"
         ],
         "teamB": [
           "Eugene",
@@ -1349,7 +1349,7 @@
           "Vlad"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Vova"
         ]
       },
@@ -1363,7 +1363,7 @@
           "Kseniya"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Vlad"
         ]
       },
@@ -1374,7 +1374,7 @@
         "scoreB": 8,
         "teamA": [
           "Andriy",
-          "Sergey"
+          "Sergey Ixi"
         ],
         "teamB": [
           "Oleksii",
@@ -1420,7 +1420,7 @@
         ],
         "teamB": [
           "Eugene",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -1429,7 +1429,7 @@
         "scoreA": 1,
         "scoreB": 15,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Anzhelika"
         ],
         "teamB": [
@@ -1453,7 +1453,7 @@
         "scoreA": 6,
         "scoreB": 18,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Yulya"
         ],
         "teamB": [
@@ -1467,7 +1467,7 @@
         "scoreA": 16,
         "scoreB": 8,
         "teamA": [
-          "Serhii",
+          "Serhii P",
           "Eugene"
         ],
         "teamB": [
@@ -1481,8 +1481,8 @@
         "scoreA": 10,
         "scoreB": 14,
         "teamA": [
-          "Serhii",
-          "Sergey"
+          "Serhii P",
+          "Sergey Ixi"
         ],
         "teamB": [
           "Yulya",
@@ -1510,10 +1510,10 @@
         "scoreB": 11,
         "teamA": [
           "George",
-          "Serhii"
+          "Serhii P"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Oleksii"
         ]
       },
@@ -1541,7 +1541,7 @@
           "George"
         ],
         "teamB": [
-          "Serhii",
+          "Serhii P",
           "Yulya"
         ]
       },
@@ -1552,7 +1552,7 @@
         "scoreB": 13,
         "teamA": [
           "Eugene",
-          "Sergey"
+          "Sergey Ixi"
         ],
         "teamB": [
           "Roman",
@@ -1570,7 +1570,7 @@
         ],
         "teamB": [
           "George",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -1580,7 +1580,7 @@
         "scoreB": 8,
         "teamA": [
           "Oleksii",
-          "Serhii"
+          "Serhii P"
         ],
         "teamB": [
           "Roman",
@@ -1598,7 +1598,7 @@
         ],
         "teamB": [
           "Alex",
-          "Serhii"
+          "Serhii P"
         ]
       },
       {
@@ -1612,7 +1612,7 @@
         ],
         "teamB": [
           "Roman",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -1635,12 +1635,12 @@
         "scoreA": 14,
         "scoreB": 10,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Alex"
         ],
         "teamB": [
           "Roman",
-          "Serhii"
+          "Serhii P"
         ]
       },
       {
@@ -1653,7 +1653,7 @@
           "Eugene"
         ],
         "teamB": [
-          "Serhii",
+          "Serhii P",
           "Oleksii"
         ]
       },
@@ -1667,7 +1667,7 @@
           "George"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Yulya"
         ]
       }
@@ -1687,7 +1687,7 @@
         "scoreA": 13,
         "scoreB": 11,
         "teamA": [
-          "Serhii",
+          "Serhii P",
           "William"
         ],
         "teamB": [
@@ -1705,7 +1705,7 @@
           "Alex"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Maks"
         ]
       },
@@ -1715,7 +1715,7 @@
         "scoreA": 16,
         "scoreB": 8,
         "teamA": [
-          "Serhii",
+          "Serhii P",
           "Oleksii"
         ],
         "teamB": [
@@ -1730,7 +1730,7 @@
         "scoreB": 15,
         "teamA": [
           "Alex",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
           "Vova",
@@ -1743,7 +1743,7 @@
         "scoreA": 6,
         "scoreB": 18,
         "teamA": [
-          "Serhii",
+          "Serhii P",
           "Roman"
         ],
         "teamB": [
@@ -1757,7 +1757,7 @@
         "scoreA": 13,
         "scoreB": 11,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Vova"
         ],
         "teamB": [
@@ -1771,11 +1771,11 @@
         "scoreA": 14,
         "scoreB": 10,
         "teamA": [
-          "Serhii",
+          "Serhii P",
           "Alex"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Oleksii"
         ]
       },
@@ -1799,8 +1799,8 @@
         "scoreA": 16,
         "scoreB": 8,
         "teamA": [
-          "Serhii",
-          "Irina"
+          "Serhii P",
+          "Irina P"
         ],
         "teamB": [
           "Vova",
@@ -1827,7 +1827,7 @@
         "scoreA": 12,
         "scoreB": 12,
         "teamA": [
-          "Serhii",
+          "Serhii P",
           "Vova"
         ],
         "teamB": [
@@ -1846,7 +1846,7 @@
         ],
         "teamB": [
           "Roman",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -1855,12 +1855,12 @@
         "scoreA": 10,
         "scoreB": 14,
         "teamA": [
-          "Serhii",
+          "Serhii P",
           "Maks"
         ],
         "teamB": [
           "William",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -1898,7 +1898,7 @@
         ],
         "teamB": [
           "William",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -1911,8 +1911,8 @@
           "Eugene"
         ],
         "teamB": [
-          "Irina",
-          "Serhii"
+          "Ira K",
+          "Serhii P"
         ]
       },
       {
@@ -1939,7 +1939,7 @@
           "Miroslav"
         ],
         "teamB": [
-          "Serhii",
+          "Serhii P",
           "Alina"
         ]
       },
@@ -1953,8 +1953,8 @@
           "Eugene"
         ],
         "teamB": [
-          "Irina",
-          "Irina"
+          "Irina P",
+          "Ira K"
         ]
       },
       {
@@ -1978,7 +1978,7 @@
         "scoreB": 12,
         "teamA": [
           "Yulya",
-          "Irina"
+          "Ira K"
         ],
         "teamB": [
           "William",
@@ -1995,7 +1995,7 @@
           "Alex"
         ],
         "teamB": [
-          "Serhii",
+          "Serhii P",
           "Oleksii"
         ]
       },
@@ -2009,7 +2009,7 @@
           "Miroslav"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Alina"
         ]
       },
@@ -2023,7 +2023,7 @@
           "Alex"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Oleksii"
         ]
       },
@@ -2034,7 +2034,7 @@
         "scoreB": 4,
         "teamA": [
           "Roman",
-          "Serhii"
+          "Serhii P"
         ],
         "teamB": [
           "William",
@@ -2052,7 +2052,7 @@
         ],
         "teamB": [
           "Eugene",
-          "Irina"
+          "Ira K"
         ]
       },
       {
@@ -2065,7 +2065,7 @@
           "Oleksii"
         ],
         "teamB": [
-          "Irina",
+          "Ira K",
           "Miroslav"
         ]
       },
@@ -2076,10 +2076,10 @@
         "scoreB": 7,
         "teamA": [
           "Vova",
-          "Serhii"
+          "Serhii P"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Roman"
         ]
       },
@@ -2103,12 +2103,12 @@
         "scoreA": 3,
         "scoreB": 13,
         "teamA": [
-          "Irina",
+          "Ira K",
           "Alex"
         ],
         "teamB": [
           "William",
-          "Serhii"
+          "Serhii P"
         ]
       },
       {
@@ -2132,7 +2132,7 @@
         "scoreB": 10,
         "teamA": [
           "Vova",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
           "Yulya",
@@ -2150,7 +2150,7 @@
         ],
         "teamB": [
           "Roman",
-          "Irina"
+          "Ira K"
         ]
       },
       {
@@ -2164,7 +2164,7 @@
         ],
         "teamB": [
           "Yulya",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -2174,7 +2174,7 @@
         "scoreB": 8,
         "teamA": [
           "Eugene",
-          "Serhii"
+          "Serhii P"
         ],
         "teamB": [
           "Miroslav",
@@ -2191,7 +2191,7 @@
           "Oleksii"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Eugene"
         ]
       },
@@ -2202,7 +2202,7 @@
         "scoreB": 8,
         "teamA": [
           "Vova",
-          "Irina"
+          "Ira K"
         ],
         "teamB": [
           "Roman",
@@ -2215,7 +2215,7 @@
         "scoreA": 9,
         "scoreB": 7,
         "teamA": [
-          "Serhii",
+          "Serhii P",
           "Miroslav"
         ],
         "teamB": [
@@ -2229,7 +2229,7 @@
         "scoreA": 10,
         "scoreB": 6,
         "teamA": [
-          "Serhii",
+          "Serhii P",
           "Alex"
         ],
         "teamB": [
@@ -2244,10 +2244,10 @@
         "scoreB": 8,
         "teamA": [
           "William",
-          "Irina"
+          "Ira K"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Miroslav"
         ]
       },
@@ -2285,11 +2285,11 @@
         "scoreA": 4,
         "scoreB": 12,
         "teamA": [
-          "Irina",
+          "Ira K",
           "Alina"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Alex"
         ]
       },
@@ -2300,7 +2300,7 @@
         "scoreB": 5,
         "teamA": [
           "Yulya",
-          "Serhii"
+          "Serhii P"
         ],
         "teamB": [
           "Eugene",
@@ -2317,8 +2317,8 @@
           "Alina"
         ],
         "teamB": [
-          "Irina",
-          "Serhii"
+          "Irina P",
+          "Serhii P"
         ]
       },
       {
@@ -2331,7 +2331,7 @@
           "Roman"
         ],
         "teamB": [
-          "Irina",
+          "Ira K",
           "Oleksii"
         ]
       },
@@ -2383,7 +2383,7 @@
           "Vova Big"
         ],
         "teamB": [
-          "Alex Double",
+          "Double Alex",
           "Roman"
         ]
       },
@@ -2393,7 +2393,7 @@
         "scoreA": 4,
         "scoreB": 12,
         "teamA": [
-          "Irina",
+          "Irina P",
           "lllya"
         ],
         "teamB": [
@@ -2426,7 +2426,7 @@
         ],
         "teamB": [
           "Yulya",
-          "Alex Double"
+          "Double Alex"
         ]
       },
       {
@@ -2435,7 +2435,7 @@
         "scoreA": 3,
         "scoreB": 13,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Alina"
         ],
         "teamB": [
@@ -2450,7 +2450,7 @@
         "scoreB": 11,
         "teamA": [
           "Denis",
-          "Alex Double"
+          "Double Alex"
         ],
         "teamB": [
           "Alex",
@@ -2468,7 +2468,7 @@
         ],
         "teamB": [
           "Roman",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -2496,7 +2496,7 @@
         ],
         "teamB": [
           "Yulya",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -2524,7 +2524,7 @@
         ],
         "teamB": [
           "Vova Big",
-          "Alex Double"
+          "Double Alex"
         ]
       },
       {
@@ -2534,10 +2534,10 @@
         "scoreB": 10,
         "teamA": [
           "Denis",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
-          "Alex Double",
+          "Double Alex",
           "lllya"
         ]
       },
@@ -2575,7 +2575,7 @@
         "scoreA": 5,
         "scoreB": 11,
         "teamA": [
-          "Alex Double",
+          "Double Alex",
           "Alina"
         ],
         "teamB": [
@@ -2590,7 +2590,7 @@
         "scoreB": 9,
         "teamA": [
           "Vova Big",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
           "lllya",
@@ -2622,7 +2622,7 @@
         ],
         "teamB": [
           "Oleksii",
-          "Alex Double"
+          "Double Alex"
         ]
       },
       {
@@ -2631,7 +2631,7 @@
         "scoreA": 8,
         "scoreB": 8,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Elise"
         ],
         "teamB": [
@@ -2660,7 +2660,7 @@
         "scoreB": 11,
         "teamA": [
           "Alex",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
           "Yulya",
@@ -2674,7 +2674,7 @@
         "scoreB": 8,
         "teamA": [
           "Vova",
-          "Alex Double"
+          "Double Alex"
         ],
         "teamB": [
           "Oleksii",
@@ -2716,7 +2716,7 @@
         "scoreB": 7,
         "teamA": [
           "Alex",
-          "Alex Double"
+          "Double Alex"
         ],
         "teamB": [
           "Yulya",
@@ -2734,7 +2734,7 @@
         ],
         "teamB": [
           "Oleksii",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -2744,7 +2744,7 @@
         "scoreB": 11,
         "teamA": [
           "Vova",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
           "Alex",
@@ -2757,7 +2757,7 @@
         "scoreA": 7,
         "scoreB": 9,
         "teamA": [
-          "Alex Double",
+          "Double Alex",
           "Elise"
         ],
         "teamB": [
@@ -2803,8 +2803,8 @@
           "Oleksii"
         ],
         "teamB": [
-          "Alex Double",
-          "Irina"
+          "Double Alex",
+          "Irina P"
         ]
       },
       {
@@ -2856,7 +2856,7 @@
         ],
         "teamB": [
           "Denis",
-          "Serhii"
+          "Serhii P"
         ]
       },
       {
@@ -2866,11 +2866,11 @@
         "scoreB": 11,
         "teamA": [
           "Vova Big",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
           "Vova",
-          "Alex Double"
+          "Double Alex"
         ]
       },
       {
@@ -2880,7 +2880,7 @@
         "scoreB": 11,
         "teamA": [
           "Kir",
-          "Alex Double"
+          "Double Alex"
         ],
         "teamB": [
           "Vova",
@@ -2908,10 +2908,10 @@
         "scoreB": 2,
         "teamA": [
           "Vova Big",
-          "Serhii"
+          "Serhii P"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Denis"
         ]
       },
@@ -2922,7 +2922,7 @@
         "scoreB": 8,
         "teamA": [
           "Roman",
-          "Serhii"
+          "Serhii P"
         ],
         "teamB": [
           "Vova",
@@ -2936,7 +2936,7 @@
         "scoreB": 9,
         "teamA": [
           "Yulya",
-          "Alex Double"
+          "Double Alex"
         ],
         "teamB": [
           "Oleksii",
@@ -2954,7 +2954,7 @@
         ],
         "teamB": [
           "Alina",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -2964,7 +2964,7 @@
         "scoreB": 6,
         "teamA": [
           "Roman",
-          "Serhii"
+          "Serhii P"
         ],
         "teamB": [
           "Vova",
@@ -2991,8 +2991,8 @@
         "scoreA": 12,
         "scoreB": 4,
         "teamA": [
-          "Alex Double",
-          "Irina"
+          "Double Alex",
+          "Irina P"
         ],
         "teamB": [
           "Alina",
@@ -3009,7 +3009,7 @@
           "Vova"
         ],
         "teamB": [
-          "Serhii",
+          "Serhii P",
           "Kir"
         ]
       },
@@ -3023,7 +3023,7 @@
           "Oleksii"
         ],
         "teamB": [
-          "Alex Double",
+          "Double Alex",
           "Vova Big"
         ]
       },
@@ -3037,7 +3037,7 @@
           "Denis"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Alina"
         ]
       },
@@ -3065,8 +3065,8 @@
           "Kir"
         ],
         "teamB": [
-          "Alex Double",
-          "Serhii"
+          "Double Alex",
+          "Serhii P"
         ]
       },
       {
@@ -3080,7 +3080,7 @@
         ],
         "teamB": [
           "Denis",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -3103,11 +3103,11 @@
         "scoreA": 8,
         "scoreB": 8,
         "teamA": [
-          "Alex Double",
+          "Double Alex",
           "Vova Big"
         ],
         "teamB": [
-          "Serhii",
+          "Serhii P",
           "lllya"
         ]
       },
@@ -3122,7 +3122,7 @@
         ],
         "teamB": [
           "Denis",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -3132,7 +3132,7 @@
         "scoreB": 10,
         "teamA": [
           "Roman",
-          "Alex Double"
+          "Double Alex"
         ],
         "teamB": [
           "Yulya",
@@ -3149,7 +3149,7 @@
           "lllya"
         ],
         "teamB": [
-          "Serhii",
+          "Serhii P",
           "Kir"
         ]
       },
@@ -3160,7 +3160,7 @@
         "scoreB": 4,
         "teamA": [
           "Vova Big",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
           "Alina",
@@ -3188,11 +3188,11 @@
         "scoreB": 2,
         "teamA": [
           "Vova Big",
-          "Serhii"
+          "Serhii P"
         ],
         "teamB": [
           "lllya",
-          "Alex Double"
+          "Double Alex"
         ]
       },
       {
@@ -3205,7 +3205,7 @@
           "Denis"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Alina"
         ]
       },
@@ -3216,7 +3216,7 @@
         "scoreB": 8,
         "teamA": [
           "Roman",
-          "Serhii"
+          "Serhii P"
         ],
         "teamB": [
           "Vova Big",
@@ -3243,12 +3243,12 @@
         "scoreA": 12,
         "scoreB": 4,
         "teamA": [
-          "Alex Double",
+          "Double Alex",
           "Alina"
         ],
         "teamB": [
           "Denis",
-          "Irina"
+          "Irina P"
         ]
       }
     ]
@@ -3272,7 +3272,7 @@
         ],
         "teamB": [
           "Oleksii",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -3282,7 +3282,7 @@
         "scoreB": 6,
         "teamA": [
           "Vova Big",
-          "Serhii"
+          "Serhii P"
         ],
         "teamB": [
           "Yulya",
@@ -3300,7 +3300,7 @@
         ],
         "teamB": [
           "Miroslav",
-          "Alex Double"
+          "Double Alex"
         ]
       },
       {
@@ -3324,10 +3324,10 @@
         "scoreB": 10,
         "teamA": [
           "Vova",
-          "Serhii"
+          "Serhii P"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Yulya"
         ]
       },
@@ -3338,7 +3338,7 @@
         "scoreB": 13,
         "teamA": [
           "Taras",
-          "Alex Double"
+          "Double Alex"
         ],
         "teamB": [
           "Piter Pen",
@@ -3356,7 +3356,7 @@
         ],
         "teamB": [
           "Oleksii",
-          "Serhii"
+          "Serhii P"
         ]
       },
       {
@@ -3366,7 +3366,7 @@
         "scoreB": 5,
         "teamA": [
           "Vova Big",
-          "Alex Double"
+          "Double Alex"
         ],
         "teamB": [
           "Kir",
@@ -3383,7 +3383,7 @@
           "Artdiler"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Miroslav"
         ]
       },
@@ -3394,10 +3394,10 @@
         "scoreB": 3,
         "teamA": [
           "Vova",
-          "Alex Double"
+          "Double Alex"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Taras"
         ]
       },
@@ -3425,7 +3425,7 @@
           "Miroslav"
         ],
         "teamB": [
-          "Serhii",
+          "Serhii P",
           "Yulya"
         ]
       },
@@ -3453,7 +3453,7 @@
           "Kir"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Vova Big"
         ]
       },
@@ -3463,12 +3463,12 @@
         "scoreA": 5,
         "scoreB": 11,
         "teamA": [
-          "Serhii",
+          "Serhii P",
           "Miroslav"
         ],
         "teamB": [
           "Oleksii",
-          "Alex Double"
+          "Double Alex"
         ]
       },
       {
@@ -3478,7 +3478,7 @@
         "scoreB": 10,
         "teamA": [
           "Yulya",
-          "Alex Double"
+          "Double Alex"
         ],
         "teamB": [
           "Oleksii",
@@ -3491,7 +3491,7 @@
         "scoreA": 15,
         "scoreB": 1,
         "teamA": [
-          "Serhii",
+          "Serhii P",
           "Taras"
         ],
         "teamB": [
@@ -3506,7 +3506,7 @@
         "scoreB": 7,
         "teamA": [
           "Vova",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
           "Piter Pen",
@@ -3538,7 +3538,7 @@
         ],
         "teamB": [
           "Piter Pen",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -3547,12 +3547,12 @@
         "scoreA": 12,
         "scoreB": 4,
         "teamA": [
-          "Serhii",
+          "Serhii P",
           "Kir"
         ],
         "teamB": [
           "Artdiler",
-          "Alex Double"
+          "Double Alex"
         ]
       },
       {
@@ -3565,8 +3565,8 @@
           "Taras"
         ],
         "teamB": [
-          "Irina",
-          "Serhii"
+          "Irina P",
+          "Serhii P"
         ]
       },
       {
@@ -3594,7 +3594,7 @@
         ],
         "teamB": [
           "Piter Pen",
-          "Alex Double"
+          "Double Alex"
         ]
       },
       {
@@ -3604,11 +3604,11 @@
         "scoreB": 9,
         "teamA": [
           "Kir",
-          "Alex Double"
+          "Double Alex"
         ],
         "teamB": [
           "Piter Pen",
-          "Serhii"
+          "Serhii P"
         ]
       },
       {
@@ -3621,7 +3621,7 @@
           "Yulya"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Artdiler"
         ]
       },
@@ -3663,8 +3663,8 @@
           "Miroslav"
         ],
         "teamB": [
-          "Irina",
-          "Alex Double"
+          "Irina P",
+          "Double Alex"
         ]
       },
       {
@@ -3677,7 +3677,7 @@
           "Kir"
         ],
         "teamB": [
-          "Serhii",
+          "Serhii P",
           "Artdiler"
         ]
       },
@@ -3691,7 +3691,7 @@
           "Miroslav"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Kir"
         ]
       },
@@ -3715,8 +3715,8 @@
         "scoreA": 12,
         "scoreB": 4,
         "teamA": [
-          "Serhii",
-          "Alex Double"
+          "Serhii P",
+          "Double Alex"
         ],
         "teamB": [
           "Piter Pen",
@@ -3767,11 +3767,11 @@
         "scoreA": 7,
         "scoreB": 9,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Anton"
         ],
         "teamB": [
-          "Irina Perminova",
+          "Irina P",
           "William"
         ]
       },
@@ -3786,7 +3786,7 @@
         ],
         "teamB": [
           "Oleksii",
-          "Irina Perminova"
+          "Irina P"
         ]
       },
       {
@@ -3809,7 +3809,7 @@
         "scoreA": 8,
         "scoreB": 8,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "William"
         ],
         "teamB": [
@@ -3842,7 +3842,7 @@
         ],
         "teamB": [
           "Oleksii",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -3856,7 +3856,7 @@
         ],
         "teamB": [
           "Anzhelika",
-          "Irina Perminova"
+          "Irina P"
         ]
       },
       {
@@ -3870,7 +3870,7 @@
         ],
         "teamB": [
           "Anzhelika",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -3894,7 +3894,7 @@
         "scoreB": 3,
         "teamA": [
           "Vernik",
-          "Irina Perminova"
+          "Irina P"
         ],
         "teamB": [
           "Miroslav",
@@ -3908,7 +3908,7 @@
         "scoreB": 2,
         "teamA": [
           "Vernik",
-          "Sergey"
+          "Sergey Ixi"
         ],
         "teamB": [
           "Snezhana",
@@ -3936,7 +3936,7 @@
         "scoreB": 5,
         "teamA": [
           "Miroslav",
-          "Irina Perminova"
+          "Irina P"
         ],
         "teamB": [
           "Alina",
@@ -3964,11 +3964,11 @@
         "scoreB": 7,
         "teamA": [
           "Miroslav",
-          "Sergey"
+          "Sergey Ixi"
         ],
         "teamB": [
           "Anton",
-          "Irina Perminova"
+          "Irina P"
         ]
       },
       {
@@ -4005,8 +4005,8 @@
         "scoreA": 10,
         "scoreB": 6,
         "teamA": [
-          "Sergey",
-          "Irina Perminova"
+          "Sergey Ixi",
+          "Irina P"
         ],
         "teamB": [
           "Vernik",
@@ -4034,7 +4034,7 @@
         "scoreB": 5,
         "teamA": [
           "Alina",
-          "Sergey"
+          "Sergey Ixi"
         ],
         "teamB": [
           "Anzhelika",
@@ -4052,7 +4052,7 @@
         ],
         "teamB": [
           "Vova Big",
-          "Irina Perminova"
+          "Irina P"
         ]
       },
       {
@@ -4104,11 +4104,11 @@
         "scoreB": 11,
         "teamA": [
           "Vova",
-          "Irina Perminova"
+          "Irina P"
         ],
         "teamB": [
           "Vova Big",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -4118,7 +4118,7 @@
         "scoreB": 5,
         "teamA": [
           "Vova",
-          "Sergey"
+          "Sergey Ixi"
         ],
         "teamB": [
           "Alina",
@@ -4132,7 +4132,7 @@
         "scoreB": 5,
         "teamA": [
           "Snezhana",
-          "Irina Perminova"
+          "Irina P"
         ],
         "teamB": [
           "Anzhelika",
@@ -4160,7 +4160,7 @@
         "scoreB": 8,
         "teamA": [
           "Alina",
-          "Irina Perminova"
+          "Irina P"
         ],
         "teamB": [
           "Anzhelika",
@@ -4178,7 +4178,7 @@
         ],
         "teamB": [
           "Snezhana",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -4225,7 +4225,7 @@
         "scoreA": 13,
         "scoreB": 3,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Double Alex"
         ],
         "teamB": [
@@ -4239,7 +4239,7 @@
         "scoreA": 10,
         "scoreB": 6,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Oleksii"
         ],
         "teamB": [
@@ -4271,7 +4271,7 @@
           "Alex Peter Pen"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Kir"
         ]
       },
@@ -4285,7 +4285,7 @@
           "Vova"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Miroslav"
         ]
       },
@@ -4295,7 +4295,7 @@
         "scoreA": 8,
         "scoreB": 8,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Alex Peter Pen"
         ],
         "teamB": [
@@ -4327,7 +4327,7 @@
           "Double Alex"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Anastasia"
         ]
       },
@@ -4337,7 +4337,7 @@
         "scoreA": 11,
         "scoreB": 5,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Anton"
         ],
         "teamB": [
@@ -4365,7 +4365,7 @@
         "scoreA": 8,
         "scoreB": 8,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Tanya"
         ],
         "teamB": [
@@ -4383,7 +4383,7 @@
           "Double Alex"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Alex Peter Pen"
         ]
       },
@@ -4397,7 +4397,7 @@
           "Kir"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Anton"
         ]
       },
@@ -4440,7 +4440,7 @@
         ],
         "teamB": [
           "Miroslav",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -4453,7 +4453,7 @@
           "Double Alex"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Oleksii"
         ]
       },
@@ -4463,8 +4463,8 @@
         "scoreA": 1,
         "scoreB": 15,
         "teamA": [
-          "Sergey",
-          "Irina"
+          "Sergey Ixi",
+          "Irina P"
         ],
         "teamB": [
           "Anton",
@@ -4509,7 +4509,7 @@
           "Double Alex"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Kir"
         ]
       },
@@ -4523,7 +4523,7 @@
           "Anton"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Vova"
         ]
       },
@@ -4565,7 +4565,7 @@
           "Alex Peter Pen"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "William"
         ]
       },
@@ -4575,7 +4575,7 @@
         "scoreA": 8,
         "scoreB": 8,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Double Alex"
         ],
         "teamB": [
@@ -4589,11 +4589,11 @@
         "scoreA": 9,
         "scoreB": 7,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Vova"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Tanya"
         ]
       },
@@ -4645,11 +4645,11 @@
         "scoreA": 8,
         "scoreB": 8,
         "teamA": [
-          "Irina",
+          "Irina P",
           "William"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Anastasia"
         ]
       },
@@ -4683,11 +4683,11 @@
         "scoreA": 8,
         "scoreB": 8,
         "teamA": [
-          "Serhii",
+          "Serhii P",
           "Anton"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "William"
         ]
       },
@@ -4702,7 +4702,7 @@
         ],
         "teamB": [
           "Roman",
-          "Billy"
+          "Maks"
         ]
       },
       {
@@ -4726,7 +4726,7 @@
         "scoreB": 6,
         "teamA": [
           "Eugene M",
-          "Sergey"
+          "Sergey Ixi"
         ],
         "teamB": [
           "Andrew",
@@ -4739,12 +4739,12 @@
         "scoreA": 8,
         "scoreB": 8,
         "teamA": [
-          "Serhii",
+          "Serhii P",
           "Vova"
         ],
         "teamB": [
           "Piter Pen",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -4758,7 +4758,7 @@
         ],
         "teamB": [
           "Eugene M",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -4785,7 +4785,7 @@
           "Anton"
         ],
         "teamB": [
-          "Billy",
+          "Maks",
           "Eugene"
         ]
       },
@@ -4795,7 +4795,7 @@
         "scoreA": 9,
         "scoreB": 7,
         "teamA": [
-          "Serhii",
+          "Serhii P",
           "Anzhelika"
         ],
         "teamB": [
@@ -4828,7 +4828,7 @@
         ],
         "teamB": [
           "William",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -4837,11 +4837,11 @@
         "scoreA": 4,
         "scoreB": 12,
         "teamA": [
-          "Billy",
+          "Maks",
           "Vova"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Oleksii"
         ]
       },
@@ -4852,7 +4852,7 @@
         "scoreB": 9,
         "teamA": [
           "Vernik",
-          "Serhii"
+          "Serhii P"
         ],
         "teamB": [
           "Eugene",
@@ -4869,7 +4869,7 @@
           "Andrew"
         ],
         "teamB": [
-          "Billy",
+          "Maks",
           "Kir"
         ]
       },
@@ -4883,7 +4883,7 @@
           "Oleksii"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Anton"
         ]
       },
@@ -4893,7 +4893,7 @@
         "scoreA": 4,
         "scoreB": 12,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Anzhelika"
         ],
         "teamB": [
@@ -4908,7 +4908,7 @@
         "scoreB": 8,
         "teamA": [
           "Roman",
-          "Serhii"
+          "Serhii P"
         ],
         "teamB": [
           "Oleksii",
@@ -4922,10 +4922,10 @@
         "scoreB": 8,
         "teamA": [
           "Eugene M",
-          "Billy"
+          "Maks"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Eugene"
         ]
       },
@@ -4954,7 +4954,7 @@
         ],
         "teamB": [
           "Kir",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -4964,7 +4964,7 @@
         "scoreB": 11,
         "teamA": [
           "Eugene M",
-          "Serhii"
+          "Serhii P"
         ],
         "teamB": [
           "Vernik",
@@ -4978,7 +4978,7 @@
         "scoreB": 12,
         "teamA": [
           "Andrew",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
           "Piter Pen",
@@ -4991,8 +4991,8 @@
         "scoreA": 7,
         "scoreB": 9,
         "teamA": [
-          "Billy",
-          "Sergey"
+          "Maks",
+          "Sergey Ixi"
         ],
         "teamB": [
           "Vova",
@@ -5020,11 +5020,11 @@
         "scoreB": 6,
         "teamA": [
           "Andrew",
-          "Serhii"
+          "Serhii P"
         ],
         "teamB": [
           "Roman",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -5033,7 +5033,7 @@
         "scoreA": 6,
         "scoreB": 10,
         "teamA": [
-          "Billy",
+          "Maks",
           "Piter Pen"
         ],
         "teamB": [
@@ -5047,7 +5047,7 @@
         "scoreA": 7,
         "scoreB": 9,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Anton"
         ],
         "teamB": [
@@ -5075,8 +5075,8 @@
         "scoreA": 8,
         "scoreB": 8,
         "teamA": [
-          "Billy",
-          "Serhii"
+          "Maks",
+          "Serhii P"
         ],
         "teamB": [
           "Eugene M",
@@ -5089,12 +5089,12 @@
         "scoreA": 4,
         "scoreB": 12,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Kir"
         ],
         "teamB": [
           "Eugene",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -5131,8 +5131,8 @@
         "scoreA": 7,
         "scoreB": 9,
         "teamA": [
-          "Irina",
-          "Serhii"
+          "Irina P",
+          "Serhii P"
         ],
         "teamB": [
           "Andrew",
@@ -5173,12 +5173,12 @@
         "scoreA": 4,
         "scoreB": 12,
         "teamA": [
-          "Billy",
+          "Maks",
           "William"
         ],
         "teamB": [
           "Vernik",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -5188,10 +5188,10 @@
         "scoreB": 3,
         "teamA": [
           "Piter Pen",
-          "Serhii"
+          "Serhii P"
         ],
         "teamB": [
-          "Billy",
+          "Maks",
           "Anzhelika"
         ]
       },
@@ -5229,8 +5229,8 @@
         "scoreA": 6,
         "scoreB": 10,
         "teamA": [
-          "Irina",
-          "Sergey"
+          "Irina P",
+          "Sergey Ixi"
         ],
         "teamB": [
           "Roman",
@@ -5244,11 +5244,11 @@
         "scoreB": 10,
         "teamA": [
           "Kir",
-          "Serhii"
+          "Serhii P"
         ],
         "teamB": [
           "Vernik",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -5261,7 +5261,7 @@
           "William"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Anzhelika"
         ]
       },
@@ -5276,7 +5276,7 @@
         ],
         "teamB": [
           "Andrew",
-          "Billy"
+          "Maks"
         ]
       },
       {
@@ -5300,7 +5300,7 @@
         "scoreB": 9,
         "teamA": [
           "Eugene",
-          "Serhii"
+          "Serhii P"
         ],
         "teamB": [
           "Roman",
@@ -5314,7 +5314,7 @@
         "scoreB": 7,
         "teamA": [
           "Oleksii",
-          "Sergey"
+          "Sergey Ixi"
         ],
         "teamB": [
           "Vernik",
@@ -5331,8 +5331,8 @@
           "William"
         ],
         "teamB": [
-          "Billy",
-          "Irina"
+          "Maks",
+          "Irina P"
         ]
       },
       {
@@ -5398,7 +5398,7 @@
         ],
         "teamB": [
           "Vova",
-          "Max"
+          "Maks"
         ]
       },
       {
@@ -5453,7 +5453,7 @@
           "Lera"
         ],
         "teamB": [
-          "Max",
+          "Maks",
           "Katie G"
         ]
       },
@@ -5524,7 +5524,7 @@
         ],
         "teamB": [
           "Nastya",
-          "Max"
+          "Maks"
         ]
       },
       {
@@ -5562,7 +5562,7 @@
         "scoreB": 10,
         "teamA": [
           "Miroslav",
-          "Max"
+          "Maks"
         ],
         "teamB": [
           "Veronika",
@@ -5593,7 +5593,7 @@
           "Andrew"
         ],
         "teamB": [
-          "Max",
+          "Maks",
           "Kristian"
         ]
       },
@@ -5664,7 +5664,7 @@
         ],
         "teamB": [
           "Marila",
-          "Max"
+          "Maks"
         ]
       },
       {
@@ -5747,7 +5747,7 @@
           "Vova"
         ],
         "teamB": [
-          "Max",
+          "Maks",
           "Anton"
         ]
       },
@@ -5800,7 +5800,7 @@
         "scoreB": 6,
         "teamA": [
           "Eugene",
-          "Max"
+          "Maks"
         ],
         "teamB": [
           "Katie G",
@@ -5831,7 +5831,7 @@
           "Vova"
         ],
         "teamB": [
-          "Max",
+          "Maks",
           "William"
         ]
       },
@@ -5884,7 +5884,7 @@
         "scoreB": 8,
         "teamA": [
           "Lera",
-          "Max"
+          "Maks"
         ],
         "teamB": [
           "Katie G",
@@ -5954,7 +5954,7 @@
         "scoreB": 10,
         "teamA": [
           "Snezhana",
-          "Max"
+          "Maks"
         ],
         "teamB": [
           "Eugene",
@@ -6005,7 +6005,7 @@
         "scoreA": 10,
         "scoreB": 6,
         "teamA": [
-          "Serhii",
+          "Serhii P",
           "Alex"
         ],
         "teamB": [
@@ -6023,7 +6023,7 @@
           "Alina"
         ],
         "teamB": [
-          "Alex Double",
+          "Double Alex",
           "William"
         ]
       },
@@ -6051,7 +6051,7 @@
           "William"
         ],
         "teamB": [
-          "Alex Double",
+          "Double Alex",
           "Eugene"
         ]
       },
@@ -6065,7 +6065,7 @@
           "Piter Pen"
         ],
         "teamB": [
-          "Serhii",
+          "Serhii P",
           "Vova"
         ]
       },
@@ -6107,8 +6107,8 @@
           "Vova"
         ],
         "teamB": [
-          "Serhii",
-          "Alex Double"
+          "Serhii P",
+          "Double Alex"
         ]
       },
       {
@@ -6159,12 +6159,12 @@
         "scoreA": 10,
         "scoreB": 6,
         "teamA": [
-          "Alex Double",
+          "Double Alex",
           "Denis"
         ],
         "teamB": [
           "Andrew",
-          "Serhii"
+          "Serhii P"
         ]
       },
       {
@@ -6219,8 +6219,8 @@
           "Denis"
         ],
         "teamB": [
-          "Serhii",
-          "Alex Double"
+          "Serhii P",
+          "Double Alex"
         ]
       },
       {
@@ -6271,11 +6271,11 @@
         "scoreA": 1,
         "scoreB": 15,
         "teamA": [
-          "Serhii",
+          "Serhii P",
           "Alex"
         ],
         "teamB": [
-          "Alex Double",
+          "Double Alex",
           "Denis"
         ]
       },
@@ -6331,8 +6331,8 @@
           "Vova"
         ],
         "teamB": [
-          "Serhii",
-          "Alex Double"
+          "Serhii P",
+          "Double Alex"
         ]
       },
       {
@@ -6383,11 +6383,11 @@
         "scoreA": 8,
         "scoreB": 8,
         "teamA": [
-          "Serhii",
+          "Serhii P",
           "Ali"
         ],
         "teamB": [
-          "Alex Double",
+          "Double Alex",
           "Denis"
         ]
       },
@@ -6439,11 +6439,11 @@
         "scoreA": 8,
         "scoreB": 8,
         "teamA": [
-          "Serhii",
+          "Serhii P",
           "Denis"
         ],
         "teamB": [
-          "Alex Double",
+          "Double Alex",
           "Mila"
         ]
       },
@@ -6495,11 +6495,11 @@
         "scoreA": 7,
         "scoreB": 9,
         "teamA": [
-          "Serhii",
+          "Serhii P",
           "Vova"
         ],
         "teamB": [
-          "Alex Double",
+          "Double Alex",
           "William"
         ]
       },
@@ -6551,11 +6551,11 @@
         "scoreA": 9,
         "scoreB": 7,
         "teamA": [
-          "Serhii",
+          "Serhii P",
           "William"
         ],
         "teamB": [
-          "Alex Double",
+          "Double Alex",
           "Mila"
         ]
       },
@@ -6632,7 +6632,7 @@
         "scoreB": 3,
         "teamA": [
           "Vova",
-          "Alex Double"
+          "Double Alex"
         ],
         "teamB": [
           "Tanya",
@@ -6691,7 +6691,7 @@
           "Alina"
         ],
         "teamB": [
-          "Alex Double",
+          "Double Alex",
           "Sofia"
         ]
       },
@@ -6702,7 +6702,7 @@
         "scoreB": 4,
         "teamA": [
           "Anton",
-          "Alex Double"
+          "Double Alex"
         ],
         "teamB": [
           "Ali",
@@ -6772,7 +6772,7 @@
         "scoreB": 7,
         "teamA": [
           "Miroslav",
-          "Alex Double"
+          "Double Alex"
         ],
         "teamB": [
           "Anton",
@@ -6804,7 +6804,7 @@
         ],
         "teamB": [
           "Stas",
-          "Alex Double"
+          "Double Alex"
         ]
       },
       {
@@ -6860,7 +6860,7 @@
         ],
         "teamB": [
           "Ali",
-          "Alex Double"
+          "Double Alex"
         ]
       },
       {
@@ -6869,7 +6869,7 @@
         "scoreA": 5,
         "scoreB": 11,
         "teamA": [
-          "Alex Double",
+          "Double Alex",
           "Marta"
         ],
         "teamB": [
@@ -6916,7 +6916,7 @@
         ],
         "teamB": [
           "Piter Pen",
-          "Alex Double"
+          "Double Alex"
         ]
       },
       {
@@ -6972,7 +6972,7 @@
         ],
         "teamB": [
           "Anya",
-          "Alex Double"
+          "Double Alex"
         ]
       },
       {
@@ -6996,7 +6996,7 @@
         "scoreB": 9,
         "teamA": [
           "Alina",
-          "Alex Double"
+          "Double Alex"
         ],
         "teamB": [
           "Miroslav",
@@ -7056,7 +7056,7 @@
         ],
         "teamB": [
           "Tanya",
-          "Alex Double"
+          "Double Alex"
         ]
       },
       {
@@ -7104,7 +7104,7 @@
         "scoreB": 7,
         "teamA": [
           "Roman",
-          "Max"
+          "Maks"
         ],
         "teamB": [
           "Miroslav",
@@ -7146,7 +7146,7 @@
         "scoreB": 5,
         "teamA": [
           "Ostap",
-          "Max"
+          "Maks"
         ],
         "teamB": [
           "Alina",
@@ -7244,7 +7244,7 @@
         "scoreB": 5,
         "teamA": [
           "Oleksii",
-          "Max"
+          "Maks"
         ],
         "teamB": [
           "Marina",
@@ -7262,7 +7262,7 @@
         ],
         "teamB": [
           "Tanya",
-          "Max"
+          "Maks"
         ]
       },
       {
@@ -7346,7 +7346,7 @@
         ],
         "teamB": [
           "Veronika",
-          "Max"
+          "Maks"
         ]
       },
       {
@@ -7402,7 +7402,7 @@
         ],
         "teamB": [
           "Vova",
-          "Max"
+          "Maks"
         ]
       },
       {
@@ -7472,7 +7472,7 @@
         ],
         "teamB": [
           "Anzhelika",
-          "Max"
+          "Maks"
         ]
       },
       {
@@ -7510,7 +7510,7 @@
         "scoreB": 10,
         "teamA": [
           "Alina",
-          "Max"
+          "Maks"
         ],
         "teamB": [
           "Roman",
@@ -7542,7 +7542,7 @@
         ],
         "teamB": [
           "Eugene",
-          "Max"
+          "Maks"
         ]
       },
       {
@@ -7612,7 +7612,7 @@
         ],
         "teamB": [
           "Kristian",
-          "Max"
+          "Maks"
         ]
       },
       {
@@ -7696,7 +7696,7 @@
         ],
         "teamB": [
           "Anton",
-          "Max"
+          "Maks"
         ]
       },
       {
@@ -7748,7 +7748,7 @@
         "scoreB": 12,
         "teamA": [
           "Andrew",
-          "Max"
+          "Maks"
         ],
         "teamB": [
           "Vova",
@@ -7775,7 +7775,7 @@
           "Lisa M"
         ],
         "teamB": [
-          "Alex Double",
+          "Double Alex",
           "Miroslav"
         ]
       },
@@ -7786,7 +7786,7 @@
         "scoreB": 9,
         "teamA": [
           "Anastasia",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
           "Katie G",
@@ -7799,7 +7799,7 @@
         "scoreA": 4,
         "scoreB": 12,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Eugene"
         ],
         "teamB": [
@@ -7831,7 +7831,7 @@
           "Anastasia"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Alina"
         ]
       },
@@ -7846,7 +7846,7 @@
         ],
         "teamB": [
           "Vova",
-          "Alex Double"
+          "Double Alex"
         ]
       },
       {
@@ -7856,7 +7856,7 @@
         "scoreB": 11,
         "teamA": [
           "Natali",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
           "Oleksii",
@@ -7898,11 +7898,11 @@
         "scoreB": 6,
         "teamA": [
           "Vova",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
           "Eugene M",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -7929,7 +7929,7 @@
           "Anastasia"
         ],
         "teamB": [
-          "Alex Double",
+          "Double Alex",
           "Oleksii"
         ]
       },
@@ -7940,7 +7940,7 @@
         "scoreB": 2,
         "teamA": [
           "Roman",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
           "Andrew",
@@ -7981,11 +7981,11 @@
         "scoreA": 11,
         "scoreB": 5,
         "teamA": [
-          "Alex Double",
+          "Double Alex",
           "Eugene"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Miroslav"
         ]
       },
@@ -8013,7 +8013,7 @@
           "Kir"
         ],
         "teamB": [
-          "Alex Double",
+          "Double Alex",
           "Andrew"
         ]
       },
@@ -8037,8 +8037,8 @@
         "scoreA": 14,
         "scoreB": 2,
         "teamA": [
-          "Sergey",
-          "Irina"
+          "Sergey Ixi",
+          "Irina P"
         ],
         "teamB": [
           "Natali",
@@ -8056,7 +8056,7 @@
         ],
         "teamB": [
           "Miroslav",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -8066,10 +8066,10 @@
         "scoreB": 10,
         "teamA": [
           "Eugene M",
-          "Alex Double"
+          "Double Alex"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Oleksii"
         ]
       },
@@ -8122,7 +8122,7 @@
         "scoreB": 5,
         "teamA": [
           "Kir",
-          "Sergey"
+          "Sergey Ixi"
         ],
         "teamB": [
           "Natali",
@@ -8135,12 +8135,12 @@
         "scoreA": 3,
         "scoreB": 13,
         "teamA": [
-          "Alex Double",
+          "Double Alex",
           "Lisa M"
         ],
         "teamB": [
           "Eugene",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -8177,7 +8177,7 @@
         "scoreA": 10,
         "scoreB": 6,
         "teamA": [
-          "Alex Double",
+          "Double Alex",
           "Natali"
         ],
         "teamB": [
@@ -8191,12 +8191,12 @@
         "scoreA": 5,
         "scoreB": 11,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Anastasia"
         ],
         "teamB": [
           "Katie G",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -8219,7 +8219,7 @@
         "scoreA": 13,
         "scoreB": 3,
         "teamA": [
-          "Alex Double",
+          "Double Alex",
           "Roman"
         ],
         "teamB": [
@@ -8233,7 +8233,7 @@
         "scoreA": 7,
         "scoreB": 9,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Andrew"
         ],
         "teamB": [
@@ -8266,7 +8266,7 @@
         ],
         "teamB": [
           "Alina",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -8275,7 +8275,7 @@
         "scoreA": 7,
         "scoreB": 9,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Roman"
         ],
         "teamB": [
@@ -8304,7 +8304,7 @@
         "scoreB": 9,
         "teamA": [
           "Andrew",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
           "Vova",
@@ -8317,7 +8317,7 @@
         "scoreA": 12,
         "scoreB": 4,
         "teamA": [
-          "Alex Double",
+          "Double Alex",
           "Alina"
         ],
         "teamB": [
@@ -8335,8 +8335,8 @@
           "Roman"
         ],
         "teamB": [
-          "Alex Double",
-          "Irina"
+          "Double Alex",
+          "Irina P"
         ]
       },
       {
@@ -8373,7 +8373,7 @@
         "scoreA": 5,
         "scoreB": 11,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Lisa M"
         ],
         "teamB": [
@@ -8398,7 +8398,7 @@
         "scoreB": 8,
         "teamA": [
           "Vova",
-          "Alex Double"
+          "Double Alex"
         ],
         "teamB": [
           "Roman",
@@ -8429,7 +8429,7 @@
           "Mila"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Alex"
         ]
       },
@@ -8453,7 +8453,7 @@
         "scoreA": 10,
         "scoreB": 6,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Denis"
         ],
         "teamB": [
@@ -8471,7 +8471,7 @@
           "Vova"
         ],
         "teamB": [
-          "Alex Double",
+          "Double Alex",
           "Rick"
         ]
       },
@@ -8509,7 +8509,7 @@
         "scoreA": 10,
         "scoreB": 6,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Eugene"
         ],
         "teamB": [
@@ -8551,7 +8551,7 @@
         "scoreA": 3,
         "scoreB": 13,
         "teamA": [
-          "Alex Double",
+          "Double Alex",
           "Mila"
         ],
         "teamB": [
@@ -8565,7 +8565,7 @@
         "scoreA": 4,
         "scoreB": 12,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Miroslav"
         ],
         "teamB": [
@@ -8612,7 +8612,7 @@
         ],
         "teamB": [
           "Sabrina",
-          "Alex Double"
+          "Double Alex"
         ]
       },
       {
@@ -8635,7 +8635,7 @@
         "scoreA": 9,
         "scoreB": 7,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Vova"
         ],
         "teamB": [
@@ -8668,7 +8668,7 @@
         ],
         "teamB": [
           "Sabrina",
-          "Alex Double"
+          "Double Alex"
         ]
       },
       {
@@ -8682,7 +8682,7 @@
         ],
         "teamB": [
           "Denis",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -8724,7 +8724,7 @@
         ],
         "teamB": [
           "Oleksii",
-          "Alex Double"
+          "Double Alex"
         ]
       },
       {
@@ -8734,7 +8734,7 @@
         "scoreB": 8,
         "teamA": [
           "Eugene",
-          "Sergey"
+          "Sergey Ixi"
         ],
         "teamB": [
           "Denis",
@@ -8779,7 +8779,7 @@
           "Mila"
         ],
         "teamB": [
-          "Alex Double",
+          "Double Alex",
           "Sabrina"
         ]
       },
@@ -8804,10 +8804,10 @@
         "scoreB": 5,
         "teamA": [
           "Tanya",
-          "Alex Double"
+          "Double Alex"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Kir"
         ]
       },
@@ -8863,7 +8863,7 @@
           "Oleksii"
         ],
         "teamB": [
-          "Alex Double",
+          "Double Alex",
           "Miroslav"
         ]
       },
@@ -8873,7 +8873,7 @@
         "scoreA": 7,
         "scoreB": 9,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Sabrina"
         ],
         "teamB": [
@@ -8929,11 +8929,11 @@
         "scoreA": 8,
         "scoreB": 8,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Miroslav"
         ],
         "teamB": [
-          "Alex Double",
+          "Double Alex",
           "Vova"
         ]
       },
@@ -8972,7 +8972,7 @@
         "scoreB": 4,
         "teamA": [
           "Alex",
-          "Sergey"
+          "Sergey Ixi"
         ],
         "teamB": [
           "Rick",
@@ -8989,7 +8989,7 @@
           "Miroslav"
         ],
         "teamB": [
-          "Alex Double",
+          "Double Alex",
           "Vova"
         ]
       },
@@ -9031,8 +9031,8 @@
           "Vova"
         ],
         "teamB": [
-          "Sergey",
-          "Alex Double"
+          "Sergey Ixi",
+          "Double Alex"
         ]
       },
       {
@@ -9121,8 +9121,8 @@
         "scoreA": 9,
         "scoreB": 7,
         "teamA": [
-          "Sergey",
-          "Irina"
+          "Sergey Ixi",
+          "Irina P"
         ],
         "teamB": [
           "Oleksii",
@@ -9150,10 +9150,10 @@
         "scoreB": 8,
         "teamA": [
           "Kir",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Andrew"
         ]
       },
@@ -9206,11 +9206,11 @@
         "scoreB": 7,
         "teamA": [
           "Vova",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
           "Anton",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -9248,7 +9248,7 @@
         "scoreB": 10,
         "teamA": [
           "Tanya",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
           "Denis",
@@ -9280,7 +9280,7 @@
         ],
         "teamB": [
           "Miroslav",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -9322,7 +9322,7 @@
         ],
         "teamB": [
           "Tanya",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -9336,7 +9336,7 @@
         ],
         "teamB": [
           "Roman",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -9392,7 +9392,7 @@
         ],
         "teamB": [
           "Kir",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -9405,7 +9405,7 @@
           "Roman"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Sofia"
         ]
       },
@@ -9448,7 +9448,7 @@
         ],
         "teamB": [
           "Denny",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -9462,7 +9462,7 @@
         ],
         "teamB": [
           "Miroslav",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -9489,7 +9489,7 @@
           "Tanya"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Oleksii"
         ]
       },
@@ -9517,7 +9517,7 @@
           "Roman"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Sofia"
         ]
       },
@@ -9527,7 +9527,7 @@
         "scoreA": 8,
         "scoreB": 8,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Andrew"
         ],
         "teamB": [
@@ -9574,7 +9574,7 @@
         ],
         "teamB": [
           "Veronika",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -9602,7 +9602,7 @@
         ],
         "teamB": [
           "Denny",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -9626,7 +9626,7 @@
         "scoreB": 6,
         "teamA": [
           "Veronika",
-          "Sergey"
+          "Sergey Ixi"
         ],
         "teamB": [
           "Roman",
@@ -9654,7 +9654,7 @@
         "scoreB": 6,
         "teamA": [
           "Alex",
-          "Irina"
+          "Irina P"
         ],
         "teamB": [
           "Kir",
@@ -9686,7 +9686,7 @@
         ],
         "teamB": [
           "Roman",
-          "Sergey"
+          "Sergey Ixi"
         ]
       },
       {
@@ -9709,8 +9709,8 @@
         "scoreA": 6,
         "scoreB": 10,
         "teamA": [
-          "Sergey",
-          "Irina"
+          "Sergey Ixi",
+          "Irina P"
         ],
         "teamB": [
           "Eugene",
@@ -9780,11 +9780,11 @@
         "scoreB": 8,
         "teamA": [
           "Tanya",
-          "Sergey"
+          "Sergey Ixi"
         ],
         "teamB": [
           "Miroslav",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -9826,7 +9826,7 @@
         ],
         "teamB": [
           "Roman",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -9836,7 +9836,7 @@
         "scoreB": 6,
         "teamA": [
           "Denny",
-          "Sergey"
+          "Sergey Ixi"
         ],
         "teamB": [
           "Kir",
@@ -9905,7 +9905,7 @@
           "Sofia"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Oleksii"
         ]
       },
@@ -9920,7 +9920,7 @@
         ],
         "teamB": [
           "Illya",
-          "Irina"
+          "Irina P"
         ]
       },
       {
@@ -9929,7 +9929,7 @@
         "scoreA": 10,
         "scoreB": 6,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Elan"
         ],
         "teamB": [
@@ -9943,7 +9943,7 @@
         "scoreA": 5,
         "scoreB": 11,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Miroslav"
         ],
         "teamB": [
@@ -9989,7 +9989,7 @@
           "Elan"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Illya"
         ]
       },
@@ -10013,7 +10013,7 @@
         "scoreA": 4,
         "scoreB": 12,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Sabrina"
         ],
         "teamB": [
@@ -10045,7 +10045,7 @@
           "Oleksii"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Elan"
         ]
       },
@@ -10087,7 +10087,7 @@
           "Veronika"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Sabrina"
         ]
       },
@@ -10115,7 +10115,7 @@
           "Denny"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Miroslav"
         ]
       },
@@ -10139,7 +10139,7 @@
         "scoreA": 8,
         "scoreB": 8,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Sofia"
         ],
         "teamB": [
@@ -10171,7 +10171,7 @@
           "Denny"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Denis R"
         ]
       },
@@ -10195,7 +10195,7 @@
         "scoreA": 8,
         "scoreB": 8,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Sofia"
         ],
         "teamB": [
@@ -10213,7 +10213,7 @@
           "Denis R"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Oleksii"
         ]
       },
@@ -10255,7 +10255,7 @@
           "Sabrina"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Sofia"
         ]
       },
@@ -10265,7 +10265,7 @@
         "scoreA": 3,
         "scoreB": 13,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Vova"
         ],
         "teamB": [
@@ -10311,7 +10311,7 @@
           "Sabrina"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Sofia"
         ]
       },
@@ -10325,7 +10325,7 @@
           "Denis R"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Oleksii"
         ]
       },
@@ -10363,7 +10363,7 @@
         "scoreA": 14,
         "scoreB": 2,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Alexander"
         ],
         "teamB": [
@@ -10395,7 +10395,7 @@
           "Elan"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Illya"
         ]
       },
@@ -10405,7 +10405,7 @@
         "scoreA": 11,
         "scoreB": 5,
         "teamA": [
-          "Irina",
+          "Irina P",
           "Miroslav"
         ],
         "teamB": [
@@ -10451,7 +10451,7 @@
           "Elan"
         ],
         "teamB": [
-          "Sergey",
+          "Sergey Ixi",
           "Denis R"
         ]
       },
@@ -10465,7 +10465,7 @@
           "Alexander"
         ],
         "teamB": [
-          "Irina",
+          "Irina P",
           "Veronika"
         ]
       },
@@ -10503,12 +10503,12 @@
         "scoreA": 6,
         "scoreB": 10,
         "teamA": [
-          "Sergey",
+          "Sergey Ixi",
           "Elan"
         ],
         "teamB": [
           "Vova",
-          "Irina"
+          "Irina P"
         ]
       },
       {

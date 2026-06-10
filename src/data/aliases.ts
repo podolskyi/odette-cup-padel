@@ -7,6 +7,5 @@
 // Format: alias-as-typed -> canonical name.
 export const SEED_ALIASES: Record<string, string> = {
   Oleksey: 'Oleksii',
-  'Irina P': 'Irina',
   sofia: 'Sofia',
 }

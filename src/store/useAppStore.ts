@@ -3,9 +3,9 @@ import { persist } from 'zustand/middleware'
 import type { Dataset, Match, Tournament } from '../types'
 import allTournaments from '../data/allTournaments.json'
 
-export const DATA_VERSION = 6
+export const DATA_VERSION = 7
 // Bump the key when the seeded data changes so existing browsers reseed.
-const STORAGE_KEY = 'odette-cup-padel:v6'
+const STORAGE_KEY = 'odette-cup-padel:v7'
 
 /**
  * The unified Odette Cup history: all 21 events merged into one store with
