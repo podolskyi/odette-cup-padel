@@ -21,8 +21,8 @@ function Gate({ onUnlock }: { onUnlock: () => void }) {
   const [word, setWord] = useState('')
   const [error, setError] = useState(false)
 
-  const submit = () => {
-    if (tryUnlock(word)) onUnlock()
+  const submit = async () => {
+    if (await tryUnlock(word)) onUnlock()
     else {
       setError(true)
       setWord('')

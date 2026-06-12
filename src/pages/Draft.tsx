@@ -27,7 +27,7 @@ export function Draft() {
   const [tab, setTab] = useState<'tournaments' | 'names'>('tournaments')
 
   if (!unlocked) {
-    const submit = () => (tryUnlock(word) ? setUnlocked(true) : (setErr(true), setWord('')))
+    const submit = async () => ((await tryUnlock(word)) ? setUnlocked(true) : (setErr(true), setWord('')))
     return (
       <div className="mx-auto mt-10 max-w-sm">
         <div className="sticker-lg bg-paper-100 p-8 text-center">

@@ -353,7 +353,7 @@ function Gate({ onUnlock }: { onUnlock: () => void }) {
   const { t } = useT()
   const [word, setWord] = useState('')
   const [error, setError] = useState(false)
-  const submit = () => (tryUnlock(word) ? onUnlock() : (setError(true), setWord('')))
+  const submit = async () => ((await tryUnlock(word)) ? onUnlock() : (setError(true), setWord('')))
   return (
     <div className="mx-auto mt-10 max-w-sm">
       <div className="sticker-lg bg-paper-100 p-8 text-center">
