@@ -14,21 +14,21 @@ export function Stats() {
     <div className="space-y-8">
       <section className="sticker-lg relative overflow-hidden bg-paper-100 p-6 sm:p-8">
         <div className="pointer-events-none absolute -right-4 -top-6 text-[7rem] opacity-10">📊</div>
-        <Chip tone="bg-sky text-paper-100">BY THE NUMBERS</Chip>
-        <h1 className="mt-3 text-4xl font-extrabold sm:text-5xl">The Big Picture</h1>
+        <Chip tone="bg-sky text-paper-100">У ЦИФРАХ</Chip>
+        <h1 className="mt-3 text-4xl font-extrabold sm:text-5xl">Загальна картина</h1>
         <p className="mt-2 max-w-lg text-ink-soft">
-          Everything the Odette Cup has racked up so far — totals, records and silly milestones.
+          Усе, що Odette Cup набрав за весь час — підсумки, рекорди й кумедні віхи.
         </p>
         <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
-          <Stat label="Tournaments" value={stats.tournaments} tone="bg-sky-soft" />
-          <Stat label="Matches" value={stats.matches} tone="bg-mint-soft" />
-          <Stat label="Hours on court" value={`${stats.hours}h`} sub="≈ 2h per event" tone="bg-tang-soft" />
-          <Stat label="Players" value={stats.players} tone="bg-punch-soft" />
+          <Stat label="Турніри" value={stats.tournaments} tone="bg-sky-soft" />
+          <Stat label="Матчі" value={stats.matches} tone="bg-mint-soft" />
+          <Stat label="Годин на корті" value={`${stats.hours} год`} sub="≈ 2 год на турнір" tone="bg-tang-soft" />
+          <Stat label="Гравці" value={stats.players} tone="bg-punch-soft" />
         </div>
       </section>
 
       <section>
-        <SectionTitle emoji="✨" title="Highlights" hint="Fun facts from the whole history" />
+        <SectionTitle emoji="✨" title="Найцікавіше" hint="Цікаві факти за всю історію" />
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {stats.cards.map((c, i) => {
             const a = accentByKey(c.accent)
@@ -50,12 +50,12 @@ export function Stats() {
           })}
         </div>
         <p className="mt-3 text-xs text-ink-faint">
-          Court time assumes ~2 hours per tournament — tell me if a different number fits.
+          Час на корті рахуємо як ~2 години на турнір — скажи, якщо цифра інша.
         </p>
       </section>
 
       <section>
-        <SectionTitle emoji="💸" title="The Damage" hint="Entry fees, roughly — ~$14 / 225k IDR per event" />
+        <SectionTitle emoji="💸" title="Витрати" hint="Орієнтовні внески — ~$14 / 225k IDR за турнір" />
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           {stats.money.map((c, i) => {
             const a = accentByKey(c.accent)
@@ -79,13 +79,13 @@ export function Stats() {
 
         <div className="mt-6 sticker-lg bg-paper-100 p-5 sm:p-6">
           <div className="flex items-baseline justify-between gap-3">
-            <h3 className="font-display text-xl font-extrabold sm:text-2xl">…or, instead 🛒</h3>
+            <h3 className="font-display text-xl font-extrabold sm:text-2xl">…або, натомість 🛒</h3>
             <span className="text-xs font-bold uppercase tracking-wider text-ink-faint">
-              same money, more fun
+              ті самі гроші, більше фану
             </span>
           </div>
           <p className="mt-1 text-sm text-ink-soft">
-            What the whole pile of entry fees could've bought around Bali instead.
+            Що ціла купа внесків могла б купити на Балі натомість.
           </p>
           <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
             {stats.buys.map((c, i) => {

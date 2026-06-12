@@ -25,7 +25,7 @@ export function TournamentDetail() {
   if (!tournament || !insights) {
     return (
       <Empty emoji="🤷">
-        Tournament not found. <Link to="/" className="font-bold underline">Back to dashboard</Link>.
+        Турнір не знайдено. <Link to="/" className="font-bold underline">На головну</Link>.
       </Empty>
     )
   }
@@ -40,22 +40,22 @@ export function TournamentDetail() {
       <section className="sticker-lg bg-paper-100 p-6 sm:p-8">
         <div className="flex flex-wrap items-center gap-2">
           <Link to="/" className="chip bg-paper-100 hover:bg-paper-300">
-            ← Home
+            ← Головна
           </Link>
           <Chip tone="bg-sun-soft">🎉 {nicknameOf(tournament)}</Chip>
           <Chip tone="bg-mint-soft">{tournament.format}</Chip>
-          <Chip tone="bg-sky-soft">to {tournament.pointsPerMatch} pts</Chip>
+          <Chip tone="bg-sky-soft">до {tournament.pointsPerMatch} pts</Chip>
         </div>
         <h1 className="mt-3 text-4xl font-extrabold sm:text-5xl">{eventTitle(tournament)}</h1>
         {champion && (
           <p className="mt-2 flex items-center gap-2 text-ink-soft">
-            Champion: <Avatar name={champion.player} size="sm" />
-            <span className="font-bold text-ink">{champion.player}</span> 👑 with {champion.points} pts
+            Чемпіон: <Avatar name={champion.player} size="sm" />
+            <span className="font-bold text-ink">{champion.player}</span> 👑 з {champion.points} балів
           </p>
         )}
         <div className="mt-5">
           <Link to={`/t/${tournament.id}/wrapped`} className="btn-dark">
-            ✨ Open Wrapped recap
+            ✨ Відкрити Wrapped
           </Link>
         </div>
       </section>
@@ -67,24 +67,24 @@ export function TournamentDetail() {
 
       {/* Standings */}
       <section>
-        <SectionTitle emoji="🏆" title="Final Standings" hint="Points = sum of your team's scores" />
+        <SectionTitle emoji="🏆" title="Фінальна таблиця" hint="Бали = сума рахунків твоєї команди" />
         <StandingsTable standings={standings} />
       </section>
 
       {/* Awards */}
       <section>
-        <SectionTitle emoji="🎁" title="The Awards" hint="Auto-generated, lovingly data-driven" />
+        <SectionTitle emoji="🎁" title="Нагороди" hint="Згенеровано автоматично, з любов’ю з даних" />
         <AwardGrid awards={awards} />
       </section>
 
       {/* Match log */}
       <section>
-        <SectionTitle emoji="🎾" title="Match Log" hint={`${tournament.matches.length} matches`} />
+        <SectionTitle emoji="🎾" title="Журнал матчів" hint={`${tournament.matches.length} матчів`} />
         <div className="space-y-4">
           {Array.from({ length: rounds }, (_, r) => r + 1).map((round) => (
             <div key={round}>
               <div className="mb-1.5 text-xs font-bold uppercase tracking-wider text-ink-soft">
-                Round {round}
+                Раунд {round}
               </div>
               <div className="grid gap-2 sm:grid-cols-2">
                 {tournament.matches

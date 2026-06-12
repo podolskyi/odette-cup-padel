@@ -122,22 +122,22 @@ export function aggregateStats(
 
   const eventHours = (n: number) => n * hoursPerTournament
   const cards: Highlight[] = [
-    { emoji: '🔢', value: totalPoints.toLocaleString(), label: 'Points rallied', caption: 'every single one fought for', accent: 'sun' },
-    { emoji: '📅', value: `${span}`, label: 'Months of rivalry', caption: dates.length ? `${dates[0]} → ${dates[dates.length - 1]}` : '', accent: 'sky' },
-    mostEvents && { emoji: '🏃', value: `${eventHours(mostEvents.tournaments)}h`, label: 'Most court time', caption: `${mostEvents.player} · ${mostEvents.tournaments} events`, accent: 'tang' },
-    mostGames && { emoji: '🎮', value: `${mostGames.games}`, label: 'Most matches', caption: `${mostGames.player} — a true regular`, accent: 'sky' },
-    mostTitles && mostTitles.tournamentWins > 0 && { emoji: '👑', value: `${mostTitles.tournamentWins}`, label: 'Most titles', caption: `${mostTitles.player}, serial champion`, accent: 'gold' },
-    topPeak && { emoji: '⚡', value: `${Math.round(topPeak.peak)}`, label: 'Highest Elo peak', caption: `${topPeak.player} at their best`, accent: 'grape' },
-    streak.n > 0 && { emoji: '🔥', value: `${streak.n}`, label: 'Longest win streak', caption: `${streak.p} — unstoppable`, accent: 'punch' },
-    topDuo && { emoji: '🤝', value: `${topDuo.games}`, label: 'Most-played duo', caption: `${topDuo.players.join(' & ')}`, accent: 'mint' },
-    blow && { emoji: '💥', value: `${blow.sf}–${blow.sa}`, label: 'Biggest blowout', caption: `${blow.winners.join(' & ')} · ${blow.nick}`, accent: 'punch' },
-    { emoji: '🤜', value: `${partnerships.length}`, label: 'Partnerships formed', caption: 'unique duos tried', accent: 'mint' },
-    { emoji: '⚔️', value: `${rivalPairs.size}`, label: 'Rivalries', caption: 'head-to-head match-ups', accent: 'sky' },
-    { emoji: '🥇', value: `${champs.size}`, label: 'Different champions', caption: `out of ${tournaments.length} events`, accent: 'gold' },
-    { emoji: '😬', value: `${close}`, label: 'Nail-biters', caption: 'matches decided by ≤ 2', accent: 'sun' },
-    { emoji: '🕊️', value: `${ties}`, label: 'Perfect ties', caption: 'nobody blinked', accent: 'grape' },
-    { emoji: '🍞', value: `${bagels}`, label: 'Demolitions', caption: 'a team left with ≤ 1', accent: 'tang' },
-    { emoji: '⚖️', value: r1(matches ? totalPoints / matches : 0), label: 'Points per match', caption: 'on average', accent: 'lime' },
+    { emoji: '🔢', value: totalPoints.toLocaleString(), label: 'Розіграних балів', caption: 'за кожен боролися', accent: 'sun' },
+    { emoji: '📅', value: `${span}`, label: 'Місяців суперництва', caption: dates.length ? `${dates[0]} → ${dates[dates.length - 1]}` : '', accent: 'sky' },
+    mostEvents && { emoji: '🏃', value: `${eventHours(mostEvents.tournaments)} год`, label: 'Найбільше на корті', caption: `${mostEvents.player} · ${mostEvents.tournaments} турнірів`, accent: 'tang' },
+    mostGames && { emoji: '🎮', value: `${mostGames.games}`, label: 'Найбільше матчів', caption: `${mostGames.player} — справжній завсідник`, accent: 'sky' },
+    mostTitles && mostTitles.tournamentWins > 0 && { emoji: '👑', value: `${mostTitles.tournamentWins}`, label: 'Найбільше титулів', caption: `${mostTitles.player}, серійний чемпіон`, accent: 'gold' },
+    topPeak && { emoji: '⚡', value: `${Math.round(topPeak.peak)}`, label: 'Найвищий пік Elo', caption: `${topPeak.player} на піку форми`, accent: 'grape' },
+    streak.n > 0 && { emoji: '🔥', value: `${streak.n}`, label: 'Найдовша серія перемог', caption: `${streak.p} — нестримний`, accent: 'punch' },
+    topDuo && { emoji: '🤝', value: `${topDuo.games}`, label: 'Найграніший дует', caption: `${topDuo.players.join(' & ')}`, accent: 'mint' },
+    blow && { emoji: '💥', value: `${blow.sf}–${blow.sa}`, label: 'Найбільший розгром', caption: `${blow.winners.join(' & ')} · ${blow.nick}`, accent: 'punch' },
+    { emoji: '🤜', value: `${partnerships.length}`, label: 'Створених пар', caption: 'унікальних дуетів', accent: 'mint' },
+    { emoji: '⚔️', value: `${rivalPairs.size}`, label: 'Суперництва', caption: 'очні протистояння', accent: 'sky' },
+    { emoji: '🥇', value: `${champs.size}`, label: 'Різних чемпіонів', caption: `з ${tournaments.length} турнірів`, accent: 'gold' },
+    { emoji: '😬', value: `${close}`, label: 'Трилери', caption: 'матчів з різницею ≤ 2', accent: 'sun' },
+    { emoji: '🕊️', value: `${ties}`, label: 'Чисті нічиї', caption: 'ніхто не здригнувся', accent: 'grape' },
+    { emoji: '🍞', value: `${bagels}`, label: 'Розгроми', caption: 'команда пішла з ≤ 1', accent: 'tang' },
+    { emoji: '⚖️', value: r1(matches ? totalPoints / matches : 0), label: 'Балів за матч', caption: 'у середньому', accent: 'lime' },
   ].filter(Boolean) as Highlight[]
 
   // 💸 The damage (entry fees). Each (player, tournament) = one paid entry.
@@ -147,22 +147,22 @@ export function aggregateStats(
     ? { player: mostEvents.player, spend: Math.round(mostEvents.tournaments * costPerEntryUsd), events: mostEvents.tournaments }
     : null
   const money: Highlight[] = [
-    { emoji: '💸', value: `$${totalSpend.toLocaleString()}`, label: 'Spent on padel, total', caption: `${totalEntries} entries · ~$${costPerEntryUsd}/event`, accent: 'mint' },
-    biggest && { emoji: '🤑', value: `$${biggest.spend.toLocaleString()}`, label: 'Biggest spender', caption: `${biggest.player} · ${biggest.events} events in`, accent: 'sun' },
-    { emoji: '🎟️', value: `${totalEntries.toLocaleString()}`, label: 'Entries paid', caption: 'one player, one event', accent: 'grape' },
+    { emoji: '💸', value: `$${totalSpend.toLocaleString()}`, label: 'Витрачено на падел разом', caption: `${totalEntries} внесків · ~$${costPerEntryUsd}/турнір`, accent: 'mint' },
+    biggest && { emoji: '🤑', value: `$${biggest.spend.toLocaleString()}`, label: 'Найбільший витратник', caption: `${biggest.player} · ${biggest.events} турнірів`, accent: 'sun' },
+    { emoji: '🎟️', value: `${totalEntries.toLocaleString()}`, label: 'Сплачених внесків', caption: 'один гравець, один турнір', accent: 'grape' },
   ].filter(Boolean) as Highlight[]
 
   // 🛒 What that pile of rupiah could have bought instead (Bali prices, very rough).
   const buy = (price: number) => Math.floor(totalSpend / price).toLocaleString()
   const buys: Highlight[] = [
-    { emoji: '🍛', value: buy(2.5), label: 'Plates of nasi goreng', caption: '~$2.5 a plate in Ubud', accent: 'tang' },
-    { emoji: '🍺', value: buy(3), label: 'Cold Bintangs', caption: '~$3 a bottle, post-match', accent: 'sun' },
-    { emoji: '🥥', value: buy(1.5), label: 'Fresh coconuts', caption: '~$1.5 on the beach', accent: 'lime' },
-    { emoji: '☕', value: buy(2.5), label: 'Flat whites', caption: '~$2.5 a cup, Canggu cafés', accent: 'mint' },
-    { emoji: '🛵', value: buy(5), label: 'Days of scooter rental', caption: '~$5 a day', accent: 'sky' },
-    { emoji: '💆', value: buy(7), label: 'Balinese massages', caption: '~$7 an hour', accent: 'grape' },
-    { emoji: '🎾', value: buy(120), label: 'Brand-new padel rackets', caption: '~$120 a mid-range racket', accent: 'punch' },
-    { emoji: '✈️', value: buy(55), label: 'Flights to Jakarta', caption: '~$55 one-way', accent: 'gold' },
+    { emoji: '🍛', value: buy(2.5), label: 'Тарілок насі-горенг', caption: '~$2.5 за тарілку в Убуді', accent: 'tang' },
+    { emoji: '🍺', value: buy(3), label: 'Холодних Bintang', caption: '~$3 за пляшку після матчу', accent: 'sun' },
+    { emoji: '🥥', value: buy(1.5), label: 'Свіжих кокосів', caption: '~$1.5 на пляжі', accent: 'lime' },
+    { emoji: '☕', value: buy(2.5), label: 'Флет-вайтів', caption: '~$2.5 чашка, кафе Чангу', accent: 'mint' },
+    { emoji: '🛵', value: buy(5), label: 'Днів оренди скутера', caption: '~$5 на день', accent: 'sky' },
+    { emoji: '💆', value: buy(7), label: 'Балійських масажів', caption: '~$7 за годину', accent: 'grape' },
+    { emoji: '🎾', value: buy(120), label: 'Нових падел-ракеток', caption: '~$120 ракетка середнього класу', accent: 'punch' },
+    { emoji: '✈️', value: buy(55), label: 'Перельотів до Джакарти', caption: '~$55 в один бік', accent: 'gold' },
   ]
 
   return { tournaments: tournaments.length, matches, hours, players: players.length, cards, money, buys }

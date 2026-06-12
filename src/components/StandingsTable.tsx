@@ -21,7 +21,7 @@ export function StandingsTable({
         <thead>
           <tr className="border-b-2 border-ink bg-ink text-paper-100">
             <Th className="w-10 pl-3 text-center">#</Th>
-            <Th>Player</Th>
+            <Th>Гравець</Th>
             <Th className="text-center">W-L-T</Th>
             <Th className="text-center">Diff</Th>
             <Th className="pr-4 text-right">Pts</Th>

@@ -36,7 +36,7 @@ export function RatingChart({ series, height = 240 }: { series: RatingSeries[]; 
           <XAxis
             dataKey="idx"
             tick={{ fontSize: 11, fontFamily: 'Space Mono', fill: '#5d534a' }}
-            tickFormatter={(v) => (v === 0 ? 'start' : `g${v}`)}
+            tickFormatter={(v) => (v === 0 ? 'старт' : `г${v}`)}
             interval="preserveStartEnd"
             stroke="#211c18"
           />
@@ -54,7 +54,7 @@ export function RatingChart({ series, height = 240 }: { series: RatingSeries[]; 
               boxShadow: '4px 4px 0 0 #211c18',
               background: '#fffcf5',
             }}
-            labelFormatter={(v) => (v === 0 ? 'Start (1000)' : `Game ${v}`)}
+            labelFormatter={(v) => (v === 0 ? 'Старт (1000)' : `Гра ${v}`)}
           />
           {series.map((s) => (
             <Line

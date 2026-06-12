@@ -30,8 +30,8 @@ export function Draft() {
       <div className="mx-auto mt-10 max-w-sm">
         <div className="sticker-lg bg-paper-100 p-8 text-center">
           <div className="text-5xl">🗂️</div>
-          <h1 className="mt-3 text-2xl font-extrabold">Import workspace</h1>
-          <p className="mt-1 text-sm text-ink-soft">Enter the secret word.</p>
+          <h1 className="mt-3 text-2xl font-extrabold">Робоча область імпорту</h1>
+          <p className="mt-1 text-sm text-ink-soft">Введіть секретне слово.</p>
           <input
             type="text"
             value={word}
@@ -39,11 +39,11 @@ export function Draft() {
             data-1p-ignore
             onChange={(e) => { setWord(e.target.value); setErr(false) }}
             onKeyDown={(e) => e.key === 'Enter' && submit()}
-            placeholder="secret word"
+            placeholder="секретне слово"
             className={cx('mt-5 w-full rounded-xl border-2 bg-paper-100 px-4 py-2.5 text-center font-bold shadow-hard-sm outline-none', err ? 'border-punch' : 'border-ink')}
           />
-          {err && <p className="mt-2 text-sm font-bold text-punch">Nope 🎾</p>}
-          <button className="btn-dark mt-4 w-full" onClick={submit}>Unlock</button>
+          {err && <p className="mt-2 text-sm font-bold text-punch">Не те 🎾</p>}
+          <button className="btn-dark mt-4 w-full" onClick={submit}>Розблокувати</button>
         </div>
       </div>
     )
@@ -52,12 +52,12 @@ export function Draft() {
   return (
     <div className="space-y-6">
       <section className="sticker-lg bg-paper-100 p-6 sm:p-8">
-        <Chip tone="bg-tang text-paper-100">DRAFT · IMPORT REVIEW</Chip>
-        <h1 className="mt-3 text-3xl font-extrabold sm:text-4xl">Imported tournaments</h1>
+        <Chip tone="bg-tang text-paper-100">ЧЕРНЕТКА · ПЕРЕВІРКА ІМПОРТУ</Chip>
+        <h1 className="mt-3 text-3xl font-extrabold sm:text-4xl">Імпортовані турніри</h1>
         <p className="mt-1 max-w-lg text-ink-soft">
-          {draftTournaments.length} events parsed from brackets, americano-padel, padelpuffin &
-          padelution. Review the data and merge name variants — nothing here touches the live app
-          until you export &amp; promote.
+          {draftTournaments.length} турнірів розібрано з brackets, americano-padel, padelpuffin та
+          padelution. Перевірте дані й об’єднайте варіанти імен — нічого тут не торкається живого
+          застосунку, доки ви не експортуєте й не опублікуєте.
         </p>
         <div className="mt-4 flex overflow-hidden rounded-xl border-2 border-ink shadow-hard-sm w-fit">
           {(['tournaments', 'names'] as const).map((t) => (
@@ -66,7 +66,7 @@ export function Draft() {
               onClick={() => setTab(t)}
               className={cx('px-4 py-1.5 text-sm font-bold capitalize', t !== 'tournaments' && 'border-l-2 border-ink', tab === t ? 'bg-ink text-paper-100' : 'bg-paper-100')}
             >
-              {t === 'tournaments' ? '🏆 Tournaments' : '🔗 Names'}
+              {t === 'tournaments' ? '🏆 Турніри' : '🔗 Імена'}
             </button>
           ))}
         </div>
@@ -116,17 +116,17 @@ function CloudBar() {
   if (!supabaseConfigured) {
     return (
       <div className="sticker bg-sun-soft px-4 py-2 text-sm text-ink-soft">
-        ☁️ Cloud not configured — work auto-saves on this device only.
+        ☁️ Хмару не налаштовано — робота зберігається лише на цьому пристрої.
       </div>
     )
   }
 
   const when = last ? new Date(last).toLocaleTimeString() : ''
   const label =
-    status === 'loading' ? 'Loading your saved work…'
-      : status === 'saving' ? 'Saving…'
-      : status === 'error' ? '⚠️ Connection issue — your work is safe locally and will sync on the next change'
-      : `All changes saved automatically${when ? ` · ${when}` : ''}`
+    status === 'loading' ? 'Завантаження збереженого…'
+      : status === 'saving' ? 'Збереження…'
+      : status === 'error' ? '⚠️ Проблема зі з’єднанням — робота в безпеці локально й синхронізується за наступної зміни'
+      : `Усі зміни збережено автоматично${when ? ` · ${when}` : ''}`
   return (
     <div className={cx('sticker px-4 py-2 text-sm font-bold', status === 'error' ? 'bg-punch-soft' : 'bg-mint-soft')}>
       ☁️ {label}
@@ -152,10 +152,10 @@ function TournamentsTab() {
   return (
     <div className="space-y-3">
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        <Stat label="Tournaments" value={draftTournaments.length} tone="bg-sky-soft" />
-        <Stat label="Need a date" value={undated} tone={undated ? 'bg-punch-soft' : 'bg-mint-soft'} />
-        <Stat label="Matches" value={draftTournaments.reduce((n, t) => n + t.matches.length, 0)} tone="bg-sun-soft" />
-        <Stat label="Draft merges" value={Object.keys(aliases).length} tone="bg-grape-soft" />
+        <Stat label="Турніри" value={draftTournaments.length} tone="bg-sky-soft" />
+        <Stat label="Без дати" value={undated} tone={undated ? 'bg-punch-soft' : 'bg-mint-soft'} />
+        <Stat label="Матчі" value={draftTournaments.reduce((n, t) => n + t.matches.length, 0)} tone="bg-sun-soft" />
+        <Stat label="Об’єднань у чернетці" value={Object.keys(aliases).length} tone="bg-grape-soft" />
       </div>
 
       {ordered.map((t) => {
@@ -182,10 +182,10 @@ function TournamentsTab() {
                 className={cx('rounded-lg border-2 px-2 py-1 font-mono text-sm', date ? 'border-ink bg-paper-100' : 'border-punch bg-punch-soft')}
               />
               <a href={t._source.url} target="_blank" rel="noreferrer" className="chip bg-paper-100 hover:bg-paper-300">
-                source ↗
+                джерело ↗
               </a>
               <button className={cx('btn px-3 py-1 text-xs', isOpen && 'btn-dark')} onClick={() => setOpen(isOpen ? null : t.id)}>
-                {isOpen ? 'Hide' : 'Review'}
+                {isOpen ? 'Сховати' : 'Перевірити'}
               </button>
             </div>
 
@@ -233,15 +233,15 @@ function TournamentDetail({
   return (
     <div className="grid gap-4 border-t-2 border-ink/10 p-3 lg:grid-cols-2">
       <div>
-        <div className="mb-1.5 text-xs font-bold uppercase tracking-wider text-ink-soft">Our standings</div>
+        <div className="mb-1.5 text-xs font-bold uppercase tracking-wider text-ink-soft">Наша таблиця</div>
         <StandingsTable standings={standings} onPlayer={onPlayer} />
       </div>
       <div>
-        <div className="mb-1.5 text-xs font-bold uppercase tracking-wider text-ink-soft">Match log</div>
+        <div className="mb-1.5 text-xs font-bold uppercase tracking-wider text-ink-soft">Журнал матчів</div>
         <div className="sticker max-h-[28rem] space-y-2 overflow-y-auto p-2">
           {Array.from({ length: rounds }, (_, r) => r + 1).map((rd) => (
             <div key={rd}>
-              <div className="text-[11px] font-bold uppercase text-ink-faint">Round {rd}</div>
+              <div className="text-[11px] font-bold uppercase text-ink-faint">Раунд {rd}</div>
               {entry.matches.filter((m) => m.round === rd).map((m, i) => (
                 <div key={i} className="flex items-center justify-between gap-2 py-0.5 text-sm">
                   <span className="flex-1 truncate text-right">
@@ -303,7 +303,7 @@ function DraftPlayerModal({
               <h3 className="text-2xl font-extrabold leading-none">{player}</h3>
               {cyr.length > 0 && <div className="mt-0.5 text-sm text-ink-soft">{cyr.join(' / ')}</div>}
               <div className="mt-1 text-[11px] font-bold uppercase tracking-wider text-ink-soft">
-                Draft profile · {rows.length} event{rows.length === 1 ? '' : 's'}
+                Профіль чернетки · {rows.length} турнір{rows.length === 1 ? '' : 'и'}
               </div>
             </div>
           </div>
@@ -312,18 +312,18 @@ function DraftPlayerModal({
 
         <div className="mt-4 space-y-2">
           {rows.length === 0 ? (
-            <div className="text-sm text-ink-soft">No appearances in the imported tournaments.</div>
+            <div className="text-sm text-ink-soft">Немає виступів в імпортованих турнірах.</div>
           ) : (
             rows.map(({ t, rank, total, record, pts }) => (
               <div key={t.id} className="sticker flex items-center justify-between gap-3 p-2.5">
                 <div className="min-w-0">
                   <div className="truncate font-bold">🎉 {t.nickname || t.name}</div>
-                  <div className="text-xs text-ink-soft">{t._source.service} · {t.date || 'no date'}</div>
+                  <div className="text-xs text-ink-soft">{t._source.service} · {t.date || 'без дати'}</div>
                 </div>
                 <div className="flex shrink-0 items-center gap-3">
                   <div className="text-right">
                     <div className="font-mono text-xs tabular text-ink-soft">{record}</div>
-                    <div className="font-mono text-sm font-bold tabular">{pts} pts</div>
+                    <div className="font-mono text-sm font-bold tabular">{pts} балів</div>
                   </div>
                   <div className="grid h-10 w-12 place-items-center rounded-xl border-2 border-ink bg-paper-200 font-mono text-sm font-bold tabular">
                     {rank}/{total}
@@ -334,7 +334,7 @@ function DraftPlayerModal({
           )}
         </div>
         <p className="mt-3 text-xs text-ink-faint">
-          Draft-only — the tournaments being imported, not the live app.
+          Лише чернетка — турніри, що імпортуються, а не живий застосунок.
         </p>
       </div>
     </div>
@@ -398,13 +398,13 @@ function NamesTab() {
       {/* Stats */}
       <div className="sticker flex flex-wrap items-center gap-3 p-3">
         <div className="flex gap-4 px-1">
-          <span className="text-sm"><b className="font-mono text-lg">{rawNames.length}</b> names</span>
-          <span className="text-sm"><b className="font-mono text-lg text-mint">{canonicalCount}</b> players</span>
-          <span className="text-sm"><b className="font-mono text-lg">{aliasEntries.length}</b> merges</span>
+          <span className="text-sm"><b className="font-mono text-lg">{rawNames.length}</b> імен</span>
+          <span className="text-sm"><b className="font-mono text-lg text-mint">{canonicalCount}</b> гравців</span>
+          <span className="text-sm"><b className="font-mono text-lg">{aliasEntries.length}</b> об’єднань</span>
         </div>
         {aliasEntries.length > 0 && (
-          <button className="btn ml-auto" onClick={() => confirm('Clear all your merges?') && clearAliases()}>
-            Reset merges
+          <button className="btn ml-auto" onClick={() => confirm('Скинути всі ваші об’єднання?') && clearAliases()}>
+            Скинути об’єднання
           </button>
         )}
       </div>
@@ -413,11 +413,11 @@ function NamesTab() {
 
       {/* Main: full name list with Cyrillic + tournaments */}
       <section>
-        <SectionTitle emoji="📇" title="Players" hint="Tap a name to see their tournaments & merge" />
+        <SectionTitle emoji="📇" title="Гравці" hint="Натисни ім’я, щоб побачити турніри та об’єднати" />
         <input
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          placeholder="search (Latin or Cyrillic)…"
+          placeholder="пошук (латиниця або кирилиця)…"
           className="mb-3 w-full rounded-xl border-2 border-ink bg-paper-100 px-3 py-2 font-bold shadow-hard-sm outline-none sm:max-w-xs"
         />
         <div className="sticker divide-y divide-ink/10">
@@ -437,14 +437,14 @@ function NamesTab() {
                   </button>
                   <span className="font-mono text-xs text-ink-faint">{counts.get(n)}g</span>
                   {merged ? (
-                    <button className="btn px-2 py-0.5 text-xs" onClick={() => removeAlias(n)}>↩ unmerge</button>
+                    <button className="btn px-2 py-0.5 text-xs" onClick={() => removeAlias(n)}>↩ роз’єднати</button>
                   ) : (
                     <MergeInput name={n} onMerge={(to) => link(n, to)} />
                   )}
                 </div>
                 {isOpen && (
                   <div className="bg-paper-300/30 px-3 py-2 text-xs text-ink-soft">
-                    <span className="font-bold">Played in:</span> {toursFor(n).join(' · ') || '—'}
+                    <span className="font-bold">Грав у:</span> {toursFor(n).join(' · ') || '—'}
                   </div>
                 )}
               </div>
@@ -456,7 +456,7 @@ function NamesTab() {
       {/* Your merges */}
       {aliasEntries.length > 0 && (
         <section>
-          <SectionTitle emoji="🧷" title="Your merges" />
+          <SectionTitle emoji="🧷" title="Ваші об’єднання" />
           <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
             {aliasEntries.map(([f, t]) => (
               <div key={f} className="sticker flex items-center justify-between gap-2 p-2 text-sm">
@@ -471,7 +471,7 @@ function NamesTab() {
       {/* Suggestions — de-emphasized, opt-in */}
       <details className="sticker p-3">
         <summary className="cursor-pointer text-sm font-bold">
-          💡 Suggested merges ({suggestions.length}) — rough hints, double-check before applying
+          💡 Запропоновані об’єднання ({suggestions.length}) — приблизні підказки, перевірте перед застосуванням
         </summary>
         <div className="mt-3 grid gap-2 sm:grid-cols-2">
           {suggestions.map((s) => {
@@ -504,7 +504,7 @@ function MergeInput({ name, onMerge }: { name: string; onMerge: (to: string) => 
         value={v}
         onChange={(e) => setV(e.target.value)}
         onKeyDown={(e) => e.key === 'Enter' && apply()}
-        placeholder="merge into…"
+        placeholder="об’єднати з…"
         className="w-28 rounded-lg border-2 border-ink bg-paper-100 px-2 py-0.5 text-xs outline-none"
       />
       <button
@@ -512,7 +512,7 @@ function MergeInput({ name, onMerge }: { name: string; onMerge: (to: string) => 
         disabled={!v.trim() || v.trim() === name}
         className="btn px-2 py-0.5 text-xs disabled:cursor-not-allowed disabled:opacity-40"
       >
-        Merge
+        Об’єднати
       </button>
     </span>
   )

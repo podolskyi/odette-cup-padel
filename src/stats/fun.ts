@@ -99,20 +99,20 @@ export function funInsights(dataset: Pick<Dataset, 'tournaments' | 'aliases'>): 
   if (glue.length) {
     const g = glue[0]
     if (g.uplift > 0)
-      out.push({ key: 'glue', emoji: '🧲', title: 'The Glue', accent: 'mint', players: [g.player], value: `+${Math.round(g.uplift * 100)}%`, caption: 'Quietly makes everyone they partner with better.' })
+      out.push({ key: 'glue', emoji: '🧲', title: 'The Glue', accent: 'mint', players: [g.player], value: `+${Math.round(g.uplift * 100)}%`, caption: 'Тихо робить кращим кожного, з ким стає в пару.' })
   }
 
   // 🪫 The Anchor (negative uplift)
   if (glue.length) {
     const g = glue[glue.length - 1]
     if (g.uplift < 0)
-      out.push({ key: 'anchor', emoji: '🪫', title: 'The Anchor', accent: 'sky', players: [g.player], value: `${Math.round(g.uplift * 100)}%`, caption: 'Partners somehow forget how to play. We still love you 💙' })
+      out.push({ key: 'anchor', emoji: '🪫', title: 'The Anchor', accent: 'sky', players: [g.player], value: `${Math.round(g.uplift * 100)}%`, caption: 'З ним партнери чомусь забувають, як грати. Ми все одно тебе любимо 💙' })
   }
 
   // 💍 Ride or Die (most games together)
   const ride = [...partnerships].sort((a, b) => b.games - a.games || b.winRate - a.winRate)[0]
   if (ride && ride.games >= 2)
-    out.push({ key: 'rideordie', emoji: '💍', title: 'Ride or Die', accent: 'punch', players: [...ride.players], value: `${ride.games} games · ${pctStr(ride.winRate)}`, caption: 'Glued at the hip. Padel soulmates.' })
+    out.push({ key: 'rideordie', emoji: '💍', title: 'Ride or Die', accent: 'punch', players: [...ride.players], value: `${ride.games} ігор · ${pctStr(ride.winRate)}`, caption: 'Нерозлийвода. Падел-споріднені душі.' })
 
   // 💔 Toxic Duo (most-paired, worst win rate)
   const toxicPool = partnerships.filter((p) => p.games >= 3)
@@ -120,13 +120,13 @@ export function funInsights(dataset: Pick<Dataset, 'tournaments' | 'aliases'>): 
     (a, b) => a.winRate - b.winRate || b.games - a.games,
   )[0]
   if (toxic)
-    out.push({ key: 'toxic', emoji: '💔', title: 'Toxic Duo', accent: 'tang', players: [...toxic.players], value: `${toxic.wins}-${toxic.losses}-${toxic.ties}`, caption: 'The schedule keeps pairing them. The schedule is cruel.' })
+    out.push({ key: 'toxic', emoji: '💔', title: 'Toxic Duo', accent: 'tang', players: [...toxic.players], value: `${toxic.wins}-${toxic.losses}-${toxic.ties}`, caption: 'Сітка раз за разом ставить їх у пару. Сітка жорстока.' })
 
   // 🦋 Social Butterfly (most distinct partners)
   let butterfly: [Player, number] | undefined
   for (const [p, c] of partnerCount) if (!butterfly || c > butterfly[1]) butterfly = [p, c]
   if (butterfly)
-    out.push({ key: 'butterfly', emoji: '🦋', title: 'Social Butterfly', accent: 'grape', players: [butterfly[0]], value: `${butterfly[1]} partners`, caption: 'Has teamed up with half the island.' })
+    out.push({ key: 'butterfly', emoji: '🦋', title: 'Social Butterfly', accent: 'grape', players: [butterfly[0]], value: `${butterfly[1]} партнерів`, caption: 'Грав у парі з половиною острова.' })
 
   // 😤 Biggest Beef (most one-sided rivalry, 3+ meetings)
   let beef: HeadToHead | undefined
@@ -135,7 +135,7 @@ export function funInsights(dataset: Pick<Dataset, 'tournaments' | 'aliases'>): 
     if (!beef || h.wins - h.losses > beef.wins - beef.losses || (h.wins - h.losses === beef.wins - beef.losses && h.pointMargin > beef.pointMargin)) beef = h
   }
   if (beef && beef.wins > beef.losses)
-    out.push({ key: 'beef', emoji: '😤', title: 'Biggest Beef', accent: 'punch', players: [beef.player, beef.opponent], value: `${beef.wins}-${beef.losses}`, caption: `${beef.player} simply owns ${beef.opponent}.` })
+    out.push({ key: 'beef', emoji: '😤', title: 'Biggest Beef', accent: 'punch', players: [beef.player, beef.opponent], value: `${beef.wins}-${beef.losses}`, caption: `${beef.player} просто володіє ${beef.opponent}.` })
 
   // 🪙 Coin-Flippers (most even rivalry, 3+ meetings)
   const seenPair = new Set<string>()
@@ -148,7 +148,7 @@ export function funInsights(dataset: Pick<Dataset, 'tournaments' | 'aliases'>): 
     if (!flip || Math.abs(h.wins - h.losses) < Math.abs(flip.wins - flip.losses) || (Math.abs(h.wins - h.losses) === Math.abs(flip.wins - flip.losses) && h.meetings > flip.meetings)) flip = h
   }
   if (flip)
-    out.push({ key: 'coinflip', emoji: '🪙', title: 'Coin-Flippers', accent: 'sun', players: [flip.player, flip.opponent], value: `${flip.wins}-${flip.losses} in ${flip.meetings}`, caption: 'Endless rivalry. Nobody ever really wins.' })
+    out.push({ key: 'coinflip', emoji: '🪙', title: 'Coin-Flippers', accent: 'sun', players: [flip.player, flip.opponent], value: `${flip.wins}-${flip.losses} у ${flip.meetings}`, caption: 'Нескінченне суперництво. По-справжньому не виграє ніхто.' })
 
   // 🔥 Hot Hand / 🥶 Cold Spell (longest win / loss streaks)
   let hot: { p: Player; n: number } | undefined
@@ -164,9 +164,9 @@ export function funInsights(dataset: Pick<Dataset, 'tournaments' | 'aliases'>): 
     if (!cold || ml > cold.n) cold = { p: a.player, n: ml }
   }
   if (hot && hot.n >= 3)
-    out.push({ key: 'hot', emoji: '🔥', title: 'Hot Hand', accent: 'tang', players: [hot.p], value: `${hot.n} in a row`, caption: 'Caught fire and torched the whole field.' })
+    out.push({ key: 'hot', emoji: '🔥', title: 'Hot Hand', accent: 'tang', players: [hot.p], value: `${hot.n} поспіль`, caption: 'Спалахнув і спопелив усіх суперників.' })
   if (cold && cold.n >= 3)
-    out.push({ key: 'cold', emoji: '🥶', title: 'Cold Spell', accent: 'sky', players: [cold.p], value: `${cold.n} straight Ls`, caption: 'A rough patch — it happens to legends too. 💙' })
+    out.push({ key: 'cold', emoji: '🥶', title: 'Cold Spell', accent: 'sky', players: [cold.p], value: `${cold.n} поразок поспіль`, caption: 'Чорна смуга — таке буває й з легендами. 💙' })
 
   // 📈 The Glow-Up (finish percentile, first → last event)
   let glow: { p: Player; d: number } | undefined
@@ -176,21 +176,21 @@ export function funInsights(dataset: Pick<Dataset, 'tournaments' | 'aliases'>): 
     if (!glow || d > glow.d) glow = { p, d }
   }
   if (glow && glow.d > 5)
-    out.push({ key: 'glowup', emoji: '📈', title: 'The Glow-Up', accent: 'lime', players: [glow.p], value: `+${Math.round(glow.d)} pts`, caption: 'Started rough, leveled all the way up.' })
+    out.push({ key: 'glowup', emoji: '📈', title: 'The Glow-Up', accent: 'lime', players: [glow.p], value: `+${Math.round(glow.d)} pts`, caption: 'Почав важко, а розкачався по повній.' })
 
   // 🎢 Drama King/Queen (biggest finish swing, 2+ events)
   const drama = season
     .filter((s) => s.tournaments >= 2)
     .sort((a, b) => b.worstFinish - b.bestFinish - (a.worstFinish - a.bestFinish))[0]
   if (drama && drama.worstFinish > drama.bestFinish)
-    out.push({ key: 'drama', emoji: '🎢', title: 'Drama King/Queen', accent: 'punch', players: [drama.player], value: `#${drama.bestFinish}–#${drama.worstFinish}`, caption: 'Champion one week, chaos the next.' })
+    out.push({ key: 'drama', emoji: '🎢', title: 'Drama King/Queen', accent: 'punch', players: [drama.player], value: `#${drama.bestFinish}–#${drama.worstFinish}`, caption: 'Цього тижня чемпіон, наступного — хаос.' })
 
   // 💯 Mr./Ms. Consistent (smallest finish spread, 3+ events)
   const cons = season
     .filter((s) => s.tournaments >= 3)
     .sort((a, b) => a.worstFinish - a.bestFinish - (b.worstFinish - b.bestFinish) || b.tournaments - a.tournaments)[0]
   if (cons)
-    out.push({ key: 'consistent', emoji: '💯', title: 'Mr. Consistent', accent: 'mint', players: [cons.player], value: `#${cons.bestFinish}–#${cons.worstFinish}`, caption: 'A metronome — you always know what you’ll get.' })
+    out.push({ key: 'consistent', emoji: '💯', title: 'Mr. Consistent', accent: 'mint', players: [cons.player], value: `#${cons.bestFinish}–#${cons.worstFinish}`, caption: 'Метроном — завжди знаєш, чого від нього чекати.' })
 
   // 🎯 Clutch (best record in nail-biters, 4+ close decided games)
   let clutch: { p: Player; w: number; l: number; rate: number } | undefined
@@ -201,13 +201,13 @@ export function funInsights(dataset: Pick<Dataset, 'tournaments' | 'aliases'>): 
     if (!clutch || rate > clutch.rate || (rate === clutch.rate && tot > clutch.w + clutch.l)) clutch = { p: a.player, w: a.closeWin, l: a.closeLoss, rate }
   }
   if (clutch)
-    out.push({ key: 'clutch', emoji: '🎯', title: 'Clutch', accent: 'lime', players: [clutch.p], value: `${clutch.w}-${clutch.l} in nail-biters`, caption: 'Ice in the veins when the score is tight.' })
+    out.push({ key: 'clutch', emoji: '🎯', title: 'Clutch', accent: 'lime', players: [clutch.p], value: `${clutch.w}-${clutch.l} у трилерах`, caption: 'Лід у венах, коли рахунок на межі.' })
 
   // 😅 Heartbreak Kid (most close losses)
   let heart: { p: Player; n: number } | undefined
   for (const a of agg.values()) if (!heart || a.closeLoss > heart.n) heart = { p: a.player, n: a.closeLoss }
   if (heart && heart.n >= 2)
-    out.push({ key: 'heartbreak', emoji: '😅', title: 'Heartbreak Kid', accent: 'sun', players: [heart.p], value: `${heart.n} by ≤2`, caption: 'So close, so often. We feel it.' })
+    out.push({ key: 'heartbreak', emoji: '😅', title: 'Heartbreak Kid', accent: 'sun', players: [heart.p], value: `${heart.n} по ≤2`, caption: 'Так близько і так часто. Співчуваємо.' })
 
   // 🧨 Demolition Expert (biggest avg winning margin, 6+ wins)
   let demo: { p: Player; avg: number } | undefined
@@ -217,20 +217,20 @@ export function funInsights(dataset: Pick<Dataset, 'tournaments' | 'aliases'>): 
     if (!demo || avg > demo.avg) demo = { p: a.player, avg }
   }
   if (demo)
-    out.push({ key: 'demo', emoji: '🧨', title: 'Demolition Expert', accent: 'punch', players: [demo.p], value: `+${r1(demo.avg)} avg`, caption: 'Doesn’t just win — sends a message.' })
+    out.push({ key: 'demo', emoji: '🧨', title: 'Demolition Expert', accent: 'punch', players: [demo.p], value: `+${r1(demo.avg)} avg`, caption: 'Не просто виграє — передає привіт.' })
 
   // 🕊️ The Pacifist (most ties)
   let pax: { p: Player; n: number } | undefined
   for (const a of agg.values()) if (!pax || a.ties > pax.n) pax = { p: a.player, n: a.ties }
   if (pax && pax.n >= 3)
-    out.push({ key: 'pacifist', emoji: '🕊️', title: 'The Pacifist', accent: 'grape', players: [pax.p], value: `${pax.n} ties`, caption: 'A lover, not a fighter. Keeps shaking hands at 8-8.' })
+    out.push({ key: 'pacifist', emoji: '🕊️', title: 'The Pacifist', accent: 'grape', players: [pax.p], value: `${pax.n} нічиїх`, caption: 'Коханець, а не боєць. Раз за разом тисне руку на 8-8.' })
 
   // 🆕 Rookie Sensation (best 1-event newcomer)
   const rookie = season
     .filter((s) => s.tournaments < 2)
     .sort((a, b) => b.performance - a.performance || b.totalPoints - a.totalPoints)[0]
   if (rookie)
-    out.push({ key: 'rookie', emoji: '🆕', title: 'Rookie Sensation', accent: 'sky', players: [rookie.player], value: `${Math.round(rookie.performance)}% · 1 event`, caption: 'Showed up once and embarrassed the regulars.' })
+    out.push({ key: 'rookie', emoji: '🆕', title: 'Rookie Sensation', accent: 'sky', players: [rookie.player], value: `${Math.round(rookie.performance)}% · 1 турнір`, caption: 'Прийшов один раз і присоромив завсідників.' })
 
   // 🥄 Spoon Collector (most last-place finishes)
   let spoon: { p: Player; n: number } | undefined
@@ -239,7 +239,7 @@ export function funInsights(dataset: Pick<Dataset, 'tournaments' | 'aliases'>): 
     if (lasts > 0 && (!spoon || lasts > spoon.n)) spoon = { p, n: lasts }
   }
   if (spoon)
-    out.push({ key: 'spoon', emoji: '🥄', title: 'Spoon Collector', accent: 'tang', players: [spoon.p], value: `${spoon.n}× last`, caption: 'Somebody’s gotta anchor the table — a hero, really. 🥄' })
+    out.push({ key: 'spoon', emoji: '🥄', title: 'Spoon Collector', accent: 'tang', players: [spoon.p], value: `${spoon.n}× останнє`, caption: 'Хтось же має тримати дно таблиці — насправді герой. 🥄' })
 
   // ── Bigger pool ─────────────────────────────────────────────────────────
   // Many more affectionate superlatives. All deterministic with a min-sample
@@ -287,93 +287,93 @@ export function funInsights(dataset: Pick<Dataset, 'tournaments' | 'aliases'>): 
   // 🐐 GOAT + heir (highest Elo, min games)
   const eloRanked = [...ratings.values()].filter((r) => r.games >= 4).sort((a, b) => b.rating - a.rating)
   if (eloRanked[0])
-    out.push({ key: 'elo-1', emoji: '🐐', title: 'The GOAT', accent: 'sun', players: [eloRanked[0].player], value: `${Math.round(eloRanked[0].rating)} Elo`, caption: 'The highest-rated player on the island. Bow down.' })
+    out.push({ key: 'elo-1', emoji: '🐐', title: 'The GOAT', accent: 'sun', players: [eloRanked[0].player], value: `${Math.round(eloRanked[0].rating)} Elo`, caption: 'Найвищий рейтинг на острові. Схиліться.' })
   if (eloRanked[1])
-    out.push({ key: 'elo-2', emoji: '⛰️', title: 'The Heir Apparent', accent: 'grape', players: [eloRanked[1].player], value: `${Math.round(eloRanked[1].rating)} Elo`, caption: 'One good run away from the throne.' })
+    out.push({ key: 'elo-2', emoji: '⛰️', title: 'The Heir Apparent', accent: 'grape', players: [eloRanked[1].player], value: `${Math.round(eloRanked[1].rating)} Elo`, caption: 'Один вдалий турнір — і трон його.' })
 
   // 🗻 Peak Performer (highest rating ever reached)
   const peak = [...ratings.values()].filter((r) => r.games >= 4).sort((a, b) => b.peak - a.peak)[0]
   if (peak)
-    out.push({ key: 'peak', emoji: '🗻', title: 'Peak Performer', accent: 'punch', players: [peak.player], value: `${Math.round(peak.peak)} peak`, caption: 'Touched the highest rating anyone has ever hit.' })
+    out.push({ key: 'peak', emoji: '🗻', title: 'Peak Performer', accent: 'punch', players: [peak.player], value: `${Math.round(peak.peak)} peak`, caption: 'Сягнув найвищого рейтингу, який будь-хто колись мав.' })
 
   // 🚀 The Rocket / 🪂 The Free Fall (biggest Elo move from the 1000 start)
   const rocket = [...ratings.values()].filter((r) => r.games >= 6).sort((a, b) => b.rating - a.rating)[0]
   if (rocket && rocket.rating > START_RATING)
-    out.push({ key: 'rocket', emoji: '🚀', title: 'The Rocket', accent: 'lime', players: [rocket.player], value: `+${Math.round(rocket.rating - START_RATING)} Elo`, caption: 'Climbed further from the start line than anyone.' })
+    out.push({ key: 'rocket', emoji: '🚀', title: 'The Rocket', accent: 'lime', players: [rocket.player], value: `+${Math.round(rocket.rating - START_RATING)} Elo`, caption: 'Піднявся від старту вище за всіх.' })
   const fall = [...ratings.values()].filter((r) => r.games >= 6).sort((a, b) => a.rating - b.rating)[0]
   if (fall && fall.rating < START_RATING)
-    out.push({ key: 'freefall', emoji: '🪂', title: 'The Free Fall', accent: 'sky', players: [fall.player], value: `${Math.round(fall.rating - START_RATING)} Elo`, caption: 'Only way left is up, right? We believe in you 💙' })
+    out.push({ key: 'freefall', emoji: '🪂', title: 'The Free Fall', accent: 'sky', players: [fall.player], value: `${Math.round(fall.rating - START_RATING)} Elo`, caption: 'Далі тільки вгору, так? Ми в тебе віримо 💙' })
 
   // 🦾 Iron Man (most events) / 🐴 Workhorse (most matches)
   const iron = [...season].sort((a, b) => b.tournaments - a.tournaments || b.games - a.games)[0]
   if (iron && iron.tournaments >= 3)
-    out.push({ key: 'ironman', emoji: '🦾', title: 'Iron Man', accent: 'tang', players: [iron.player], value: `${iron.tournaments} events`, caption: 'Never misses. Shows up rain or shine.' })
+    out.push({ key: 'ironman', emoji: '🦾', title: 'Iron Man', accent: 'tang', players: [iron.player], value: `${iron.tournaments} турнірів`, caption: 'Ніколи не пропускає. Приходить у будь-яку погоду.' })
   const work = [...season].sort((a, b) => b.games - a.games)[0]
   if (work && work.games >= 12)
-    out.push({ key: 'workhorse', emoji: '🐴', title: 'The Workhorse', accent: 'sky', players: [work.player], value: `${work.games} matches`, caption: 'Logs more court time than the net itself.' })
+    out.push({ key: 'workhorse', emoji: '🐴', title: 'The Workhorse', accent: 'sky', players: [work.player], value: `${work.games} матчів`, caption: 'Проводить на корті більше часу, ніж сама сітка.' })
 
   // 🏆 Win Machine + runner-up (highest win rate, 10+ games)
   const wm = [...season].filter((s) => s.games >= 10).sort((a, b) => b.winRate - a.winRate || b.games - a.games)
   if (wm[0])
-    out.push({ key: 'winmachine-1', emoji: '🏆', title: 'Win Machine', accent: 'lime', players: [wm[0].player], value: pctStr(wm[0].winRate), caption: 'Wins far more often than not. Relentless.' })
+    out.push({ key: 'winmachine-1', emoji: '🏆', title: 'Win Machine', accent: 'lime', players: [wm[0].player], value: pctStr(wm[0].winRate), caption: 'Виграє значно частіше, ніж програє. Невблаганний.' })
   if (wm[1])
-    out.push({ key: 'winmachine-2', emoji: '🥈', title: 'Almost Unbeatable', accent: 'mint', players: [wm[1].player], value: pctStr(wm[1].winRate), caption: 'Second-scariest name on the schedule.' })
+    out.push({ key: 'winmachine-2', emoji: '🥈', title: 'Almost Unbeatable', accent: 'mint', players: [wm[1].player], value: pctStr(wm[1].winRate), caption: 'Друге найстрашніше ім’я в сітці.' })
 
   // 🏹 The Sniper (points per game) / 🧱 Great Wall (fewest allowed)
   const sniper = [...season].filter((s) => s.games >= 10).sort((a, b) => b.pf / b.games - a.pf / a.games)[0]
   if (sniper)
-    out.push({ key: 'sniper', emoji: '🏹', title: 'The Sniper', accent: 'punch', players: [sniper.player], value: `${r1(sniper.pf / sniper.games)} pts/game`, caption: 'Racks up points like it’s nothing.' })
+    out.push({ key: 'sniper', emoji: '🏹', title: 'The Sniper', accent: 'punch', players: [sniper.player], value: `${r1(sniper.pf / sniper.games)} pts/game`, caption: 'Набиває бали, наче це дрібниця.' })
   const wall = [...season].filter((s) => s.games >= 10).sort((a, b) => a.pa / a.games - b.pa / b.games)[0]
   if (wall)
-    out.push({ key: 'wall', emoji: '🧱', title: 'The Great Wall', accent: 'sky', players: [wall.player], value: `${r1(wall.pa / wall.games)} allowed/game`, caption: 'Points simply do not get past them.' })
+    out.push({ key: 'wall', emoji: '🧱', title: 'The Great Wall', accent: 'sky', players: [wall.player], value: `${r1(wall.pa / wall.games)} allowed/game`, caption: 'Бали повз нього просто не проходять.' })
 
   // 🫀 Cardio King (most points per event)
   const cardio = [...season].filter((s) => s.tournaments >= 2).sort((a, b) => b.avgPoints - a.avgPoints)[0]
   if (cardio)
-    out.push({ key: 'cardioking', emoji: '🫀', title: 'Cardio King', accent: 'tang', players: [cardio.player], value: `${r1(cardio.avgPoints)} pts/event`, caption: 'Leaves it all on the court, every single time.' })
+    out.push({ key: 'cardioking', emoji: '🫀', title: 'Cardio King', accent: 'tang', players: [cardio.player], value: `${r1(cardio.avgPoints)} pts/event`, caption: 'Щоразу викладається на корті без залишку.' })
 
   // 💰 Points Tycoon + mogul (most total points)
   const tycoon = [...season].sort((a, b) => b.totalPoints - a.totalPoints)
   if (tycoon[0])
-    out.push({ key: 'tycoon-1', emoji: '💰', title: 'Points Tycoon', accent: 'sun', players: [tycoon[0].player], value: `${tycoon[0].totalPoints.toLocaleString()} pts`, caption: 'Has banked more points than anyone alive.' })
+    out.push({ key: 'tycoon-1', emoji: '💰', title: 'Points Tycoon', accent: 'sun', players: [tycoon[0].player], value: `${tycoon[0].totalPoints.toLocaleString()} pts`, caption: 'Наскладав більше балів, ніж будь-хто живий.' })
   if (tycoon[1])
-    out.push({ key: 'tycoon-2', emoji: '💵', title: 'Points Mogul', accent: 'grape', players: [tycoon[1].player], value: `${tycoon[1].totalPoints.toLocaleString()} pts`, caption: 'Not the richest, but very, very comfortable.' })
+    out.push({ key: 'tycoon-2', emoji: '💵', title: 'Points Mogul', accent: 'grape', players: [tycoon[1].player], value: `${tycoon[1].totalPoints.toLocaleString()} pts`, caption: 'Не найбагатший, але дуже-дуже заможний.' })
 
   // 👑 Title Hoarder + serial contender (most 1st places)
   const titles = [...season].filter((s) => s.tournamentWins >= 1).sort((a, b) => b.tournamentWins - a.tournamentWins)
   if (titles[0])
-    out.push({ key: 'title-1', emoji: '👑', title: 'Title Hoarder', accent: 'sun', players: [titles[0].player], value: `${titles[0].tournamentWins} titles`, caption: 'Collects trophies like beach souvenirs.' })
+    out.push({ key: 'title-1', emoji: '👑', title: 'Title Hoarder', accent: 'sun', players: [titles[0].player], value: `${titles[0].tournamentWins} титулів`, caption: 'Колекціонує трофеї, як сувеніри з пляжу.' })
   if (titles[1])
-    out.push({ key: 'title-2', emoji: '🥇', title: 'Serial Contender', accent: 'tang', players: [titles[1].player], value: `${titles[1].tournamentWins} titles`, caption: 'Always somewhere in the title hunt.' })
+    out.push({ key: 'title-2', emoji: '🥇', title: 'Serial Contender', accent: 'tang', players: [titles[1].player], value: `${titles[1].tournamentWins} титулів`, caption: 'Завжди десь у боротьбі за титул.' })
 
   // 🏅 Podium Machine (most top-3 finishes)
   const pod = [...season].filter((s) => s.podiums >= 2).sort((a, b) => b.podiums - a.podiums)[0]
   if (pod)
-    out.push({ key: 'podium', emoji: '🏅', title: 'Podium Machine', accent: 'mint', players: [pod.player], value: `${pod.podiums} podiums`, caption: 'Practically lives in the top three.' })
+    out.push({ key: 'podium', emoji: '🏅', title: 'Podium Machine', accent: 'mint', players: [pod.player], value: `${pod.podiums} подіумів`, caption: 'Практично живе в топ-3.' })
 
   // 💐 Bridesmaid / 🥉 Bronze / 😬 Nearly Man (most 2nd / 3rd / 4th)
   const brides = topByRankCount(2)
   if (brides && brides.n >= 2)
-    out.push({ key: 'bridesmaid', emoji: '💐', title: 'Always the Bridesmaid', accent: 'grape', players: [brides.p], value: `${brides.n}× runner-up`, caption: 'So close to the top step. So very often.' })
+    out.push({ key: 'bridesmaid', emoji: '💐', title: 'Always the Bridesmaid', accent: 'grape', players: [brides.p], value: `${brides.n}× друге`, caption: 'Так близько до верхньої сходинки. І так часто.' })
   const bronze = topByRankCount(3)
   if (bronze && bronze.n >= 2)
-    out.push({ key: 'bronze', emoji: '🥉', title: 'Bronze Specialist', accent: 'tang', players: [bronze.p], value: `${bronze.n}× third`, caption: 'Master of the third step. Steady hands.' })
+    out.push({ key: 'bronze', emoji: '🥉', title: 'Bronze Specialist', accent: 'tang', players: [bronze.p], value: `${bronze.n}× третє`, caption: 'Майстер третьої сходинки. Тверда рука.' })
   const nearly = topByRankCount(4)
   if (nearly && nearly.n >= 2)
-    out.push({ key: 'nearly', emoji: '😬', title: 'The Nearly Man', accent: 'sky', players: [nearly.p], value: `${nearly.n}× fourth`, caption: 'Just off the podium, again. Brutal.' })
+    out.push({ key: 'nearly', emoji: '😬', title: 'The Nearly Man', accent: 'sky', players: [nearly.p], value: `${nearly.n}× четверте`, caption: 'Знову трохи не дотягнув до подіуму. Жорстоко.' })
 
   // 📊 Top of the Class (best avg finish %) / 🛡️ Safe Bet (best floor)
   const topTable = [...season].filter((s) => s.tournaments >= 3).sort((a, b) => b.performance - a.performance)[0]
   if (topTable)
-    out.push({ key: 'toptable', emoji: '📊', title: 'Top of the Class', accent: 'lime', players: [topTable.player], value: `${Math.round(topTable.performance)}% avg`, caption: 'Finishes near the top no matter the field.' })
+    out.push({ key: 'toptable', emoji: '📊', title: 'Top of the Class', accent: 'lime', players: [topTable.player], value: `${Math.round(topTable.performance)}% avg`, caption: 'Фінішує близько до вершини за будь-якого складу.' })
   const floor = [...season].filter((s) => s.tournaments >= 4).sort((a, b) => a.worstFinish - b.worstFinish || a.avgFinish - b.avgFinish)[0]
   if (floor)
-    out.push({ key: 'safebet', emoji: '🛡️', title: 'The Safe Bet', accent: 'mint', players: [floor.player], value: `never below #${floor.worstFinish}`, caption: 'A guaranteed safe pair of hands.' })
+    out.push({ key: 'safebet', emoji: '🛡️', title: 'The Safe Bet', accent: 'mint', players: [floor.player], value: `не нижче #${floor.worstFinish}`, caption: 'Гарантовано надійний вибір.' })
 
   // ⚖️ The Human Coin Toss (win rate closest to 50%)
   const fifty = [...season].filter((s) => s.games >= 10).sort((a, b) => Math.abs(a.winRate - 0.5) - Math.abs(b.winRate - 0.5))[0]
   if (fifty)
-    out.push({ key: 'fifty', emoji: '⚖️', title: 'The Human Coin Toss', accent: 'grape', players: [fifty.player], value: `${pctStr(fifty.winRate)} win`, caption: 'Wins exactly as often as they lose. Pure suspense.' })
+    out.push({ key: 'fifty', emoji: '⚖️', title: 'The Human Coin Toss', accent: 'grape', players: [fifty.player], value: `${pctStr(fifty.winRate)} win`, caption: 'Виграє рівно так само часто, як програє. Суцільна інтрига.' })
 
   // ⚡ Power Couple / 🧩 Odd Couple (current Elo of duos, 2+ games)
   const duos2 = partnerships.filter((p) => p.games >= 2)
@@ -381,24 +381,24 @@ export function funInsights(dataset: Pick<Dataset, 'tournaments' | 'aliases'>): 
     (a, b) => ratingOf(b.players[0]) + ratingOf(b.players[1]) - (ratingOf(a.players[0]) + ratingOf(a.players[1])),
   )[0]
   if (power)
-    out.push({ key: 'power', emoji: '⚡', title: 'Power Couple', accent: 'punch', players: [...power.players], value: `${Math.round((ratingOf(power.players[0]) + ratingOf(power.players[1])) / 2)} avg Elo`, caption: 'The scariest two names to see across the net.' })
+    out.push({ key: 'power', emoji: '⚡', title: 'Power Couple', accent: 'punch', players: [...power.players], value: `${Math.round((ratingOf(power.players[0]) + ratingOf(power.players[1])) / 2)} avg Elo`, caption: 'Двоє найстрашніших імен по той бік сітки.' })
   const odd = [...duos2]
     .filter((p) => p.winRate >= 0.5)
     .sort((a, b) => Math.abs(ratingOf(b.players[0]) - ratingOf(b.players[1])) - Math.abs(ratingOf(a.players[0]) - ratingOf(a.players[1])))[0]
   if (odd)
-    out.push({ key: 'oddcouple', emoji: '🧩', title: 'The Odd Couple', accent: 'grape', players: [...odd.players], value: `${Math.round(Math.abs(ratingOf(odd.players[0]) - ratingOf(odd.players[1])))} Elo apart`, caption: 'On paper it makes no sense. It works anyway.' })
+    out.push({ key: 'oddcouple', emoji: '🧩', title: 'The Odd Couple', accent: 'grape', players: [...odd.players], value: `${Math.round(Math.abs(ratingOf(odd.players[0]) - ratingOf(odd.players[1])))} Elo різниці`, caption: 'На папері — повна нісенітниця. Та все одно працює.' })
 
   // ✨ Dream Team / 🤜 Dynamic Duo / 💎 Flawless Together
   const dreamPool = partnerships.filter((p) => p.games >= 3)
   const dream = (dreamPool.length ? dreamPool : duos2).sort((a, b) => b.winRate - a.winRate || b.pointsPerGame - a.pointsPerGame)[0]
   if (dream && dream.winRate > 0.5)
-    out.push({ key: 'dreamteam', emoji: '✨', title: 'Dream Team', accent: 'mint', players: [...dream.players], value: `${pctStr(dream.winRate)} win`, caption: 'When these two pair up, just concede early.' })
+    out.push({ key: 'dreamteam', emoji: '✨', title: 'Dream Team', accent: 'mint', players: [...dream.players], value: `${pctStr(dream.winRate)} win`, caption: 'Коли ці двоє в парі — здавайся одразу.' })
   const dynamic = [...duos2].sort((a, b) => b.wins - a.wins || b.winRate - a.winRate)[0]
   if (dynamic && dynamic.wins >= 3)
-    out.push({ key: 'dynamic', emoji: '🤜', title: 'Dynamic Duo', accent: 'tang', players: [...dynamic.players], value: `${dynamic.wins} wins together`, caption: 'More W’s as a team than most play games.' })
+    out.push({ key: 'dynamic', emoji: '🤜', title: 'Dynamic Duo', accent: 'tang', players: [...dynamic.players], value: `${dynamic.wins} перемог разом`, caption: 'Перемог у парі більше, ніж дехто грає матчів.' })
   const perfect = perfectPairs(partnerships).filter((p) => p.games >= 2).sort((a, b) => b.games - a.games || b.wins - a.wins)[0]
   if (perfect)
-    out.push({ key: 'perfectpair', emoji: '💎', title: 'Flawless Together', accent: 'lime', players: [...perfect.players], value: `${perfect.wins}-0`, caption: 'Teamed up and never, ever lost.' })
+    out.push({ key: 'perfectpair', emoji: '💎', title: 'Flawless Together', accent: 'lime', players: [...perfect.players], value: `${perfect.wins}-0`, caption: 'Стали в пару й не програли жодного разу.' })
 
   // 🐺 Lone Wolf (fewest distinct partners, 4+ events)
   let lone: { p: Player; n: number } | undefined
@@ -408,7 +408,7 @@ export function funInsights(dataset: Pick<Dataset, 'tournaments' | 'aliases'>): 
     if (!lone || c < lone.n) lone = { p, n: c }
   }
   if (lone)
-    out.push({ key: 'lonewolf', emoji: '🐺', title: 'Lone Wolf', accent: 'sky', players: [lone.p], value: `${lone.n} partners`, caption: 'Loyal to a tiny circle. Trust is earned.' })
+    out.push({ key: 'lonewolf', emoji: '🐺', title: 'Lone Wolf', accent: 'sky', players: [lone.p], value: `${lone.n} партнерів`, caption: 'Вірний вузькому колу. Довіру треба заслужити.' })
 
   // 😎 The Bully / 🎁 Everyone's Favourite Win / 🔁 Familiar Foes
   const oppWin = new Map<Player, number>()
@@ -428,27 +428,27 @@ export function funInsights(dataset: Pick<Dataset, 'tournaments' | 'aliases'>): 
   }
   const bully = topCount(oppWin, 2)
   if (bully)
-    out.push({ key: 'bully', emoji: '😎', title: 'The Bully', accent: 'punch', players: [bully.p], value: `owns ${bully.n} rivals`, caption: 'Has a winning record against half the room.' })
+    out.push({ key: 'bully', emoji: '😎', title: 'The Bully', accent: 'punch', players: [bully.p], value: `домінує над ${bully.n}`, caption: 'Має позитивний рахунок проти половини спільноти.' })
   const bag = topCount(oppLoss, 2)
   if (bag)
-    out.push({ key: 'favewin', emoji: '🎁', title: 'Everyone’s Favourite Win', accent: 'sky', players: [bag.p], value: `${bag.n} bogey rivals`, caption: 'Keeps drawing the wrong people. We feel it 💙' })
+    out.push({ key: 'favewin', emoji: '🎁', title: 'Everyone’s Favourite Win', accent: 'sky', players: [bag.p], value: `${bag.n} незручних`, caption: 'Раз за разом трапляються незручні суперники. Співчуваємо 💙' })
   if (familiar && familiar.n >= 3)
-    out.push({ key: 'familiar', emoji: '🔁', title: 'Familiar Foes', accent: 'sun', players: [familiar.a, familiar.b], value: `${familiar.n} meetings`, caption: 'These two simply cannot stop running into each other.' })
+    out.push({ key: 'familiar', emoji: '🔁', title: 'Familiar Foes', accent: 'sun', players: [familiar.a, familiar.b], value: `${familiar.n} зустрічей`, caption: 'Ці двоє просто не можуть перестати натикатися одне на одного.' })
 
   // 🥂 First Blood / 🫅 Reigning Champ / 🔂 Back-to-Back
   const firstWin = champions[0]?.winner
   if (firstWin)
-    out.push({ key: 'firstblood', emoji: '🥂', title: 'First Blood', accent: 'tang', players: [firstWin], value: 'Champion #1', caption: `Won the very first Odette Cup — ${champions[0].nick}.` })
+    out.push({ key: 'firstblood', emoji: '🥂', title: 'First Blood', accent: 'tang', players: [firstWin], value: 'Чемпіон №1', caption: `Виграв найперший Odette Cup — ${champions[0].nick}.` })
   const lastWin = champions[champions.length - 1]?.winner
   if (lastWin)
-    out.push({ key: 'reigning', emoji: '🫅', title: 'Reigning Champ', accent: 'sun', players: [lastWin], value: 'Current holder', caption: `Took the latest crown — ${champions[champions.length - 1].nick}. Long may they reign.` })
+    out.push({ key: 'reigning', emoji: '🫅', title: 'Reigning Champ', accent: 'sun', players: [lastWin], value: 'Чинний чемпіон', caption: `Здобув останню корону — ${champions[champions.length - 1].nick}. Хай довго панує.` })
   let b2b: Player | undefined
   for (let i = 1; i < champions.length; i++) {
     const w = champions[i].winner
     if (w && w === champions[i - 1].winner) { b2b = w; break }
   }
   if (b2b)
-    out.push({ key: 'b2b', emoji: '🔂', title: 'Back-to-Back', accent: 'punch', players: [b2b], value: '2 in a row', caption: 'Defended the crown on the next outing. Dynasty vibes.' })
+    out.push({ key: 'b2b', emoji: '🔂', title: 'Back-to-Back', accent: 'punch', players: [b2b], value: '2 поспіль', caption: 'Захистив корону на наступному турнірі. Запахло династією.' })
 
   // 📌 Ever-Present (longest attendance streak) / 🎖️ The Veteran (tenure)
   const attend = standingsByT.map(({ st }) => new Set(st.map((s) => s.player)))
@@ -461,7 +461,7 @@ export function funInsights(dataset: Pick<Dataset, 'tournaments' | 'aliases'>): 
     if (!present || mx > present.n) present = { p, n: mx }
   }
   if (present && present.n >= 3)
-    out.push({ key: 'everpresent', emoji: '📌', title: 'Ever-Present', accent: 'mint', players: [present.p], value: `${present.n} events straight`, caption: 'Hasn’t missed a beat. The heartbeat of the group.' })
+    out.push({ key: 'everpresent', emoji: '📌', title: 'Ever-Present', accent: 'mint', players: [present.p], value: `${present.n} турнірів поспіль`, caption: 'Не пропустив жодного. Серце спільноти.' })
 
   const firstLast = new Map<Player, { first: string; last: string; n: number }>()
   for (const { t, st } of standingsByT) {
@@ -478,15 +478,15 @@ export function funInsights(dataset: Pick<Dataset, 'tournaments' | 'aliases'>): 
     if (m >= 1 && (!vet || m > vet.m)) vet = { p, m }
   }
   if (vet)
-    out.push({ key: 'veteran', emoji: '🎖️', title: 'The Veteran', accent: 'grape', players: [vet.p], value: `${vet.m} months in`, caption: 'Here since the early days. Respect the elder.' })
+    out.push({ key: 'veteran', emoji: '🎖️', title: 'The Veteran', accent: 'grape', players: [vet.p], value: `${vet.m} місяців у грі`, caption: 'Тут із перших днів. Поважайте старійшину.' })
 
   // 🥯 Bagel Baker / 🍩 Bagel Connoisseur
   const baker = topCount(bagelBake, 2)
   if (baker)
-    out.push({ key: 'bagelbaker', emoji: '🥯', title: 'Bagel Baker', accent: 'punch', players: [baker.p], value: `${baker.n}× bagels served`, caption: 'Holds opponents to a single point — or none.' })
+    out.push({ key: 'bagelbaker', emoji: '🥯', title: 'Bagel Baker', accent: 'punch', players: [baker.p], value: `${baker.n}× бубликів`, caption: 'Лишає суперникам один бал — або жодного.' })
   const eater = topCount(bagelEat, 2)
   if (eater)
-    out.push({ key: 'bageleater', emoji: '🍩', title: 'Bagel Connoisseur', accent: 'tang', players: [eater.p], value: `${eater.n}× held to ≤1`, caption: 'Took a few for the team. Builds character 💙' })
+    out.push({ key: 'bageleater', emoji: '🍩', title: 'Bagel Connoisseur', accent: 'tang', players: [eater.p], value: `${eater.n}× до ≤1`, caption: 'Прийняв кілька на себе. Гартує характер 💙' })
 
   return out
 }

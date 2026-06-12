@@ -56,25 +56,25 @@ export function Fun() {
       <section className="sticker-lg relative overflow-hidden bg-paper-100 p-6 sm:p-8">
         <div className="pointer-events-none absolute -right-4 -top-6 text-[7rem] opacity-10">🤪</div>
         <Chip tone="bg-punch text-paper-100">HALL OF FAME &amp; SHAME</Chip>
-        <h1 className="mt-3 text-4xl font-extrabold sm:text-5xl">The Fun Stuff</h1>
+        <h1 className="mt-3 text-4xl font-extrabold sm:text-5xl">Найвеселіше</h1>
         <p className="mt-2 max-w-lg text-ink-soft">
-          Season-long superlatives, lovingly data-driven. Every number is real 🎾
+          Сезонні номінації, з любов’ю пораховані з даних. Кожна цифра — справжня 🎾
         </p>
         <div className="mt-4 rounded-2xl border-2 border-ink bg-sun-soft p-3 text-sm">
-          <span className="font-bold">😅 It's all love.</span> These awards roast everyone equally and
-          purely for laughs. The stats are real, but the bragging rights are temporary — and showing
-          up is the real win. No padel egos were permanently harmed. 💛
+          <span className="font-bold">😅 Усе по любові.</span> Ці нагороди підколюють усіх однаково й
+          суто заради сміху. Статистика справжня, але право похизуватися тимчасове — а головна
+          перемога в тому, що ти прийшов грати. Жодне падел-его не постраждало назавжди. 💛
         </div>
       </section>
 
       <section>
         <SectionTitle
           emoji="🏅"
-          title="Superlatives"
+          title="Номінації"
           hint={
             pool.length
-              ? `A random ${Math.min(VISIBLE, pool.length)} of ${pool.length} — hit shuffle for more`
-              : 'Across every Odette Cup so far'
+              ? `Випадкові ${Math.min(VISIBLE, pool.length)} з ${pool.length} — тисни перемішати`
+              : 'З усіх Odette Cup за весь час'
           }
           action={
             pool.length > VISIBLE ? (
@@ -86,13 +86,13 @@ export function Fun() {
                 <span className="text-lg transition-transform duration-300 group-hover:rotate-180 group-active:rotate-[360deg]">
                   🎲
                 </span>
-                Surprise me
+                Здивуй мене
               </button>
             ) : undefined
           }
         />
         {pool.length === 0 ? (
-          <Empty emoji="🤷">Not enough data yet — play a few more events!</Empty>
+          <Empty emoji="🤷">Поки що замало даних — зіграйте ще кілька турнірів!</Empty>
         ) : (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {visible.map((it) => (
@@ -120,7 +120,7 @@ function FunCard({ insight }: { insight: FunInsight }) {
           {insight.emoji}
         </span>
         <div>
-          <div className="text-[11px] font-bold uppercase tracking-wider text-ink-soft">Award</div>
+          <div className="text-[11px] font-bold uppercase tracking-wider text-ink-soft">Нагорода</div>
           <h3 className="text-lg font-extrabold leading-none">{insight.title}</h3>
         </div>
       </div>

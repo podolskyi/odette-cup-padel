@@ -52,29 +52,29 @@ export function Dashboard() {
       {/* Hero */}
       <section className="sticker-lg relative overflow-hidden bg-paper-100 p-6 sm:p-8">
         <div className="pointer-events-none absolute -right-6 -top-8 text-[8rem] opacity-10">🏆</div>
-        <Chip tone="bg-sun">SEASON DASHBOARD</Chip>
+        <Chip tone="bg-sun">ПАНЕЛЬ СЕЗОНУ</Chip>
         <h1 className="mt-3 text-4xl font-extrabold leading-[0.95] sm:text-5xl">
           Odette Cup
           <span className="mt-1 block text-2xl font-bold text-grape sm:text-3xl">by Vova 🐐</span>
         </h1>
         <p className="mt-2 max-w-md text-ink-soft">
-          The Ubud Ukrainian padel league — every match, duo and rivalry turned into stats, awards
-          and shareable recaps.
+          Українська падел-ліга Убуду — кожен матч, дует і суперництво перетворені на статистику,
+          нагороди та підсумки, якими хочеться поділитися.
         </p>
         <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
-          <Stat label="Tournaments" value={tournaments.length} tone="bg-sky-soft" />
-          <Stat label="Matches" value={totalMatches} tone="bg-mint-soft" />
-          <Stat label="Players" value={season.length} tone="bg-punch-soft" />
+          <Stat label="Турніри" value={tournaments.length} tone="bg-sky-soft" />
+          <Stat label="Матчі" value={totalMatches} tone="bg-mint-soft" />
+          <Stat label="Гравці" value={season.length} tone="bg-punch-soft" />
           <Stat
-            label="Top Rated"
+            label="Топ Elo"
             value={topRated[0] ? Math.round(topRated[0].rating) : '—'}
             sub={topRated[0]?.player}
             tone="bg-grape-soft"
           />
         </div>
         <div className="mt-5 flex flex-wrap gap-2">
-          <span className="btn cursor-not-allowed opacity-60" title="Paste importer coming soon">
-            ➕ Add tournament <em className="not-italic text-ink-faint">(soon)</em>
+          <span className="btn cursor-not-allowed opacity-60" title="Імпорт через вставку — скоро">
+            ➕ Додати турнір <em className="not-italic text-ink-faint">(скоро)</em>
           </span>
         </div>
       </section>
@@ -83,11 +83,11 @@ export function Dashboard() {
       <section>
         <SectionTitle
           emoji="📊"
-          title="Season Leaderboard"
+          title="Таблиця сезону"
           hint={
             board === 'total'
-              ? 'All-time points across every tournament'
-              : 'Avg finishing percentile — fair no matter how many events you played'
+              ? 'Усі бали за весь час по всіх турнірах'
+              : 'Середній перцентиль фінішу — чесно, скільки б турнірів ти не зіграв'
           }
           action={
             <div className="flex overflow-hidden rounded-xl border-2 border-ink shadow-hard-sm">
@@ -114,41 +114,41 @@ export function Dashboard() {
         <div className={cx('sticker mb-4 p-4', board === 'total' ? 'bg-sky-soft' : 'bg-lime-soft')}>
           {board === 'total' ? (
             <p className="text-sm text-ink-soft">
-              <span className="font-bold text-ink">📊 Total — rewards showing up.</span> The sum of
-              every point your teams scored across all events, so playing (and scoring) more climbs
-              you higher.
+              <span className="font-bold text-ink">📊 Total — винагороджує присутність.</span> Сума
+              всіх балів, які набрали твої команди в усіх турнірах, тож що більше граєш (і набираєш) —
+              то вище ти піднімаєшся.
               <span className="mt-1.5 block text-xs">
-                <b>Pts</b> total points · <b>Avg</b> points per event · <b>Win%</b> games won ·{' '}
-                <b>🏆</b> 1st places · <b>🥉</b> podiums (top-3) · <b>👻</b> idle (missed last{' '}
-                {RECENT_EVENTS} events)
+                <b>Pts</b> усі бали · <b>Avg</b> бали за турнір · <b>Win%</b> виграні ігри ·{' '}
+                <b>🏆</b> перші місця · <b>🥉</b> подіуми (топ-3) · <b>👻</b> неактивний (пропустив
+                останні {RECENT_EVENTS} турнірів)
               </span>
             </p>
           ) : (
             <p className="text-sm text-ink-soft">
-              <span className="font-bold text-ink">🎯 Performance — rewards how high you finish.</span>{' '}
-              Your average finishing percentile: each event scores{' '}
-              <code className="rounded bg-paper-100 px-1 font-mono">(N − rank) / (N − 1) × 100</code>,
-              so 1st = 100% and last = 0%, then averaged. Field-size-adjusted, so a strong night counts
-              the same whether the draw was 8 or 16 — and it's fair no matter how many events you've
-              played.
+              <span className="font-bold text-ink">🎯 Performance — винагороджує, як високо ти фінішуєш.</span>{' '}
+              Твій середній перцентиль фінішу: кожен турнір рахується як{' '}
+              <code className="rounded bg-paper-100 px-1 font-mono">(N − місце) / (N − 1) × 100</code>,
+              тож 1-е = 100%, а останнє = 0%, далі береться середнє. З поправкою на розмір сітки, тож
+              сильний вечір важить однаково — хоч у сітці було 8, хоч 16 — і це чесно, скільки б
+              турнірів ти не зіграв.
               <span className="mt-1.5 block text-xs">
-                Ranked at <b>2+ events</b>; newcomers appear below as <b>provisional</b>. · <b>Perf</b>{' '}
-                avg percentile · <b>Events</b> played · <b>Elo</b> skill rating · <b>👻</b> idle (missed
-                last {RECENT_EVENTS} events)
+                Ранжуються від <b>2+ турнірів</b>; новачки нижче як <b>попередні</b>. · <b>Perf</b>{' '}
+                середній перцентиль · <b>Events</b> зіграно · <b>Elo</b> рейтинг майстерності · <b>👻</b> неактивний
+                (пропустив останні {RECENT_EVENTS} турнірів)
               </span>
             </p>
           )}
         </div>
 
         {season.length === 0 ? (
-          <Empty>No tournaments yet.</Empty>
+          <Empty>Поки що немає турнірів.</Empty>
         ) : board === 'total' ? (
           <div className="sticker overflow-x-auto">
             <table className="w-full min-w-[40rem] border-collapse text-left">
               <thead>
                 <tr className="border-b-2 border-ink bg-ink text-paper-100">
                   <th className="w-10 py-2 pl-3 text-center text-[11px] font-bold uppercase">#</th>
-                  <th className="py-2 text-[11px] font-bold uppercase tracking-wider">Player</th>
+                  <th className="py-2 text-[11px] font-bold uppercase tracking-wider">Гравець</th>
                   <th className="py-2 text-center text-[11px] font-bold uppercase">Pts</th>
                   <th className="py-2 text-center text-[11px] font-bold uppercase">Avg</th>
                   <th className="py-2 text-center text-[11px] font-bold uppercase">W-L-T</th>
@@ -203,7 +203,7 @@ export function Dashboard() {
               <thead>
                 <tr className="border-b-2 border-ink bg-ink text-paper-100">
                   <th className="w-10 py-2 pl-3 text-center text-[11px] font-bold uppercase">#</th>
-                  <th className="py-2 text-[11px] font-bold uppercase tracking-wider">Player</th>
+                  <th className="py-2 text-[11px] font-bold uppercase tracking-wider">Гравець</th>
                   <th className="py-2 text-center text-[11px] font-bold uppercase">Perf</th>
                   <th className="py-2 text-center text-[11px] font-bold uppercase">Events</th>
                   <th className="py-2 text-center text-[11px] font-bold uppercase">Win%</th>
@@ -228,7 +228,7 @@ export function Dashboard() {
                       colSpan={6}
                       className="bg-paper-300/50 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-ink-soft"
                     >
-                      Provisional · needs 2+ events
+                      Попередньо · треба 2+ турніри
                     </td>
                   </tr>
                 )}
@@ -249,16 +249,16 @@ export function Dashboard() {
 
         {board === 'total' && leader && (
           <p className="mt-2 text-sm text-ink-soft">
-            👑 <span className="font-bold">{leader.player}</span> leads the season with{' '}
-            {leader.totalPoints} points across {leader.tournaments}{' '}
-            {leader.tournaments === 1 ? 'event' : 'events'}.
+            👑 <span className="font-bold">{leader.player}</span> очолює сезон —{' '}
+            {leader.totalPoints} балів за {leader.tournaments}{' '}
+            {leader.tournaments === 1 ? 'турнір' : 'турнірів'}.
           </p>
         )}
         {board === 'performance' && perfRanked[0] && (
           <p className="mt-2 text-sm text-ink-soft">
-            🚀 <span className="font-bold">{perfRanked[0].player}</span> tops performance at{' '}
-            {round1(perfRanked[0].performance)}% avg finish across {perfRanked[0].tournaments} events —
-            volume doesn't count here.
+            🚀 <span className="font-bold">{perfRanked[0].player}</span> лідирує за перформансом —{' '}
+            {round1(perfRanked[0].performance)}% середній фініш за {perfRanked[0].tournaments} турнірів —
+            обсяг тут не рахується.
           </p>
         )}
       </section>
@@ -266,7 +266,7 @@ export function Dashboard() {
       {/* Ratings */}
       <section className="grid gap-6 lg:grid-cols-2">
         <div>
-          <SectionTitle emoji="📈" title="Elo Ratings" hint={`Team-Elo · all ${ratings.length} players`} />
+          <SectionTitle emoji="📈" title="Рейтинг Elo" hint={`Командний Elo · усі ${ratings.length} гравців`} />
           <div className="sticker max-h-[32rem] divide-y divide-ink/10 overflow-y-auto">
             {ratings.map((r, i) => {
               const delta = Math.round(r.rating - 1000)
@@ -297,18 +297,18 @@ export function Dashboard() {
           </div>
         </div>
         <div>
-          <SectionTitle emoji="🏁" title="Rating Race" hint="Top 5 players, game by game" />
+          <SectionTitle emoji="🏁" title="Гонка рейтингу" hint="Топ-5 гравців, гра за грою" />
           {topRated.length ? (
             <RatingChart series={toSeries(topRated)} />
           ) : (
-            <Empty emoji="📈">Not enough games yet.</Empty>
+            <Empty emoji="📈">Поки що замало ігор.</Empty>
           )}
         </div>
       </section>
 
       {/* Tournaments */}
       <section>
-        <SectionTitle emoji="🗓️" title="Tournaments" hint="Tap a card for full standings, awards & recap" />
+        <SectionTitle emoji="🗓️" title="Турніри" hint="Натисни картку — повна таблиця, нагороди й підсумки" />
         <div className="grid gap-4 sm:grid-cols-2">
           {[...tournaments]
             .sort((a, b) => b.date.localeCompare(a.date))
@@ -324,7 +324,7 @@ export function Dashboard() {
                   </div>
                   <div className="text-2xl font-extrabold group-hover:underline">Odette Cup</div>
                   <div className="mt-1 text-sm text-ink-soft">
-                    🎉 {nicknameOf(t)} · {t.matches.length} matches
+                    🎉 {nicknameOf(t)} · {t.matches.length} матчів
                   </div>
                 </div>
                 <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl border-2 border-ink bg-tang text-2xl shadow-hard-sm transition-transform group-hover:rotate-12">
@@ -344,8 +344,8 @@ function GhostMark({ date }: { date?: string }) {
       className="cursor-default"
       title={
         date
-          ? `Idle — hasn't played the last ${RECENT_EVENTS} events (last seen ${formatDate(date)})`
-          : `Idle — hasn't played the last ${RECENT_EVENTS} events`
+          ? `Неактивний — не грав останні ${RECENT_EVENTS} турнірів (востаннє ${formatDate(date)})`
+          : `Неактивний — не грав останні ${RECENT_EVENTS} турнірів`
       }
     >
       {' '}
@@ -393,7 +393,7 @@ function PerfRow({
           </span>
           {provisional && (
             <span className="ml-1 rounded-full border border-ink/40 px-1.5 text-[10px] font-bold uppercase text-ink-faint">
-              new
+              новий
             </span>
           )}
         </Link>

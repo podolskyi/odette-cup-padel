@@ -5,9 +5,8 @@ export const signed = (n: number): string => (n > 0 ? `+${n}` : `${n}`)
 export const round1 = (n: number): string => (Math.round(n * 10) / 10).toFixed(1)
 
 export function ordinal(n: number): string {
-  const s = ['th', 'st', 'nd', 'rd']
-  const v = n % 100
-  return n + (s[(v - 20) % 10] || s[v] || s[0])
+  // Ukrainian place ordinal, e.g. "1-е", "2-е", "3-є".
+  return `${n}-${n % 10 === 3 && n % 100 !== 13 ? 'є' : 'е'}`
 }
 
 export function initials(name: string): string {
@@ -17,9 +16,9 @@ export function initials(name: string): string {
 }
 
 export function formatDate(iso: string): string {
-  // iso = yyyy-mm-dd; render as "7 Jun 2026" without timezone surprises.
+  // iso = yyyy-mm-dd; render as "7 чер 2026" without timezone surprises.
   const [y, m, d] = iso.split('-').map(Number)
-  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+  const months = ['січ', 'лют', 'бер', 'кві', 'тра', 'чер', 'лип', 'сер', 'вер', 'жов', 'лис', 'гру']
   if (!y || !m || !d) return iso
   return `${d} ${months[m - 1]} ${y}`
 }

@@ -5,9 +5,9 @@ import { cx } from '../lib/cx'
 
 const STYLE = [
   // index 0 = winner (rank 1)
-  { h: 'h-28', bg: 'bg-gold', medal: '🥇', label: '1st' },
-  { h: 'h-20', bg: 'bg-paper-300', medal: '🥈', label: '2nd' },
-  { h: 'h-14', bg: 'bg-tang-soft', medal: '🥉', label: '3rd' },
+  { h: 'h-28', bg: 'bg-gold', medal: '🥇', label: '1-е' },
+  { h: 'h-20', bg: 'bg-paper-300', medal: '🥈', label: '2-е' },
+  { h: 'h-14', bg: 'bg-tang-soft', medal: '🥉', label: '3-є' },
 ]
 
 /** The classic 2-1-3 podium with avatars perched on plinths. */

@@ -31,8 +31,8 @@ function Gate({ onUnlock }: { onUnlock: () => void }) {
     <div className="mx-auto mt-10 max-w-sm">
       <div className="sticker-lg bg-paper-100 p-8 text-center">
         <div className="text-5xl">🔒</div>
-        <h1 className="mt-3 text-2xl font-extrabold">Organizer settings</h1>
-        <p className="mt-1 text-sm text-ink-soft">Enter the secret word to continue.</p>
+        <h1 className="mt-3 text-2xl font-extrabold">Налаштування організатора</h1>
+        <p className="mt-1 text-sm text-ink-soft">Введіть секретне слово, щоб продовжити.</p>
         <input
           type="text"
           value={word}
@@ -48,15 +48,15 @@ function Gate({ onUnlock }: { onUnlock: () => void }) {
             setError(false)
           }}
           onKeyDown={(e) => e.key === 'Enter' && submit()}
-          placeholder="secret word"
+          placeholder="секретне слово"
           className={cx(
             'mt-5 w-full rounded-xl border-2 bg-paper-100 px-4 py-2.5 text-center font-bold shadow-hard-sm outline-none',
             error ? 'border-punch' : 'border-ink',
           )}
         />
-        {error && <p className="mt-2 text-sm font-bold text-punch">Nope — try again 🎾</p>}
+        {error && <p className="mt-2 text-sm font-bold text-punch">Не те — спробуйте ще 🎾</p>}
         <button className="btn-dark mt-4 w-full" onClick={submit}>
-          Unlock
+          Розблокувати
         </button>
       </div>
     </div>
@@ -135,30 +135,30 @@ function SettingsPanel({ onLock }: { onLock: () => void }) {
       <section className="sticker-lg bg-paper-100 p-6 sm:p-8">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
-            <Chip tone="bg-grape text-paper-100">⚙️ ORGANIZER</Chip>
-            <h1 className="mt-3 text-3xl font-extrabold sm:text-4xl">Settings</h1>
-            <p className="mt-1 text-ink-soft">Tidy up the data behind every stat.</p>
+            <Chip tone="bg-grape text-paper-100">⚙️ ОРГАНІЗАТОР</Chip>
+            <h1 className="mt-3 text-3xl font-extrabold sm:text-4xl">Налаштування</h1>
+            <p className="mt-1 text-ink-soft">Наведіть лад у даних за кожною статистикою.</p>
           </div>
           <div className="flex items-center gap-2">
             <button className="btn" onClick={exportLinks}>
-              ⤓ Export for deploy
+              ⤓ Експорт для деплою
             </button>
             <button className="btn" onClick={onLock}>
-              🔒 Lock
+              🔒 Заблокувати
             </button>
           </div>
         </div>
         <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
-          <Stat label="Distinct names" value={rawNames.length} tone="bg-sky-soft" />
-          <Stat label="Unique players" value={canonicalCount} tone="bg-mint-soft" />
-          <Stat label="Links" value={aliasEntries.length} tone="bg-sun-soft" />
+          <Stat label="Різних імен" value={rawNames.length} tone="bg-sky-soft" />
+          <Stat label="Унікальних гравців" value={canonicalCount} tone="bg-mint-soft" />
+          <Stat label="Зв’язки" value={aliasEntries.length} tone="bg-sun-soft" />
         </div>
         {snippet && (
           <div className="mt-4 rounded-2xl border-2 border-ink bg-grape-soft p-4">
             <div className="mb-2 text-sm font-bold">
-              ✅ Copied to clipboard. Paste into{' '}
-              <code className="rounded bg-paper-100 px-1">src/data/aliases.ts</code> and redeploy so
-              everyone gets these merges.
+              ✅ Скопійовано в буфер. Вставте у{' '}
+              <code className="rounded bg-paper-100 px-1">src/data/aliases.ts</code> і передеплойте,
+              щоб усі отримали ці об’єднання.
             </div>
             <textarea
               readOnly
@@ -174,17 +174,17 @@ function SettingsPanel({ onLock }: { onLock: () => void }) {
       <section>
         <SectionTitle
           emoji="🔗"
-          title="Link synonym names"
-          hint="Merge the same person typed differently across tournaments (e.g. Oleksii = Oleksey)"
+          title="Зв’язати імена-синоніми"
+          hint="Об’єднайте одну людину, записану по-різному в різних турнірах (напр. Oleksii = Oleksey)"
         />
 
         {/* Suggestions */}
         <div className="mb-4">
           <div className="mb-1.5 text-xs font-bold uppercase tracking-wider text-ink-soft">
-            Suggested matches
+            Запропоновані збіги
           </div>
           {suggestions.length === 0 ? (
-            <Empty emoji="✅">No look-alike names left. Nice and tidy.</Empty>
+            <Empty emoji="✅">Схожих імен не лишилось. Чисто й охайно.</Empty>
           ) : (
             <div className="grid gap-2 sm:grid-cols-2">
               {suggestions.slice(0, 12).map((s) => {
@@ -204,9 +204,9 @@ function SettingsPanel({ onLock }: { onLock: () => void }) {
                     <button
                       className="btn-dark shrink-0 px-3 py-1 text-xs"
                       onClick={() => link(loser, winner)}
-                      title={`Merge ${loser} into ${winner}`}
+                      title={`Об’єднати ${loser} у ${winner}`}
                     >
-                      Link → {winner}
+                      Зв’язати → {winner}
                     </button>
                   </div>
                 )
@@ -218,12 +218,12 @@ function SettingsPanel({ onLock }: { onLock: () => void }) {
         {/* Manual merge */}
         <div className="sticker bg-paper-100 p-4">
           <div className="mb-2 text-xs font-bold uppercase tracking-wider text-ink-soft">
-            Merge manually
+            Об’єднати вручну
           </div>
           <div className="flex flex-wrap items-center gap-2">
-            <NameSelect value={from} onChange={setFrom} names={rawNames} counts={counts} placeholder="this name…" />
-            <span className="font-bold">is</span>
-            <NameSelect value={into} onChange={setInto} names={rawNames} counts={counts} placeholder="…the same as" />
+            <NameSelect value={from} onChange={setFrom} names={rawNames} counts={counts} placeholder="це ім’я…" />
+            <span className="font-bold">це</span>
+            <NameSelect value={into} onChange={setInto} names={rawNames} counts={counts} placeholder="…те саме, що" />
             <button
               className="btn-dark"
               disabled={!from || !into || from === into}
@@ -233,11 +233,11 @@ function SettingsPanel({ onLock }: { onLock: () => void }) {
                 setInto('')
               }}
             >
-              🔗 Link
+              🔗 Зв’язати
             </button>
           </div>
           <p className="mt-2 text-xs text-ink-soft">
-            The first name becomes the second everywhere — standings, ratings, partners, the lot.
+            Перше ім’я скрізь стає другим — у таблиці, рейтингах, парах, усюди.
           </p>
         </div>
       </section>
@@ -246,17 +246,17 @@ function SettingsPanel({ onLock }: { onLock: () => void }) {
       <section>
         <SectionTitle
           emoji="🧷"
-          title="Current links"
+          title="Поточні зв’язки"
           action={
             aliasEntries.length > 0 ? (
               <button className="btn" onClick={clearAliases}>
-                Reset all
+                Скинути все
               </button>
             ) : undefined
           }
         />
         {aliasEntries.length === 0 ? (
-          <Empty emoji="🪢">No links yet — merged names will show up here.</Empty>
+          <Empty emoji="🪢">Поки що немає зв’язків — об’єднані імена з’являться тут.</Empty>
         ) : (
           <div className="grid gap-2 sm:grid-cols-2">
             {aliasEntries.map(([f, t]) => (
@@ -268,7 +268,7 @@ function SettingsPanel({ onLock }: { onLock: () => void }) {
                   <span className="font-bold">{resolveName(t, aliases)}</span>
                 </div>
                 <button className="btn shrink-0 px-3 py-1 text-xs" onClick={() => removeAlias(f)}>
-                  Unlink
+                  Роз’єднати
                 </button>
               </div>
             ))}

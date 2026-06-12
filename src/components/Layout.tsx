@@ -47,10 +47,10 @@ export function Layout() {
           </div>
         </Link>
         <nav className="flex items-center gap-2">
-          <Tab to="/">Home</Tab>
-          <Tab to="/explore">Explore</Tab>
-          <Tab to="/stats">Stats</Tab>
-          <Tab to="/fun">Fun</Tab>
+          <Tab to="/">Головна</Tab>
+          <Tab to="/explore">Огляд</Tab>
+          <Tab to="/stats">Статистика</Tab>
+          <Tab to="/fun">Фан</Tab>
         </nav>
       </header>
 
@@ -59,7 +59,7 @@ export function Layout() {
       </main>
 
       <footer className="mt-12 text-center text-xs text-ink-faint">
-        Made for the group chat · stats derived live from every match 🎾
+        Зроблено для нашого чату · статистика рахується наживо з кожного матчу 🎾
       </footer>
     </div>
   )
