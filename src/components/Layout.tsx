@@ -36,7 +36,9 @@ function Tab({ to, children }: { to: string; children: React.ReactNode }) {
       end={to === '/'}
       className={({ isActive }) =>
         cx(
-          'rounded-xl border-2 border-ink px-3 py-1.5 text-sm font-bold transition-transform',
+          // Mobile: tabs share a full-width row, so they stretch evenly and
+          // shrink a little; from sm up they're regular chips.
+          'flex-1 rounded-xl border-2 border-ink px-2 py-1.5 text-center text-xs font-bold transition-transform sm:flex-none sm:px-3 sm:text-sm',
           isActive
             ? 'bg-ink text-paper-100 shadow-none'
             : 'bg-paper-100 shadow-hard-sm hover:-translate-y-0.5',
@@ -58,8 +60,11 @@ export function Layout() {
   return (
     <div className="mx-auto flex min-h-dvh max-w-5xl flex-col px-4 pb-16 pt-4 sm:px-6">
       <ScrollToTop />
-      <header className="mb-6 flex items-center justify-between gap-3">
-        <Link to="/" className="group flex items-center gap-2.5">
+      {/* Mobile: logo + toggle on the first row, tabs on their own full-width
+          row below (they don't fit beside the logo, especially in Ukrainian).
+          Desktop (sm+): everything on one row, as before. */}
+      <header className="mb-6 flex flex-wrap items-center gap-3">
+        <Link to="/" className="group order-1 flex items-center gap-2.5">
           <span className="grid h-11 w-11 place-items-center rounded-2xl border-2 border-ink bg-sun text-2xl shadow-hard-sm transition-transform group-hover:rotate-12">
             🎾
           </span>
@@ -70,12 +75,14 @@ export function Layout() {
             </div>
           </div>
         </Link>
-        <nav className="flex items-center gap-2">
+        <div className="order-2 ml-auto sm:order-3 sm:ml-0">
+          <LangToggle />
+        </div>
+        <nav className="order-3 flex w-full items-center gap-1.5 sm:order-2 sm:ml-auto sm:w-auto sm:gap-2">
           <Tab to="/">{t('Home', 'Головна')}</Tab>
           <Tab to="/explore">{t('Explore', 'Огляд')}</Tab>
           <Tab to="/stats">{t('Stats', 'Статистика')}</Tab>
           <Tab to="/fun">{t('Fun', 'Фан')}</Tab>
-          <LangToggle />
         </nav>
       </header>
 
