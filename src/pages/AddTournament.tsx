@@ -42,6 +42,8 @@ export function AddTournament() {
   const aliases = useAppStore((s) => s.aliases)
   const upsertTournament = useAppStore((s) => s.upsertTournament)
   const setAlias = useAppStore((s) => s.setAlias)
+  const markLocalOnly = useAppStore((s) => s.markLocalOnly)
+  const unmarkLocalOnly = useAppStore((s) => s.unmarkLocalOnly)
 
   const [unlocked, setUnlocked] = useState(isUnlocked())
 
@@ -54,6 +56,7 @@ export function AddTournament() {
   const [nickname, setNickname] = useState('')
   const [mapping, setMapping] = useState<Record<string, string>>({})
   const [saving, setSaving] = useState(false)
+  const [testMode, setTestMode] = useState(false)
 
   const parsedNames = useMemo(
     () => (draft ? [...new Set(draft.matches.flatMap((m) => [...m.teamA, ...m.teamB]))].sort((a, b) => a.localeCompare(b)) : []),
@@ -126,10 +129,17 @@ export function AddTournament() {
     try {
       upsertTournament(preview)
       for (const [from, to] of Object.entries(draftAliases)) setAlias(from, to)
+      if (testMode) {
+        // Draft: nothing leaves this browser. Publish/delete from the tournament page.
+        markLocalOnly(preview.id)
+        navigate(`/t/${preview.id}`)
+        return
+      }
       await saveCommunityTournament(preview)
       if (Object.keys(draftAliases).length) {
         await saveCommunityAliases({ ...aliases, ...draftAliases })
       }
+      unmarkLocalOnly(preview.id)
       navigate(`/t/${preview.id}`)
     } catch (e) {
       setError(
@@ -296,9 +306,33 @@ export function AddTournament() {
 
           {error && <p className="px-1 text-sm font-bold text-punch">⚠️ {error}</p>}
 
+          <label className="sticker flex cursor-pointer items-center gap-3 bg-sky-soft p-3 text-sm">
+            <input
+              type="checkbox"
+              checked={testMode}
+              onChange={(e) => setTestMode(e.target.checked)}
+              className="h-5 w-5 accent-ink"
+            />
+            <span>
+              <b>🧪 {t('Test run — this device only.', 'Тестовий запуск — лише цей пристрій.')}</b>{' '}
+              {t(
+                'Nothing is shared; you can publish or delete it from the tournament page afterwards.',
+                'Нічого не публікується; потім зможеш опублікувати або видалити зі сторінки турніру.',
+              )}
+            </span>
+          </label>
+
           <div className="sticky bottom-2 z-10">
-            <button className="btn-dark w-full py-3 text-base" disabled={saving || !date} onClick={save}>
-              {saving ? t('Saving…', 'Збереження…') : t('Save tournament', 'Зберегти турнір')}
+            <button
+              className={cx('w-full py-3 text-base', testMode ? 'btn' : 'btn-dark')}
+              disabled={saving || !date}
+              onClick={save}
+            >
+              {saving
+                ? t('Saving…', 'Збереження…')
+                : testMode
+                  ? t('🧪 Save as test (this device only)', '🧪 Зберегти як тест (лише цей пристрій)')
+                  : t('Save tournament', 'Зберегти турнір')}
             </button>
           </div>
         </>
