@@ -2,7 +2,7 @@
 // This is NOT real security — it's just a JS check so the page isn't stumbled
 // into by casual users. Change the secret word here.
 
-export const SETTINGS_SECRET = 'padel-admin'
+export const SETTINGS_SECRET = 'odette2691'
 
 const KEY = 'odette-cup-padel:settings-unlocked'
 
