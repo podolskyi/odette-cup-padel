@@ -2,6 +2,7 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import type { Dataset, Match, Tournament } from '../types'
 import allTournaments from '../data/allTournaments.json'
+import { loadCommunity } from '../lib/supabase'
 
 export const DATA_VERSION = 7
 // Bump the key when the seeded data changes so existing browsers reseed.
@@ -35,11 +36,16 @@ interface AppState extends Dataset {
   loadDataset: (data: Dataset) => void
   /** Restore the shipped fixtures. */
   resetToSeed: () => void
+  /** Merge community-added tournaments + aliases on top of the local data. */
+  mergeCommunity: (tournaments: Tournament[], aliases: Record<string, string>) => void
+  /** Load shared community data from Supabase once (no-op on repeat/failure). */
+  hydrateCommunity: () => Promise<void>
+  _communityLoaded?: boolean
 }
 
 export const useAppStore = create<AppState>()(
   persist(
-    (set) => ({
+    (set, get) => ({
       ...seedDataset(),
 
       updateMatch: (tournamentId, index, patch) =>
@@ -87,6 +93,30 @@ export const useAppStore = create<AppState>()(
         })),
 
       resetToSeed: () => set(() => seedDataset()),
+
+      mergeCommunity: (tournaments, aliases) =>
+        set((state) => {
+          const byId = new Map(state.tournaments.map((t) => [t.id, t]))
+          for (const t of tournaments) byId.set(t.id, t)
+          return {
+            tournaments: [...byId.values()],
+            aliases: { ...state.aliases, ...aliases },
+          }
+        }),
+
+      hydrateCommunity: async () => {
+        if (get()._communityLoaded) return
+        set({ _communityLoaded: true })
+        try {
+          const { tournaments, aliases } = await loadCommunity()
+          if (tournaments.length || Object.keys(aliases).length) {
+            get().mergeCommunity(tournaments, aliases)
+          }
+        } catch {
+          // Offline / not configured / tables not deployed yet — keep baked data.
+          set({ _communityLoaded: false })
+        }
+      },
     }),
     {
       name: STORAGE_KEY,

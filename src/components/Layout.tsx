@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { NavLink, Outlet, Link, useLocation } from 'react-router-dom'
 import { cx } from '../lib/cx'
 import { useLang, useT } from '../lib/i18n'
+import { useAppStore } from '../store/useAppStore'
 
 /** EN ⇄ UK switch — flips the whole UI between languages. */
 function LangToggle() {
@@ -49,6 +50,11 @@ function Tab({ to, children }: { to: string; children: React.ReactNode }) {
 
 export function Layout() {
   const { t } = useT()
+  const hydrateCommunity = useAppStore((s) => s.hydrateCommunity)
+  // Pull in community-added tournaments + aliases once on load.
+  useEffect(() => {
+    void hydrateCommunity()
+  }, [hydrateCommunity])
   return (
     <div className="mx-auto flex min-h-dvh max-w-5xl flex-col px-4 pb-16 pt-4 sm:px-6">
       <ScrollToTop />

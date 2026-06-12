@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 import { Layout } from './components/Layout'
 import { Dashboard } from './pages/Dashboard'
+import { AddTournament } from './pages/AddTournament'
 import { TournamentDetail } from './pages/TournamentDetail'
 import { PlayerProfile } from './pages/PlayerProfile'
 import { Explorer } from './pages/Explorer'
@@ -15,6 +16,7 @@ export const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { path: '/', element: <Dashboard /> },
+      { path: '/add', element: <AddTournament /> },
       { path: '/t/:id', element: <TournamentDetail /> },
       { path: '/p/:name', element: <PlayerProfile /> },
       { path: '/explore', element: <Explorer /> },

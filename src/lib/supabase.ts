@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js'
+import type { Tournament } from '../types'
 
 // Public client config. The publishable key is browser-safe (Supabase: "can be
 // safely shared publicly") — access is governed by Row Level Security policies.
@@ -38,4 +39,55 @@ export async function saveReview(aliases: ReviewState['aliases'], dates: ReviewS
   const { error } = await supabase.from(TABLE).upsert({ id: ROW_ID, aliases, dates, updated_at })
   if (error) throw error
   return updated_at
+}
+
+// --- Community tournaments (the live "Add tournament" feature) --------------
+
+const COMMUNITY_TABLE = 'community_tournaments'
+const ALIASES_TABLE = 'community_aliases'
+const ALIASES_ROW = 'live'
+
+/** Fetch a round page's raw HTML via the CORS-bypassing edge function. */
+export async function fetchAmericanoHtml(url: string): Promise<string> {
+  if (!supabase) throw new Error('Supabase not configured')
+  const { data, error } = await supabase.functions.invoke('fetch-americano', { body: { url } })
+  if (error) throw new Error(error.message || 'Could not reach the importer')
+  if (!data?.html) throw new Error(data?.error || 'Empty response from the importer')
+  return data.html as string
+}
+
+export interface CommunityData {
+  tournaments: Tournament[]
+  aliases: Record<string, string>
+}
+
+/** Load all community-added tournaments and the shared alias map. */
+export async function loadCommunity(): Promise<CommunityData> {
+  if (!supabase) return { tournaments: [], aliases: {} }
+  const [tRes, aRes] = await Promise.all([
+    supabase.from(COMMUNITY_TABLE).select('data'),
+    supabase.from(ALIASES_TABLE).select('map').eq('id', ALIASES_ROW).maybeSingle(),
+  ])
+  if (tRes.error) throw tRes.error
+  if (aRes.error) throw aRes.error
+  return {
+    tournaments: (tRes.data ?? []).map((r) => r.data as Tournament),
+    aliases: (aRes.data?.map as Record<string, string>) ?? {},
+  }
+}
+
+/** Upsert one tournament (keyed by its americano-padel id, so re-adds replace). */
+export async function saveCommunityTournament(t: Tournament): Promise<void> {
+  if (!supabase) throw new Error('Supabase not configured')
+  const { error } = await supabase.from(COMMUNITY_TABLE).upsert({ id: t.id, data: t })
+  if (error) throw error
+}
+
+/** Replace the shared alias map (read-modify-write; fine for low concurrency). */
+export async function saveCommunityAliases(map: Record<string, string>): Promise<void> {
+  if (!supabase) throw new Error('Supabase not configured')
+  const { error } = await supabase
+    .from(ALIASES_TABLE)
+    .upsert({ id: ALIASES_ROW, map, updated_at: new Date().toISOString() })
+  if (error) throw error
 }

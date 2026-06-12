@@ -77,9 +77,9 @@ export function Dashboard() {
           />
         </div>
         <div className="mt-5 flex flex-wrap gap-2">
-          <span className="btn cursor-not-allowed opacity-60" title={t('Paste importer coming soon', 'Імпорт через вставку — скоро')}>
-            {t('➕ Add tournament', '➕ Додати турнір')} <em className="not-italic text-ink-faint">{t('(soon)', '(скоро)')}</em>
-          </span>
+          <Link to="/add" className="btn-dark">
+            {t('➕ Add tournament', '➕ Додати турнір')}
+          </Link>
         </div>
       </section>
 
