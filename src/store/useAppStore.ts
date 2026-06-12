@@ -41,13 +41,6 @@ interface AppState extends Dataset {
   /** Load shared community data from Supabase once (no-op on repeat/failure). */
   hydrateCommunity: () => Promise<void>
   _communityLoaded?: boolean
-  /**
-   * Ids of test-mode (draft) tournaments that exist only in this browser —
-   * never synced to Supabase. Publish or delete them from the tournament page.
-   */
-  localOnly: string[]
-  markLocalOnly: (id: string) => void
-  unmarkLocalOnly: (id: string) => void
 }
 
 export const useAppStore = create<AppState>()(
@@ -78,15 +71,7 @@ export const useAppStore = create<AppState>()(
         }),
 
       deleteTournament: (id) =>
-        set((state) => ({
-          tournaments: state.tournaments.filter((t) => t.id !== id),
-          localOnly: state.localOnly.filter((x) => x !== id),
-        })),
-
-      localOnly: [],
-      markLocalOnly: (id) =>
-        set((state) => ({ localOnly: state.localOnly.includes(id) ? state.localOnly : [...state.localOnly, id] })),
-      unmarkLocalOnly: (id) => set((state) => ({ localOnly: state.localOnly.filter((x) => x !== id) })),
+        set((state) => ({ tournaments: state.tournaments.filter((t) => t.id !== id) })),
 
       setAlias: (from, to) =>
         set((state) => ({ aliases: { ...state.aliases, [from.trim()]: to.trim() } })),
@@ -139,7 +124,6 @@ export const useAppStore = create<AppState>()(
         version: state.version,
         tournaments: state.tournaments,
         aliases: state.aliases,
-        localOnly: state.localOnly,
       }),
     },
   ),

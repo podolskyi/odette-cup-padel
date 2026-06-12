@@ -120,11 +120,11 @@ export function parseAmericanoPadelText(text: string): ParseResult {
   return { title, matches, standings }
 }
 
-/** Strip a trailing human date ("Odette Cup 7th June" -> "Odette Cup"). */
+/** Strip a trailing human date ("Odette Cup 7th June" / "… 19th Oct" -> "Odette Cup"). */
 export function seriesNameFromTitle(title: string): string {
   return title
     .replace(
-      /\s+\d{1,2}(st|nd|rd|th)?\s+(january|february|march|april|may|june|july|august|september|october|november|december).*$/i,
+      /\s+\d{1,2}(st|nd|rd|th)?\s+(jan(uary)?|feb(ruary)?|mar(ch)?|apr(il)?|may|jun(e)?|jul(y)?|aug(ust)?|sep(t(ember)?)?|oct(ober)?|nov(ember)?|dec(ember)?)\.?.*$/i,
       '',
     )
     .trim()

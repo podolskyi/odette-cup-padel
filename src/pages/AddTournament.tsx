@@ -9,6 +9,7 @@ import { isUnlocked, tryUnlock } from '../lib/settingsGate'
 import { allPlayers } from '../identity/aliases'
 import { computeStandings } from '../stats'
 import { levenshtein } from '../lib/similar'
+import { formatDate } from '../lib/format'
 import { PodiumBlock } from '../components/PodiumBlock'
 import { Avatar } from '../components/ui/Avatar'
 import { Chip, SectionTitle } from '../components/ui/Bits'
@@ -42,8 +43,6 @@ export function AddTournament() {
   const aliases = useAppStore((s) => s.aliases)
   const upsertTournament = useAppStore((s) => s.upsertTournament)
   const setAlias = useAppStore((s) => s.setAlias)
-  const markLocalOnly = useAppStore((s) => s.markLocalOnly)
-  const unmarkLocalOnly = useAppStore((s) => s.unmarkLocalOnly)
 
   const [unlocked, setUnlocked] = useState(isUnlocked())
 
@@ -53,20 +52,25 @@ export function AddTournament() {
   const [error, setError] = useState<string | null>(null)
   const [draft, setDraft] = useState<(HtmlParseResult & { id: string }) | null>(null)
   const [date, setDate] = useState('')
+  const [seriesName, setSeriesName] = useState('')
   const [nickname, setNickname] = useState('')
   const [mapping, setMapping] = useState<Record<string, string>>({})
   const [saving, setSaving] = useState(false)
-  const [testMode, setTestMode] = useState(false)
 
   const parsedNames = useMemo(
     () => (draft ? [...new Set(draft.matches.flatMap((m) => [...m.teamA, ...m.teamB]))].sort((a, b) => a.localeCompare(b)) : []),
     [draft],
   )
 
-  // Aliases implied by the current name mapping (only the ones that changed).
+  // Aliases implied by the mapping inputs. `mapping` holds the RAW text typed
+  // per parsed name ('' = keep as is); an alias only exists when the trimmed
+  // text is non-empty and differs from the original.
   const draftAliases = useMemo(() => {
     const out: Record<string, string> = {}
-    for (const [from, to] of Object.entries(mapping)) if (to && to !== from) out[from] = to
+    for (const [from, raw] of Object.entries(mapping)) {
+      const to = raw.trim()
+      if (to && to !== from) out[from] = to
+    }
     return out
   }, [mapping])
 
@@ -75,14 +79,14 @@ export function AddTournament() {
     if (!draft) return null
     return {
       id: draft.id,
-      name: seriesNameFromTitle(draft.title) || 'Odette Cup',
+      name: seriesName.trim() || 'Odette Cup',
       nickname: nickname.trim() || undefined,
       date,
       format: 'Americano',
       pointsPerMatch: draft.matches[0].scoreA + draft.matches[0].scoreB,
       matches: draft.matches,
     }
-  }, [draft, nickname, date])
+  }, [draft, seriesName, nickname, date])
 
   const standings = useMemo(
     () => (preview ? computeStandings(preview, { ...aliases, ...draftAliases }) : []),
@@ -108,9 +112,9 @@ export function AddTournament() {
       if (!res.matches.length) throw new Error(t('No matches found on that page.', 'На цій сторінці не знайдено матчів.'))
       setDraft({ ...res, id })
       setDate(res.dateHint ?? '')
-      const init: Record<string, string> = {}
-      for (const n of new Set(res.matches.flatMap((m) => [...m.teamA, ...m.teamB]))) init[n] = n
-      setMapping(init)
+      setSeriesName(seriesNameFromTitle(res.title) || 'Odette Cup')
+      setNickname('')
+      setMapping({})
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e))
     } finally {
@@ -129,17 +133,10 @@ export function AddTournament() {
     try {
       upsertTournament(preview)
       for (const [from, to] of Object.entries(draftAliases)) setAlias(from, to)
-      if (testMode) {
-        // Draft: nothing leaves this browser. Publish/delete from the tournament page.
-        markLocalOnly(preview.id)
-        navigate(`/t/${preview.id}`)
-        return
-      }
       await saveCommunityTournament(preview)
       if (Object.keys(draftAliases).length) {
         await saveCommunityAliases({ ...aliases, ...draftAliases })
       }
-      unmarkLocalOnly(preview.id)
       navigate(`/t/${preview.id}`)
     } catch (e) {
       setError(
@@ -224,9 +221,12 @@ export function AddTournament() {
               </div>
             )}
 
-            <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            <div className="mt-4 grid gap-3 sm:grid-cols-3">
               <label className="text-sm font-bold">
                 {t('Date', 'Дата')}
+                {!draft.dateHint && (
+                  <span className="ml-1 font-normal text-ink-faint">{t('(not in the title — set it)', '(немає в назві — вкажіть)')}</span>
+                )}
                 <input
                   type="date"
                   value={date}
@@ -235,7 +235,16 @@ export function AddTournament() {
                 />
               </label>
               <label className="text-sm font-bold">
-                {t('Nickname (optional)', 'Прізвисько (необов’язково)')}
+                {t('Tournament name', 'Назва турніру')}
+                <input
+                  value={seriesName}
+                  onChange={(e) => setSeriesName(e.target.value)}
+                  placeholder="Odette Cup"
+                  className="mt-1 block w-full rounded-xl border-2 border-ink bg-paper-100 px-3 py-2 text-sm shadow-hard-sm outline-none"
+                />
+              </label>
+              <label className="text-sm font-bold">
+                {t('Fun nickname (optional)', 'Веселе прізвисько (необов’язково)')}
                 <input
                   value={nickname}
                   onChange={(e) => setNickname(e.target.value)}
@@ -244,6 +253,14 @@ export function AddTournament() {
                 />
               </label>
             </div>
+            <p className="mt-3 text-sm text-ink-soft">
+              {t('Will appear as:', 'Виглядатиме як:')}{' '}
+              <b className="text-ink">
+                {preview.name}
+                {date ? `, ${formatDate(date)}` : ''}
+              </b>
+              {nickname.trim() && <> · 🎉 {nickname.trim()}</>}
+            </p>
           </section>
 
           {/* Podium preview */}
@@ -258,22 +275,34 @@ export function AddTournament() {
             <SectionTitle
               emoji="🧩"
               title={t('Match the names', 'Звірте імена')}
-              hint={t('Map any spelling variants onto the player we already know.', 'Зіставте варіанти написання з гравцем, якого ми вже знаємо.')}
+              hint={t(
+                'Type to search a known player, or enter a brand-new name to rename. Leave empty to keep as is.',
+                'Почни вводити, щоб знайти відомого гравця, або впиши нове ім’я. Залиш порожнім, щоб не міняти.',
+              )}
             />
+            <datalist id="add-canon-names">
+              {canon.map((c) => (
+                <option key={c} value={c} />
+              ))}
+            </datalist>
             <div className="sticker divide-y divide-ink/10">
               {parsedNames.map((name) => {
                 const known = canon.includes(name)
                 const suggestion = !known ? suggestCanonical(name, canon) : undefined
-                const chosen = mapping[name] ?? name
-                const isMapped = chosen !== name
+                const raw = mapping[name] ?? ''
+                const isMapped = !!raw.trim() && raw.trim() !== name
+                const chosen = isMapped ? raw.trim() : name
                 return (
                   <div key={name} className="flex flex-wrap items-center gap-2 px-3 py-2.5">
                     <Avatar name={chosen} size="sm" />
                     <span className={cx('font-bold', isMapped && 'text-ink-faint line-through')}>{name}</span>
-                    {known ? (
+                    {isMapped ? (
+                      <span className="text-sm text-ink-soft">
+                        → <b className="text-ink">{chosen}</b>
+                        {!canon.includes(chosen) && <span className="ml-1 text-xs text-ink-faint">({t('new name', 'нове ім’я')})</span>}
+                      </span>
+                    ) : known ? (
                       <span className="chip bg-mint-soft text-xs">✓ {t('known', 'відомий')}</span>
-                    ) : isMapped ? (
-                      <span className="text-sm text-ink-soft">→ <b className="text-ink">{chosen}</b></span>
                     ) : (
                       <span className="chip bg-sky-soft text-xs">{t('new player', 'новий гравець')}</span>
                     )}
@@ -287,16 +316,13 @@ export function AddTournament() {
                           ↪ {suggestion}?
                         </button>
                       )}
-                      <select
-                        value={chosen}
+                      <input
+                        list="add-canon-names"
+                        value={raw}
                         onChange={(e) => setMapping((m) => ({ ...m, [name]: e.target.value }))}
-                        className="max-w-[9rem] rounded-lg border-2 border-ink bg-paper-100 px-2 py-1 text-xs font-bold shadow-hard-sm outline-none"
-                      >
-                        <option value={name}>{t('— keep as new —', '— новий —')}</option>
-                        {canon.map((c) => (
-                          <option key={c} value={c}>{c}</option>
-                        ))}
-                      </select>
+                        placeholder={t('search / new name…', 'пошук / нове ім’я…')}
+                        className="w-40 rounded-lg border-2 border-ink bg-paper-100 px-2 py-1 text-xs font-bold shadow-hard-sm outline-none"
+                      />
                     </div>
                   </div>
                 )
@@ -306,33 +332,9 @@ export function AddTournament() {
 
           {error && <p className="px-1 text-sm font-bold text-punch">⚠️ {error}</p>}
 
-          <label className="sticker flex cursor-pointer items-center gap-3 bg-sky-soft p-3 text-sm">
-            <input
-              type="checkbox"
-              checked={testMode}
-              onChange={(e) => setTestMode(e.target.checked)}
-              className="h-5 w-5 accent-ink"
-            />
-            <span>
-              <b>🧪 {t('Test run — this device only.', 'Тестовий запуск — лише цей пристрій.')}</b>{' '}
-              {t(
-                'Nothing is shared; you can publish or delete it from the tournament page afterwards.',
-                'Нічого не публікується; потім зможеш опублікувати або видалити зі сторінки турніру.',
-              )}
-            </span>
-          </label>
-
           <div className="sticky bottom-2 z-10">
-            <button
-              className={cx('w-full py-3 text-base', testMode ? 'btn' : 'btn-dark')}
-              disabled={saving || !date}
-              onClick={save}
-            >
-              {saving
-                ? t('Saving…', 'Збереження…')
-                : testMode
-                  ? t('🧪 Save as test (this device only)', '🧪 Зберегти як тест (лише цей пристрій)')
-                  : t('Save tournament', 'Зберегти турнір')}
+            <button className="btn-dark w-full py-3 text-base" disabled={saving || !date} onClick={save}>
+              {saving ? t('Saving…', 'Збереження…') : t('Save tournament', 'Зберегти турнір')}
             </button>
           </div>
         </>

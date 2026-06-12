@@ -6,6 +6,7 @@ import {
   americanoIdFromUrl,
   tournamentFromHtml,
 } from '../americanoPadelHtml'
+import { seriesNameFromTitle } from '../americanoPadel'
 
 describe('parseAmericanoPadelHtml', () => {
   const result = parseAmericanoPadelHtml(html)
@@ -45,6 +46,19 @@ describe('parseAmericanoPadelHtml', () => {
 describe('helpers', () => {
   it('parses a date hint with an explicit year', () => {
     expect(dateHintFromTitle('Odette Cup 7th June 2025')).toBe('2025-06-07')
+  })
+
+  it('parses abbreviated month names', () => {
+    const y = new Date().getFullYear()
+    expect(dateHintFromTitle('Odette Cup 19th Oct')).toBe(`${y}-10-19`)
+    expect(dateHintFromTitle('Odette Cup 1 Sept')).toBe(`${y}-09-01`)
+    expect(dateHintFromTitle('Odette Cup 3rd Mar 2025')).toBe('2025-03-03')
+    expect(dateHintFromTitle('Odette Cup Finale')).toBeUndefined()
+  })
+
+  it('strips abbreviated dates from the series name', () => {
+    expect(seriesNameFromTitle('Odette Cup 19th Oct')).toBe('Odette Cup')
+    expect(seriesNameFromTitle('Odette Cup 7th June')).toBe('Odette Cup')
   })
 
   it('extracts the uuid from a round URL', () => {

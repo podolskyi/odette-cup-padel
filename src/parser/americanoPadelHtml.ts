@@ -30,12 +30,16 @@ const MONTHS = [
   'july', 'august', 'september', 'october', 'november', 'december',
 ]
 
-/** "Odette Cup 7th June" -> "2026-06-07" (year falls back to the current one). */
+/**
+ * "Odette Cup 7th June" -> "2026-06-07". Accepts abbreviated months too
+ * ("19th Oct", "1 Sept"); year falls back to the current one.
+ */
 export function dateHintFromTitle(title: string, today = new Date()): string | undefined {
-  const m = title.match(/(\d{1,2})(?:st|nd|rd|th)?\s+([A-Za-z]+)(?:\s+(\d{4}))?/)
+  const m = title.match(/(\d{1,2})(?:st|nd|rd|th)?\s+([A-Za-z]{3,})\.?(?:\s+(\d{4}))?/)
   if (!m) return undefined
   const day = Number(m[1])
-  const month = MONTHS.indexOf(m[2].toLowerCase())
+  const word = m[2].toLowerCase()
+  const month = MONTHS.findIndex((name) => name.startsWith(word))
   if (month < 0 || day < 1 || day > 31) return undefined
   const year = m[3] ? Number(m[3]) : today.getFullYear()
   const iso = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`

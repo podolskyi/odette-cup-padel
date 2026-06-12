@@ -1,9 +1,8 @@
-import { useMemo, useState } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { useMemo } from 'react'
+import { Link, useParams } from 'react-router-dom'
 import { useAppStore } from '../store/useAppStore'
-import { saveCommunityTournament, saveCommunityAliases } from '../lib/supabase'
 import { tournamentInsights } from '../stats'
-import type { Match, Tournament } from '../types'
+import type { Match } from '../types'
 import { StandingsTable } from '../components/StandingsTable'
 import { AwardGrid } from '../components/AwardCard'
 import { PodiumBlock } from '../components/PodiumBlock'
@@ -18,10 +17,8 @@ export function TournamentDetail() {
   const { id } = useParams()
   const tournaments = useAppStore((s) => s.tournaments)
   const aliases = useAppStore((s) => s.aliases)
-  const localOnly = useAppStore((s) => s.localOnly)
 
   const tournament = tournaments.find((t) => t.id === id)
-  const isDraft = !!tournament && localOnly.includes(tournament.id)
   const insights = useMemo(
     () => (tournament ? tournamentInsights(tournament, aliases) : null),
     [tournament, aliases],
@@ -41,8 +38,6 @@ export function TournamentDetail() {
 
   return (
     <div className="space-y-10">
-      {isDraft && <DraftBanner tournament={tournament} />}
-
       {/* Header */}
       <section className="sticker-lg bg-paper-100 p-6 sm:p-8">
         <div className="flex flex-wrap items-center gap-2">
@@ -106,62 +101,6 @@ export function TournamentDetail() {
         </div>
       </section>
     </div>
-  )
-}
-
-/** Banner for test-mode tournaments that live only in this browser. */
-function DraftBanner({ tournament }: { tournament: Tournament }) {
-  const { t } = useT()
-  const navigate = useNavigate()
-  const aliases = useAppStore((s) => s.aliases)
-  const deleteTournament = useAppStore((s) => s.deleteTournament)
-  const unmarkLocalOnly = useAppStore((s) => s.unmarkLocalOnly)
-  const [busy, setBusy] = useState(false)
-  const [error, setError] = useState<string | null>(null)
-
-  const publish = async () => {
-    setBusy(true)
-    setError(null)
-    try {
-      await saveCommunityTournament(tournament)
-      if (Object.keys(aliases).length) await saveCommunityAliases(aliases)
-      unmarkLocalOnly(tournament.id)
-    } catch (e) {
-      setError(e instanceof Error ? e.message : String(e))
-    } finally {
-      setBusy(false)
-    }
-  }
-
-  const discard = () => {
-    deleteTournament(tournament.id)
-    navigate('/')
-  }
-
-  return (
-    <section className="sticker border-dashed bg-sky-soft p-4">
-      <div className="flex flex-wrap items-center gap-3">
-        <span className="text-2xl">🧪</span>
-        <div className="min-w-0 flex-1">
-          <div className="font-extrabold">{t('Test tournament — only on this device', 'Тестовий турнір — лише на цьому пристрої')}</div>
-          <p className="text-sm text-ink-soft">
-            {t(
-              'Nobody else sees it, and it skews your local stats while it exists. Publish it for everyone, or delete it.',
-              'Ніхто інший його не бачить, і поки він існує — він викривлює твою локальну статистику. Опублікуй для всіх або видали.',
-            )}
-          </p>
-        </div>
-        <div className="flex shrink-0 gap-2">
-          <button className="btn-dark px-4 py-2 text-sm" disabled={busy} onClick={publish}>
-            {busy ? t('Publishing…', 'Публікація…') : t('🚀 Publish for everyone', '🚀 Опублікувати для всіх')}
-          </button>
-          <button className="btn px-4 py-2 text-sm" disabled={busy} onClick={discard}>
-            {t('🗑 Delete', '🗑 Видалити')}
-          </button>
-        </div>
-      </div>
-      {error && <p className="mt-2 text-sm font-bold text-punch">⚠️ {t('Publishing failed: ', 'Не вдалося опублікувати: ')}{error}</p>}
-    </section>
   )
 }
 
