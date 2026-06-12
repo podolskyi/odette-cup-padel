@@ -1,6 +1,23 @@
 import { useEffect } from 'react'
 import { NavLink, Outlet, Link, useLocation } from 'react-router-dom'
 import { cx } from '../lib/cx'
+import { useLang, useT } from '../lib/i18n'
+
+/** EN ⇄ UK switch — flips the whole UI between languages. */
+function LangToggle() {
+  const lang = useLang((s) => s.lang)
+  const toggle = useLang((s) => s.toggle)
+  return (
+    <button
+      type="button"
+      onClick={toggle}
+      title={lang === 'uk' ? 'Switch to English' : 'Перемкнути на українську'}
+      className="rounded-xl border-2 border-ink bg-paper-100 px-2.5 py-1.5 text-sm font-bold shadow-hard-sm transition-transform hover:-translate-y-0.5 active:translate-y-0 active:shadow-none"
+    >
+      {lang === 'uk' ? '🇬🇧 EN' : '🇺🇦 УК'}
+    </button>
+  )
+}
 
 /** Reset scroll to the top whenever the route changes (SPA navigations don't). */
 function ScrollToTop() {
@@ -31,6 +48,7 @@ function Tab({ to, children }: { to: string; children: React.ReactNode }) {
 }
 
 export function Layout() {
+  const { t } = useT()
   return (
     <div className="mx-auto flex min-h-dvh max-w-5xl flex-col px-4 pb-16 pt-4 sm:px-6">
       <ScrollToTop />
@@ -47,10 +65,11 @@ export function Layout() {
           </div>
         </Link>
         <nav className="flex items-center gap-2">
-          <Tab to="/">Головна</Tab>
-          <Tab to="/explore">Огляд</Tab>
-          <Tab to="/stats">Статистика</Tab>
-          <Tab to="/fun">Фан</Tab>
+          <Tab to="/">{t('Home', 'Головна')}</Tab>
+          <Tab to="/explore">{t('Explore', 'Огляд')}</Tab>
+          <Tab to="/stats">{t('Stats', 'Статистика')}</Tab>
+          <Tab to="/fun">{t('Fun', 'Фан')}</Tab>
+          <LangToggle />
         </nav>
       </header>
 
@@ -59,7 +78,10 @@ export function Layout() {
       </main>
 
       <footer className="mt-12 text-center text-xs text-ink-faint">
-        Зроблено для нашого чату · статистика рахується наживо з кожного матчу 🎾
+        {t(
+          'Made for the group chat · stats derived live from every match 🎾',
+          'Зроблено для нашого чату · статистика рахується наживо з кожного матчу 🎾',
+        )}
       </footer>
     </div>
   )

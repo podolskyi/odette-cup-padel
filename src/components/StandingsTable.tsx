@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import type { PlayerStanding } from '../stats'
 import { Avatar } from './ui/Avatar'
 import { signed } from '../lib/format'
+import { useT } from '../lib/i18n'
 import { cx } from '../lib/cx'
 
 export function StandingsTable({
@@ -15,13 +16,14 @@ export function StandingsTable({
   onPlayer?: (name: string) => void
 }) {
   const last = standings.length
+  const { t } = useT()
   return (
     <div className={cx('sticker overflow-hidden', className)}>
       <table className="w-full border-collapse text-left">
         <thead>
           <tr className="border-b-2 border-ink bg-ink text-paper-100">
             <Th className="w-10 pl-3 text-center">#</Th>
-            <Th>Гравець</Th>
+            <Th>{t('Player', 'Гравець')}</Th>
             <Th className="text-center">W-L-T</Th>
             <Th className="text-center">Diff</Th>
             <Th className="pr-4 text-right">Pts</Th>

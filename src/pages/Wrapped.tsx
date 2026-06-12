@@ -6,9 +6,11 @@ import { Avatar } from '../components/ui/Avatar'
 import { exportNodeToPng } from '../lib/image'
 import { nicknameOf } from '../lib/tournament'
 import { formatDate, pct, round1 } from '../lib/format'
+import { useT } from '../lib/i18n'
 import { cx } from '../lib/cx'
 
 export function Wrapped() {
+  const { t } = useT()
   const { id } = useParams()
   const tournaments = useAppStore((s) => s.tournaments)
   const aliases = useAppStore((s) => s.aliases)
@@ -26,7 +28,7 @@ export function Wrapped() {
     return (
       <div className="grid min-h-dvh place-items-center bg-ink text-paper-100">
         <Link to="/" className="btn bg-paper-100">
-          ← На головну
+          {t('← Back home', '← На головну')}
         </Link>
       </div>
     )
@@ -41,12 +43,12 @@ export function Wrapped() {
       {/* Top bar */}
       <div className="sticky top-0 z-10 flex items-center justify-between gap-3 bg-ink/90 px-4 py-3 backdrop-blur">
         <Link to={`/t/${tournament.id}`} className="chip border-paper-100 bg-transparent text-paper-100">
-          ← Назад
+          {t('← Back', '← Назад')}
         </Link>
         <div className="font-display text-sm font-bold uppercase tracking-widest text-paper-100/70">
           {tournament.name} · Wrapped
         </div>
-        <div className="w-14 text-right text-xs text-paper-100/50">гортай →</div>
+        <div className="w-14 text-right text-xs text-paper-100/50">{t('swipe →', 'гортай →')}</div>
       </div>
 
       {/* Horizontal swiper */}
@@ -61,7 +63,7 @@ export function Wrapped() {
             <h1 className="mt-1 font-display text-6xl font-extrabold leading-[0.9]">{tournament.name}</h1>
             <p className="mt-2 text-xl font-bold opacity-90">aka “{nicknameOf(tournament)}”</p>
             <p className="mt-3 text-lg opacity-90">
-              {standings.length} гравців · {tournament.matches.length} матчів · {tournament.format}
+              {standings.length} {t('players', 'гравців')} · {tournament.matches.length} {t('matches', 'матчів')} · {tournament.format}
             </p>
           </div>
           <div className="text-7xl">🏆🎾🔥</div>
@@ -70,7 +72,7 @@ export function Wrapped() {
         {/* 2 — Champion */}
         {champ && (
           <Slide accent="bg-gold text-ink" filename={`${slug}-2-champion.png`}>
-            <Tag>👑 Чемпіон</Tag>
+            <Tag>👑 {t('Champion', 'Чемпіон')}</Tag>
             <div className="flex flex-1 flex-col items-center justify-center text-center">
               <Avatar name={champ.player} size="xl" className="shadow-hard-lg" />
               <h1 className="mt-4 font-display text-6xl font-extrabold leading-none">{champ.player}</h1>
@@ -82,13 +84,13 @@ export function Wrapped() {
                 <Pill>+{champ.diff} diff</Pill>
               </div>
             </div>
-            <p className="text-center text-lg font-bold">Чемпіон {tournament.name} 🥂</p>
+            <p className="text-center text-lg font-bold">{t(`Champion of the ${tournament.name} 🥂`, `Чемпіон ${tournament.name} 🥂`)}</p>
           </Slide>
         )}
 
         {/* 3 — Podium */}
         <Slide accent="bg-paper-100 text-ink" filename={`${slug}-3-podium.png`}>
-          <Tag>🏅 Подіум</Tag>
+          <Tag>🏅 {t('The Podium', 'Подіум')}</Tag>
           <div className="flex flex-1 flex-col justify-center gap-3">
             {standings.slice(0, 3).map((s, i) => (
               <div
@@ -138,7 +140,7 @@ export function Wrapped() {
                 <span className="opacity-60">–</span>
                 {awards.demolition.scoreAgainst}
               </div>
-              <div className="mt-2 text-xl font-bold">найбільший розгром (+{awards.demolition.margin})</div>
+              <div className="mt-2 text-xl font-bold">{t(`biggest blowout (+${awards.demolition.margin})`, `найбільший розгром (+${awards.demolition.margin})`)}</div>
               <div className="mt-5 flex -space-x-3">
                 <Avatar name={awards.demolition.winners[0]} size="lg" />
                 <Avatar name={awards.demolition.winners[1]} size="lg" />
@@ -155,10 +157,10 @@ export function Wrapped() {
           <Tag dark>🧱 Wall · 🏃 Cardio</Tag>
           <div className="flex flex-1 flex-col justify-center gap-4">
             {awards.wall && (
-              <DuoStat emoji="🧱" label="The Wall" name={awards.wall.player} note={`${round1(awards.wall.paPerGame)} пропущено / гру`} />
+              <DuoStat emoji="🧱" label="The Wall" name={awards.wall.player} note={t(`${round1(awards.wall.paPerGame)} conceded / game`, `${round1(awards.wall.paPerGame)} пропущено / гру`)} />
             )}
             {awards.cardio && (
-              <DuoStat emoji="🏃" label="Cardio King/Queen" name={awards.cardio.player} note={`${awards.cardio.pf} набраних балів`} />
+              <DuoStat emoji="🏃" label="Cardio King/Queen" name={awards.cardio.player} note={t(`${awards.cardio.pf} points scored`, `${awards.cardio.pf} набраних балів`)} />
             )}
           </div>
         </Slide>
@@ -168,10 +170,10 @@ export function Wrapped() {
           <Tag>🕊️ Diplomat · 😬 Heartbreaker</Tag>
           <div className="flex flex-1 flex-col justify-center gap-4">
             {awards.diplomat && (
-              <DuoStat emoji="🕊️" label="The Diplomat" name={awards.diplomat.player} note={`${awards.diplomat.ties} нічиїх`} />
+              <DuoStat emoji="🕊️" label="The Diplomat" name={awards.diplomat.player} note={t(`${awards.diplomat.ties} tied matches`, `${awards.diplomat.ties} нічиїх`)} />
             )}
             {awards.heartbreaker && (
-              <DuoStat emoji="😬" label="Heartbreaker" name={awards.heartbreaker.player} note={`${awards.heartbreaker.closeLosses} поразок ≤ 2`} />
+              <DuoStat emoji="😬" label="Heartbreaker" name={awards.heartbreaker.player} note={t(`${awards.heartbreaker.closeLosses} losses by ≤ 2`, `${awards.heartbreaker.closeLosses} поразок ≤ 2`)} />
             )}
           </div>
         </Slide>
@@ -184,7 +186,7 @@ export function Wrapped() {
               <Avatar name={awards.woodenSpoon.player} size="xl" className="animate-wiggle" />
               <h1 className="mt-4 font-display text-5xl font-extrabold">{awards.woodenSpoon.player}</h1>
               <p className="mt-3 max-w-xs text-lg font-bold">
-                Останнє місце, найбільше серце. Повернеться сильнішим 💪
+                {t('Last place, biggest heart. Back next week, stronger 💪', 'Останнє місце, найбільше серце. Повернеться сильнішим 💪')}
               </p>
             </div>
           </Slide>
@@ -192,7 +194,7 @@ export function Wrapped() {
 
         {/* 9 — Full standings */}
         <Slide accent="bg-paper-100 text-ink" filename={`${slug}-9-standings.png`}>
-          <Tag>📊 Фінальна таблиця</Tag>
+          <Tag>📊 {t('Final Standings', 'Фінальна таблиця')}</Tag>
           <div className="flex-1 overflow-hidden">
             <div className="grid grid-cols-1 gap-y-0.5">
               {standings.map((s) => (
@@ -230,6 +232,7 @@ function Slide({
   filename: string
   children: ReactNode
 }) {
+  const { t } = useT()
   const ref = useRef<HTMLDivElement>(null)
   return (
     <section className="flex w-screen shrink-0 snap-center flex-col items-center gap-3 px-5 py-6">
@@ -246,7 +249,7 @@ function Slide({
         className="btn bg-paper-100 text-ink"
         onClick={() => ref.current && exportNodeToPng(ref.current, filename)}
       >
-        ⬇️ Зберегти зображення
+        ⬇️ {t('Save image', 'Зберегти зображення')}
       </button>
     </section>
   )

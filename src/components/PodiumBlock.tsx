@@ -1,17 +1,19 @@
 import type { PlayerStanding } from '../stats'
 import { Avatar } from './ui/Avatar'
 import { Link } from 'react-router-dom'
+import { useT } from '../lib/i18n'
 import { cx } from '../lib/cx'
 
 const STYLE = [
   // index 0 = winner (rank 1)
-  { h: 'h-28', bg: 'bg-gold', medal: '🥇', label: '1-е' },
-  { h: 'h-20', bg: 'bg-paper-300', medal: '🥈', label: '2-е' },
-  { h: 'h-14', bg: 'bg-tang-soft', medal: '🥉', label: '3-є' },
+  { h: 'h-28', bg: 'bg-gold', medal: '🥇', label: ['1st', '1-е'] as const },
+  { h: 'h-20', bg: 'bg-paper-300', medal: '🥈', label: ['2nd', '2-е'] as const },
+  { h: 'h-14', bg: 'bg-tang-soft', medal: '🥉', label: ['3rd', '3-є'] as const },
 ]
 
 /** The classic 2-1-3 podium with avatars perched on plinths. */
 export function PodiumBlock({ standings }: { standings: PlayerStanding[] }) {
+  const { t } = useT()
   const top = standings.slice(0, 3)
   if (top.length < 3) return null
   const order = [top[1], top[0], top[2]] // visual left-to-right: 2nd, 1st, 3rd
@@ -38,7 +40,7 @@ export function PodiumBlock({ standings }: { standings: PlayerStanding[] }) {
                 st.bg,
               )}
             >
-              {st.label}
+              {t(st.label[0], st.label[1])}
             </div>
           </div>
         )

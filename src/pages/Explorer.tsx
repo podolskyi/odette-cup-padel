@@ -6,8 +6,10 @@ import { SortableTable, type Column } from '../components/SortableTable'
 import { PlayerTag } from '../components/ui/Avatar'
 import { SectionTitle, Chip, Empty, Stat } from '../components/ui/Bits'
 import { pct, round1, signed } from '../lib/format'
+import { useT } from '../lib/i18n'
 
 export function Explorer() {
+  const { t, lang } = useT()
   const tournaments = useAppStore((s) => s.tournaments)
   const aliases = useAppStore((s) => s.aliases)
 
@@ -53,7 +55,7 @@ export function Explorer() {
   const duoCols: Column<(typeof duos)[number]>[] = [
     {
       key: 'duo',
-      header: 'Дует',
+      header: t('Duo', 'Дует'),
       render: (p) => (
         <div className="flex items-center gap-1">
           <PlayerTag name={p.players[0]} size="sm" bold={false} />
@@ -63,7 +65,7 @@ export function Explorer() {
       ),
       sortValue: (p) => p.key,
     },
-    { key: 'games', header: 'Ігри', align: 'center', render: (p) => p.games, sortValue: (p) => p.games },
+    { key: 'games', header: t('Games', 'Ігри'), align: 'center', render: (p) => p.games, sortValue: (p) => p.games },
     {
       key: 'wlt',
       header: 'W-L-T',
@@ -94,13 +96,13 @@ export function Explorer() {
   const rivalCols: Column<HeadToHead>[] = [
     {
       key: 'leader',
-      header: 'Веде',
+      header: t('Leads', 'Веде'),
       render: (h) => <PlayerTag name={h.player} size="sm" bold={false} />,
       sortValue: (h) => h.player,
     },
     {
       key: 'rec',
-      header: 'Рахунок',
+      header: t('Record', 'Рахунок'),
       align: 'center',
       render: (h) => (
         <span className="font-mono tabular font-bold">
@@ -112,20 +114,20 @@ export function Explorer() {
     },
     {
       key: 'foe',
-      header: 'Над',
+      header: t('Over', 'Над'),
       render: (h) => <PlayerTag name={h.opponent} size="sm" bold={false} />,
       sortValue: (h) => h.opponent,
     },
     {
       key: 'mtg',
-      header: 'Зустр.',
+      header: t('Mtgs', 'Зустр.'),
       align: 'center',
       render: (h) => h.meetings,
       sortValue: (h) => h.meetings,
     },
     {
       key: 'margin',
-      header: 'Різниця',
+      header: t('Margin', 'Різниця'),
       align: 'right',
       render: (h) => <span className="font-mono tabular">{signed(h.pointMargin)}</span>,
       sortValue: (h) => h.pointMargin,
@@ -135,10 +137,13 @@ export function Explorer() {
   return (
     <div className="space-y-6">
       <section className="sticker-lg bg-paper-100 p-6 sm:p-8">
-        <Chip tone="bg-mint">ОГЛЯД</Chip>
-        <h1 className="mt-3 text-4xl font-extrabold sm:text-5xl">Дуети, суперники та Glue</h1>
+        <Chip tone="bg-mint">{t('EXPLORER', 'ОГЛЯД')}</Chip>
+        <h1 className="mt-3 text-4xl font-extrabold sm:text-5xl">{t('Duos, Rivals & Glue', 'Дуети, суперники та Glue')}</h1>
         <p className="mt-2 max-w-lg text-ink-soft">
-          Хто найкраще грає разом, хто кого тримає, і хто тихо робить кращими всіх навколо.
+          {t(
+            'Who plays best together, who owns whom, and who quietly makes everyone around them better.',
+            'Хто найкраще грає разом, хто кого тримає, і хто тихо робить кращими всіх навколо.',
+          )}
         </p>
       </section>
 
@@ -149,31 +154,39 @@ export function Explorer() {
             list="explorer-players"
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
-            placeholder="🔎 фільтр за гравцем…"
+            placeholder={t('🔎 filter by player…', '🔎 фільтр за гравцем…')}
             className="w-48 rounded-xl border-2 border-ink bg-paper-100 px-3 py-1.5 font-bold shadow-hard-sm outline-none"
           />
           <datalist id="explorer-players">
             {players.map((p) => <option key={p} value={p} />)}
           </datalist>
           {filter && (
-            <button className="btn px-2 py-1 text-xs" onClick={() => setFilter('')}>✕ очистити</button>
+            <button className="btn px-2 py-1 text-xs" onClick={() => setFilter('')}>{t('✕ clear', '✕ очистити')}</button>
           )}
         </div>
         <div className="ml-auto flex flex-wrap gap-2">
-          <button className="btn px-3 py-1 text-sm" onClick={() => jump(partRef)}>🤝 Пари</button>
-          <button className="btn px-3 py-1 text-sm" onClick={() => jump(rivRef)}>⚔️ Суперники</button>
+          <button className="btn px-3 py-1 text-sm" onClick={() => jump(partRef)}>{t('🤝 Partnerships', '🤝 Пари')}</button>
+          <button className="btn px-3 py-1 text-sm" onClick={() => jump(rivRef)}>{t('⚔️ Rivalries', '⚔️ Суперники')}</button>
           <button className="btn px-3 py-1 text-sm" onClick={() => jump(glueRef)}>🧲 Glue</button>
         </div>
       </div>
 
       {active && (
         <p className="px-1 text-sm text-ink-soft">
-          Показано пари та суперництва гравця <span className="font-bold text-ink">{active}</span>.
+          {lang === 'en' ? (
+            <>
+              Showing <span className="font-bold text-ink">{active}</span>'s partnerships & rivalries.
+            </>
+          ) : (
+            <>
+              Показано пари та суперництва гравця <span className="font-bold text-ink">{active}</span>.
+            </>
+          )}
         </p>
       )}
 
       <section ref={partRef} className="scroll-mt-20">
-        <SectionTitle emoji="🤝" title="Найкращі пари" hint="Пари, що грали разом 2+ рази — натисни заголовок для сортування" />
+        <SectionTitle emoji="🤝" title={t('Best Partnerships', 'Найкращі пари')} hint={t('Pairs who teamed up 2+ times — tap a header to sort', 'Пари, що грали разом 2+ рази — натисни заголовок для сортування')} />
         {duos.length ? (
           <SortableTable
             columns={duoCols}
@@ -182,12 +195,12 @@ export function Explorer() {
             initialSort={{ key: active ? 'games' : 'win', dir: 'desc' }}
           />
         ) : (
-          <Empty emoji="🤝">{active ? `У ${active} немає повторних пар.` : 'Поки що немає повторних пар.'}</Empty>
+          <Empty emoji="🤝">{active ? t(`No repeat partnerships for ${active}.`, `У ${active} немає повторних пар.`) : t('No repeat partnerships yet.', 'Поки що немає повторних пар.')}</Empty>
         )}
       </section>
 
       <section ref={rivRef} className="scroll-mt-20">
-        <SectionTitle emoji="⚔️" title="Суперництва" hint="Однобокі очні протистояння, 2+ зустрічі" />
+        <SectionTitle emoji="⚔️" title={t('Rivalries', 'Суперництва')} hint={t('One-sided head-to-heads, 2+ meetings', 'Однобокі очні протистояння, 2+ зустрічі')} />
         {rivalryShown.length ? (
           <SortableTable
             columns={rivalCols}
@@ -196,7 +209,7 @@ export function Explorer() {
             initialSort={{ key: 'rec', dir: 'desc' }}
           />
         ) : (
-          <Empty emoji="⚔️">{active ? `У ${active} немає однозначних суперництв.` : 'Поки що немає однозначних суперництв.'}</Empty>
+          <Empty emoji="⚔️">{active ? t(`No decisive rivalries for ${active}.`, `У ${active} немає однозначних суперництв.`) : t('No decisive rivalries yet.', 'Поки що немає однозначних суперництв.')}</Empty>
         )}
       </section>
 
@@ -204,7 +217,7 @@ export function Explorer() {
         <SectionTitle
           emoji="🧲"
           title="The Glue"
-          hint={active ? `Приріст партнерів гравця ${active}` : 'Гравці, що піднімають вінрейт своїх партнерів'}
+          hint={active ? t(`${active}'s partner uplift`, `Приріст партнерів гравця ${active}`) : t("Players who lift their partners' win rate", 'Гравці, що піднімають вінрейт своїх партнерів')}
         />
         {glueShown.length ? (
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -216,22 +229,28 @@ export function Explorer() {
                   <div className="font-mono text-xl font-bold tabular text-mint">
                     {signed(Math.round(g.uplift * 100))}%
                   </div>
-                  <div className="text-[11px] text-ink-soft">{g.partners} партнерів</div>
+                  <div className="text-[11px] text-ink-soft">{g.partners} {t('partners', 'партнерів')}</div>
                 </div>
               </div>
             ))}
           </div>
         ) : (
           <Empty emoji="🧲">
-            Поки що замало спільних ігор — «The Glue» потребує ще кількох турнірів, щоб щось означати.
+            {t(
+              '“The Glue” needs a few more shared games — a few more tournaments to mean something.',
+              'Поки що замало спільних ігор — «The Glue» потребує ще кількох турнірів, щоб щось означати.',
+            )}
           </Empty>
         )}
       </section>
 
       <Stat
-        label="Як це рахується"
-        value="Приріст партнерів"
-        sub="Для кожного гравця ми порівнюємо, як грають його партнери З НИМ і їхній звичний вінрейт, зважено за кількістю спільних ігор."
+        label={t("How it's measured", 'Як це рахується')}
+        value={t('Partner uplift', 'Приріст партнерів')}
+        sub={t(
+          'For each player we compare how their partners do WITH them vs their usual win rate, weighted by games together.',
+          'Для кожного гравця ми порівнюємо, як грають його партнери З НИМ і їхній звичний вінрейт, зважено за кількістю спільних ігор.',
+        )}
         tone="bg-grape-soft"
       />
     </div>

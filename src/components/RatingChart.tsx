@@ -9,6 +9,7 @@ import {
 } from 'recharts'
 import type { PlayerRating } from '../stats'
 import { hexForName } from '../lib/colors'
+import { useT } from '../lib/i18n'
 
 export interface RatingSeries {
   name: string
@@ -21,6 +22,7 @@ export function toSeries(players: PlayerRating[]): RatingSeries[] {
 }
 
 export function RatingChart({ series, height = 240 }: { series: RatingSeries[]; height?: number }) {
+  const { t } = useT()
   const maxLen = Math.max(0, ...series.map((s) => s.ratings.length))
   const data = Array.from({ length: maxLen }, (_, i) => {
     const row: Record<string, number | null | string> = { idx: i }
@@ -36,7 +38,7 @@ export function RatingChart({ series, height = 240 }: { series: RatingSeries[]; 
           <XAxis
             dataKey="idx"
             tick={{ fontSize: 11, fontFamily: 'Space Mono', fill: '#5d534a' }}
-            tickFormatter={(v) => (v === 0 ? 'старт' : `г${v}`)}
+            tickFormatter={(v) => (v === 0 ? t('start', 'старт') : t(`g${v}`, `г${v}`))}
             interval="preserveStartEnd"
             stroke="#211c18"
           />
@@ -54,7 +56,7 @@ export function RatingChart({ series, height = 240 }: { series: RatingSeries[]; 
               boxShadow: '4px 4px 0 0 #211c18',
               background: '#fffcf5',
             }}
-            labelFormatter={(v) => (v === 0 ? 'Старт (1000)' : `Гра ${v}`)}
+            labelFormatter={(v) => (v === 0 ? t('Start (1000)', 'Старт (1000)') : t(`Game ${v}`, `Гра ${v}`))}
           />
           {series.map((s) => (
             <Line

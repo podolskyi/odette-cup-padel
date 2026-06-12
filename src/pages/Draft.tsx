@@ -10,6 +10,7 @@ import { isUnlocked, tryUnlock } from '../lib/settingsGate'
 import { StandingsTable } from '../components/StandingsTable'
 import { Avatar } from '../components/ui/Avatar'
 import { SectionTitle, Chip, Stat } from '../components/ui/Bits'
+import { useT, t as tr } from '../lib/i18n'
 import { cx } from '../lib/cx'
 
 // name -> Cyrillic originals + tournaments it appears in (from the draft import).
@@ -19,6 +20,7 @@ const seed = seedDataset()
 const seedTournaments = seed.tournaments
 
 export function Draft() {
+  const { t } = useT()
   const [unlocked, setUnlocked] = useState(isUnlocked())
   const [word, setWord] = useState('')
   const [err, setErr] = useState(false)
@@ -30,8 +32,8 @@ export function Draft() {
       <div className="mx-auto mt-10 max-w-sm">
         <div className="sticker-lg bg-paper-100 p-8 text-center">
           <div className="text-5xl">🗂️</div>
-          <h1 className="mt-3 text-2xl font-extrabold">Робоча область імпорту</h1>
-          <p className="mt-1 text-sm text-ink-soft">Введіть секретне слово.</p>
+          <h1 className="mt-3 text-2xl font-extrabold">{t('Import workspace', 'Робоча область імпорту')}</h1>
+          <p className="mt-1 text-sm text-ink-soft">{t('Enter the secret word.', 'Введіть секретне слово.')}</p>
           <input
             type="text"
             value={word}
@@ -39,11 +41,11 @@ export function Draft() {
             data-1p-ignore
             onChange={(e) => { setWord(e.target.value); setErr(false) }}
             onKeyDown={(e) => e.key === 'Enter' && submit()}
-            placeholder="секретне слово"
+            placeholder={t('secret word', 'секретне слово')}
             className={cx('mt-5 w-full rounded-xl border-2 bg-paper-100 px-4 py-2.5 text-center font-bold shadow-hard-sm outline-none', err ? 'border-punch' : 'border-ink')}
           />
-          {err && <p className="mt-2 text-sm font-bold text-punch">Не те 🎾</p>}
-          <button className="btn-dark mt-4 w-full" onClick={submit}>Розблокувати</button>
+          {err && <p className="mt-2 text-sm font-bold text-punch">{t('Nope 🎾', 'Не те 🎾')}</p>}
+          <button className="btn-dark mt-4 w-full" onClick={submit}>{t('Unlock', 'Розблокувати')}</button>
         </div>
       </div>
     )
@@ -52,12 +54,13 @@ export function Draft() {
   return (
     <div className="space-y-6">
       <section className="sticker-lg bg-paper-100 p-6 sm:p-8">
-        <Chip tone="bg-tang text-paper-100">ЧЕРНЕТКА · ПЕРЕВІРКА ІМПОРТУ</Chip>
-        <h1 className="mt-3 text-3xl font-extrabold sm:text-4xl">Імпортовані турніри</h1>
+        <Chip tone="bg-tang text-paper-100">{t('DRAFT · IMPORT REVIEW', 'ЧЕРНЕТКА · ПЕРЕВІРКА ІМПОРТУ')}</Chip>
+        <h1 className="mt-3 text-3xl font-extrabold sm:text-4xl">{t('Imported tournaments', 'Імпортовані турніри')}</h1>
         <p className="mt-1 max-w-lg text-ink-soft">
-          {draftTournaments.length} турнірів розібрано з brackets, americano-padel, padelpuffin та
-          padelution. Перевірте дані й об’єднайте варіанти імен — нічого тут не торкається живого
-          застосунку, доки ви не експортуєте й не опублікуєте.
+          {t(
+            `${draftTournaments.length} events parsed from brackets, americano-padel, padelpuffin & padelution. Review the data and merge name variants — nothing here touches the live app until you export & promote.`,
+            `${draftTournaments.length} турнірів розібрано з brackets, americano-padel, padelpuffin та padelution. Перевірте дані й об’єднайте варіанти імен — нічого тут не торкається живого застосунку, доки ви не експортуєте й не опублікуєте.`,
+          )}
         </p>
         <div className="mt-4 flex overflow-hidden rounded-xl border-2 border-ink shadow-hard-sm w-fit">
           {(['tournaments', 'names'] as const).map((t) => (
@@ -66,7 +69,7 @@ export function Draft() {
               onClick={() => setTab(t)}
               className={cx('px-4 py-1.5 text-sm font-bold capitalize', t !== 'tournaments' && 'border-l-2 border-ink', tab === t ? 'bg-ink text-paper-100' : 'bg-paper-100')}
             >
-              {t === 'tournaments' ? '🏆 Турніри' : '🔗 Імена'}
+              {t === 'tournaments' ? tr('🏆 Tournaments', '🏆 Турніри') : tr('🔗 Names', '🔗 Імена')}
             </button>
           ))}
         </div>
@@ -81,6 +84,7 @@ export function Draft() {
 // --- Cloud sync (Supabase) -------------------------------------------------
 
 function CloudBar() {
+  const { t } = useT()
   const aliases = useDraftStore((s) => s.aliases)
   const dates = useDraftStore((s) => s.dates)
   const loadStore = useDraftStore((s) => s.load)
@@ -116,17 +120,17 @@ function CloudBar() {
   if (!supabaseConfigured) {
     return (
       <div className="sticker bg-sun-soft px-4 py-2 text-sm text-ink-soft">
-        ☁️ Хмару не налаштовано — робота зберігається лише на цьому пристрої.
+        ☁️ {t('Cloud not configured — work auto-saves on this device only.', 'Хмару не налаштовано — робота зберігається лише на цьому пристрої.')}
       </div>
     )
   }
 
   const when = last ? new Date(last).toLocaleTimeString() : ''
   const label =
-    status === 'loading' ? 'Завантаження збереженого…'
-      : status === 'saving' ? 'Збереження…'
-      : status === 'error' ? '⚠️ Проблема зі з’єднанням — робота в безпеці локально й синхронізується за наступної зміни'
-      : `Усі зміни збережено автоматично${when ? ` · ${when}` : ''}`
+    status === 'loading' ? t('Loading your saved work…', 'Завантаження збереженого…')
+      : status === 'saving' ? t('Saving…', 'Збереження…')
+      : status === 'error' ? t('⚠️ Connection issue — your work is safe locally and will sync on the next change', '⚠️ Проблема зі з’єднанням — робота в безпеці локально й синхронізується за наступної зміни')
+      : t(`All changes saved automatically${when ? ` · ${when}` : ''}`, `Усі зміни збережено автоматично${when ? ` · ${when}` : ''}`)
   return (
     <div className={cx('sticker px-4 py-2 text-sm font-bold', status === 'error' ? 'bg-punch-soft' : 'bg-mint-soft')}>
       ☁️ {label}
@@ -137,6 +141,7 @@ function CloudBar() {
 // --- Tournaments review ----------------------------------------------------
 
 function TournamentsTab() {
+  const { t } = useT()
   const aliases = useDraftStore((s) => s.aliases)
   const dates = useDraftStore((s) => s.dates)
   const setDate = useDraftStore((s) => s.setDate)
@@ -152,10 +157,10 @@ function TournamentsTab() {
   return (
     <div className="space-y-3">
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        <Stat label="Турніри" value={draftTournaments.length} tone="bg-sky-soft" />
-        <Stat label="Без дати" value={undated} tone={undated ? 'bg-punch-soft' : 'bg-mint-soft'} />
-        <Stat label="Матчі" value={draftTournaments.reduce((n, t) => n + t.matches.length, 0)} tone="bg-sun-soft" />
-        <Stat label="Об’єднань у чернетці" value={Object.keys(aliases).length} tone="bg-grape-soft" />
+        <Stat label={t('Tournaments', 'Турніри')} value={draftTournaments.length} tone="bg-sky-soft" />
+        <Stat label={t('Need a date', 'Без дати')} value={undated} tone={undated ? 'bg-punch-soft' : 'bg-mint-soft'} />
+        <Stat label={t('Matches', 'Матчі')} value={draftTournaments.reduce((n, t) => n + t.matches.length, 0)} tone="bg-sun-soft" />
+        <Stat label={t('Draft merges', 'Об’єднань у чернетці')} value={Object.keys(aliases).length} tone="bg-grape-soft" />
       </div>
 
       {ordered.map((t) => {
@@ -182,10 +187,10 @@ function TournamentsTab() {
                 className={cx('rounded-lg border-2 px-2 py-1 font-mono text-sm', date ? 'border-ink bg-paper-100' : 'border-punch bg-punch-soft')}
               />
               <a href={t._source.url} target="_blank" rel="noreferrer" className="chip bg-paper-100 hover:bg-paper-300">
-                джерело ↗
+                {tr('source ↗', 'джерело ↗')}
               </a>
               <button className={cx('btn px-3 py-1 text-xs', isOpen && 'btn-dark')} onClick={() => setOpen(isOpen ? null : t.id)}>
-                {isOpen ? 'Сховати' : 'Перевірити'}
+                {isOpen ? tr('Hide', 'Сховати') : tr('Review', 'Перевірити')}
               </button>
             </div>
 
@@ -220,6 +225,7 @@ function TournamentDetail({
   aliases: Record<string, string>
   onPlayer: (name: string) => void
 }) {
+  const { t } = useT()
   const standings = useMemo(() => computeStandings(entry, aliases), [entry, aliases])
   const rounds = Math.max(...entry.matches.map((m) => m.round))
   const P = ({ raw }: { raw: string }) => {
@@ -233,15 +239,15 @@ function TournamentDetail({
   return (
     <div className="grid gap-4 border-t-2 border-ink/10 p-3 lg:grid-cols-2">
       <div>
-        <div className="mb-1.5 text-xs font-bold uppercase tracking-wider text-ink-soft">Наша таблиця</div>
+        <div className="mb-1.5 text-xs font-bold uppercase tracking-wider text-ink-soft">{t('Our standings', 'Наша таблиця')}</div>
         <StandingsTable standings={standings} onPlayer={onPlayer} />
       </div>
       <div>
-        <div className="mb-1.5 text-xs font-bold uppercase tracking-wider text-ink-soft">Журнал матчів</div>
+        <div className="mb-1.5 text-xs font-bold uppercase tracking-wider text-ink-soft">{t('Match log', 'Журнал матчів')}</div>
         <div className="sticker max-h-[28rem] space-y-2 overflow-y-auto p-2">
           {Array.from({ length: rounds }, (_, r) => r + 1).map((rd) => (
             <div key={rd}>
-              <div className="text-[11px] font-bold uppercase text-ink-faint">Раунд {rd}</div>
+              <div className="text-[11px] font-bold uppercase text-ink-faint">{t('Round', 'Раунд')} {rd}</div>
               {entry.matches.filter((m) => m.round === rd).map((m, i) => (
                 <div key={i} className="flex items-center justify-between gap-2 py-0.5 text-sm">
                   <span className="flex-1 truncate text-right">
@@ -273,6 +279,7 @@ function DraftPlayerModal({
   aliases: Record<string, string>
   onClose: () => void
 }) {
+  const { t } = useT()
   const rows = useMemo(() => {
     const out: { t: DraftEntry; rank: number; total: number; record: string; pts: number }[] = []
     for (const t of [...draftTournaments].sort((a, b) => (b.date || '0').localeCompare(a.date || '0'))) {
@@ -303,7 +310,7 @@ function DraftPlayerModal({
               <h3 className="text-2xl font-extrabold leading-none">{player}</h3>
               {cyr.length > 0 && <div className="mt-0.5 text-sm text-ink-soft">{cyr.join(' / ')}</div>}
               <div className="mt-1 text-[11px] font-bold uppercase tracking-wider text-ink-soft">
-                Профіль чернетки · {rows.length} турнір{rows.length === 1 ? '' : 'и'}
+                {t(`Draft profile · ${rows.length} event${rows.length === 1 ? '' : 's'}`, `Профіль чернетки · ${rows.length} турнір${rows.length === 1 ? '' : 'и'}`)}
               </div>
             </div>
           </div>
@@ -312,18 +319,18 @@ function DraftPlayerModal({
 
         <div className="mt-4 space-y-2">
           {rows.length === 0 ? (
-            <div className="text-sm text-ink-soft">Немає виступів в імпортованих турнірах.</div>
+            <div className="text-sm text-ink-soft">{t('No appearances in the imported tournaments.', 'Немає виступів в імпортованих турнірах.')}</div>
           ) : (
             rows.map(({ t, rank, total, record, pts }) => (
               <div key={t.id} className="sticker flex items-center justify-between gap-3 p-2.5">
                 <div className="min-w-0">
                   <div className="truncate font-bold">🎉 {t.nickname || t.name}</div>
-                  <div className="text-xs text-ink-soft">{t._source.service} · {t.date || 'без дати'}</div>
+                  <div className="text-xs text-ink-soft">{t._source.service} · {t.date || tr('no date', 'без дати')}</div>
                 </div>
                 <div className="flex shrink-0 items-center gap-3">
                   <div className="text-right">
                     <div className="font-mono text-xs tabular text-ink-soft">{record}</div>
-                    <div className="font-mono text-sm font-bold tabular">{pts} балів</div>
+                    <div className="font-mono text-sm font-bold tabular">{pts} {tr('pts', 'балів')}</div>
                   </div>
                   <div className="grid h-10 w-12 place-items-center rounded-xl border-2 border-ink bg-paper-200 font-mono text-sm font-bold tabular">
                     {rank}/{total}
@@ -334,7 +341,7 @@ function DraftPlayerModal({
           )}
         </div>
         <p className="mt-3 text-xs text-ink-faint">
-          Лише чернетка — турніри, що імпортуються, а не живий застосунок.
+          {t('Draft-only — the tournaments being imported, not the live app.', 'Лише чернетка — турніри, що імпортуються, а не живий застосунок.')}
         </p>
       </div>
     </div>
@@ -346,6 +353,7 @@ function DraftPlayerModal({
 const allTournaments = [...seedTournaments, ...draftTournaments]
 
 function NamesTab() {
+  const { t } = useT()
   const aliases = useDraftStore((s) => s.aliases)
   const setAlias = useDraftStore((s) => s.setAlias)
   const removeAlias = useDraftStore((s) => s.removeAlias)
@@ -398,13 +406,13 @@ function NamesTab() {
       {/* Stats */}
       <div className="sticker flex flex-wrap items-center gap-3 p-3">
         <div className="flex gap-4 px-1">
-          <span className="text-sm"><b className="font-mono text-lg">{rawNames.length}</b> імен</span>
-          <span className="text-sm"><b className="font-mono text-lg text-mint">{canonicalCount}</b> гравців</span>
-          <span className="text-sm"><b className="font-mono text-lg">{aliasEntries.length}</b> об’єднань</span>
+          <span className="text-sm"><b className="font-mono text-lg">{rawNames.length}</b> {t('names', 'імен')}</span>
+          <span className="text-sm"><b className="font-mono text-lg text-mint">{canonicalCount}</b> {t('players', 'гравців')}</span>
+          <span className="text-sm"><b className="font-mono text-lg">{aliasEntries.length}</b> {t('merges', 'об’єднань')}</span>
         </div>
         {aliasEntries.length > 0 && (
-          <button className="btn ml-auto" onClick={() => confirm('Скинути всі ваші об’єднання?') && clearAliases()}>
-            Скинути об’єднання
+          <button className="btn ml-auto" onClick={() => confirm(t('Clear all your merges?', 'Скинути всі ваші об’єднання?')) && clearAliases()}>
+            {t('Reset merges', 'Скинути об’єднання')}
           </button>
         )}
       </div>
@@ -413,11 +421,11 @@ function NamesTab() {
 
       {/* Main: full name list with Cyrillic + tournaments */}
       <section>
-        <SectionTitle emoji="📇" title="Гравці" hint="Натисни ім’я, щоб побачити турніри та об’єднати" />
+        <SectionTitle emoji="📇" title={t('Players', 'Гравці')} hint={t('Tap a name to see their tournaments & merge', 'Натисни ім’я, щоб побачити турніри та об’єднати')} />
         <input
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          placeholder="пошук (латиниця або кирилиця)…"
+          placeholder={t('search (Latin or Cyrillic)…', 'пошук (латиниця або кирилиця)…')}
           className="mb-3 w-full rounded-xl border-2 border-ink bg-paper-100 px-3 py-2 font-bold shadow-hard-sm outline-none sm:max-w-xs"
         />
         <div className="sticker divide-y divide-ink/10">
@@ -437,14 +445,14 @@ function NamesTab() {
                   </button>
                   <span className="font-mono text-xs text-ink-faint">{counts.get(n)}g</span>
                   {merged ? (
-                    <button className="btn px-2 py-0.5 text-xs" onClick={() => removeAlias(n)}>↩ роз’єднати</button>
+                    <button className="btn px-2 py-0.5 text-xs" onClick={() => removeAlias(n)}>{t('↩ unmerge', '↩ роз’єднати')}</button>
                   ) : (
                     <MergeInput name={n} onMerge={(to) => link(n, to)} />
                   )}
                 </div>
                 {isOpen && (
                   <div className="bg-paper-300/30 px-3 py-2 text-xs text-ink-soft">
-                    <span className="font-bold">Грав у:</span> {toursFor(n).join(' · ') || '—'}
+                    <span className="font-bold">{t('Played in:', 'Грав у:')}</span> {toursFor(n).join(' · ') || '—'}
                   </div>
                 )}
               </div>
@@ -456,7 +464,7 @@ function NamesTab() {
       {/* Your merges */}
       {aliasEntries.length > 0 && (
         <section>
-          <SectionTitle emoji="🧷" title="Ваші об’єднання" />
+          <SectionTitle emoji="🧷" title={t('Your merges', 'Ваші об’єднання')} />
           <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
             {aliasEntries.map(([f, t]) => (
               <div key={f} className="sticker flex items-center justify-between gap-2 p-2 text-sm">
@@ -471,7 +479,7 @@ function NamesTab() {
       {/* Suggestions — de-emphasized, opt-in */}
       <details className="sticker p-3">
         <summary className="cursor-pointer text-sm font-bold">
-          💡 Запропоновані об’єднання ({suggestions.length}) — приблизні підказки, перевірте перед застосуванням
+          💡 {t(`Suggested merges (${suggestions.length}) — rough hints, double-check before applying`, `Запропоновані об’єднання (${suggestions.length}) — приблизні підказки, перевірте перед застосуванням`)}
         </summary>
         <div className="mt-3 grid gap-2 sm:grid-cols-2">
           {suggestions.map((s) => {
@@ -493,6 +501,7 @@ function NamesTab() {
 }
 
 function MergeInput({ name, onMerge }: { name: string; onMerge: (to: string) => void }) {
+  const { t } = useT()
   const [v, setV] = useState('')
   const apply = () => {
     if (v.trim() && v.trim() !== name) { onMerge(v.trim()); setV('') }
@@ -504,7 +513,7 @@ function MergeInput({ name, onMerge }: { name: string; onMerge: (to: string) => 
         value={v}
         onChange={(e) => setV(e.target.value)}
         onKeyDown={(e) => e.key === 'Enter' && apply()}
-        placeholder="об’єднати з…"
+        placeholder={t('merge into…', 'об’єднати з…')}
         className="w-28 rounded-lg border-2 border-ink bg-paper-100 px-2 py-0.5 text-xs outline-none"
       />
       <button
@@ -512,7 +521,7 @@ function MergeInput({ name, onMerge }: { name: string; onMerge: (to: string) => 
         disabled={!v.trim() || v.trim() === name}
         className="btn px-2 py-0.5 text-xs disabled:cursor-not-allowed disabled:opacity-40"
       >
-        Об’єднати
+        {t('Merge', 'Об’єднати')}
       </button>
     </span>
   )

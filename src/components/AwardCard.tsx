@@ -4,6 +4,7 @@ import type { TournamentAwards } from '../stats'
 import { Avatar } from './ui/Avatar'
 import { accentByKey } from '../lib/colors'
 import { pct, round1, signed } from '../lib/format'
+import { useT } from '../lib/i18n'
 import { cx } from '../lib/cx'
 
 export function AwardCard({
@@ -21,6 +22,7 @@ export function AwardCard({
   children: ReactNode
   tilt?: number
 }) {
+  const { t } = useT()
   const a = accentByKey(accent)
   return (
     <div
@@ -37,7 +39,7 @@ export function AwardCard({
           {emoji}
         </span>
         <div>
-          <div className="text-[11px] font-bold uppercase tracking-wider text-ink-soft">Нагорода</div>
+          <div className="text-[11px] font-bold uppercase tracking-wider text-ink-soft">{t('Award', 'Нагорода')}</div>
           <h3 className="text-lg font-extrabold leading-none">{title}</h3>
         </div>
       </div>
@@ -81,6 +83,7 @@ function SoloRow({ name, note }: { name: string; note?: string }) {
 
 /** Renders the headline funny awards for one tournament as a sticker grid. */
 export function AwardGrid({ awards }: { awards: TournamentAwards }) {
+  const { t } = useT()
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {awards.demolition && (
@@ -89,7 +92,7 @@ export function AwardGrid({ awards }: { awards: TournamentAwards }) {
           title="The Demolition"
           accent="punch"
           tilt={-1}
-          blurb={`Найбільший розгром — Раунд ${awards.demolition.round}`}
+          blurb={t(`Biggest blowout — Round ${awards.demolition.round}`, `Найбільший розгром — Раунд ${awards.demolition.round}`)}
         >
           <DuoRow a={awards.demolition.winners[0]} b={awards.demolition.winners[1]} />
           <div className="mt-2 font-mono text-2xl font-bold tabular">
@@ -105,7 +108,7 @@ export function AwardGrid({ awards }: { awards: TournamentAwards }) {
           title="Duo of the Night"
           accent="mint"
           tilt={1}
-          blurb={`${round1(awards.bestDuo.pointsPerGame)} pts/гра разом`}
+          blurb={t(`${round1(awards.bestDuo.pointsPerGame)} pts/game together`, `${round1(awards.bestDuo.pointsPerGame)} pts/гра разом`)}
         >
           <DuoRow a={awards.bestDuo.players[0]} b={awards.bestDuo.players[1]} />
           <div className="mt-2 font-mono text-sm font-bold tabular text-ink-soft">
@@ -115,25 +118,25 @@ export function AwardGrid({ awards }: { awards: TournamentAwards }) {
       )}
 
       {awards.cardio && (
-        <AwardCard emoji="🏃" title="Cardio King/Queen" accent="tang" blurb="Найбільше набраних балів">
+        <AwardCard emoji="🏃" title="Cardio King/Queen" accent="tang" blurb={t('Most points scored', 'Найбільше набраних балів')}>
           <SoloRow name={awards.cardio.player} note={`${awards.cardio.pf} PF`} />
         </AwardCard>
       )}
 
       {awards.wall && (
-        <AwardCard emoji="🧱" title="The Wall" accent="sky" blurb="Найменше пропущено / гру">
+        <AwardCard emoji="🧱" title="The Wall" accent="sky" blurb={t('Fewest points conceded / game', 'Найменше пропущено / гру')}>
           <SoloRow name={awards.wall.player} note={`${round1(awards.wall.paPerGame)} PA/g`} />
         </AwardCard>
       )}
 
       {awards.diplomat && (
-        <AwardCard emoji="🕊️" title="The Diplomat" accent="grape" blurb="Найбільше нічиїх">
+        <AwardCard emoji="🕊️" title="The Diplomat" accent="grape" blurb={t('Most tied matches', 'Найбільше нічиїх')}>
           <SoloRow name={awards.diplomat.player} note={`${awards.diplomat.ties} ties`} />
         </AwardCard>
       )}
 
       {awards.heartbreaker && (
-        <AwardCard emoji="😬" title="Heartbreaker" accent="sun" blurb="Найбільше поразок ≤ 2 балів">
+        <AwardCard emoji="😬" title="Heartbreaker" accent="sun" blurb={t('Most losses by ≤ 2 points', 'Найбільше поразок ≤ 2 балів')}>
           <SoloRow name={awards.heartbreaker.player} note={`${awards.heartbreaker.closeLosses}×`} />
         </AwardCard>
       )}
@@ -143,11 +146,11 @@ export function AwardGrid({ awards }: { awards: TournamentAwards }) {
           emoji="🪓"
           title="Giant Slayer"
           accent="lime"
-          blurb={`Переміг топ-${awards.giantSlayer.loserRank} фінішера (розрив ${awards.giantSlayer.gap})`}
+          blurb={t(`Beat a top-${awards.giantSlayer.loserRank} finisher (gap ${awards.giantSlayer.gap})`, `Переміг топ-${awards.giantSlayer.loserRank} фінішера (розрив ${awards.giantSlayer.gap})`)}
         >
           <DuoRow a={awards.giantSlayer.winners[0]} b={awards.giantSlayer.winners[1]} />
           <div className="mt-1 text-xs text-ink-soft">
-            повалив #{awards.giantSlayer.loserRank} {awards.giantSlayer.losers.join(' & ')}
+            {t('toppled', 'повалив')} #{awards.giantSlayer.loserRank} {awards.giantSlayer.losers.join(' & ')}
           </div>
         </AwardCard>
       )}
@@ -157,18 +160,18 @@ export function AwardGrid({ awards }: { awards: TournamentAwards }) {
           emoji="🎒"
           title="Most Carried"
           accent="tang"
-          blurb="Найбільший розрив між найкращим і найгіршим партнером"
+          blurb={t('Widest swing between best & worst partner', 'Найбільший розрив між найкращим і найгіршим партнером')}
         >
           <SoloRow name={awards.mostCarried.player} note={signed(Math.round(awards.mostCarried.spread * 100))} />
           <div className="mt-1 text-xs text-ink-soft">
-            злітав із {awards.mostCarried.bestPartner} ({pct(awards.mostCarried.bestRate)}), тонув із{' '}
+            {t('soared with', 'злітав із')} {awards.mostCarried.bestPartner} ({pct(awards.mostCarried.bestRate)}), {t('sank with', 'тонув із')}{' '}
             {awards.mostCarried.worstPartner} ({pct(awards.mostCarried.worstRate)})
           </div>
         </AwardCard>
       )}
 
       {awards.woodenSpoon && (
-        <AwardCard emoji="🥄" title="Wooden Spoon" accent="sun" blurb="Останнє місце — повернеться сильнішим 💪">
+        <AwardCard emoji="🥄" title="Wooden Spoon" accent="sun" blurb={t('Last place — back next week, stronger 💪', 'Останнє місце — повернеться сильнішим 💪')}>
           <SoloRow name={awards.woodenSpoon.player} note={`${awards.woodenSpoon.points} pts`} />
         </AwardCard>
       )}
@@ -178,7 +181,7 @@ export function AwardGrid({ awards }: { awards: TournamentAwards }) {
           emoji="✨"
           title="Perfect Pairs"
           accent="mint"
-          blurb="Непереможні разом (2+ ігор)"
+          blurb={t('Undefeated together (2+ games)', 'Непереможні разом (2+ ігор)')}
         >
           <div className="flex flex-col gap-1.5">
             {awards.perfectPairs.slice(0, 4).map((p) => (

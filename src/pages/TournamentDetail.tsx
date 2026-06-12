@@ -9,9 +9,11 @@ import { PodiumBlock } from '../components/PodiumBlock'
 import { SectionTitle, Chip, Empty } from '../components/ui/Bits'
 import { Avatar } from '../components/ui/Avatar'
 import { eventTitle, nicknameOf } from '../lib/tournament'
+import { useT } from '../lib/i18n'
 import { cx } from '../lib/cx'
 
 export function TournamentDetail() {
+  const { t } = useT()
   const { id } = useParams()
   const tournaments = useAppStore((s) => s.tournaments)
   const aliases = useAppStore((s) => s.aliases)
@@ -25,7 +27,7 @@ export function TournamentDetail() {
   if (!tournament || !insights) {
     return (
       <Empty emoji="🤷">
-        Турнір не знайдено. <Link to="/" className="font-bold underline">На головну</Link>.
+        {t('Tournament not found.', 'Турнір не знайдено.')} <Link to="/" className="font-bold underline">{t('Back to dashboard', 'На головну')}</Link>.
       </Empty>
     )
   }
@@ -40,22 +42,22 @@ export function TournamentDetail() {
       <section className="sticker-lg bg-paper-100 p-6 sm:p-8">
         <div className="flex flex-wrap items-center gap-2">
           <Link to="/" className="chip bg-paper-100 hover:bg-paper-300">
-            ← Головна
+            {t('← Home', '← Головна')}
           </Link>
           <Chip tone="bg-sun-soft">🎉 {nicknameOf(tournament)}</Chip>
           <Chip tone="bg-mint-soft">{tournament.format}</Chip>
-          <Chip tone="bg-sky-soft">до {tournament.pointsPerMatch} pts</Chip>
+          <Chip tone="bg-sky-soft">{t(`to ${tournament.pointsPerMatch} pts`, `до ${tournament.pointsPerMatch} pts`)}</Chip>
         </div>
         <h1 className="mt-3 text-4xl font-extrabold sm:text-5xl">{eventTitle(tournament)}</h1>
         {champion && (
           <p className="mt-2 flex items-center gap-2 text-ink-soft">
-            Чемпіон: <Avatar name={champion.player} size="sm" />
-            <span className="font-bold text-ink">{champion.player}</span> 👑 з {champion.points} балів
+            {t('Champion:', 'Чемпіон:')} <Avatar name={champion.player} size="sm" />
+            <span className="font-bold text-ink">{champion.player}</span> 👑 {t(`with ${champion.points} pts`, `з ${champion.points} балів`)}
           </p>
         )}
         <div className="mt-5">
           <Link to={`/t/${tournament.id}/wrapped`} className="btn-dark">
-            ✨ Відкрити Wrapped
+            {t('✨ Open Wrapped recap', '✨ Відкрити Wrapped')}
           </Link>
         </div>
       </section>
@@ -67,24 +69,24 @@ export function TournamentDetail() {
 
       {/* Standings */}
       <section>
-        <SectionTitle emoji="🏆" title="Фінальна таблиця" hint="Бали = сума рахунків твоєї команди" />
+        <SectionTitle emoji="🏆" title={t('Final Standings', 'Фінальна таблиця')} hint={t("Points = sum of your team's scores", 'Бали = сума рахунків твоєї команди')} />
         <StandingsTable standings={standings} />
       </section>
 
       {/* Awards */}
       <section>
-        <SectionTitle emoji="🎁" title="Нагороди" hint="Згенеровано автоматично, з любов’ю з даних" />
+        <SectionTitle emoji="🎁" title={t('The Awards', 'Нагороди')} hint={t('Auto-generated, lovingly data-driven', 'Згенеровано автоматично, з любов’ю з даних')} />
         <AwardGrid awards={awards} />
       </section>
 
       {/* Match log */}
       <section>
-        <SectionTitle emoji="🎾" title="Журнал матчів" hint={`${tournament.matches.length} матчів`} />
+        <SectionTitle emoji="🎾" title={t('Match Log', 'Журнал матчів')} hint={t(`${tournament.matches.length} matches`, `${tournament.matches.length} матчів`)} />
         <div className="space-y-4">
           {Array.from({ length: rounds }, (_, r) => r + 1).map((round) => (
             <div key={round}>
               <div className="mb-1.5 text-xs font-bold uppercase tracking-wider text-ink-soft">
-                Раунд {round}
+                {t('Round', 'Раунд')} {round}
               </div>
               <div className="grid gap-2 sm:grid-cols-2">
                 {tournament.matches

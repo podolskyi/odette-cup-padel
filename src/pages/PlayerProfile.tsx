@@ -10,6 +10,7 @@ import { RatingChart, toSeries } from '../components/RatingChart'
 import { nicknameOf } from '../lib/tournament'
 import { accentForName, accentByKey } from '../lib/colors'
 import { formatDate, ordinal, pct, round1, signed } from '../lib/format'
+import { useT } from '../lib/i18n'
 import { cx } from '../lib/cx'
 
 const AWARD_META: Record<string, { emoji: string; title: string; accent: string }> = {
@@ -26,6 +27,7 @@ const AWARD_META: Record<string, { emoji: string; title: string; accent: string 
 }
 
 export function PlayerProfile() {
+  const { t } = useT()
   const { name = '' } = useParams()
   const tournaments = useAppStore((s) => s.tournaments)
   const aliases = useAppStore((s) => s.aliases)
@@ -41,7 +43,8 @@ export function PlayerProfile() {
   if (!data.season) {
     return (
       <Empty emoji="🤷">
-        Немає записів про «{player}». <Link to="/" className="font-bold underline">На головну</Link>.
+        {t(`No record for “${player}”.`, `Немає записів про «${player}».`)}{' '}
+        <Link to="/" className="font-bold underline">{t('Back to dashboard', 'На головну')}</Link>.
       </Empty>
     )
   }
@@ -55,7 +58,7 @@ export function PlayerProfile() {
       {/* Header */}
       <section className={cx('sticker-lg p-6 sm:p-8', a.soft)}>
         <Link to="/" className="chip bg-paper-100 hover:bg-paper-300">
-          ← Головна
+          {t('← Home', '← Головна')}
         </Link>
         <div className="mt-4 flex flex-wrap items-center gap-4">
           <Avatar name={player} size="xl" className="shadow-hard" />
@@ -63,12 +66,12 @@ export function PlayerProfile() {
             <h1 className="text-4xl font-extrabold sm:text-5xl">{player}</h1>
             <div className="mt-2 flex flex-wrap gap-2">
               {rating && <Chip tone="bg-ink text-paper-100">⚡ {Math.round(rating.rating)} Elo</Chip>}
-              <Chip tone="bg-paper-100">🏅 Найкраще: {ordinal(season.bestFinish)}</Chip>
+              <Chip tone="bg-paper-100">🏅 {t('Best:', 'Найкраще:')} {ordinal(season.bestFinish)}</Chip>
               <Chip tone="bg-paper-100">
-                {season.tournaments} {season.tournaments === 1 ? 'турнір' : 'турнірів'}
+                {season.tournaments} {t(season.tournaments === 1 ? 'event' : 'events', season.tournaments === 1 ? 'турнір' : 'турнірів')}
               </Chip>
-              {season.tournamentWins > 0 && <Chip tone="bg-gold">👑 {season.tournamentWins}× чемпіон</Chip>}
-              {awards.length > 0 && <Chip tone="bg-punch-soft">🏅 {awards.length} нагород</Chip>}
+              {season.tournamentWins > 0 && <Chip tone="bg-gold">👑 {season.tournamentWins}× {t('champ', 'чемпіон')}</Chip>}
+              {awards.length > 0 && <Chip tone="bg-punch-soft">🏅 {awards.length} {t('awards', 'нагород')}</Chip>}
             </div>
           </div>
         </div>
@@ -80,21 +83,21 @@ export function PlayerProfile() {
         <Stat
           label="Perf %"
           value={`${round1(season.performance)}%`}
-          sub={season.tournaments < 2 ? 'попередньо' : 'з поправкою на склад'}
+          sub={season.tournaments < 2 ? t('provisional', 'попередньо') : t('field-adjusted', 'з поправкою на склад')}
           tone="bg-lime-soft"
         />
-        <Stat label="Усього Pts" value={season.totalPoints} tone="bg-sun-soft" />
-        <Stat label="Вінрейт" value={pct(season.winRate)} sub={`${season.wins}-${season.losses}-${season.ties}`} tone="bg-mint-soft" />
+        <Stat label={t('Total Pts', 'Усього Pts')} value={season.totalPoints} tone="bg-sun-soft" />
+        <Stat label={t('Win Rate', 'Вінрейт')} value={pct(season.winRate)} sub={`${season.wins}-${season.losses}-${season.ties}`} tone="bg-mint-soft" />
         <Stat label="Diff" value={signed(season.diff)} tone="bg-sky-soft" />
-        <Stat label="Сер. фініш" value={round1(season.avgFinish)} tone="bg-tang-soft" />
-        <Stat label="Подіуми" value={season.podiums} tone="bg-punch-soft" />
+        <Stat label={t('Avg Finish', 'Сер. фініш')} value={round1(season.avgFinish)} tone="bg-tang-soft" />
+        <Stat label={t('Podiums', 'Подіуми')} value={season.podiums} tone="bg-punch-soft" />
       </section>
 
       {/* Awards */}
       <section>
-        <SectionTitle emoji="🏅" title="Нагороди" hint="Відзнаки, зароблені на всіх турнірах" />
+        <SectionTitle emoji="🏅" title={t('Awards', 'Нагороди')} hint={t('Honours earned across every event', 'Відзнаки, зароблені на всіх турнірах')} />
         {awards.length === 0 ? (
-          <Empty emoji="🎖️">Поки що немає нагород — наступна вже близько 🎾</Empty>
+          <Empty emoji="🎖️">{t("No awards yet — the next one's coming 🎾", 'Поки що немає нагород — наступна вже близько 🎾')}</Empty>
         ) : (
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {awards.map((aw, i) => {
@@ -120,7 +123,7 @@ export function PlayerProfile() {
                       {(aw.detail || aw.partner) && (
                         <div className="truncate text-sm text-ink-soft">
                           {aw.detail}
-                          {aw.partner && ` · з ${aw.partner}`}
+                          {aw.partner && t(` · with ${aw.partner}`, ` · з ${aw.partner}`)}
                         </div>
                       )}
                     </div>
@@ -138,44 +141,44 @@ export function PlayerProfile() {
       {/* Rating over time */}
       {rating && rating.history.length > 1 && (
         <section>
-          <SectionTitle emoji="📈" title="Рейтинг у часі" hint="Elo гра за грою" />
+          <SectionTitle emoji="📈" title={t('Rating Over Time', 'Рейтинг у часі')} hint={t('Game-by-game Elo', 'Elo гра за грою')} />
           <RatingChart series={toSeries([rating])} />
         </section>
       )}
 
       {/* Partners & nemesis */}
       <section>
-        <SectionTitle emoji="🤝" title="Партнери та суперники" />
+        <SectionTitle emoji="🤝" title={t('Partners & Rivals', 'Партнери та суперники')} />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {(() => {
             // Only show distinct, meaningful cards — avoids the same partner
             // appearing as best/toughest/most-played for low-sample players.
             const cards: { key: string; emoji: string; title: string; accent: string; p: Partnership }[] = []
-            if (bestPartner) cards.push({ key: 'best', emoji: '💞', title: 'Найкращий партнер', accent: 'bg-mint-soft', p: bestPartner })
+            if (bestPartner) cards.push({ key: 'best', emoji: '💞', title: t('Best Partner', 'Найкращий партнер'), accent: 'bg-mint-soft', p: bestPartner })
             if (worstPartner && worstPartner.key !== bestPartner?.key)
-              cards.push({ key: 'worst', emoji: '🧊', title: 'Найважча пара', accent: 'bg-sky-soft', p: worstPartner })
+              cards.push({ key: 'worst', emoji: '🧊', title: t('Toughest Pairing', 'Найважча пара'), accent: 'bg-sky-soft', p: worstPartner })
             if (
               mostFrequentPartner &&
               mostFrequentPartner.key !== bestPartner?.key &&
               mostFrequentPartner.key !== worstPartner?.key
             )
-              cards.push({ key: 'freq', emoji: '🔁', title: 'Найчастіша пара', accent: 'bg-sun-soft', p: mostFrequentPartner })
+              cards.push({ key: 'freq', emoji: '🔁', title: t('Most Played', 'Найчастіша пара'), accent: 'bg-sun-soft', p: mostFrequentPartner })
             return cards.map((c) => (
               <RelCard key={c.key} emoji={c.emoji} title={c.title} accent={c.accent} partnership={c.p} self={player} />
             ))
           })()}
           <div className="sticker bg-punch-soft p-4">
             <div className="mb-2 text-2xl">😈</div>
-            <div className="text-[11px] font-bold uppercase tracking-wider text-ink-soft">Немезида</div>
+            <div className="text-[11px] font-bold uppercase tracking-wider text-ink-soft">{t('Nemesis', 'Немезида')}</div>
             {nemesis ? (
               <>
                 <PlayerTag name={nemesis.opponent} size="sm" className="mt-1" />
                 <div className="mt-1 font-mono text-sm tabular text-ink-soft">
-                  {nemesis.winsOverX}-{nemesis.lossesToX} проти тебе ({nemesis.meetings} зустр.)
+                  {nemesis.winsOverX}-{nemesis.lossesToX} {t(`vs you (${nemesis.meetings} mtgs)`, `проти тебе (${nemesis.meetings} зустр.)`)}
                 </div>
               </>
             ) : (
-              <div className="mt-1 text-sm text-ink-soft">Поки що немає явної немезиди 😇</div>
+              <div className="mt-1 text-sm text-ink-soft">{t('No clear nemesis yet 😇', 'Поки що немає явної немезиди 😇')}</div>
             )}
           </div>
         </div>
@@ -183,7 +186,7 @@ export function PlayerProfile() {
 
       {/* Finishes */}
       <section>
-        <SectionTitle emoji="🗓️" title="Історія турнірів" />
+        <SectionTitle emoji="🗓️" title={t('Tournament History', 'Історія турнірів')} />
         <div className="space-y-2">
           {finishes
             .slice()
@@ -203,7 +206,7 @@ export function PlayerProfile() {
                 <div className="flex items-center gap-4">
                   <div className="text-right">
                     <div className="font-mono text-sm tabular text-ink-soft">{f.record}</div>
-                    <div className="font-mono text-sm font-bold tabular">{f.points} балів</div>
+                    <div className="font-mono text-sm font-bold tabular">{f.points} {t('pts', 'балів')}</div>
                   </div>
                   <div
                     className={cx(
@@ -235,6 +238,7 @@ function RelCard({
   partnership?: Partnership
   self: string
 }) {
+  const { t } = useT()
   const partner = partnership
     ? partnership.players[0] === self
       ? partnership.players[1]
@@ -252,7 +256,7 @@ function RelCard({
           </div>
         </>
       ) : (
-        <div className="mt-1 text-sm text-ink-soft">Поки що замало ігор</div>
+        <div className="mt-1 text-sm text-ink-soft">{t('Not enough games yet', 'Поки що замало ігор')}</div>
       )}
     </div>
   )
