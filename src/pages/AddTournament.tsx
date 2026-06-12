@@ -86,6 +86,9 @@ export function AddTournament() {
     [preview, aliases, draftAliases],
   )
   const alreadyExists = draft ? tournaments.some((t) => t.id === draft.id) : false
+  // Same event already in the app under a different id (e.g. it shipped with the
+  // baked-in history) — saving would double-count every match in the stats.
+  const sameDateExists = draft ? tournaments.some((t) => t.id !== draft.id && t.date === date) : false
   const canon = allPlayers(tournaments, aliases)
 
   async function fetchTournament() {
@@ -200,6 +203,14 @@ export function AddTournament() {
             {alreadyExists && (
               <div className="mt-3 rounded-xl border-2 border-ink bg-sun-soft p-3 text-sm font-bold">
                 {t('This tournament is already in the app — saving will overwrite it.', 'Цей турнір уже є в застосунку — збереження перезапише його.')}
+              </div>
+            )}
+            {sameDateExists && (
+              <div className="mt-3 rounded-xl border-2 border-ink bg-punch-soft p-3 text-sm font-bold">
+                {t(
+                  '⚠️ A tournament with this date is already in the app. Saving would add a DUPLICATE and double-count every match in the stats.',
+                  '⚠️ Турнір із цією датою вже є в застосунку. Збереження додасть ДУБЛІКАТ і подвоїть кожен матч у статистиці.',
+                )}
               </div>
             )}
 
