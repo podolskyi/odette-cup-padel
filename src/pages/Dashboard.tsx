@@ -20,7 +20,7 @@ export function Dashboard() {
     [tournaments, aliases],
   )
 
-  const [board, setBoard] = useState<'total' | 'performance'>('total')
+  const [board, setBoard] = useState<'total' | 'performance' | 'champions'>('total')
 
   // Performance view: avg finishing percentile, fair regardless of events played.
   // Only players with 2+ events are ranked; newcomers show as "provisional".
@@ -36,6 +36,31 @@ export function Dashboard() {
       season
         .filter((r) => r.tournaments < 2)
         .sort((a, b) => b.performance - a.performance || b.totalPoints - a.totalPoints),
+    [season],
+  )
+
+  // Champions view: an Olympic-style medal table. Golds/silvers/bronzes come
+  // straight from each player's finishing ranks, so they stay in lock-step with
+  // tournamentWins (🥇) and podiums (🥇+🥈+🥉). Only players who've reached a
+  // podium appear; ranked golds → silvers → bronzes, then by performance.
+  const medalRanked = useMemo(
+    () =>
+      season
+        .map((r) => ({
+          row: r,
+          gold: r.finishes.filter((x) => x === 1).length,
+          silver: r.finishes.filter((x) => x === 2).length,
+          bronze: r.finishes.filter((x) => x === 3).length,
+        }))
+        .filter((m) => m.gold + m.silver + m.bronze > 0)
+        .sort(
+          (a, b) =>
+            b.gold - a.gold ||
+            b.silver - a.silver ||
+            b.bronze - a.bronze ||
+            b.row.performance - a.row.performance ||
+            a.row.player.localeCompare(b.row.player),
+        ),
     [season],
   )
 
@@ -91,7 +116,9 @@ export function Dashboard() {
           hint={
             board === 'total'
               ? t('All-time points across every tournament', 'Усі бали за весь час по всіх турнірах')
-              : t('Avg finishing percentile — fair no matter how many events you played', 'Середній перцентиль фінішу — чесно, скільки б турнірів ти не зіграв')
+              : board === 'performance'
+                ? t('Avg finishing percentile — fair no matter how many events you played', 'Середній перцентиль фінішу — чесно, скільки б турнірів ти не зіграв')
+                : t('Medal table — who actually wins tournaments', 'Медальна таблиця — хто справді виграє турніри')
           }
           action={
             <div className="flex overflow-hidden rounded-xl border-2 border-ink shadow-hard-sm">
@@ -110,13 +137,46 @@ export function Dashboard() {
               >
                 Performance
               </button>
+              <button
+                onClick={() => setBoard('champions')}
+                className={cx(
+                  'border-l-2 border-ink px-3 py-1.5 text-sm font-bold',
+                  board === 'champions' ? 'bg-ink text-paper-100' : 'bg-paper-100',
+                )}
+              >
+                Champions
+              </button>
             </div>
           }
         />
 
         {/* Legend: explains the selected board */}
-        <div className={cx('sticker mb-4 p-4', board === 'total' ? 'bg-sky-soft' : 'bg-lime-soft')}>
-          {board === 'total' ? (
+        <div className={cx('sticker mb-4 p-4', board === 'total' ? 'bg-sky-soft' : board === 'performance' ? 'bg-lime-soft' : 'bg-gold-soft')}>
+          {board === 'champions' ? (
+            lang === 'en' ? (
+              <p className="text-sm text-ink-soft">
+                <span className="font-bold text-ink">🏅 Champions — rewards winning when it counts.</span>{' '}
+                An Olympic-style medal table ranked golds → silvers → bronzes, so the players who
+                actually take tournaments rise to the top — no matter their points total. Only players
+                who've reached a podium appear.
+                <span className="mt-1.5 block text-xs">
+                  <b>🥇</b> 1st places · <b>🥈</b> 2nd · <b>🥉</b> 3rd · <b>Events</b> played · <b>👻</b> idle
+                  (missed last {RECENT_EVENTS} events)
+                </span>
+              </p>
+            ) : (
+              <p className="text-sm text-ink-soft">
+                <span className="font-bold text-ink">🏅 Champions — винагороджує перемоги, коли вони важливі.</span>{' '}
+                Медальна таблиця в олімпійському стилі: ранжування золото → срібло → бронза, тож нагору
+                піднімаються ті, хто справді виграє турніри — незалежно від суми балів. Показано лише
+                гравців, що бували на подіумі.
+                <span className="mt-1.5 block text-xs">
+                  <b>🥇</b> перші місця · <b>🥈</b> другі · <b>🥉</b> треті · <b>Events</b> зіграно ·{' '}
+                  <b>👻</b> неактивний (пропустив останні {RECENT_EVENTS} турнірів)
+                </span>
+              </p>
+            )
+          ) : board === 'total' ? (
             lang === 'en' ? (
               <p className="text-sm text-ink-soft">
                 <span className="font-bold text-ink">📊 Total — rewards showing up.</span> The sum of
@@ -228,7 +288,7 @@ export function Dashboard() {
               </tbody>
             </table>
           </div>
-        ) : (
+        ) : board === 'performance' ? (
           <div className="sticker overflow-x-auto">
             <table className="w-full min-w-[40rem] border-collapse text-left">
               <thead>
@@ -276,6 +336,51 @@ export function Dashboard() {
               </tbody>
             </table>
           </div>
+        ) : (
+          <div className="sticker overflow-x-auto">
+            <table className="w-full min-w-[40rem] border-collapse text-left">
+              <thead>
+                <tr className="border-b-2 border-ink bg-ink text-paper-100">
+                  <th className="w-10 py-2 pl-3 text-center text-[11px] font-bold uppercase">#</th>
+                  <th className="py-2 text-[11px] font-bold uppercase tracking-wider">{t('Player', 'Гравець')}</th>
+                  <th className="py-2 text-center text-[11px] font-bold uppercase">🥇</th>
+                  <th className="py-2 text-center text-[11px] font-bold uppercase">🥈</th>
+                  <th className="py-2 text-center text-[11px] font-bold uppercase">🥉</th>
+                  <th className="py-2 pr-3 text-center text-[11px] font-bold uppercase">Events</th>
+                </tr>
+              </thead>
+              <tbody>
+                {medalRanked.map((m, i) => (
+                  <tr
+                    key={m.row.player}
+                    className={cx(
+                      'border-b border-ink/10 last:border-0 hover:bg-paper-300/50',
+                      i === 0 && 'bg-gold-soft',
+                    )}
+                  >
+                    <td className="py-2 pl-3 text-center font-mono text-xs font-bold">{i + 1}</td>
+                    <td className="py-2">
+                      <Link
+                        to={`/p/${encodeURIComponent(m.row.player)}`}
+                        className="group inline-flex items-center gap-2.5"
+                      >
+                        <Avatar name={m.row.player} size="sm" />
+                        <span className="font-bold group-hover:underline">
+                          {m.row.player}
+                          {i === 0 && ' 👑'}
+                          {isIdle(m.row.player) && <GhostMark date={lastSeen.get(m.row.player)} />}
+                        </span>
+                      </Link>
+                    </td>
+                    <td className="py-2 text-center font-mono text-lg font-bold tabular">{m.gold || '·'}</td>
+                    <td className="py-2 text-center font-mono text-sm tabular text-ink-soft">{m.silver || '·'}</td>
+                    <td className="py-2 text-center font-mono text-sm tabular text-ink-soft">{m.bronze || '·'}</td>
+                    <td className="py-2 pr-3 text-center font-mono text-sm tabular text-ink-soft">{m.row.tournaments}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         )}
 
         {board === 'total' && leader && (
@@ -293,6 +398,15 @@ export function Dashboard() {
             {t(
               `tops performance at ${round1(perfRanked[0].performance)}% avg finish across ${perfRanked[0].tournaments} events — volume doesn't count here.`,
               `лідирує за перформансом — ${round1(perfRanked[0].performance)}% середній фініш за ${perfRanked[0].tournaments} турнірів — обсяг тут не рахується.`,
+            )}
+          </p>
+        )}
+        {board === 'champions' && medalRanked[0] && (
+          <p className="mt-2 text-sm text-ink-soft">
+            🏅 <span className="font-bold">{medalRanked[0].row.player}</span>{' '}
+            {t(
+              `tops the medal table — ${medalRanked[0].gold}× 🥇, ${medalRanked[0].silver}× 🥈, ${medalRanked[0].bronze}× 🥉.`,
+              `очолює медальну таблицю — ${medalRanked[0].gold}× 🥇, ${medalRanked[0].silver}× 🥈, ${medalRanked[0].bronze}× 🥉.`,
             )}
           </p>
         )}
