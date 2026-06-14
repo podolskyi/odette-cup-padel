@@ -121,17 +121,17 @@ export function Dashboard() {
                 : t('Medal table — who actually wins tournaments', 'Медальна таблиця — хто справді виграє турніри')
           }
           action={
-            <div className="flex overflow-hidden rounded-xl border-2 border-ink shadow-hard-sm">
+            <div className="flex w-full overflow-hidden rounded-xl border-2 border-ink shadow-hard-sm sm:w-auto">
               <button
                 onClick={() => setBoard('total')}
-                className={cx('px-3 py-1.5 text-sm font-bold', board === 'total' ? 'bg-ink text-paper-100' : 'bg-paper-100')}
+                className={cx('flex-1 px-3 py-1.5 text-sm font-bold sm:flex-none', board === 'total' ? 'bg-ink text-paper-100' : 'bg-paper-100')}
               >
                 Total
               </button>
               <button
                 onClick={() => setBoard('performance')}
                 className={cx(
-                  'border-l-2 border-ink px-3 py-1.5 text-sm font-bold',
+                  'flex-1 border-l-2 border-ink px-3 py-1.5 text-sm font-bold sm:flex-none',
                   board === 'performance' ? 'bg-ink text-paper-100' : 'bg-paper-100',
                 )}
               >
@@ -140,7 +140,7 @@ export function Dashboard() {
               <button
                 onClick={() => setBoard('champions')}
                 className={cx(
-                  'border-l-2 border-ink px-3 py-1.5 text-sm font-bold',
+                  'flex-1 border-l-2 border-ink px-3 py-1.5 text-sm font-bold sm:flex-none',
                   board === 'champions' ? 'bg-ink text-paper-100' : 'bg-paper-100',
                 )}
               >
@@ -338,10 +338,10 @@ export function Dashboard() {
           </div>
         ) : (
           <div className="sticker overflow-x-auto">
-            <table className="w-full min-w-[40rem] border-collapse text-left">
+            <table className="w-full border-collapse text-left">
               <thead>
                 <tr className="border-b-2 border-ink bg-ink text-paper-100">
-                  <th className="w-10 py-2 pl-3 text-center text-[11px] font-bold uppercase">#</th>
+                  <th className="w-8 py-2 pl-3 text-center text-[11px] font-bold uppercase">#</th>
                   <th className="py-2 text-[11px] font-bold uppercase tracking-wider">{t('Player', 'Гравець')}</th>
                   <th className="py-2 text-center text-[11px] font-bold uppercase">🥇</th>
                   <th className="py-2 text-center text-[11px] font-bold uppercase">🥈</th>

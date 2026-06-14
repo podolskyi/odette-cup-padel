@@ -36,8 +36,8 @@ export function SectionTitle({
   action?: ReactNode
 }) {
   return (
-    <div className="mb-3 flex items-end justify-between gap-3">
-      <div>
+    <div className="mb-3 flex flex-wrap items-end justify-between gap-3">
+      <div className="min-w-0">
         <h2 className="flex items-center gap-2 text-xl font-extrabold sm:text-2xl">
           {emoji && <span className="text-2xl">{emoji}</span>}
           {title}
